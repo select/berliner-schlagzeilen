@@ -21,6 +21,8 @@
   },
   "homepage": "https://github.com/shoutrlabs/berliner-schlagzeilen#readme",
   "dependencies": {
+    "crawler": "^1.1.1",
+    "jsdom": "^9.12.0",
     "moment": "^2.19.1",
     "node-schedule": "^1.2.5",
     "twit": "^2.2.9"

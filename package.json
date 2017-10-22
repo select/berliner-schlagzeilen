@@ -1,0 +1,28 @@
+{
+  "name": "berliner-schlagzeilen",
+  "version": "1.0.0",
+  "description": "Tweeting old news from 100 years ago.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shoutrlabs/berliner-schlagzeilen.git"
+  },
+  "keywords": [
+    "news",
+    "twitter"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shoutrlabs/berliner-schlagzeilen/issues"
+  },
+  "homepage": "https://github.com/shoutrlabs/berliner-schlagzeilen#readme",
+  "dependencies": {
+    "moment": "^2.19.1",
+    "node-schedule": "^1.2.5",
+    "twit": "^2.2.9"
+  }
+}

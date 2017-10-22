@@ -14,10 +14,8 @@ const twitterClient = new Twit(
 );
 
 const tweets = require(config.tweetsPath);
-const tweet = tweets.find(({ sendAfter }) => {
-	const _sendAfter = moment(sendAfter);
-	const now = moment();
-	return moment(sendAfter).diff(now) < 0;
+const tweet = tweets.find(({ sendAfter, tweetId }) => {
+	return !tweetId && moment(sendAfter).diff(moment()) < 0;
 });
 
 if (!tweet) process.exit(1);
@@ -33,7 +31,7 @@ twitterClient.post('media/upload', { media_data: b64content }, function(err, dat
 					'statuses/update',
 					{ status: tweet.status, media_ids: [data1.media_id_string] },
 					function(err, data, response) {
-						tweet.id = data.id;
+						tweet.tweetId = data.id;
 						fs.writeFileSync(config.tweetsPath, JSON.stringify(tweets, null, 2));
 						console.log(`Send ${data.id} ${tweet.status}`);
 					}

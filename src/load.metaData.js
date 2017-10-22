@@ -53,7 +53,7 @@ const urls = range(0, 10).map(() => {
 	};
 });
 
-console.log("urls", urls);
+console.log(`Crawling ${urls.length} URLs`);
 
 // Queue a list of URLs
 crawler.queue(urls);

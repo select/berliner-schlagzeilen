@@ -8,30 +8,30 @@
   },
   {
     "sendAfter": "2017-10-23 10:30",
-    "status": "Spannung an der Tiroler Front 23.10.1917 https://de.wikipedia.org/wiki/Gebirgskrieg_1915–1918",
+    "status": "Spannung an der Tiroler Front. 23.10.1917 https://de.wikipedia.org/wiki/Gebirgskrieg_1915–1918 #OnThisDay",
     "alt_text": "Berliner Volkszeitung. 23.10.1917 Ausgabe 1",
-    "img": "1917-10-23.0.png",
-    "tweetId": null
+    "img": "1917-10-23.0.png"
   },
   {
     "sendAfter": "2017-10-23 20:24",
-    "status": "Beginnende Infanterieschlacht bei Soissons. 23.10.1917",
+    "status": "Beginnende Infanterieschlacht bei Soissons. 23.10.1917 ",
     "alt_text": "Berliner Volkszeitung 23.10.1917 Ausgabe 2",
-    "img": "1917-10-23.2.png",
-    "tweetId": null
+    "img": "1917-10-23.2.png"
   },
   {
     "sendAfter": "2017-10-24 10:30",
     "status": "Die Infanterieschlacht bei Soissons dauert an. 24.10.1917",
     "alt_text": "Berliner Volkszeitung 24.10.1917 Ausgabe 1",
-    "img": "1917-10-24.0.png",
-    "tweetId": null
+    "img": "1917-10-24.0.png"
+  },
+  {
+    "sendAfter": "2017-10-24 16:24",
+    "status": "Auf ZEFYS kann man insgesamt 281.990 Ausgaben von 192 historischen Zeitungen entdecken http://zefys.staatsbibliothek-berlin.de/list/"
   },
   {
     "sendAfter": "2017-10-24 20:35",
     "status": "Feindliche Stellungen and der Ostfront genommen. 24.10.1917",
     "alt_text": "Berliner Volkszeitung 24.10.1917 Ausgabe 2",
-    "img": "1917-10-24.2.png",
-    "tweetId": null
+    "img": "1917-10-24.2.png"
   }
 ]

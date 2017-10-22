@@ -20,23 +20,31 @@ const tweet = tweets.find(({ sendAfter, tweetId }) => {
 
 if (!tweet) process.exit(1);
 
-var b64content = fs.readFileSync(`${config.dataDir}/img/${tweet.img}`, { encoding: 'base64' });
-twitterClient.post('media/upload', { media_data: b64content }, function(err, data1, response) {
-	twitterClient.post(
-		'media/metadata/create',
-		{ media_id: data1.media_id_string, alt_text: { text: tweet.alt_text } },
-		function(err, data, response) {
-			if (!err) {
-				twitterClient.post(
-					'statuses/update',
-					{ status: tweet.status, media_ids: [data1.media_id_string] },
-					function(err, data, response) {
-						tweet.tweetId = data.id;
-						fs.writeFileSync(config.tweetsPath, JSON.stringify(tweets, null, 2));
-						console.log(`Send ${data.id} ${tweet.status}`);
-					}
-				);
+if (tweet.img) {
+	var b64content = fs.readFileSync(`${config.dataDir}/img/${tweet.img}`, { encoding: 'base64' });
+	twitterClient.post('media/upload', { media_data: b64content }, function(err, data1, response) {
+		twitterClient.post(
+			'media/metadata/create',
+			{ media_id: data1.media_id_string, alt_text: { text: tweet.alt_text } },
+			function(err, data, response) {
+				if (!err) {
+					twitterClient.post(
+						'statuses/update',
+						{ status: tweet.status, media_ids: [data1.media_id_string] },
+						function(err, data, response) {
+							tweet.tweetId = data.id;
+							fs.writeFileSync(config.tweetsPath, JSON.stringify(tweets, null, 2));
+							console.log(`Send ${data.id} ${tweet.status}`);
+						}
+					);
+				}
 			}
-		}
-	);
-});
+		);
+	});
+} else {
+	twitterClient.post('statuses/update', { status: tweet.status }, function(err, data, response) {
+		tweet.tweetId = data.id;
+		fs.writeFileSync(config.tweetsPath, JSON.stringify(tweets, null, 2));
+		console.log(`Send ${data.id} ${tweet.status}`);
+	});
+}

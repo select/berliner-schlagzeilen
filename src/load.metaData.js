@@ -6,7 +6,7 @@ const moment = require('moment');
 const fs = require('fs');
 const path = require('path');
 
-const dataPath = `${__dirname}/../data/date2metaDataId.json`;
+const config = require('./config');
 
 const range = (start, end) =>
 	Array(end - start + 1)
@@ -44,9 +44,8 @@ const crawler = new Crawler({
 	},
 });
 
-const today = moment();
-const oneHundredYearsAgo = today.subtract(100, 'years');
-const urls = range(0, 365).map(() => {
+const oneHundredYearsAgo = moment().subtract(100, 'years').subtract(1, 'days');
+const urls = range(0, 10).map(() => {
 	const date = oneHundredYearsAgo.add(1, 'days').format('YYYY-MM-DD');
 	return {
 		uri: `http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/${date}/27971740/?no_cache=1`,
@@ -61,6 +60,6 @@ crawler.queue(urls);
 
 
 crawler.on('drain', () => {
-	fs.writeFileSync(dataPath, JSON.stringify(allIds, null, 2));
-	// process.stdout.write(`\nFound ${allItems.length} items\n`);
+	fs.writeFileSync(config.date2mIdPath, JSON.stringify(allIds, null, 2));
+	process.stdout.write(`\nwrote file ${config.date2mIdPath}\n`);
 });

@@ -23,3 +23,37 @@ From this page we scrape the identifier `454dde27-b9f4-4faf-987f-ee73cad2c351` a
 ```
 http://zefys.staatsbibliothek-berlin.de/oai/?tx_zefysoai_pi1[identifier]=454dde27-b9f4-4faf-987f-ee73cad2c351
 ```
+
+From the derived URLs, so called [METS](https://www.loc.gov/standards/mets/) files can be obtained.
+
+A METS file contains e.g. the following sections that are relevant here:
+
+Metadata about the publication sits in 
+```xml
+<mets:dmdSec>
+```
+including, among other things:    
+
+Unique title of the newspaper
+```xml
+<mods:title>
+```
+Date of publication of the newspaper issue
+```xml
+<mods:dateIssued>
+```
+
+Further down the tree, there is a section for all information on data objects relating to the issue
+```xml
+<mets:fileSec>
+```
+which again has children for different file groups (images, text, etc)
+```xml
+<mets:fileGrp>
+```
+and contains elements with URIs for the various data objects  per newspaper page
+```xml
+<mets:file MIMETYPE="image/jpg" ID="default_1">
+   <mets:FLocat LOCTYPE="URL" xlink:href="http://ztcs.staatsbibliothek-berlin.de/zefys_contentServer.php?action=metsImage&format=png&metsFile=454dde27-b9f4-4faf-987f-ee73cad2c351&divID=phys_1&width=1200&metsFileGroup=PRESENTATION"/>
+</mets:file>
+```

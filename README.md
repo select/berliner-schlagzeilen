@@ -1,12 +1,12 @@
 # Berliner Schlagzeilen
 
-Das Berliner Tageblatt war vor 100 Jahren eine der großen überregionalen Zeitungen in Deutschland und ein Leitmedium für gesellschaftliche Debatten und Diskurse. 1914 erreichte das Tageblatt 245.000 Leser und Leserinnen.
+Die Berliner Volks-Zeitung war vor 100 Jahren die Tageszeitung für die Metropole Berlin. Mit Sensationen und Unterhaltung wurde sie zur erfolgreichsten Boulevardzeitung der Zeit.
 
 # https://twitter.com/Volkszeitung100
 
 https://hackdash.org/projects/59ec6cc287d0970a0e0a3ca8
 
-This project was created during the Coding Da Vinci 2017 using the zfz
+This project was created during the Coding Da Vinci 2017 using the Zefys database.
 
 http://zefys.staatsbibliothek-berlin.de/
 

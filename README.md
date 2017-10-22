@@ -1,6 +1,29 @@
 # Berliner Schlagzeilen
 
-Twitterbot mit Nachrichten von vor 100 Jahren
+Das Berliner Tageblatt war vor 100 Jahren eine der großen überregionalen Zeitungen in Deutschland und ein Leitmedium für gesellschaftliche Debatten und Diskurse. 1914 erreichte das Tageblatt 245.000 Leser und Leserinnen.
+
+# https://twitter.com/Volkszeitung100
+
+https://hackdash.org/projects/59ec6cc287d0970a0e0a3ca8
+
+This project was created during the Coding Da Vinci 2017 using the zfz
+
+http://zefys.staatsbibliothek-berlin.de/
+
+https://codingdavinci.de/
+
+## Installation
+
+Clone the git project 
+
+```
+git clone
+```
+
+Then install all dependecies.
+```
+npm install
+```
 
 ## Getting data
 
@@ -9,11 +32,11 @@ You can find the map between the date and the metadata file ids for the  **Berli
 
 From the derived URLs, so called [METS](https://www.loc.gov/standards/mets/) files can be obtained. A METS file contains e.g. the following sections that are relevant here:
 
-Metadata about the publication sits in 
+Metadata about the publication sits in
 ```xml
 <mets:dmdSec>
 ```
-including, among other things:    
+including, among other things:
 
 Unique title of the newspaper
 ```xml

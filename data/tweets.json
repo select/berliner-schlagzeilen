@@ -1,74 +1,74 @@
 [
-  {
-    "sendAfter": "2017-10-22 22:30",
-    "status": "Stärkster Atilleriekampf bei Soissons 22.10.1917 https://de.wikipedia.org/wiki/Soissons",
-    "alt_text": "Berliner Volkszeitung 22.10.1917 Ausgabe 1",
-    "img": "1917-10-22.1.png",
-    "tweetId": 922225757228879900
-  },
-  {
-    "sendAfter": "2017-10-23 10:30",
-    "status": "Spannung an der Tiroler Front. 23.10.1917 https://de.wikipedia.org/wiki/Gebirgskrieg_1915–1918 #OnThisDay",
-    "alt_text": "Berliner Volkszeitung. 23.10.1917 Ausgabe 1",
-    "img": "1917-10-23.0.png",
-    "tweetId": 922438497251848200
-  },
-  {
-    "sendAfter": "2017-10-23 20:24",
-    "status": "Beginnende Infanterieschlacht bei Soissons. 23.10.1917 #100yearsago",
-    "alt_text": "Berliner Volkszeitung 23.10.1917 Ausgabe 2",
-    "img": "1917-10-23.2.png"
-  },
-  {
-    "sendAfter": "2017-10-24 10:30",
-    "status": "Die Infanterieschlacht bei Soissons dauert an. 24.10.1917",
-    "alt_text": "Berliner Volkszeitung 24.10.1917 Ausgabe 1",
-    "img": "1917-10-24.0.png"
-  },
-  {
-    "sendAfter": "2017-10-24 16:24",
-    "status": "Auf ZEFYS kann man insgesamt 281.990 Ausgaben von 192 historischen Zeitungen entdecken http://zefys.staatsbibliothek-berlin.de/list/ #OpenData #codingdavinci "
-  },
-  {
-    "sendAfter": "2017-10-24 20:35",
-    "status": "Feindliche Stellungen and der Ostfront genommen. 24.10.1917",
-    "alt_text": "Berliner Volkszeitung 24.10.1917 Ausgabe 2",
-    "img": "1917-10-24.2.png"
-  },
-  {
-    "sendAfter": "2017-10-26 12:35",
-    "status": "Kriegseintritt von Brasilien 26.10.1917 #OnThisDay #Brasilien"
-  },
-  {
-    "sendAfter": "2017-10-27 20:35",
-    "status": "27.10.1917 Noch mehr als ein Jahr dauerte der Erste Weltkrieg an! https://de.wikipedia.org/wiki/Erster_Weltkrieg #ErsterWeltkrieg "
-  },
-  {
-    "sendAfter": "2017-10-30 20:35",
-    "status": "Der Erste Weltkrieg auf @dctp_tv https://www.youtube.com/watch?v=IkB2lNYUl_U #ErsterWeltkrieg "
-  },
-  {
-    "sendAfter": "2017-11-02 13:10",
-    "status": "Brief des br. Außenminister sagt Unterstützung für jüdische Heimstätte in Palästina zu 02.11.1917 https://de.wikipedia.org/wiki/Balfour-Deklaration"
-  },
-  {
-    "sendAfter": "2017-11-10 12:35",
-    "status": "Kriegseintritt von Panama 10.11.1917 #OnThisDay"
-  },
-  {
-    "sendAfter": "2017-11-20 11:22",
-    "status": "Beginn der Schlacht von Cambrai 20.11.1917 https://de.wikipedia.org/wiki/Schlacht_von_Cambrai #Panzeroffensive",
-    "alt_text": "Schlacht von Cambrai 1917 Karte",
-    "img": "600px-Schlacht_von_Cambrai.png"
-  },
-  {
-    "sendAfter": "2017-12-07 15:27",
-    "status": "Ende der Schlacht von Cambrai 07.12.1917 https://de.wikipedia.org/wiki/Schlacht_von_Cambrai",
-    "alt_text": "Schlacht von Cambrai 1917 Karte",
-    "img": "WWITrenchCambrai.jpg"
-  },
-  {
-    "sendAfter": "2017-10-31 16:55",
-    "status": "Eroberung von Be’er Scheva läutet die Erob. Palästinas durch br. Truppen ein. 31.10.1917 #BalfourDeklaration https://de.wikipedia.org/wiki/Be’er_Scheva"
-  }
+	{
+		"sendAfter": "2017-10-22 22:30",
+		"status": "Stärkster Atilleriekampf bei Soissons 22.10.1917 https://de.wikipedia.org/wiki/Soissons",
+		"alt_text": "Berliner Volkszeitung 22.10.1917 Ausgabe 1",
+		"img": "1917-10-22.1.png",
+		"tweetId": 922225757228879900
+	},
+	{
+		"sendAfter": "2017-10-23 10:30",
+		"status": "Spannung an der Tiroler Front. 23.10.1917 https://de.wikipedia.org/wiki/Gebirgskrieg_1915–1918 #OnThisDay",
+		"alt_text": "Berliner Volkszeitung. 23.10.1917 Ausgabe 1",
+		"img": "1917-10-23.0.png",
+		"tweetId": 922438497251848200
+	},
+	{
+		"sendAfter": "2017-10-23 19:24",
+		"status": "Beginnende Infanterieschlacht bei Soissons. 23.10.1917 #100yearsago http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-10-23/27971740",
+		"alt_text": "Berliner Volkszeitung 23.10.1917 Ausgabe 2",
+		"img": "1917-10-23.2.png"
+	},
+	{
+		"sendAfter": "2017-10-24 10:30",
+		"status": "Die Infanterieschlacht bei Soissons dauert an. 24.10.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-10-24/27971740",
+		"alt_text": "Berliner Volkszeitung 24.10.1917 Ausgabe 1",
+		"img": "1917-10-24.0.png"
+	},
+	{
+		"sendAfter": "2017-10-24 16:24",
+		"status": "Auf ZEFYS kann man insgesamt 281.990 Ausgaben von 192 historischen Zeitungen entdecken http://zefys.staatsbibliothek-berlin.de/list/ #OpenData #codingdavinci "
+	},
+	{
+		"sendAfter": "2017-10-24 20:35",
+		"status": "Feindliche Stellungen and der Ostfront genommen. 24.10.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-10-24/27971740",
+		"alt_text": "Berliner Volkszeitung 24.10.1917 Ausgabe 2",
+		"img": "1917-10-24.2.png"
+	},
+	{
+		"sendAfter": "2017-10-26 12:35",
+		"status": "Kriegseintritt von Brasilien 26.10.1917 #OnThisDay #Brasilien"
+	},
+	{
+		"sendAfter": "2017-10-27 20:35",
+		"status": "27.10.1917 Noch mehr als ein Jahr dauerte der Erste Weltkrieg an! https://de.wikipedia.org/wiki/Erster_Weltkrieg #ErsterWeltkrieg "
+	},
+	{
+		"sendAfter": "2017-10-30 20:35",
+		"status": "Der Erste Weltkrieg auf @dctp_tv https://www.youtube.com/watch?v=IkB2lNYUl_U #ErsterWeltkrieg "
+	},
+	{
+		"sendAfter": "2017-11-02 13:10",
+		"status": "Brief des br. Außenminister sagt Unterstützung für jüdische Heimstätte in Palästina zu 02.11.1917 https://de.wikipedia.org/wiki/Balfour-Deklaration"
+	},
+	{
+		"sendAfter": "2017-11-10 12:35",
+		"status": "Kriegseintritt von Panama 10.11.1917 #OnThisDay"
+	},
+	{
+		"sendAfter": "2017-11-20 11:22",
+		"status": "Beginn der Schlacht von Cambrai 20.11.1917 https://de.wikipedia.org/wiki/Schlacht_von_Cambrai #Panzeroffensive",
+		"alt_text": "Schlacht von Cambrai 1917 Karte",
+		"img": "600px-Schlacht_von_Cambrai.png"
+	},
+	{
+		"sendAfter": "2017-12-07 15:27",
+		"status": "Ende der Schlacht von Cambrai 07.12.1917 https://de.wikipedia.org/wiki/Schlacht_von_Cambrai",
+		"alt_text": "Schlacht von Cambrai 1917 Karte",
+		"img": "WWITrenchCambrai.jpg"
+	},
+	{
+		"sendAfter": "2017-10-31 16:55",
+		"status": "Eroberung von Be’er Scheva läutet die Erob. Palästinas durch br. Truppen ein. 31.10.1917 #BalfourDeklaration https://de.wikipedia.org/wiki/Be’er_Scheva"
+	}
 ]

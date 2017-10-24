@@ -22,6 +22,7 @@ console.log('urls', urls);
 var crawler = new Crawler({
 	encoding: null,
 	jQuery: false, // set false to suppress warning message.
+	maxConnections: 10,
 	callback: function(err, res, done) {
 		if (err) {
 			console.error(err.stack);

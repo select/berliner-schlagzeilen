@@ -45,7 +45,7 @@ const crawler = new Crawler({
 });
 
 const oneHundredYearsAgo = moment().subtract(100, 'years').subtract(1, 'days');
-const urls = range(0, 10).map(() => {
+const urls = range(0, 100).map(() => {
 	const date = oneHundredYearsAgo.add(1, 'days').format('YYYY-MM-DD');
 	return {
 		uri: `http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/${date}/27971740/?no_cache=1`,

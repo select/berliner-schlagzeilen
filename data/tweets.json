@@ -43,7 +43,7 @@
     "sendAfter": "2017-10-25 10:30",
     "status": "Günstiger Verlauf der Offensive gegen Italien. 25.10.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-10-25/27971740",
     "alt_text": "Berliner Volkszeitung 25.10.1917 Morgen-Ausgabe",
-    "img": "1917-10-25.1.png"
+    "img": "1917-10-25.0.png"
   },
   {
     "sendAfter": "2017-10-25 20:35",
@@ -58,6 +58,12 @@
     "img": "1917-10-26.1.png"
   },
   {
+    "sendAfter": "2017-10-26 19:30",
+    "status": "Das Edelsteinsammling de Ruyter. 26.10.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-10-26/27971740",
+    "alt_text": "Berliner Volkszeitung 26.10.1917 Ausgabe ?",
+    "img": "1917-10-26.2.png"
+  },
+  {
     "sendAfter": "2017-10-26 12:35",
     "status": "Kriegseintritt von Brasilien. 26.10.1917 #OnThisDay #Brasilien"
   },
@@ -65,7 +71,7 @@
     "sendAfter": "2017-10-27 10:30",
     "status": "50 Kilometer Isonzo-Front erschüttert. 27.10.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-10-27/27971740",
     "alt_text": "Berliner Volkszeitung 27.10.1917 Morgen-Ausgabe",
-    "img": "1917-10-27.1.png"
+    "img": "1917-10-27.0.png"
   },
   {
     "sendAfter": "2017-10-27 18:35",
@@ -79,27 +85,27 @@
   },
   {
     "sendAfter": "2017-10-28 10:39",
-    "status": "Die wankende Isonzo-Front. 28.10.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-10-28/27971740",
+    "status": "Die wankende Isonzofront. 28.10.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-10-28/27971740",
     "alt_text": "Berliner Volkszeitung 28.10.1917 Morgen-Ausgabe",
-    "img": "1917-10-28.1.png"
+    "img": "1917-10-28.2.png"
   },
   {
     "sendAfter": "2017-10-29 10:30",
     "status": "100 000 Italiener gefangen. 29.10.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-10-29/27971740",
     "alt_text": "Berliner Volkszeitung 29.10.1917 Morgen-Ausgabe",
-    "img": "1917-10-25.1.png"
+    "img": "1917-10-29.0.png"
   },
   {
     "sendAfter": "2017-10-29 20:35",
-    "status": "Zusammenbruch der ganzen Isonzo-Front. 29.10.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-10-29/27971740",
+    "status": "Zusammenbruch der ganzen Isonzofront. 29.10.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-10-29/27971740",
     "alt_text": "Berliner Volkszeitung 29.10.1917 Abend-Ausgabe",
-    "img": "1917-10-29.2.png"
+    "img": "1917-10-29.1.png"
   },
   {
     "sendAfter": "2017-10-30 10:35",
     "status": "Gute Fortschritte in der italienischen Ebene. 30.10.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-10-30/27971740",
     "alt_text": "Berliner Volkszeitung 30.10.1917 Morgen-Ausgabe",
-    "img": "1917-10-30.1.png"
+    "img": "1917-10-30.0.png"
   },
   {
     "sendAfter": "2017-10-30 18:35",
@@ -128,8 +134,68 @@
     "img": "1917-10-31.2.png"
   },
   {
+    "sendAfter": "2017-11-01 10:35",
+    "status": "Erfolgreiche Kämpfe am Tagliamento. 01.11.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-11-01/27971740",
+    "alt_text": "Berliner Volkszeitung 01.11.1917 Morgen-Ausgabe",
+    "img": "1917-11-01.0.png"
+  },
+  {
+    "sendAfter": "2017-11-01 19:35",
+    "status": "Waffensteckung von weitern 60 000 Italienern. 01.11.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-11-01/27971740",
+    "alt_text": "Berliner Volkszeitung 01.11.1917 Abend-Ausgabe",
+    "img": "1917-11-01.2.png"
+  },
+  {
+    "sendAfter": "2017-11-02 10:35",
+    "status": "Neue Gefangenenbeute am Tagliamento. 02.11.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-11-02/27971740",
+    "alt_text": "Berliner Volkszeitung 02.11.1917 Morgen-Ausgabe",
+    "img": "1917-11-02.1.png"
+  },
+  {
     "sendAfter": "2017-11-02 13:10",
     "status": "Brief des britischen Außenministers sagt Unterstützung für jüdische Heimstätte in Palästina zu. 02.11.1917 https://de.wikipedia.org/wiki/Balfour-Deklaration"
+  },
+  {
+    "sendAfter": "2017-11-03 10:35",
+    "status": "Deutsches Bombengeschwader über England. 03.11.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-11-03/27971740",
+    "alt_text": "Berliner Volkszeitung 03.11.1917 Morgen-Ausgabe",
+    "img": "1917-11-03.0.png"
+  },
+  {
+    "sendAfter": "2017-11-03 19:35",
+    "status": "Bisher über 200 000 Italienern gefangen. 03.11.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-11-03/27971740",
+    "alt_text": "Berliner Volkszeitung 03.11.1917 Abend-Ausgabe",
+    "img": "1917-11-03.2.png"
+  },
+  {
+    "sendAfter": "2017-11-04 10:35",
+    "status": "Stakes Feuer in Flandern. 04.11.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-11-04/27971740",
+    "alt_text": "Berliner Volkszeitung 04.11.1917 Morgen-Ausgabe",
+    "img": "1917-11-04.0.png"
+  },
+  {
+    "sendAfter": "2017-11-05 10:35",
+    "status": "Atillerietätigkeit längs des Tagliamento. 05.11.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-11-05/27971740",
+    "alt_text": "Berliner Volkszeitung 05.11.1917 Montags-Ausgabe",
+    "img": "1917-11-05.0.png"
+  },
+  {
+    "sendAfter": "2017-11-05 19:35",
+    "status": "Der Tagliamento überschritten. 05.11.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-11-05/27971740",
+    "alt_text": "Berliner Volkszeitung 05.11.1917 Abend-Ausgabe",
+    "img": "1917-11-05.1.png"
+  },
+  {
+    "sendAfter": "2017-11-06 10:35",
+    "status": ". 06.11.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-11-06/27971740",
+    "alt_text": "Berliner Volkszeitung 06.11.1917 Morgen-Ausgabe",
+    "img": "1917-11-06.0.png"
+  },
+  {
+    "sendAfter": "2017-11-06 10:35",
+    "status": ". 06.11.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-11-06/27971740",
+    "alt_text": "Berliner Volkszeitung 06.11.1917 Abend-Ausgabe",
+    "img": "1917-11-06.2.png"
   },
   {
     "sendAfter": "2017-11-10 12:35",

@@ -57,17 +57,19 @@
     "sendAfter": "2017-10-26 10:30",
     "status": "Das Fortschreiten der Isonzo-Offensive. 26.10.1917 #1917LIVE http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-10-26/27971740",
     "alt_text": "Berliner Volkszeitung 26.10.1917 Morgen-Ausgabe",
-    "img": "1917-10-26.1.png"
-  },
-  {
-    "sendAfter": "2017-10-26 19:30",
-    "status": "Das Edelsteinsammling de Ruyter. 26.10.1917 #1917LIVE http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-10-26/27971740",
-    "alt_text": "Berliner Volkszeitung 26.10.1917 Ausgabe ?",
-    "img": "1917-10-26.2.png"
+    "img": "1917-10-26.1.png",
+    "tweetId": 923502285791137800
   },
   {
     "sendAfter": "2017-10-26 12:35",
-    "status": "Kriegseintritt von Brasilien. 26.10.1917 #OnThisDay #Brasilien"
+    "status": "Brasilien erklärt dem Deutschen Kaiserreich den Krieg. 26.10.1917 #OnThisDay #Brasilien #1917LIVE https://de.wikipedia.org/wiki/Beteiligte_am_Ersten_Weltkrieg",
+    "tweetId": 923514752915202000
+  },
+  {
+    "sendAfter": "2017-10-26 19:30",
+    "status": "Die Edelsteinsammlung de Ruyter. 26.10.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-10-26/27971740",
+    "alt_text": "Berliner Volkszeitung 26.10.1917 Ausgabe ?",
+    "img": "1917-10-26.2.png"
   },
   {
     "sendAfter": "2017-10-27 10:30",

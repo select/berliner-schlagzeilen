@@ -66,44 +66,51 @@
     "tweetId": 923514752915202000
   },
   {
-    "sendAfter": "2017-10-26 19:30",
+    "sendAfter": "2017-10-26 19:20",
     "status": "Die Edelsteinsammlung de Ruyter. 26.10.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-10-26/27971740",
     "alt_text": "Berliner Volkszeitung 26.10.1917 Ausgabe ?",
-    "img": "1917-10-26.2.png"
+    "img": "1917-10-26.2.png",
+    "tweetId": 923600607138799600
   },
   {
     "sendAfter": "2017-10-27 10:30",
     "status": "50 Kilometer Isonzo-Front erschüttert. 27.10.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-10-27/27971740",
     "alt_text": "Berliner Volkszeitung 27.10.1917 Morgen-Ausgabe",
-    "img": "1917-10-27.0.png"
+    "img": "1917-10-27.0.png",
+    "tweetId": 923886793438761000
   },
   {
     "sendAfter": "2017-10-27 18:35",
     "status": "60.000 Italiener gefangen. 27.10.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-10-27/27971740",
     "alt_text": "Berliner Volkszeitung 27.10.1917 Abend-Ausgabe",
-    "img": "1917-10-27.2.png"
+    "img": "1917-10-27.2.png",
+    "tweetId": 923961892292440000
   },
   {
     "sendAfter": "2017-10-27 20:35",
-    "status": "Noch mehr als ein Jahr dauerte der Erste Weltkrieg an! 27.10.1917 https://de.wikipedia.org/wiki/Erster_Weltkrieg #ErsterWeltkrieg"
+    "status": "Noch mehr als ein Jahr dauerte der Erste Weltkrieg an! 27.10.1917 https://de.wikipedia.org/wiki/Erster_Weltkrieg #ErsterWeltkrieg",
+    "tweetId": 924224162650054700
   },
   {
     "sendAfter": "2017-10-28 10:39",
     "status": "Die wankende Isonzofront. 28.10.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-10-28/27971740",
     "alt_text": "Berliner Volkszeitung 28.10.1917 Morgen-Ausgabe",
-    "img": "1917-10-28.2.png"
+    "img": "1917-10-28.2.png",
+    "tweetId": 924224232153862100
   },
   {
     "sendAfter": "2017-10-29 10:30",
     "status": "100 000 Italiener gefangen. 29.10.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-10-29/27971740",
     "alt_text": "Berliner Volkszeitung 29.10.1917 Morgen-Ausgabe",
-    "img": "1917-10-29.0.png"
+    "img": "1917-10-29.0.png",
+    "tweetId": 924588748423290900
   },
   {
-    "sendAfter": "2017-10-29 20:35",
+    "sendAfter": "2017-10-29 18:35",
     "status": "Zusammenbruch der ganzen Isonzofront. 29.10.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-10-29/27971740",
     "alt_text": "Berliner Volkszeitung 29.10.1917 Abend-Ausgabe",
-    "img": "1917-10-29.1.png"
+    "img": "1917-10-29.1.png",
+    "tweetId": 924942190647881700
   },
   {
     "sendAfter": "2017-10-30 10:35",

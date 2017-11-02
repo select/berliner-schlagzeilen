@@ -7,14 +7,17 @@ const moment = require('moment');
 const config = require('./config');
 
 const errorLogPath = `${__dirname}/../log/error.log`;
+const now = moment(new Date());
+
 
 // Log the error to file, console and tweets.json.
 function onError(error) {
 	tweet.error = `${error}`;
 	fs.writeFileSync(config.tweetsPath, JSON.stringify(tweets, null, 2));
 	console.warn(`Could not tweet. ${error}`);
-	fs.appendFileSync(errorLogPath, `\n${moment().format('YYYY-MM-DD HH:MM')} ${error}`);
+	fs.appendFileSync(errorLogPath, `\n${now.format('YYYY-MM-DD HH:mm')} ${error}`);
 }
+
 
 // Twit library does not implement promises reject for failed tweets but
 // resolves them and puts the error in the data object.
@@ -25,6 +28,7 @@ function catchError(callback) {
 	}
 }
 
+
 // Get an instance of the twitter client.
 const twitterClient = new Twit(
 	Object.assign(config.twitterCredentials, {
@@ -32,22 +36,22 @@ const twitterClient = new Twit(
 	})
 );
 
+
 // Get the tweets.
 let tweets;
 try {
 	tweets = require(config.tweetsPath);
 } catch (error) {
-	fs.appendFileSync(errorLogPath, `\n${moment().format('YYYY-MM-DD HH:MM')} ${error}`);
+	fs.appendFileSync(errorLogPath, `\n${now.format('YYYY-MM-DD HH:mm')} ${error}`);
 	console.warn(`Could not tweet. ${error}`);
 	process.exit(1);
 }
 const tweet = tweets.find(({ sendAfter, tweetId, error }) => {
-	return !tweetId && !error && moment(sendAfter).diff(moment()) < 0;
+	return !tweetId && !error && moment(sendAfter).diff(now) < 0;
 });
 
 // If there are no new tweets, exit.
 if (!tweet) {
-	console.log('No new tweets.');
 	process.exit(0);
 }
 

@@ -399,9 +399,21 @@
     "img": "600px-Schlacht_von_Cambrai.png"
   },
   {
+    "sendAfter": "2017-11-21 10:35",
+    "status": "Bußtag. 21.11.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-11-21/27971740",
+    "alt_text": "Berliner Volkszeitung 21.11.1917 Morgen-Ausgabe",
+    "img": "1917-11-21.0.png"
+  },
+  {
+    "sendAfter": "2017-11-21 19:35",
+    "status": "Hinter den großen Ereignissen: Berlin am 21.11.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-11-21/27971740",
+    "alt_text": "Berliner Volkszeitung 21.11.1917 Morgen-Ausgabe",
+    "img": "1917-11-21.2.png"
+  },
+  {
     "sendAfter": "2017-12-07 15:27",
     "status": "Ende der Schlacht von Cambrai. 07.12.1917 https://de.wikipedia.org/wiki/Schlacht_von_Cambrai",
-    "alt_text": "Schlacht von Cambrai 1917 Karte",
+    "alt_text": "Schlacht von Cambrai 1917",
     "img": "WWITrenchCambrai.jpg"
   },
   {

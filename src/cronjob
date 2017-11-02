@@ -1,0 +1,1 @@
+*/15 * * * *  /path/to/src/tweet.js >> /path/to/log/cron.log 2>&1

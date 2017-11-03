@@ -175,7 +175,8 @@
     "sendAfter": "2017-11-02 19:35",
     "status": "Hertling Reichskanzler. 02.11.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-11-02/27971740",
     "alt_text": "Berliner Volkszeitung 02.11.1917 Abend-Ausgabe",
-    "img": "1917-11-02.2.png"
+    "img": "1917-11-02.2.png",
+    "error": "Error: ENOENT: no such file or directory, open '/home/select/Dev/berliner-schlagzeilen/src/../data/img/1917-11-02.2.png'"
   },
   {
     "sendAfter": "2017-11-02 13:10",
@@ -192,10 +193,11 @@
     "sendAfter": "2017-11-03 10:35",
     "status": "Deutsches Bombengeschwader über England. 03.11.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-11-03/27971740",
     "alt_text": "Berliner Volkszeitung 03.11.1917 Morgen-Ausgabe",
-    "img": "1917-11-03.0.png"
+    "img": "1917-11-03.0.png",
+    "tweetId": 926417052444872700
   },
   {
-    "sendAfter": "2017-11-03 19:35",
+    "sendAfter": "2017-11-03 18:35",
     "status": "Bisher über 200 000 Italiener gefangen. 03.11.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-11-03/27971740",
     "alt_text": "Berliner Volkszeitung 03.11.1917 Abend-Ausgabe",
     "img": "1917-11-03.2.png"
@@ -280,7 +282,7 @@
   },
   {
     "sendAfter": "2017-11-10 12:35",
-    "status": "Kriegseintritt von Panama. 10.11.1917 #OnThisDay"
+    "status": "Kriegseintritt von Panama. 10.11.1917 #OnThisDay #Panama"
   },
   {
     "sendAfter": "2017-11-10 19:35",

@@ -22,9 +22,9 @@ function onError(error) {
 // Twit library does not implement promises reject for failed tweets but
 // resolves them and puts the error in the data object.
 function catchError(callback) {
-	return ({ data }) => {
-		if (data.errors) onError(data.errors[0].message)
-		else callback(data)
+	return (response) => {
+		if (response.data.errors) return onError(response.data.errors[0].message)
+		else return callback(response.data)
 	}
 }
 
@@ -57,6 +57,7 @@ if (!tweet) {
 
 // If tweet has image, upload image first, then tweet
 if (tweet.img) {
+	let media_id;
 	let b64content;
 	try {
 		b64content = fs.readFileSync(`${config.dataDir}/img/${tweet.img}`, { encoding: 'base64' });
@@ -66,16 +67,16 @@ if (tweet.img) {
 	}
 	twitterClient
 		.post('media/upload', { media_data: b64content })
-		.then(catchError((data) =>
-			twitterClient.post('media/metadata/create', {
+		.then(catchError((data) => {
+			media_id = data.media_id_string;
+			return twitterClient.post('media/metadata/create', {
 				media_id: data.media_id_string,
 				alt_text: { text: tweet.alt_text },
 			})
-		))
-		.then(catchError((data) =>
-			twitterClient.post('statuses/update', {
+		}))
+		.then(catchError(() => twitterClient.post('statuses/update', {
 				status: tweet.status,
-				media_ids: [data1.media_id_string],
+				media_ids: [media_id],
 			})
 		))
 		.then(catchError((data) => {

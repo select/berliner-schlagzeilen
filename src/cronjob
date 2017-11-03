@@ -1,1 +1,4 @@
+# To create the coronjob run the followin command
+# crontab -e
+# then add the following line (and adapt the paths)
 */15 * * * *  /path/to/src/tweet.js >> /path/to/log/cron.log 2>&1

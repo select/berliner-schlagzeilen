@@ -419,8 +419,98 @@
   {
     "sendAfter": "2017-11-22 19:35",
     "status": "Russisches Waffenstillstandsangebot. 22.11.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-11-22/27971740",
-    "alt_text": "Berliner Volkszeitung 22.11.1917 Morgen-Ausgabe",
+    "alt_text": "Berliner Volkszeitung 22.11.1917 Abend-Ausgabe",
     "img": "1917-11-22.2.png"
+  },
+  {
+    "sendAfter": "2017-11-23 10:35",
+    "status": "674 000 Tonnen im Oktober versenkt. 23.11.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-11-23/27971740",
+    "alt_text": "Berliner Volkszeitung 23.11.1917 Morgen-Ausgabe",
+    "img": "1917-11-23.0.png"
+  },
+  {
+    "sendAfter": "2017-11-23 19:35",
+    "status": "Siegreiche erbitterte Nahkämpfe bei Cambrai. 23.11.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-11-23/27971740",
+    "alt_text": "Berliner Volkszeitung 23.11.1917 Abend-Ausgabe",
+    "img": "1917-11-23.2.png"
+  },
+  {
+    "sendAfter": "2017-11-24 10:35",
+    "status": "Neuer englischer Durchbruchsversuch gescheitert. 24.11.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-11-24/27971740",
+    "alt_text": "Berliner Volkszeitung 24.11.1917 Morgen-Ausgabe",
+    "img": "1917-11-24.0.png"
+  },
+  {
+    "sendAfter": "2017-11-24 19:35",
+    "status": "Neue vergebliche Durchbruchsversuche bei Cambrai. 24.11.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-11-24/27971740",
+    "alt_text": "Berliner Volkszeitung 24.11.1917 Abend-Ausgabe",
+    "img": "1917-11-24.2.png"
+  },
+  {
+    "sendAfter": "2017-11-25 10:35",
+    "status": "Der vergebliche britische Ansturm bei Cambrai. 25.11.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-11-25/27971740",
+    "alt_text": "Berliner Volkszeitung 25.11.1917 Morgen-Ausgabe",
+    "img": "1917-11-25.0.png"
+  },
+  {
+    "sendAfter": "2017-11-25 19:35",
+    "status": "Hinter den großen Ereignissen: Berlin am 25.11.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-11-25/27971740",
+    "alt_text": "Berliner Volkszeitung 25.11.1917 Morgen-Ausgabe",
+    "img": "1917-11-25.2.png"
+  },
+  {
+    "sendAfter": "2017-11-26 19:35",
+    "status": "Das neue Preußen. 26.11.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-11-26/27971740",
+    "alt_text": "Berliner Volkszeitung 26.11.1917 Montags-Ausgabe",
+    "img": "1917-11-26.0.png"
+  },
+  {
+    "sendAfter": "2017-11-27 10:35",
+    "status": "Die Kriegslage. 27.11.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-11-27/27971740",
+    "alt_text": "Berliner Volkszeitung 27.11.1917 Morgen-Ausgabe",
+    "img": "1917-11-27.0.png"
+  },
+  {
+    "sendAfter": "2017-11-27 19:35",
+    "status": "Englischer Angriff südwestlich Cambrai abgeschlagen. 27.11.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-11-27/27971740",
+    "alt_text": "Berliner Volkszeitung 27.11.1917 Abend-Ausgabe",
+    "img": "1917-11-27.2.png"
+  },
+  {
+    "sendAfter": "2017-11-28 10:35",
+    "status": "Trotzkis Enthüllungen über die Raubverträge. 28.11.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-11-28/27971740",
+    "alt_text": "Berliner Volkszeitung 28.11.1917 Morgen-Ausgabe",
+    "img": "1917-11-28.0.png"
+  },
+  {
+    "sendAfter": "2017-11-28 19:35",
+    "status": "Heftige Kämpfe um Bourlon und Fontaine. 28.11.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-11-28/27971740",
+    "alt_text": "Berliner Volkszeitung 28.11.1917 Abend-Ausgabe",
+    "img": "1917-11-28.2.png"
+  },
+  {
+    "sendAfter": "2017-11-29 10:35",
+    "status": "Petersburg und Berlin in drahtloser Verbindung? 29.11.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-11-29/27971740",
+    "alt_text": "Berliner Volkszeitung 29.11.1917 Morgen-Ausgabe",
+    "img": "1917-11-29.0.png"
+  },
+  {
+    "sendAfter": "2017-11-25 19:35",
+    "status": "Abflauen der Kämpfe bei Cambrai. 29.11.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-11-29/27971740",
+    "alt_text": "Berliner Volkszeitung 29.11.1917 Abend-Ausgabe",
+    "img": "1917-11-29.2.png"
+  },
+  {
+    "sendAfter": "2017-11-30 10:35",
+    "status": "Graf Hertling zu einem neuen russischen Friedensangebot. 30.11.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-11-30/27971740",
+    "alt_text": "Berliner Volkszeitung 30.11.1917 Morgen-Ausgabe",
+    "img": "1917-11-30.0.png"
+  },
+  {
+    "sendAfter": "2017-11-30 19:35",
+    "status": "Neuer vergeblicher englischer Angriff bei Bourlon. 30.11.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-11-30/27971740",
+    "alt_text": "Berliner Volkszeitung 30.11.1917 Abend-Ausgabe",
+    "img": "1917-11-30.2.png"
   },
   {
     "sendAfter": "2017-12-07 15:27",

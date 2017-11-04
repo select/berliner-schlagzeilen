@@ -200,19 +200,22 @@
     "sendAfter": "2017-11-03 18:35",
     "status": "Bisher über 200 000 Italiener gefangen. 03.11.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-11-03/27971740",
     "alt_text": "Berliner Volkszeitung 03.11.1917 Abend-Ausgabe",
-    "img": "1917-11-03.2.png"
+    "img": "1917-11-03.2.png",
+    "tweetId": 926505556113797100
   },
   {
     "sendAfter": "2017-11-04 10:35",
     "status": "Starkes Feuer in Flandern. 04.11.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-11-04/27971740",
     "alt_text": "Berliner Volkszeitung 04.11.1917 Morgen-Ausgabe",
-    "img": "1917-11-04.0.png"
+    "img": "1917-11-04.0.png",
+    "tweetId": 926747163383574500
   },
   {
     "sendAfter": "2017-11-04 19:35",
     "status": "Hinter den großen Ereignissen: Berlin am 04.11.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-11-04/27971740",
     "alt_text": "Berliner Volkszeitung 04.11.1917 Morgen-Ausgabe",
-    "img": "1917-11-04.2.png"
+    "img": "1917-11-04.2.png",
+    "error": "Error: ENOENT: no such file or directory, open '/home/select/Dev/berliner-schlagzeilen/src/../data/img/1917-11-04.2.png'"
   },
   {
     "sendAfter": "2017-11-05 10:35",

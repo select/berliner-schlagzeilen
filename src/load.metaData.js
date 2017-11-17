@@ -20,7 +20,7 @@ const crawler = new Crawler({
 	userAgent:
 		'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.111 Safari/537.36 Vivaldi/1.8.770.50',
 	jQuery: jsdom,
-	maxConnections: 10,
+	maxConnections: 3,
 	// This will be called for each crawled page
 	callback: (error, res, done) => {
 		if (error) {

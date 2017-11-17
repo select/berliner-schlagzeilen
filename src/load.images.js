@@ -9,15 +9,17 @@ const data = require(config.date2mIdPath);
 const urls = data.reduce(
 	(acc, { date, ids }) => [
 		...acc,
-		...ids.map((id, index) => ({
-			uri: `http://ztcs.staatsbibliothek-berlin.de/zefys_contentServer.php?action=metsImage&format=png&metsFile=${id}&divID=phys_1&width=1200&metsFileGroup=PRESENTATION`,
-			filename: `${date}.${index}.png`,
-		})),
+		...ids
+			.filter((id, index) => !fs.existsSync(`${config.dataDir}/img/raw/${date}.${index}.png`))
+			.map((id, index) => ({
+				uri: `http://ztcs.staatsbibliothek-berlin.de/zefys_contentServer.php?action=metsImage&format=png&metsFile=${id}&divID=phys_1&width=1200&metsFileGroup=PRESENTATION`,
+				filename: `${date}.${index}.png`,
+			})),
 	],
 	[]
 );
 
-console.log('urls', urls);
+console.log('num urls', urls.lenth);
 
 var crawler = new Crawler({
 	encoding: null,

@@ -19,12 +19,12 @@ const urls = data.reduce(
 	[]
 );
 
-console.log('num urls', urls.lenth);
+console.log('num urls', urls.length);
 
 var crawler = new Crawler({
 	encoding: null,
 	jQuery: false, // set false to suppress warning message.
-	maxConnections: 10,
+	maxConnections: 2,
 	callback: function(err, res, done) {
 		if (err) {
 			console.error(err.stack);

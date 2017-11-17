@@ -387,7 +387,8 @@
     "sendAfter": "2017-11-17 10:35",
     "status": "Neue Erfolge zwischen Brenta und Piave. 17.11.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-11-17/27971740",
     "alt_text": "Berliner Volkszeitung 17.11.1917 Morgen-Ausgabe",
-    "img": "1917-11-17.0.png"
+    "img": "1917-11-17.0.png",
+    "tweetId": 931458215728091100
   },
   {
     "sendAfter": "2017-11-17 19:35",
@@ -538,17 +539,5 @@
     "status": "Ende der Schlacht von Cambrai. 07.12.1917 https://de.wikipedia.org/wiki/Schlacht_von_Cambrai",
     "alt_text": "Schlacht von Cambrai 1917",
     "img": "WWITrenchCambrai.jpg"
-  },
-  {
-    "sendAfter": "2017-12-17 10:35",
-    "status": "28 Tage Waffenstillstand mit Rußland. 17.12.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-12-17/27971740",
-    "alt_text": "Berliner Volkszeitung 17.12.1917 Abend-Ausgabe",
-    "img": "1917-11-17.2.png"
-  },
-  {
-    "sendAfter": "2017-11-17 10:35",
-    "status": "Sieg der Bolschewiki über Kaledin. 16.11.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-11-16/27971740",
-    "alt_text": "Berliner Volkszeitung 16.11.1917 Morgen-Ausgabe",
-    "img": "1917-11-16.1.png"
   }
 ]

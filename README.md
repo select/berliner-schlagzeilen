@@ -17,20 +17,53 @@ https://codingdavinci.de/
 Clone the git project 
 
 ```
-git clone
+git clone git@github.com:shoutrlabs/berliner-schlagzeilen.git
 ```
 
 Then install all dependecies.
 ```
-npm install
+cd berliner-schlagzeilen
+npm i
 ```
 
-## Getting data
+## Running
 
-You can find the map between the date and the metadata file ids for the  **Berliner Volkszeitung** at `data/date2metaDataId.json`. Read more if you want to know how the script works.
+First we need to scrape the Zefys site to get the hash id under which we can can download the images for each newspaper
 
+```
+node ./src/load.metaData.js
+```
 
-From the derived URLs, so called [METS](https://www.loc.gov/standards/mets/) files can be obtained. A METS file contains e.g. the following sections that are relevant here:
+This will generate the file `date2metaDataId.json` with entries like
+```
+{
+    "date": "1917-11-19",
+    "ids": [
+      "10e23300-0776-4ca8-af12-d9026cfd8f8b",
+      "a3918c61-3a39-4a9c-b06e-23c36f1885ba"
+    ]
+  },
+```
+
+Now we can download the images with
+
+```
+node ./src/load.images.js
+```
+
+This will download all images from `date2metaDataId.json` to the `data/img` directory. From the images we can now generate empty tweets.
+
+```
+node ./src/init.tweets.js
+```
+
+This will extend the `data/tweets.json` file. The messages have to be written by hand. 
+
+In the future we can extend this process by automatically retrieving the texts from OCR scans of the images. This is currently not possible due to API restrictions, but once this the API is ready the next section explains where the ORC information can be retrieved.
+
+## Getting Metadata and links to OCR files
+
+Using the ids in `date2metaDataId.json` we can generate URLs to get so called [METS](https://www.loc.gov/standards/mets/) files. A METS file contains the following sections:
 
 Metadata about the publication sits in
 ```xml
@@ -62,22 +95,7 @@ that contain elements with URIs for the various data objects per newspaper page
 </mets:file>
 ```
 
-## Date to metadata script
-
-Run the script with
-
-```
-./src/metadata.js
-```
-
-The generated mapping can be found at 
-
-```
-data/date2metaDataId.json
-```
-
-This is the page where we can get the identifiers for each newspaper.
-There can be multiple issues for one newspaper for one day.
+## Newspaper id mappings
 
 ```
 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-02-07/27971740/?no_cache=1
@@ -90,7 +108,7 @@ The identifiers for the other Berlin newspapers are:
 - Berliner Börsenzeitung ```2436020X``` (1872-1930)
 - Norddeutsche Allgemeine Zeitung ```28028685``` (1879-1919)
 
-From this page we scrape the identifier `454dde27-b9f4-4faf-987f-ee73cad2c351` and generate the link to the XML metadata file.
+On the URL above we scrape the identifier `454dde27-b9f4-4faf-987f-ee73cad2c351` and generate the link to the XML metadata file.
 
 ```
 http://zefys.staatsbibliothek-berlin.de/oai/?tx_zefysoai_pi1[identifier]=454dde27-b9f4-4faf-987f-ee73cad2c351

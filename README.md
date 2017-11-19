@@ -49,13 +49,13 @@ Now we can download the images with
 node ./src/load.images.js
 ```
 
-This will download all images from `date2metaDataId.json` to the `data/img` directory. From the images we can now generate empty tweets.
+This will download all images from `date2metaDataId.json` to the `data/img/raw` directory. We now look at each image and manually crop a nice version into the `data/img` directory. From the images in `data/img` we can now generate empty tweets.
 
 ```
 node ./src/init.tweets.js
 ```
 
-This will extend the `data/tweets.json` file. The messages have to be written by hand. 
+The script extends the `data/tweets.json` file. The messages have to be written manually.
 
 In the future we can extend this process by automatically retrieving the texts from OCR scans of the images. This is currently not possible due to API restrictions, but once this the API is ready the next section explains where the ORC information can be retrieved.
 

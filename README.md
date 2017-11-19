@@ -75,7 +75,7 @@ To send tweets run.
 node ./src/tweet.js
 ```
 
-This will look if there is a tweet with a date-time lower than the current date-time in `sendAfter` and a falsy `tweetId`. As soon as a tweet is successfully send the `tweetId` is filled. If there was an error sending the tweet an `error` field is added to the tweet.
+The script checks if there is a tweet with a date-time lower than the current date-time in `sendAfter` and a falsy `tweetId`. As soon as a tweet is successfully send the `tweetId` is filled. If there was an error sending the tweet an `error` field is added to the tweet.
 
 ```
 {

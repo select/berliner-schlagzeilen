@@ -2,15 +2,13 @@
 
 Die Berliner Volks-Zeitung war vor 100 Jahren die Tageszeitung für die Metropole Berlin. Mit Sensationen und Unterhaltung wurde sie zur erfolgreichsten Boulevardzeitung der Zeit.
 
-# [twitter.com/Volkszeitung100](https://twitter.com/Volkszeitung100)
+We tweet every day the news from exactly 100 years ago
 
-https://hackdash.org/projects/59ec6cc287d0970a0e0a3ca8
+# [twitter.com/volkszeitung100](https://twitter.com/Volkszeitung100)
 
-This project was created during the Coding Da Vinci 2017 using the Zefys database.
+This project was created during the [Coding Da Vinci](https://codingdavinci.de/) hackaton 2017 using the [Zefys database](http://zefys.staatsbibliothek-berlin.de/).
 
-http://zefys.staatsbibliothek-berlin.de/
-
-https://codingdavinci.de/
+Our project is also present on the official Coding Da Vinci [Hackdash](https://hackdash.org/projects/59ec6cc287d0970a0e0a3ca8)
 
 ## Installation
 

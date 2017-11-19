@@ -55,7 +55,46 @@ This will download all images from `date2metaDataId.json` to the `data/img/raw` 
 node ./src/init.tweets.js
 ```
 
-The script extends the `data/tweets.json` file. The messages have to be written manually.
+The script extends the `data/tweets.json` file. The messages have to be written manually (the `status` field needs to be exented). This is an example entry.
+
+```
+{
+    "sendAfter": "2017-11-06 19:35",
+    "status": "… 06.11.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-11-06/27971740",
+    "alt_text": "Berliner Volkszeitung 06.11.1917 Abend-Ausgabe",
+    "img": "1917-11-06.2.png",
+    "tweetId": 0
+  }
+```
+
+To send tweets run.
+
+```
+node ./src/tweet.js
+```
+
+This will look if there is a tweet with a date-time lower than the current date-time in `sendAfter` and a falsy `tweetId`. As soon as a tweet is successfully send the `tweetId` is filled. If there was an error sending the tweet an `error` field is added to the tweet.
+
+```
+{
+    "sendAfter": "2017-11-02 19:35",
+    "status": "Hertling Reichskanzler. 02.11.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-11-02/27971740",
+    "alt_text": "Berliner Volkszeitung 02.11.1917 Abend-Ausgabe",
+    "img": "1917-11-02.2.png",
+    "error": "Error: ENOENT: no such file or directory, open '/home/select/Dev/berliner-schlagzeilen/src/../data/img/1917-11-02.2.png'"
+  },
+```
+
+Also tweets containing an `error` will be skipped.
+
+To automate sending tweets we create a cronjob that tries to tweet every x minutes
+
+```
+# To create the coronjob run the followin command
+# crontab -e
+# then add the following line (and adapt the paths)
+*/15 * * * *  /path/to/src/tweet.js >> /path/to/log/cron.log 2>&1
+```
 
 In the future we can extend this process by automatically retrieving the texts from OCR scans of the images. This is currently not possible due to API restrictions, but once this the API is ready the next section explains where the ORC information can be retrieved.
 

@@ -2,9 +2,11 @@
 
 Die Berliner Volks-Zeitung war vor 100 Jahren die Tageszeitung für die Metropole Berlin. Mit Sensationen und Unterhaltung wurde sie zur erfolgreichsten Boulevardzeitung der Zeit.
 
-We tweet every day the news from exactly 100 years ago
+We tweet news headlines and newspaper images of the Berliner Volks-Zeitung from exactly 100 years ago, every day.
 
 # [twitter.com/volkszeitung100](https://twitter.com/Volkszeitung100)
+
+## Motivation
 
 This project was created during the [Coding Da Vinci](https://codingdavinci.de/) hackaton 2017 using the [Zefys database](http://zefys.staatsbibliothek-berlin.de/).
 

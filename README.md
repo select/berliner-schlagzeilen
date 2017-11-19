@@ -12,17 +12,26 @@ This project was created during the [Coding Da Vinci](https://codingdavinci.de/)
 
 Our project is also present on the official Coding Da Vinci [Hackdash](https://hackdash.org/projects/59ec6cc287d0970a0e0a3ca8)
 
+## Community
+
+Add your ideas and questions to our [issue tracker](https://github.com/shoutrlabs/berliner-schlagzeilen/issues).
+
+Talk to us directly, join our chat on [slack](https://join.slack.com/t/cdvb17/shared_invite/enQtMjU5OTM1MzkwNzM5LTQ1N2MzYWY4MmNhYjM0NTYyZTNhMGYyOWVmNzVkYjRiOTJlMmEwOTA0YjkyMjViMWZkNzBkNzZiOWYwNGJmM2U).
+
 ## Installation
 
-Clone the git project 
-
+Clone the git project.
 ```
 git clone git@github.com:shoutrlabs/berliner-schlagzeilen.git
 ```
 
-Then install all dependecies.
+Go to the new directory.
 ```
 cd berliner-schlagzeilen
+```
+
+Install all dependecies.
+```
 npm i
 ```
 

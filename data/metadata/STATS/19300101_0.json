@@ -1,0 +1,16 @@
+{ "metad":
+ { "titre": "Volkszeitung (1890-1904) /Berliner Volkszeitung (1904-1930)",
+   "dateEdition": "1930-01-01",
+   "Jahrgang": "078",
+   "Nummer": "078",
+   "nbPage": 4,
+     "suppl": "FALSE"},
+  "contenus": {
+     "nbArticle": 0,
+     "largeur": 350,
+     "hauteur": 510,
+  "page": [
+    {"nbMot": 1374, "blocTexte": 16, "blocGraphics": 36, "blocComposed": 4, "blocIllustration": 8},
+    {"nbMot": 2438, "blocTexte": 5, "blocGraphics": 4, "blocComposed": 1, "blocIllustration": 1},
+    {"nbMot": 1931, "blocTexte": 27, "blocGraphics": 43, "blocComposed": 5, "blocIllustration": 4},
+    {"nbMot": 1158, "blocTexte": 62, "blocGraphics": 83, "blocComposed": 2, "blocIllustration": 3}]}}

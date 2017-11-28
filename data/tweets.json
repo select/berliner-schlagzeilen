@@ -147,15 +147,15 @@
   },
   {
     "sendAfter": "2017-10-31 20:35",
+    "status": "Der Erste Weltkrieg auf @dctp_tv https://www.youtube.com/watch?v=IkB2lNYUl_U #ErsterWeltkrieg",
+    "tweetId": 925778928580595700
+  },
+  {
+    "sendAfter": "2017-10-31 20:35",
     "status": "Günstiger Fortgang des Vormarsches in Italien. 31.10.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-10-31/27971740",
     "alt_text": "Berliner Volkszeitung 31.10.1917 Abend-Ausgabe",
     "img": "1917-10-31.2.png",
     "tweetId": 925779758968918000
-  },
-  {
-    "sendAfter": "2017-10-31 20:35",
-    "status": "Der Erste Weltkrieg auf @dctp_tv https://www.youtube.com/watch?v=IkB2lNYUl_U #ErsterWeltkrieg",
-    "tweetId": 925778928580595700
   },
   {
     "sendAfter": "2017-11-01 10:35",
@@ -952,13 +952,13 @@
     "sendAfter": "2018-01-05 10:35",
     "status": "05.01.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-01-05/27971740 #1918LIVE",
     "alt_text": "Berliner Volkszeitung 05.01.1918 Morgen-Ausgabe",
-    "img": "1918-01-05.0.png"
+    "img": "1918-01-05.2.png"
   },
   {
     "sendAfter": "2018-01-05 10:35",
     "status": "05.01.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-01-05/27971740 #1918LIVE",
     "alt_text": "Berliner Volkszeitung 05.01.1918 Morgen-Ausgabe",
-    "img": "1918-01-05.2.png"
+    "img": "1918-01-05.0.png"
   },
   {
     "sendAfter": "2018-01-06 10:35",
@@ -970,13 +970,13 @@
     "sendAfter": "2018-01-07 10:35",
     "status": "07.01.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-01-07/27971740 #1918LIVE",
     "alt_text": "Berliner Volkszeitung 07.01.1918 Morgen-Ausgabe",
-    "img": "1918-01-07.0.png"
+    "img": "1918-01-07.1.png"
   },
   {
     "sendAfter": "2018-01-07 10:35",
     "status": "07.01.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-01-07/27971740 #1918LIVE",
     "alt_text": "Berliner Volkszeitung 07.01.1918 Morgen-Ausgabe",
-    "img": "1918-01-07.1.png"
+    "img": "1918-01-07.0.png"
   },
   {
     "sendAfter": "2018-01-08 10:35",
@@ -1204,13 +1204,13 @@
     "sendAfter": "2018-01-28 10:35",
     "status": "28.01.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-01-28/27971740",
     "alt_text": "Berliner Volkszeitung 28.01.1918 Morgen-Ausgabe",
-    "img": "1918-01-28.0.png"
+    "img": "1918-01-28.1.png"
   },
   {
     "sendAfter": "2018-01-28 10:35",
     "status": "28.01.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-01-28/27971740",
     "alt_text": "Berliner Volkszeitung 28.01.1918 Morgen-Ausgabe",
-    "img": "1918-01-28.1.png"
+    "img": "1918-01-28.0.png"
   },
   {
     "sendAfter": "2018-01-29 10:35",
@@ -1247,5 +1247,647 @@
     "status": "01.02.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-02-01/27971740",
     "alt_text": "Berliner Volkszeitung 01.02.1918 Morgen-Ausgabe",
     "img": "1918-02-01.0.png"
+  },
+  {
+    "sendAfter": "2018-02-02 10:35",
+    "status": "02.02.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-02-02/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 02.02.1918 Morgen-Ausgabe",
+    "img": "1918-02-02.1.png"
+  },
+  {
+    "sendAfter": "2018-02-02 18:35",
+    "status": "02.02.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-02-02/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 02.02.1918 Abend-Ausgabe",
+    "img": "1918-02-02.2.png"
+  },
+  {
+    "sendAfter": "2018-02-03 10:35",
+    "status": "03.02.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-02-03/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 03.02.1918 Morgen-Ausgabe",
+    "img": "1918-02-03.0.png"
+  },
+  {
+    "sendAfter": "2018-02-04 10:35",
+    "status": "04.02.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-02-04/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 04.02.1918 Morgen-Ausgabe",
+    "img": "1918-02-04.0.png"
+  },
+  {
+    "sendAfter": "2018-02-04 18:35",
+    "status": "04.02.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-02-04/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 04.02.1918 Abend-Ausgabe",
+    "img": "1918-02-04.1.png"
+  },
+  {
+    "sendAfter": "2018-02-05 10:35",
+    "status": "05.02.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-02-05/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 05.02.1918 Morgen-Ausgabe",
+    "img": "1918-02-05.1.png"
+  },
+  {
+    "sendAfter": "2018-02-05 18:35",
+    "status": "05.02.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-02-05/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 05.02.1918 Abend-Ausgabe",
+    "img": "1918-02-05.2.png"
+  },
+  {
+    "sendAfter": "2018-02-06 10:35",
+    "status": "06.02.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-02-06/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 06.02.1918 Morgen-Ausgabe",
+    "img": "1918-02-06.0.png"
+  },
+  {
+    "sendAfter": "2018-02-06 18:35",
+    "status": "06.02.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-02-06/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 06.02.1918 Abend-Ausgabe",
+    "img": "1918-02-06.2.png"
+  },
+  {
+    "sendAfter": "2018-02-07 10:35",
+    "status": "07.02.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-02-07/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 07.02.1918 Morgen-Ausgabe",
+    "img": "1918-02-07.0.png"
+  },
+  {
+    "sendAfter": "2018-02-07 18:35",
+    "status": "07.02.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-02-07/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 07.02.1918 Abend-Ausgabe",
+    "img": "1918-02-07.2.png"
+  },
+  {
+    "sendAfter": "2018-02-08 10:35",
+    "status": "08.02.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-02-08/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 08.02.1918 Morgen-Ausgabe",
+    "img": "1918-02-08.0.png"
+  },
+  {
+    "sendAfter": "2018-02-08 18:35",
+    "status": "08.02.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-02-08/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 08.02.1918 Abend-Ausgabe",
+    "img": "1918-02-08.2.png"
+  },
+  {
+    "sendAfter": "2018-02-09 10:35",
+    "status": "09.02.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-02-09/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 09.02.1918 Morgen-Ausgabe",
+    "img": "1918-02-09.0.png"
+  },
+  {
+    "sendAfter": "2018-02-09 18:35",
+    "status": "09.02.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-02-09/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 09.02.1918 Abend-Ausgabe",
+    "img": "1918-02-09.2.png"
+  },
+  {
+    "sendAfter": "2018-02-10 10:35",
+    "status": "10.02.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-02-10/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 10.02.1918 Morgen-Ausgabe",
+    "img": "1918-02-10.1.png"
+  },
+  {
+    "sendAfter": "2018-02-11 10:35",
+    "status": "11.02.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-02-11/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 11.02.1918 Morgen-Ausgabe",
+    "img": "1918-02-11.0.png"
+  },
+  {
+    "sendAfter": "2018-02-11 18:35",
+    "status": "11.02.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-02-11/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 11.02.1918 Abend-Ausgabe",
+    "img": "1918-02-11.1.png"
+  },
+  {
+    "sendAfter": "2018-02-12 10:35",
+    "status": "12.02.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-02-12/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 12.02.1918 Morgen-Ausgabe",
+    "img": "1918-02-12.0.png"
+  },
+  {
+    "sendAfter": "2018-02-12 18:35",
+    "status": "12.02.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-02-12/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 12.02.1918 Abend-Ausgabe",
+    "img": "1918-02-12.2.png"
+  },
+  {
+    "sendAfter": "2018-02-13 10:35",
+    "status": "13.02.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-02-13/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 13.02.1918 Morgen-Ausgabe",
+    "img": "1918-02-13.0.png"
+  },
+  {
+    "sendAfter": "2018-02-13 18:35",
+    "status": "13.02.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-02-13/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 13.02.1918 Abend-Ausgabe",
+    "img": "1918-02-13.2.png"
+  },
+  {
+    "sendAfter": "2018-02-14 10:35",
+    "status": "14.02.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-02-14/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 14.02.1918 Morgen-Ausgabe",
+    "img": "1918-02-14.0.png"
+  },
+  {
+    "sendAfter": "2018-02-14 18:35",
+    "status": "14.02.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-02-14/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 14.02.1918 Abend-Ausgabe",
+    "img": "1918-02-14.2.png"
+  },
+  {
+    "sendAfter": "2018-02-15 10:35",
+    "status": "15.02.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-02-15/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 15.02.1918 Morgen-Ausgabe",
+    "img": "1918-02-15.0.png"
+  },
+  {
+    "sendAfter": "2018-02-16 10:35",
+    "status": "16.02.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-02-16/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 16.02.1918 Morgen-Ausgabe",
+    "img": "1918-02-16.0.png"
+  },
+  {
+    "sendAfter": "2018-02-16 18:35",
+    "status": "16.02.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-02-16/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 16.02.1918 Abend-Ausgabe",
+    "img": "1918-02-16.2.png"
+  },
+  {
+    "sendAfter": "2018-02-17 10:35",
+    "status": "17.02.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-02-17/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 17.02.1918 Morgen-Ausgabe",
+    "img": "1918-02-17.0.png"
+  },
+  {
+    "sendAfter": "2018-02-18 10:35",
+    "status": "18.02.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-02-18/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 18.02.1918 Morgen-Ausgabe",
+    "img": "1918-02-18.0.png"
+  },
+  {
+    "sendAfter": "2018-02-18 18:35",
+    "status": "18.02.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-02-18/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 18.02.1918 Abend-Ausgabe",
+    "img": "1918-02-18.1.png"
+  },
+  {
+    "sendAfter": "2018-02-19 10:35",
+    "status": "19.02.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-02-19/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 19.02.1918 Morgen-Ausgabe",
+    "img": "1918-02-19.0.png"
+  },
+  {
+    "sendAfter": "2018-02-19 18:35",
+    "status": "19.02.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-02-19/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 19.02.1918 Abend-Ausgabe",
+    "img": "1918-02-19.2.png"
+  },
+  {
+    "sendAfter": "2018-02-20 10:35",
+    "status": "20.02.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-02-20/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 20.02.1918 Morgen-Ausgabe",
+    "img": "1918-02-20.0.png"
+  },
+  {
+    "sendAfter": "2018-02-20 18:35",
+    "status": "20.02.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-02-20/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 20.02.1918 Abend-Ausgabe",
+    "img": "1918-02-20.2.png"
+  },
+  {
+    "sendAfter": "2018-02-21 10:35",
+    "status": "21.02.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-02-21/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 21.02.1918 Morgen-Ausgabe",
+    "img": "1918-02-21.0.png"
+  },
+  {
+    "sendAfter": "2018-02-21 18:35",
+    "status": "21.02.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-02-21/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 21.02.1918 Abend-Ausgabe",
+    "img": "1918-02-21.2.png"
+  },
+  {
+    "sendAfter": "2018-02-22 10:35",
+    "status": "22.02.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-02-22/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 22.02.1918 Morgen-Ausgabe",
+    "img": "1918-02-22.1.png"
+  },
+  {
+    "sendAfter": "2018-02-22 18:35",
+    "status": "22.02.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-02-22/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 22.02.1918 Abend-Ausgabe",
+    "img": "1918-02-22.2.png"
+  },
+  {
+    "sendAfter": "2018-02-23 10:35",
+    "status": "23.02.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-02-23/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 23.02.1918 Morgen-Ausgabe",
+    "img": "1918-02-23.0.png"
+  },
+  {
+    "sendAfter": "2018-02-23 18:35",
+    "status": "23.02.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-02-23/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 23.02.1918 Abend-Ausgabe",
+    "img": "1918-02-23.2.png"
+  },
+  {
+    "sendAfter": "2018-02-24 10:35",
+    "status": "24.02.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-02-24/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 24.02.1918 Morgen-Ausgabe",
+    "img": "1918-02-24.1.png"
+  },
+  {
+    "sendAfter": "2018-02-25 10:35",
+    "status": "25.02.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-02-25/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 25.02.1918 Morgen-Ausgabe",
+    "img": "1918-02-25.0.png"
+  },
+  {
+    "sendAfter": "2018-02-25 18:35",
+    "status": "25.02.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-02-25/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 25.02.1918 Abend-Ausgabe",
+    "img": "1918-02-25.1.png"
+  },
+  {
+    "sendAfter": "2018-02-26 10:35",
+    "status": "26.02.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-02-26/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 26.02.1918 Morgen-Ausgabe",
+    "img": "1918-02-26.1.png"
+  },
+  {
+    "sendAfter": "2018-02-26 18:35",
+    "status": "26.02.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-02-26/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 26.02.1918 Abend-Ausgabe",
+    "img": "1918-02-26.2.png"
+  },
+  {
+    "sendAfter": "2018-02-27 10:35",
+    "status": "27.02.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-02-27/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 27.02.1918 Morgen-Ausgabe",
+    "img": "1918-02-27.0.png"
+  },
+  {
+    "sendAfter": "2018-02-27 18:35",
+    "status": "27.02.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-02-27/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 27.02.1918 Abend-Ausgabe",
+    "img": "1918-02-27.2.png"
+  },
+  {
+    "sendAfter": "2018-02-28 10:35",
+    "status": "28.02.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-02-28/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 28.02.1918 Morgen-Ausgabe",
+    "img": "1918-02-28.0.png"
+  },
+  {
+    "sendAfter": "2018-02-28 18:35",
+    "status": "28.02.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-02-28/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 28.02.1918 Abend-Ausgabe",
+    "img": "1918-02-28.2.png"
+  },
+  {
+    "sendAfter": "2018-03-01 10:35",
+    "status": "01.03.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-03-01/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 01.03.1918 Morgen-Ausgabe",
+    "img": "1918-03-01.1.png"
+  },
+  {
+    "sendAfter": "2018-03-01 18:35",
+    "status": "01.03.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-03-01/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 01.03.1918 Abend-Ausgabe",
+    "img": "1918-03-01.2.png"
+  },
+  {
+    "sendAfter": "2018-03-02 10:35",
+    "status": "02.03.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-03-02/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 02.03.1918 Morgen-Ausgabe",
+    "img": "1918-03-02.1.png"
+  },
+  {
+    "sendAfter": "2018-03-02 18:35",
+    "status": "02.03.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-03-02/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 02.03.1918 Abend-Ausgabe",
+    "img": "1918-03-02.2.png"
+  },
+  {
+    "sendAfter": "2018-03-03 10:35",
+    "status": "03.03.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-03-03/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 03.03.1918 Morgen-Ausgabe",
+    "img": "1918-03-03.1.png"
+  },
+  {
+    "sendAfter": "2018-03-04 10:35",
+    "status": "04.03.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-03-04/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 04.03.1918 Morgen-Ausgabe",
+    "img": "1918-03-04.0.png"
+  },
+  {
+    "sendAfter": "2018-03-04 18:35",
+    "status": "04.03.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-03-04/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 04.03.1918 Abend-Ausgabe",
+    "img": "1918-03-04.1.png"
+  },
+  {
+    "sendAfter": "2018-03-05 10:35",
+    "status": "05.03.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-03-05/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 05.03.1918 Morgen-Ausgabe",
+    "img": "1918-03-05.1.png"
+  },
+  {
+    "sendAfter": "2018-03-05 18:35",
+    "status": "05.03.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-03-05/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 05.03.1918 Abend-Ausgabe",
+    "img": "1918-03-05.2.png"
+  },
+  {
+    "sendAfter": "2018-03-06 10:35",
+    "status": "06.03.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-03-06/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 06.03.1918 Morgen-Ausgabe",
+    "img": "1918-03-06.1.png"
+  },
+  {
+    "sendAfter": "2018-03-06 18:35",
+    "status": "06.03.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-03-06/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 06.03.1918 Abend-Ausgabe",
+    "img": "1918-03-06.2.png"
+  },
+  {
+    "sendAfter": "2018-03-07 10:35",
+    "status": "07.03.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-03-07/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 07.03.1918 Morgen-Ausgabe",
+    "img": "1918-03-07.0.png"
+  },
+  {
+    "sendAfter": "2018-03-07 18:35",
+    "status": "07.03.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-03-07/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 07.03.1918 Abend-Ausgabe",
+    "img": "1918-03-07.2.png"
+  },
+  {
+    "sendAfter": "2018-03-08 10:35",
+    "status": "08.03.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-03-08/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 08.03.1918 Morgen-Ausgabe",
+    "img": "1918-03-08.1.png"
+  },
+  {
+    "sendAfter": "2018-03-08 18:35",
+    "status": "08.03.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-03-08/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 08.03.1918 Abend-Ausgabe",
+    "img": "1918-03-08.2.png"
+  },
+  {
+    "sendAfter": "2018-03-09 10:35",
+    "status": "09.03.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-03-09/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 09.03.1918 Morgen-Ausgabe",
+    "img": "1918-03-09.0.png"
+  },
+  {
+    "sendAfter": "2018-03-09 18:35",
+    "status": "09.03.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-03-09/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 09.03.1918 Abend-Ausgabe",
+    "img": "1918-03-09.2.png"
+  },
+  {
+    "sendAfter": "2018-03-10 10:35",
+    "status": "10.03.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-03-10/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 10.03.1918 Morgen-Ausgabe",
+    "img": "1918-03-10.0.png"
+  },
+  {
+    "sendAfter": "2018-03-11 10:35",
+    "status": "11.03.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-03-11/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 11.03.1918 Morgen-Ausgabe",
+    "img": "1918-03-11.0.png"
+  },
+  {
+    "sendAfter": "2018-03-11 18:35",
+    "status": "11.03.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-03-11/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 11.03.1918 Abend-Ausgabe",
+    "img": "1918-03-11.1.png"
+  },
+  {
+    "sendAfter": "2018-03-12 10:35",
+    "status": "12.03.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-03-12/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 12.03.1918 Morgen-Ausgabe",
+    "img": "1918-03-12.1.png"
+  },
+  {
+    "sendAfter": "2018-03-12 18:35",
+    "status": "12.03.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-03-12/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 12.03.1918 Abend-Ausgabe",
+    "img": "1918-03-12.2.png"
+  },
+  {
+    "sendAfter": "2018-03-13 10:35",
+    "status": "13.03.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-03-13/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 13.03.1918 Morgen-Ausgabe",
+    "img": "1918-03-13.1.png"
+  },
+  {
+    "sendAfter": "2018-03-13 18:35",
+    "status": "13.03.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-03-13/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 13.03.1918 Abend-Ausgabe",
+    "img": "1918-03-13.2.png"
+  },
+  {
+    "sendAfter": "2018-03-14 10:35",
+    "status": "14.03.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-03-14/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 14.03.1918 Morgen-Ausgabe",
+    "img": "1918-03-14.1.png"
+  },
+  {
+    "sendAfter": "2018-03-14 18:35",
+    "status": "14.03.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-03-14/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 14.03.1918 Abend-Ausgabe",
+    "img": "1918-03-14.2.png"
+  },
+  {
+    "sendAfter": "2018-03-15 10:35",
+    "status": "15.03.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-03-15/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 15.03.1918 Morgen-Ausgabe",
+    "img": "1918-03-15.0.png"
+  },
+  {
+    "sendAfter": "2018-03-15 18:35",
+    "status": "15.03.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-03-15/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 15.03.1918 Abend-Ausgabe",
+    "img": "1918-03-15.2.png"
+  },
+  {
+    "sendAfter": "2018-03-16 10:35",
+    "status": "16.03.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-03-16/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 16.03.1918 Morgen-Ausgabe",
+    "img": "1918-03-16.0.png"
+  },
+  {
+    "sendAfter": "2018-03-16 18:35",
+    "status": "16.03.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-03-16/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 16.03.1918 Abend-Ausgabe",
+    "img": "1918-03-16.2.png"
+  },
+  {
+    "sendAfter": "2018-03-17 10:35",
+    "status": "17.03.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-03-17/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 17.03.1918 Morgen-Ausgabe",
+    "img": "1918-03-17.1.png"
+  },
+  {
+    "sendAfter": "2018-03-18 10:35",
+    "status": "18.03.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-03-18/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 18.03.1918 Morgen-Ausgabe",
+    "img": "1918-03-18.0.png"
+  },
+  {
+    "sendAfter": "2018-03-18 18:35",
+    "status": "18.03.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-03-18/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 18.03.1918 Abend-Ausgabe",
+    "img": "1918-03-18.1.png"
+  },
+  {
+    "sendAfter": "2018-03-19 10:35",
+    "status": "19.03.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-03-19/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 19.03.1918 Morgen-Ausgabe",
+    "img": "1918-03-19.0.png"
+  },
+  {
+    "sendAfter": "2018-03-19 18:35",
+    "status": "19.03.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-03-19/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 19.03.1918 Abend-Ausgabe",
+    "img": "1918-03-19.2.png"
+  },
+  {
+    "sendAfter": "2018-03-20 10:35",
+    "status": "20.03.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-03-20/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 20.03.1918 Morgen-Ausgabe",
+    "img": "1918-03-20.1.png"
+  },
+  {
+    "sendAfter": "2018-03-20 18:35",
+    "status": "20.03.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-03-20/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 20.03.1918 Abend-Ausgabe",
+    "img": "1918-03-20.2.png"
+  },
+  {
+    "sendAfter": "2018-03-21 10:35",
+    "status": "21.03.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-03-21/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 21.03.1918 Morgen-Ausgabe",
+    "img": "1918-03-21.1.png"
+  },
+  {
+    "sendAfter": "2018-03-21 18:35",
+    "status": "21.03.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-03-21/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 21.03.1918 Abend-Ausgabe",
+    "img": "1918-03-21.2.png"
+  },
+  {
+    "sendAfter": "2018-03-22 10:35",
+    "status": "22.03.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-03-22/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 22.03.1918 Morgen-Ausgabe",
+    "img": "1918-03-22.1.png"
+  },
+  {
+    "sendAfter": "2018-03-22 18:35",
+    "status": "22.03.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-03-22/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 22.03.1918 Abend-Ausgabe",
+    "img": "1918-03-22.2.png"
+  },
+  {
+    "sendAfter": "2018-03-23 10:35",
+    "status": "23.03.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-03-23/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 23.03.1918 Morgen-Ausgabe",
+    "img": "1918-03-23.1.png"
+  },
+  {
+    "sendAfter": "2018-03-23 18:35",
+    "status": "23.03.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-03-23/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 23.03.1918 Abend-Ausgabe",
+    "img": "1918-03-23.2.png"
+  },
+  {
+    "sendAfter": "2018-03-24 10:35",
+    "status": "24.03.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-03-24/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 24.03.1918 Morgen-Ausgabe",
+    "img": "1918-03-24.0.png"
+  },
+  {
+    "sendAfter": "2018-03-25 10:35",
+    "status": "25.03.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-03-25/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 25.03.1918 Morgen-Ausgabe",
+    "img": "1918-03-25.0.png"
+  },
+  {
+    "sendAfter": "2018-03-25 18:35",
+    "status": "25.03.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-03-25/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 25.03.1918 Abend-Ausgabe",
+    "img": "1918-03-25.1.png"
+  },
+  {
+    "sendAfter": "2018-03-26 10:35",
+    "status": "26.03.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-03-26/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 26.03.1918 Morgen-Ausgabe",
+    "img": "1918-03-26.0.png"
+  },
+  {
+    "sendAfter": "2018-03-26 18:35",
+    "status": "26.03.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-03-26/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 26.03.1918 Abend-Ausgabe",
+    "img": "1918-03-26.2.png"
+  },
+  {
+    "sendAfter": "2018-03-27 10:35",
+    "status": "27.03.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-03-27/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 27.03.1918 Morgen-Ausgabe",
+    "img": "1918-03-27.0.png"
+  },
+  {
+    "sendAfter": "2018-03-27 18:35",
+    "status": "27.03.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-03-27/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 27.03.1918 Abend-Ausgabe",
+    "img": "1918-03-27.2.png"
+  },
+  {
+    "sendAfter": "2018-03-28 10:35",
+    "status": "28.03.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-03-28/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 28.03.1918 Morgen-Ausgabe",
+    "img": "1918-03-28.0.png"
+  },
+  {
+    "sendAfter": "2018-03-28 18:35",
+    "status": "28.03.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-03-28/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 28.03.1918 Abend-Ausgabe",
+    "img": "1918-03-28.2.png"
+  },
+  {
+    "sendAfter": "2018-03-28 18:35",
+    "status": "28.03.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-03-28/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 28.03.1918 Abend-Ausgabe",
+    "img": "1918-03-28.1.png"
+  },
+  {
+    "sendAfter": "2018-03-29 10:35",
+    "status": "29.03.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-03-29/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 29.03.1918 Morgen-Ausgabe",
+    "img": "1918-03-29.1.png"
+  },
+  {
+    "sendAfter": "2018-03-30 10:35",
+    "status": "30.03.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-03-30/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 30.03.1918 Morgen-Ausgabe",
+    "img": "1918-03-30.0.png"
+  },
+  {
+    "sendAfter": "2018-03-30 18:35",
+    "status": "30.03.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-03-30/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 30.03.1918 Abend-Ausgabe",
+    "img": "1918-03-30.1.png"
+  },
+  {
+    "sendAfter": "2018-03-31 10:35",
+    "status": "31.03.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-03-31/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 31.03.1918 Morgen-Ausgabe",
+    "img": "1918-03-31.0.png"
+  },
+  {
+    "sendAfter": "2018-04-02 10:35",
+    "status": "02.04.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-04-02/27971740 #1918LIVE",
+    "alt_text": "Berliner Volkszeitung 02.04.1918 Morgen-Ausgabe",
+    "img": "1918-04-02.0.png"
   }
 ]

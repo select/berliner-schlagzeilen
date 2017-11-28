@@ -23,7 +23,7 @@ const newTweets = fs.readdirSync(`${config.dataDir}/img`)
 		const mToday = moment(file, 'YYYY-MM-DD').add(100, 'y');
 		return tweet = {
 	    sendAfter: `${mToday.format('YYYY-MM-DD')} ${sendTime}`,
-	    status: `${m.format('DD.MM.YYYY')} http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/${m.format('YYYY-MM-DD')}/27971740`,
+	    status: `${m.format('DD.MM.YYYY')} http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/${m.format('YYYY-MM-DD')}/27971740 #1918LIVE`,
 	    alt_text: `Berliner Volkszeitung ${m.format('DD.MM.YYYY')} ${issue}`,
 	    img: file,
 	  };

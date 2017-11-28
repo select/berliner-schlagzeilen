@@ -26,5 +26,8 @@
     "moment": "^2.19.1",
     "twit": "^2.2.9",
     "xml2js": "^0.4.19"
+  },
+  "devDependencies": {
+    "cleaver": "^0.8.5"
   }
 }

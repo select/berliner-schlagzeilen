@@ -1,0 +1,104 @@
+title: Berliner Schlagzeilen - Tweets von vor 100 Jahren
+author:
+	name: Falko Krause, Erik Koenen, Olivier Wagener
+	github: shoutrlabs
+	url: https://github.com/shoutrlabs/berliner-schlagzeilen
+output: ./documentation/finals.presentation.html
+theme: ./cleaver-select-theme
+controls: true
+
+--
+# Berliner Schlagzeilen
+
+## Tweets von vor 100 Jahren @VolksZeitung100
+
+--
+### Die Berliner Volks-Zeitung
+
+Die Berliner Volks-Zeitung war vor 100 Jahren die Tageszeitung für die Metropole Berlin. Mit Anspruch, Sensationen und Unterhaltung wurde sie zur erfolgreichsten Boulevardzeitung der Zeit.
+<img src="img/1917-11-01.0.png" alt="Volkszeitung Titelseite">
+
+--
+### Unser Ziel ist
+<div>&nbsp;</div>
+Die **Vergangenheit** mit der **Gegenwart** verbiden.
+<div>&nbsp;</div>
+Geschichte einem **breiten Publikum** zugänglich zu machen
+<div>&nbsp;</div>
+**Spass** haben!
+
+--
+### Der Twitter Bot
+Wir tweeten die Schlagzeilen und ein Bild der Titelseite von vor 100 Jahren jeden Tag, auf den Tag.
+<div>&nbsp;</div>
+<img src="img/code.example.png" alt="Twitter bot Code Beispiel">
+
+--
+### Fake it till you ~~make~~ automate it
+Wir tweeten seit dem letzten Abend des Hackatons.
+
+<div>&nbsp;</div>
+<img src="img/our-scripts.png" alt="Screenshots of scripts collection">
+<div>&nbsp;</div>
+Dann haben wir angefangen die Tweets automatisiert.
+
+--
+### Followers
+<img src="img/follower.number.png" alt="66 Follower im Moment">
+<img src="img/followers.png" alt="Follower Graph">
+
+--
+### Followers
+Wir hatten eigentlich gehofft **100 Follower** bis heute zubekomen.
+
+Aber es ist noch zu spät!
+
+# @volkszeitung100
+
+<div style="text-align: center;">
+https://twitter.com/Volkszeitung100
+</div>
+
+--
+### Impressions and Mentions Oct '17
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div class="left">
+	<img src="img/impressions.png" alt="">
+</div>
+<div class="right">
+	<img src="img/mentions.png" alt="">
+</div>
+--
+<img src="img/mentions-follower.png" alt="asynchronous encryption">
+
+--
+<img src="img/profiel-mentions.last28d.png" alt="asynchronous encryption">
+
+--
+<img src="img/summary.oct17.png" alt="">
+
+--
+### Top Follower Oct '17
+<img src="img/top-follower.oct17.png" alt="">
+
+--
+### Top Tweet Oct '17
+<img src="img/top-tweet.oct17.png" alt="">
+
+--
+<img src="img/tweets-impressions.png" alt="">
+
+--
+## Links und Code
+Ihr wollt uns helfen? Ich wollt auch Tweeten? 
+
+
+--
+## just a test
+<div class="left">
+	left
+</div>
+<div class="right">
+	right
+</div>

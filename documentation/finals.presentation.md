@@ -15,7 +15,10 @@ controls: true
 
 --
 ### Idee
-Wir verbinden die Vergangenheit mit der Gegenwart und wollen Geschichte dem breiten Publikum heute zugänglich machen.
+"The newspapers are making morning after morning the rough draft of history."
+The State (Columbia, South Carolina) December 5, 1905
+
+Wir verbinden die Vergangenheit mit der Gegenwart und wollen die in Zeitungsseiten konservierte Geschichte dem breiten Publikum heute zugänglich machen.
 
 Wir tweeten die Schlagzeilen der Berliner Volkszeitung und die Titelseite von vor 100 Jahren jeden Tag, auf den Tag.
 

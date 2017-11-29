@@ -14,6 +14,18 @@ controls: true
 ## Tweets von vor 100 Jahren
 
 --
+### Team
+<div class="left">
+	<div>&nbsp;</div>
+	Falko <br><span class="smalldec">fk@shoutrlabs.com</span><br><br>
+	Erik <br><span class="smalldec">ekoenen@uni-bremen.de</span><br><br>
+	Olivier <br><span class="smalldec">ow@shoutrlabs.com</span>
+</div>
+<div class="right">
+	<img src="img/Volkszeitung.real.print.jpg" alt="Druck der Volkszeitung">
+</div>
+
+--
 ### Idee
 "The newspapers are making morning after morning the rough draft of history."
 The State (Columbia, South Carolina) December 5, 1905
@@ -64,17 +76,19 @@ Mit Anspruch, Sensationen und Unterhaltung für die Massen - die **Berliner Volk
 ### Coding: Twitter Bot
 Wir tweeten seit Beginn des Hackathons konstant im Erscheinungsrhythmus der Zeitung **morgens und abends** die neuen Schlagzeilen.
 
-Erst händisch, dann …
+Erst händisch …
 
 <img src="img/code.example.png" alt="Twitter bot Code Beispiel">
 
 --
 ### Fake it till you ~~make~~ automate it
-...und dann haben wir das Tweeten immer weiter automatisiert und werden dies weiter vorantreiben.
+ … und dann haben wir das Tweeten immer weiter **automatisiert** …
 
 <div>&nbsp;</div>
 <img src="img/our-scripts.png" alt="Screenshots of scripts collection">
 <div>&nbsp;</div>
+
+… doch wir sind noch nicht fertig.
 
 --
 <div>&nbsp;</div>
@@ -87,7 +101,7 @@ Erst händisch, dann …
 <img src="img/summary.oct17.png" alt="">
 
 --
-### Top Tweet Oct '17
+### Top Tweet Nov '17
 <img src="img/top-tweet.oct17.png" alt="">
 
 --
@@ -107,7 +121,7 @@ Erst händisch, dann …
 ### Followers Nov '17
 Wir hatten eigentlich gehofft **100 Follower** bis heute zubekomen.
 
-Aber es ist noch zu spät!
+Aber es ist noch nicht zu spät!
 
 <img src="img/follower.number.png" alt="66 Follower im Moment">
 <img src="img/followers.png" alt="Follower Graph">

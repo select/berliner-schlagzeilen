@@ -51,21 +51,13 @@ Wir tweeten seit dem letzten Abend des Hackatons.
 Dann haben wir angefangen die Tweets automatisiert.
 
 --
-### Followers
-<img src="img/follower.number.png" alt="66 Follower im Moment">
-<img src="img/followers.png" alt="Follower Graph">
-
---
-### Followers
+### Benchmarks: Followers
 Wir hatten eigentlich gehofft **100 Follower** bis heute zubekomen.
 
 Aber es ist noch zu spät!
 
-# @volkszeitung100
-
-<div style="text-align: center;">
-https://twitter.com/Volkszeitung100
-</div>
+<img src="img/follower.number.png" alt="66 Follower im Moment">
+<img src="img/followers.png" alt="Follower Graph">
 
 --
 ### Impressions and Mentions Oct '17
@@ -100,3 +92,9 @@ https://twitter.com/Volkszeitung100
 --
 ## Links und Code
 Ihr wollt uns helfen? Ich wollt auch Tweeten?
+
+# @volkszeitung100
+
+<div style="text-align: center;">
+https://twitter.com/Volkszeitung100
+</div>

@@ -15,7 +15,7 @@ controls: true
 --
 ### Die Berliner Volks-Zeitung
 
-Die Berliner Volks-Zeitung war vor 100 Jahren die Tageszeitung für die Metropole Berlin. Mit Anspruch, Sensationen und Unterhaltung wurde sie zur erfolgreichsten Boulevardzeitung der Zeit.
+Die Berliner Volks-Zeitung war vor 100 Jahren die Tageszeitung für die Metropole Berlin. Mit Anspruch, Sensationen und Unterhaltung wurde sie zur erfolgreichsten Boulevardzeitung der Zeit. a
 <img src="img/1917-11-01.0.png" alt="Volkszeitung Titelseite">
 
 --

@@ -8,59 +8,64 @@ theme: ./cleaver-select-theme
 controls: true
 
 --
+
 # Berliner Schlagzeilen
 
 ## Tweets von vor 100 Jahren @VolksZeitung100
 
 --
-### Die Berliner Volks-Zeitung
+### Idee
+"The newspapers are making morning after morning the rough draft of history."
+The State (Columbia, South Carolina) December 5, 1905
 
-Die Berliner Volks-Zeitung war vor 100 Jahren die Tageszeitung für die Metropole Berlin. Mit Anspruch, Sensationen und Unterhaltung wurde sie zur erfolgreichsten Boulevardzeitung der Zeit.
+Wir verbinden die Vergangenheit mit der Gegenwart und wollen die in Zeitungsseiten konservierte Geschichte dem breiten Publikum heute zugänglich machen.
+
+--
+### Idee
+Wir tweeten die Schlagzeilen der **Berliner Volkszeitung** und die Titelseite von vor 100 Jahren jeden Tag, auf den Tag.
+
+Im Mittelpunkt der Schlagzeilen stehen derzeit die Ereignisse des **Ersten Weltkrieges (1914-1918)** und die **Revolution in Russland 1917**.
+
 <img src="img/1917-11-01.0.png" alt="Volkszeitung Titelseite">
 
 --
-### Unser Ziel ist
-<div>&nbsp;</div>
-Die **Vergangenheit** mit der **Gegenwart** verbiden.
-<div>&nbsp;</div>
-Geschichte einem **breiten Publikum** zugänglich zu machen
-<div>&nbsp;</div>
-**Spass** haben!
+### Daten: Berliner Volks-Zeitung digital
+Mit Anspruch, Sensationen und Unterhaltung für die Massen - die **Berliner Volkszeitung** war vor 100 Jahren die erfolgreichste Boulevardzeitung für die Metropole Berlin.
+
+Datenquelle: digitalisierter historischer Zeitungsbestand der Staatsbibliothek zu Berlin – Preußischer Kulturbesitz 
+
+Datenformate: ALTO-XML, METS-XML, JPEG, TIFF
+
+Lizenz: CCO
 
 --
-### Der Twitter Bot
-Wir tweeten die Schlagzeilen und ein Bild der Titelseite von vor 100 Jahren jeden Tag, auf den Tag.
+### Coding: Twitter Bot
+Wir tweeten seit Beginn des Hackathons konstant im Erscheinungsrhythmus der Zeitung morgens und abends die neuen Schlagzeilen.
+
+Erst handisch...
+
 <div>&nbsp;</div>
 <img src="img/code.example.png" alt="Twitter bot Code Beispiel">
 
 --
 ### Fake it till you ~~make~~ automate it
-Wir tweeten seit dem letzten Abend des Hackatons.
+...und dann haben wir das Tweeten immer weiter automatisiert und werden dies weiter vorantreiben.
 
 <div>&nbsp;</div>
 <img src="img/our-scripts.png" alt="Screenshots of scripts collection">
 <div>&nbsp;</div>
-Dann haben wir angefangen die Tweets automatisiert.
 
 --
-### Followers
-<img src="img/follower.number.png" alt="66 Follower im Moment">
-<img src="img/followers.png" alt="Follower Graph">
-
---
-### Followers
+### Benchmarks: Followers
 Wir hatten eigentlich gehofft **100 Follower** bis heute zubekomen.
 
 Aber es ist noch zu spät!
 
-# @volkszeitung100
-
-<div style="text-align: center;">
-https://twitter.com/Volkszeitung100
-</div>
+<img src="img/follower.number.png" alt="66 Follower im Moment">
+<img src="img/followers.png" alt="Follower Graph">
 
 --
-### Impressions and Mentions Oct '17
+### Benchmarks: Impressions and Mentions Oct '17
 <div>&nbsp;</div>
 <div>&nbsp;</div>
 <div class="left">
@@ -90,15 +95,11 @@ https://twitter.com/Volkszeitung100
 <img src="img/tweets-impressions.png" alt="">
 
 --
-## Links und Code
-Ihr wollt uns helfen? Ich wollt auch Tweeten? 
+### Links und Code
+Ihr wollt uns helfen? Ich wollt auch tweeten?
 
+# @volkszeitung100
 
---
-## just a test
-<div class="left">
-	left
-</div>
-<div class="right">
-	right
+<div style="text-align: center;">
+https://twitter.com/Volkszeitung100
 </div>

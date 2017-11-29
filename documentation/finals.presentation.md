@@ -42,14 +42,14 @@ Lizenz: CCO
 ### Coding: Twitter Bot
 Wir tweeten seit Beginn des Hackathons konstant im Erscheinungsrythmus der Zeitung morgens und abends die neuen Schlagzeilen.
 
-...erst handisch
+Erst handisch...
 
 <div>&nbsp;</div>
 <img src="img/code.example.png" alt="Twitter bot Code Beispiel">
 
 --
 ### Fake it till you ~~make~~ automate it
-...und dann haben wir das Tweeten immer weiter automatisiert und werden dies weiter vorantreiben
+...und dann haben wir das Tweeten immer weiter automatisiert und werden dies weiter vorantreiben.
 
 <div>&nbsp;</div>
 <img src="img/our-scripts.png" alt="Screenshots of scripts collection">

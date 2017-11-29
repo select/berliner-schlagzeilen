@@ -22,8 +22,6 @@ Wir verbinden die Vergangenheit mit der Gegenwart und wollen die in Zeitungsseit
 
 --
 ### Idee
-
-
 Wir tweeten die Schlagzeilen der **Berliner Volkszeitung** und die Titelseite von vor 100 Jahren jeden Tag, auf den Tag.
 
 Im Mittelpunkt der Schlagzeilen stehen derzeit die Ereignisse des Ersten Weltkrieges (1914-1918) und die Revolution in Russland 1917.

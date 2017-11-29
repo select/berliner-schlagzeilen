@@ -11,7 +11,7 @@ controls: true
 # Berliner Schlagzeilen
 
 ## Tweets von vor 100 Jahren @VolksZeitung100
-<img src="documentation/cover.png" alt="@VolksZeitung100">
+<img src="berliner-schlagzeilen/documentation/cover.png" alt="@VolksZeitung100">
 --
 ### Idee
 

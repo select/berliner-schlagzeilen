@@ -25,11 +25,18 @@ Wir tweeten die Schlagzeilen der Berliner Volkszeitung und die Titelseite von vo
 <img src="img/1917-11-01.0.png" alt="Volkszeitung Titelseite">
 
 --
-### Daten
-Mit Anspruch, Sensationen und Unterhaltung für die Massen - die **Berliner Volkszeitung** war vor 100 Jahren die erfolgreichste Boulevardzeitung für die Metroploe Berlin.
+### Daten: Berliner Volks-Zeitung digital (1917-1930)
+
+Mit Anspruch, Sensationen und Unterhaltung für die Massen - die **Berliner Volkszeitung** war vor 100 Jahren die erfolgreichste Boulevardzeitung für die Metropole Berlin.
+
+Einrichtung: digitalisierter historischer Zeitungsbestand der Staatsbibliothek zu Berlin – Preußischer Kulturbesitz 
+
+Datenformate: Alto-XML, METS-XML, JPEG, TIFF
+
+Lizens: CCO
 
 --
-### Der Twitter Bot
+### Coding: Der Twitter Bot
 Wir tweeten die Schlagzeilen und ein Bild der Titelseite von vor 100 Jahren jeden Tag, auf den Tag.
 <div>&nbsp;</div>
 <img src="img/code.example.png" alt="Twitter bot Code Beispiel">

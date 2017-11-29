@@ -8,17 +8,18 @@ theme: ./cleaver-select-theme
 controls: true
 
 --
+
 # Berliner Schlagzeilen
 
 ## Tweets von vor 100 Jahren @VolksZeitung100
 
-<img src="documentation/cover.png" alt="@VolksZeitung100">
 --
+
 ### Idee
 
-Wir verbinden die Vergangenheit mit der Gegenward und machen Geschichte dem breiten Publikum heute zugänglich.
+Wir verbinden die Vergangenheit mit der Gegenwart und wollen Geschichte dem breiten Publikum heute zugänglich machen.
 
-Wir tweeten die Schlagzeilen der Berliner Volkszeitung Bild der Titelseite von vor 100 Jahren jeden Tag, auf den Tag.
+Wir tweeten die Schlagzeilen der Berliner Volkszeitung und die Titelseite von vor 100 Jahren jeden Tag, auf den Tag.
 
 <img src="img/1917-11-01.0.png" alt="Volkszeitung Titelseite">
 

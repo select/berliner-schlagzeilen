@@ -36,7 +36,7 @@ Datenformate: ALTO-XML, METS-XML, JPEG, TIFF
 Lizenz: CCO
 
 --
-### Coding: Der Twitter Bot
+### Coding: Twitter Bot
 Wir tweeten die Schlagzeilen und ein Bild der Titelseite von vor 100 Jahren jeden Tag, auf den Tag.
 <div>&nbsp;</div>
 <img src="img/code.example.png" alt="Twitter bot Code Beispiel">
@@ -60,7 +60,7 @@ Aber es ist noch zu spät!
 <img src="img/followers.png" alt="Follower Graph">
 
 --
-### Impressions and Mentions Oct '17
+### Benchmarks: Impressions and Mentions Oct '17
 <div>&nbsp;</div>
 <div>&nbsp;</div>
 <div class="left">
@@ -90,8 +90,8 @@ Aber es ist noch zu spät!
 <img src="img/tweets-impressions.png" alt="">
 
 --
-## Links und Code
-Ihr wollt uns helfen? Ich wollt auch Tweeten?
+### Links und Code
+Ihr wollt uns helfen? Ich wollt auch tweeten?
 
 # @volkszeitung100
 

@@ -14,7 +14,6 @@ controls: true
 ## Tweets von vor 100 Jahren @VolksZeitung100
 
 --
-
 ### Idee
 Wir verbinden die Vergangenheit mit der Gegenwart und wollen Geschichte dem breiten Publikum heute zugänglich machen.
 
@@ -23,14 +22,8 @@ Wir tweeten die Schlagzeilen der Berliner Volkszeitung und die Titelseite von vo
 <img src="img/1917-11-01.0.png" alt="Volkszeitung Titelseite">
 
 --
-### Unser Ziel ist
-<div>&nbsp;</div>
-Die **Vergangenheit** mit der **Gegenwart** verbiden.
-<div>&nbsp;</div>
-Geschichte einem **breiten Publikum** zugänglich zu machen
-<div>&nbsp;</div>
-**Spass** haben!
-Mit Anspruch, Sensationen und Unterhaltung für die Massen - die Berliner Volkszeitung war vor 100 Jahren die erfolgreichste Boulevardzeitung für die Metroploe Berlin.
+### Daten
+Mit Anspruch, Sensationen und Unterhaltung für die Massen - die **Berliner Volkszeitung** war vor 100 Jahren die erfolgreichste Boulevardzeitung für die Metroploe Berlin.
 
 --
 ### Der Twitter Bot

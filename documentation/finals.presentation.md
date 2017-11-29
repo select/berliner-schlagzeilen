@@ -11,7 +11,7 @@ controls: true
 
 # Berliner Schlagzeilen
 
-## Tweets von vor 100 Jahren @VolksZeitung100
+## Tweets von vor 100 Jahren
 
 --
 ### Idee
@@ -22,29 +22,50 @@ Wir verbinden die Vergangenheit mit der Gegenwart und wollen die in Zeitungsseit
 
 --
 ### Idee
+<style>
+	ul {
+		padding: 0px 0 0 27px;
+	}
+</style>
 Wir tweeten die Schlagzeilen der **Berliner Volkszeitung** und die Titelseite von vor 100 Jahren jeden Tag, auf den Tag.
 
-Im Mittelpunkt der Schlagzeilen stehen derzeit die Ereignisse des **Ersten Weltkrieges (1914-1918)** und die **Revolution in Russland 1917**.
+Im Mittelpunkt der Schlagzeilen stehen derzeit:
+- **Ersten Weltkrieg (1914-1918)**
 
-<img src="img/1917-11-01.0.png" alt="Volkszeitung Titelseite">
+- **Revolution in Russland 1917**
 
 --
 ### Daten: Berliner Volks-Zeitung digital
 Mit Anspruch, Sensationen und Unterhaltung für die Massen - die **Berliner Volkszeitung** war vor 100 Jahren die erfolgreichste Boulevardzeitung für die Metropole Berlin.
 
-Datenquelle: digitalisierter historischer Zeitungsbestand der Staatsbibliothek zu Berlin – Preußischer Kulturbesitz 
+<img src="img/1917-11-01.0.png" alt="Volkszeitung Titelseite">
 
-Datenformate: ALTO-XML, METS-XML, JPEG, TIFF
 
-Lizenz: CCO
+--
+### Daten: Berliner Volks-Zeitung digital
+<style>
+	.smalldec {
+		font-size: 0.7em;
+		color: #7a7a7a;
+		margin-top: 0;
+	}
+</style>
+
+<span class="smalldec">Datenquelle</span><br>
+**digitalisierter historischer Zeitungsbestand der Staatsbibliothek zu Berlin – Preußischer Kulturbesitz**<br>
+<span class="smalldec">Datenformate</span><br>
+**ALTO-XML**, **METS-XML**, **JPEG**, **TIFF**<br>
+<span class="smalldec">Lizenz</span><br>
+**CCO**
+
+<img src="img/zefys.homepage.png" alt="Zefys Homepage">
 
 --
 ### Coding: Twitter Bot
-Wir tweeten seit Beginn des Hackathons konstant im Erscheinungsrhythmus der Zeitung morgens und abends die neuen Schlagzeilen.
+Wir tweeten seit Beginn des Hackathons konstant im Erscheinungsrhythmus der Zeitung **morgens und abends** die neuen Schlagzeilen.
 
-Erst handisch...
+Erst händisch, dann …
 
-<div>&nbsp;</div>
 <img src="img/code.example.png" alt="Twitter bot Code Beispiel">
 
 --
@@ -56,7 +77,34 @@ Erst handisch...
 <div>&nbsp;</div>
 
 --
-### Benchmarks: Followers
+<div>&nbsp;</div>
+<img src="img/nila-cuts-berliner-volkszeitung.jpg" alt="Nila schneidet die Volkszeitung">
+<div>&nbsp;</div>
+
+
+--
+### Besucherstatistiken Oct '17
+<img src="img/summary.oct17.png" alt="">
+
+--
+### Top Tweet Oct '17
+<img src="img/top-tweet.oct17.png" alt="">
+
+--
+### Besucherstatistiken Nov '17
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div style="background: white; width: 100%; height: 254px;">
+	<div class="left">
+		<img src="img/impressions.png" alt="">
+	</div>
+	<div class="right">
+		<img src="img/mentions.png" alt="">
+	</div>
+</div>
+
+--
+### Followers Nov '17
 Wir hatten eigentlich gehofft **100 Follower** bis heute zubekomen.
 
 Aber es ist noch zu spät!
@@ -65,38 +113,8 @@ Aber es ist noch zu spät!
 <img src="img/followers.png" alt="Follower Graph">
 
 --
-### Benchmarks: Impressions and Mentions Oct '17
-<div>&nbsp;</div>
-<div>&nbsp;</div>
-<div class="left">
-	<img src="img/impressions.png" alt="">
-</div>
-<div class="right">
-	<img src="img/mentions.png" alt="">
-</div>
---
-<img src="img/mentions-follower.png" alt="asynchronous encryption">
-
---
-<img src="img/profiel-mentions.last28d.png" alt="asynchronous encryption">
-
---
-<img src="img/summary.oct17.png" alt="">
-
---
-### Top Follower Oct '17
-<img src="img/top-follower.oct17.png" alt="">
-
---
-### Top Tweet Oct '17
-<img src="img/top-tweet.oct17.png" alt="">
-
---
-<img src="img/tweets-impressions.png" alt="">
-
---
 ### Links und Code
-Ihr wollt uns helfen? Ich wollt auch tweeten?
+Ihr wollt uns helfen? Ihr wollt auch mit bots tweeten?
 
 # @volkszeitung100
 

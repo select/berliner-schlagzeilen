@@ -20,7 +20,7 @@ The State (Columbia, South Carolina) December 5, 1905
 
 Wir verbinden die Vergangenheit mit der Gegenwart und wollen die in Zeitungsseiten konservierte Geschichte dem breiten Publikum heute zugänglich machen.
 
-Wir tweeten die Schlagzeilen der Berliner Volkszeitung und die Titelseite von vor 100 Jahren jeden Tag, auf den Tag.
+Wir tweeten die Schlagzeilen der **Berliner Volkszeitung** und die Titelseite von vor 100 Jahren jeden Tag, auf den Tag.
 
 <img src="img/1917-11-01.0.png" alt="Volkszeitung Titelseite">
 
@@ -29,11 +29,11 @@ Wir tweeten die Schlagzeilen der Berliner Volkszeitung und die Titelseite von vo
 
 Mit Anspruch, Sensationen und Unterhaltung für die Massen - die **Berliner Volkszeitung** war vor 100 Jahren die erfolgreichste Boulevardzeitung für die Metropole Berlin.
 
-Einrichtung: digitalisierter historischer Zeitungsbestand der Staatsbibliothek zu Berlin – Preußischer Kulturbesitz 
+Datenquelle: digitalisierter historischer Zeitungsbestand der Staatsbibliothek zu Berlin – Preußischer Kulturbesitz 
 
-Datenformate: Alto-XML, METS-XML, JPEG, TIFF
+Datenformate: ALTO-XML, METS-XML, JPEG, TIFF
 
-Lizens: CCO
+Lizenz: CCO
 
 --
 ### Coding: Der Twitter Bot
@@ -99,14 +99,4 @@ https://twitter.com/Volkszeitung100
 
 --
 ## Links und Code
-Ihr wollt uns helfen? Ich wollt auch Tweeten? 
-
-
---
-## just a test
-<div class="left">
-	left
-</div>
-<div class="right">
-	right
-</div>
+Ihr wollt uns helfen? Ich wollt auch Tweeten?

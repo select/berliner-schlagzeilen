@@ -29,8 +29,7 @@ Im Mittelpunkt der Schlagzeilen stehen derzeit die Ereignisse des Ersten Weltkri
 <img src="img/1917-11-01.0.png" alt="Volkszeitung Titelseite">
 
 --
-### Daten: Berliner Volks-Zeitung digital (1917-1930)
-
+### Daten: Berliner Volks-Zeitung digital
 Mit Anspruch, Sensationen und Unterhaltung für die Massen - die **Berliner Volkszeitung** war vor 100 Jahren die erfolgreichste Boulevardzeitung für die Metropole Berlin.
 
 Datenquelle: digitalisierter historischer Zeitungsbestand der Staatsbibliothek zu Berlin – Preußischer Kulturbesitz 
@@ -41,18 +40,20 @@ Lizenz: CCO
 
 --
 ### Coding: Twitter Bot
-Wir tweeten die Schlagzeilen und ein Bild der Titelseite von vor 100 Jahren jeden Tag, auf den Tag.
+Wir tweeten seit Beginn des Hackathons konstant im Erscheinungsrythmus der Zeitung morgens und abends die neuen Schlagzeilen.
+
+...erst handisch
+
 <div>&nbsp;</div>
 <img src="img/code.example.png" alt="Twitter bot Code Beispiel">
 
 --
 ### Fake it till you ~~make~~ automate it
-Wir tweeten seit dem letzten Abend des Hackatons.
+...und dann haben wir das Tweeten immer weiter automatisiert und werden dies weiter vorantreiben
 
 <div>&nbsp;</div>
 <img src="img/our-scripts.png" alt="Screenshots of scripts collection">
 <div>&nbsp;</div>
-Dann haben wir angefangen die Tweets automatisiert.
 
 --
 ### Benchmarks: Followers

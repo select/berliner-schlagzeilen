@@ -16,7 +16,6 @@ controls: true
 --
 
 ### Idee
-
 Wir verbinden die Vergangenheit mit der Gegenwart und wollen Geschichte dem breiten Publikum heute zugänglich machen.
 
 Wir tweeten die Schlagzeilen der Berliner Volkszeitung und die Titelseite von vor 100 Jahren jeden Tag, auf den Tag.

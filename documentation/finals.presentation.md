@@ -11,11 +11,14 @@ controls: true
 # Berliner Schlagzeilen
 
 ## Tweets von vor 100 Jahren @VolksZeitung100
-
+<img src="img/cover.png" alt="@VolksZeitung100">
 --
-### Die Berliner Volks-Zeitung
+### Idee
 
-Die Berliner Volks-Zeitung war vor 100 Jahren die Tageszeitung für die Metropole Berlin. Mit Anspruch, Sensationen und Unterhaltung wurde sie zur erfolgreichsten Boulevardzeitung der Zeit.
+Wir verbinden die Vergangenheit mit der Gegenward und machen Geschichte dem breiten Publikum heute zugänglich.
+
+Wir tweeten die Schlagzeilen der Berliner Volkszeitung Bild der Titelseite von vor 100 Jahren jeden Tag, auf den Tag.
+
 <img src="img/1917-11-01.0.png" alt="Volkszeitung Titelseite">
 
 --
@@ -26,6 +29,7 @@ Die **Vergangenheit** mit der **Gegenwart** verbiden.
 Geschichte einem **breiten Publikum** zugänglich zu machen
 <div>&nbsp;</div>
 **Spass** haben!
+Mit Anspruch, Sensationen und Unterhaltung für die Massen - die Berliner Volkszeitung war vor 100 Jahren die erfolgreichste Boulevardzeitung für die Metroploe Berlin.
 
 --
 ### Der Twitter Bot

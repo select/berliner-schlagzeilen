@@ -134,10 +134,8 @@ Ihr wollt uns helfen? Ihr wollt auch mit Bots tweeten?
 https://github.com/shoutrlabs/berliner-schlagzeilen
 
 **FOLLOW US ON TWITTER**
-We are live and tweeting. Follow us!
 
 # @volkszeitung100
-
 <div style="text-align: center;">
 https://twitter.com/Volkszeitung100
 </div>

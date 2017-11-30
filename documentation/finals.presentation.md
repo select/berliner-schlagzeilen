@@ -130,8 +130,7 @@ Aber es ist noch nicht zu spät!
 ### Links und Code
 Ihr wollt uns helfen? Ihr wollt auch mit Bots tweeten?
 
-**CODE AND DOCUMENTATION**
-Find the full code and documentation on our github page.
+**FULL CODE AND DOCUMENTATION**
 https://github.com/shoutrlabs/berliner-schlagzeilen
 
 **FOLLOW US ON TWITTER**

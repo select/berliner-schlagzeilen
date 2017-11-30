@@ -130,6 +130,15 @@ Aber es ist noch nicht zu spät!
 ### Links und Code
 Ihr wollt uns helfen? Ihr wollt auch mit Bots tweeten?
 
+https://twitter.com/volkszeitung100
+
+**CODE AND DOCUMENTATION**
+Find the full code and documentation on our github page.
+https://github.com/shoutrlabs/berliner-schlagzeilen
+
+**FOLLOW US ON TWITTER**
+We are live and tweeting. Follow us!
+
 # @volkszeitung100
 
 <div style="text-align: center;">

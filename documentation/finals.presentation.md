@@ -119,7 +119,7 @@ Erst händisch …
 
 --
 ### Followers Nov '17
-Wir hatten eigentlich gehofft **100 Follower** bis heute zubekomen.
+Wir hatten eigentlich gehofft **100 Follower** bis heute zu bekommen.
 
 Aber es ist noch nicht zu spät!
 
@@ -128,7 +128,7 @@ Aber es ist noch nicht zu spät!
 
 --
 ### Links und Code
-Ihr wollt uns helfen? Ihr wollt auch mit bots tweeten?
+Ihr wollt uns helfen? Ihr wollt auch mit Bots tweeten?
 
 # @volkszeitung100
 

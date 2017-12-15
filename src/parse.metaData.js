@@ -72,6 +72,15 @@ function zeroPad(num, size) {
 	return s.substr(s.length - size);
 }
 
+function getSize(o) {
+	return {
+		x: parseInt(o.HPOS, 10),
+		y: parseInt(o.VPOS, 10),
+		w: parseInt(o.WIDTH, 10),
+		h: parseInt(o.HEIGHT, 10),
+	};
+}
+
 const baseDir = `${config.dataDir}/metadata/DOCS/19300101_0`;
 const file1 = `${baseDir}/19300101_0-METS.xml`;
 let dataMETS;
@@ -89,18 +98,25 @@ parseMETS(file1)
 					const printSpaceXML = result['alto']['Layout'][0]['Page'][0]['PrintSpace'][0];
 					const words = recurseToString(printSpaceXML);
 					const minMax = words.reduce(
-						(acc, w) => ({
-							xMin: acc.xMin > w.$.HPOS ? w.$.HPOS : acc.xMin,
-							xMax: acc.xMax < w.$.HPOS + w.$.WIDTH ? w.$.HPOS + w.$.WIDTH : acc.xMax,
-							yMin: acc.yMin > w.$.VPOS ? w.$.HPOS : acc.yMin,
-							yMax: acc.yMax < w.$.VPOS + w.$.HEIGHT ? w.$.HPOS + w.$.HEIGHT : acc.yMax,
-						}),
+						(acc, w) => {
+							const size = getSize(w.$);
+							return {
+								xMin: acc.xMin > size.x ? size.x : acc.xMin,
+								xMax: acc.xMax < size.x + size.w ? size.x + size.w : acc.xMax,
+								yMin: acc.yMin > size.y ? size.y : acc.yMin,
+								yMax: acc.yMax < size.y + size.h ? size.y + size.h : acc.yMax,
+							};
+						},
 						{ xMin: 999999999, yMin: 999999999, xMax: 0, yMax: 0 }
 					);
 					return {
 						strings: words.length,
-						size: minMax,
-						arithmeticMeanWC: words.reduce((acc,w) => acc+parseFloat(w.$.WC), 0)/words.length
+						sizeInPx: minMax,
+						sizeInMm: {
+							width: ((minMax.xMax-minMax.xMin)*25.4/300).toFixed(1),
+							height: ((minMax.yMax-minMax.yMin)*25.4/300).toFixed(1)
+						},
+						arithmeticMeanWC: (words.reduce((acc, w) => acc + parseFloat(w.$.WC), 0) / words.length).toFixed(5),
 					};
 					console.log('words', words.length);
 					// console.log('words', words.map(w => w.$.CONTENT).join(' '));

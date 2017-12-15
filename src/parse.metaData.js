@@ -90,16 +90,17 @@ parseMETS(file1)
 					const words = recurseToString(printSpaceXML);
 					const minMax = words.reduce(
 						(acc, w) => ({
-							xMax: acc.xMax < w.$.HPOS + w.$.WIDTH ? w.$.HPOS + w.$.WIDTH : acc.xMax,
-							yMax: acc.yMax < w.$.VPOS + w.$.HEIGHT ? w.$.HPOS + w.$.HEIGHT : acc.yMax,
 							xMin: acc.xMin > w.$.HPOS ? w.$.HPOS : acc.xMin,
+							xMax: acc.xMax < w.$.HPOS + w.$.WIDTH ? w.$.HPOS + w.$.WIDTH : acc.xMax,
 							yMin: acc.yMin > w.$.VPOS ? w.$.HPOS : acc.yMin,
+							yMax: acc.yMax < w.$.VPOS + w.$.HEIGHT ? w.$.HPOS + w.$.HEIGHT : acc.yMax,
 						}),
 						{ xMin: 999999999, yMin: 999999999, xMax: 0, yMax: 0 }
 					);
 					return {
 						strings: words.length,
 						size: minMax,
+						arithmeticMeanWC: words.reduce((acc,w) => acc+parseFloat(w.$.WC), 0)/words.length
 					};
 					console.log('words', words.length);
 					// console.log('words', words.map(w => w.$.CONTENT).join(' '));

@@ -1,0 +1,732 @@
+[
+  {
+    "title": "Volkszeitung (1890-1904) /Berliner Volkszeitung (1904-1930)",
+    "dateIssued": "1890-04-01",
+    "details": [
+      {
+        "caption": "Jahrgang",
+        "number": "038"
+      },
+      {
+        "caption": "Nr.",
+        "number": "077"
+      }
+    ],
+    "pages": [
+      {
+        "top10words": [
+          "Bank",
+          "loco",
+          "Preis",
+          "Mark",
+          "Mai",
+          "Brauerei",
+          "April",
+          "AprilMai",
+          "rer",
+          "StPr"
+        ],
+        "Strings": 5156,
+        "TextLines": 2172,
+        "arithmeticMeanStrinsPerLine": "2.3738",
+        "arithmeticMeanLineLengthInMm": "15.7",
+        "blocks": 1401,
+        "arithmeticMeanLinesPerBlock": "1.5503",
+        "sizeInPx": {
+          "xMin": 974,
+          "xMax": 4171,
+          "yMin": 474,
+          "yMax": 5473
+        },
+        "sizeInMm": {
+          "width": "270.7",
+          "height": "423.2"
+        },
+        "arithmeticMeanWC": "0.51665",
+        "fileName": "alto/F_SBB_00009_18900401_038_077_0_004.xml"
+      },
+      {
+        "top10words": [
+          "Signora",
+          "Grfin",
+          "ihrer",
+          "hatte",
+          "ihren",
+          "Ehernbina",
+          "keine",
+          "Basili",
+          "diese",
+          "ver"
+        ],
+        "Strings": 2654,
+        "TextLines": 340,
+        "arithmeticMeanStrinsPerLine": "7.8059",
+        "arithmeticMeanLineLengthInMm": "78.7",
+        "blocks": 12,
+        "arithmeticMeanLinesPerBlock": "28.3333",
+        "sizeInPx": {
+          "xMin": 242,
+          "xMax": 3620,
+          "yMin": 388,
+          "yMax": 5462
+        },
+        "sizeInMm": {
+          "width": "286.0",
+          "height": "429.6"
+        },
+        "arithmeticMeanWC": "0.59674",
+        "fileName": "alto/F_SBB_00009_18900401_038_077_0_001.xml"
+      },
+      {
+        "top10words": [
+          "unter",
+          "hatte",
+          "selbst",
+          "sein",
+          "jetzt",
+          "welche",
+          "uud",
+          "soll",
+          "zum",
+          "ver"
+        ],
+        "Strings": 3301,
+        "TextLines": 386,
+        "arithmeticMeanStrinsPerLine": "8.5518",
+        "arithmeticMeanLineLengthInMm": "81.6",
+        "blocks": 8,
+        "arithmeticMeanLinesPerBlock": "48.2500",
+        "sizeInPx": {
+          "xMin": -1,
+          "xMax": 3969,
+          "yMin": 0,
+          "yMax": 5481
+        },
+        "sizeInMm": {
+          "width": "336.1",
+          "height": "464.1"
+        },
+        "arithmeticMeanWC": "0.55624",
+        "fileName": "alto/F_SBB_00009_18900401_038_077_0_002.xml"
+      },
+      {
+        "top10words": [
+          "Rubel",
+          "000",
+          "Kilogr",
+          "Dividende",
+          "Berlin",
+          "1889",
+          "Mark",
+          "Jahre",
+          "Aktien",
+          "Genossenschaft"
+        ],
+        "Strings": 3598,
+        "TextLines": 523,
+        "arithmeticMeanStrinsPerLine": "6.8795",
+        "arithmeticMeanLineLengthInMm": "65.7",
+        "blocks": 122,
+        "arithmeticMeanLinesPerBlock": "4.2869",
+        "sizeInPx": {
+          "xMin": 168,
+          "xMax": 3500,
+          "yMin": 186,
+          "yMax": 5462
+        },
+        "sizeInMm": {
+          "width": "282.1",
+          "height": "446.7"
+        },
+        "arithmeticMeanWC": "0.53599",
+        "fileName": "alto/F_SBB_00009_18900401_038_077_0_003.xml"
+      }
+    ],
+    "metsFileName": "SBB_00006_18900401_F_038_077_0_mets.xml",
+    "zipFileName": "SBB_00006_18900401_F_038_077_0.zip"
+  },
+  {
+    "title": "Volkszeitung (1890-1904) /Berliner Volkszeitung (1904-1930)",
+    "dateIssued": "1890-04-01",
+    "details": [
+      {
+        "caption": "Jahrgang",
+        "number": "038"
+      },
+      {
+        "caption": "Nr.",
+        "number": "077"
+      }
+    ],
+    "pages": [
+      {
+        "top10words": [
+          "000",
+          "200",
+          "200000",
+          "300000",
+          "Berlin",
+          "Male",
+          "400000",
+          "Herrn",
+          "Anfang",
+          "100000"
+        ],
+        "Strings": 1783,
+        "TextLines": 469,
+        "arithmeticMeanStrinsPerLine": "3.8017",
+        "arithmeticMeanLineLengthInMm": "38.8",
+        "blocks": 93,
+        "arithmeticMeanLinesPerBlock": "5.0430",
+        "sizeInPx": {
+          "xMin": 734,
+          "xMax": 4148,
+          "yMin": 511,
+          "yMax": 5682
+        },
+        "sizeInMm": {
+          "width": "289.1",
+          "height": "437.8"
+        },
+        "arithmeticMeanWC": "0.56031",
+        "fileName": "alto/F_SBB_00009_18900401_038_077_1_004.xml"
+      },
+      {
+        "top10words": [
+          "Dividende",
+          "welche",
+          "1889",
+          "waren",
+          "fich",
+          "unter",
+          "Arbeiter",
+          "dieser",
+          "pro",
+          "bis"
+        ],
+        "Strings": 3654,
+        "TextLines": 422,
+        "arithmeticMeanStrinsPerLine": "8.6588",
+        "arithmeticMeanLineLengthInMm": "80.8",
+        "blocks": 13,
+        "arithmeticMeanLinesPerBlock": "32.4615",
+        "sizeInPx": {
+          "xMin": 296,
+          "xMax": 3513,
+          "yMin": 476,
+          "yMax": 5483
+        },
+        "sizeInMm": {
+          "width": "272.4",
+          "height": "423.9"
+        },
+        "arithmeticMeanWC": "0.49615",
+        "fileName": "alto/F_SBB_00009_18900401_038_077_1_003.xml"
+      },
+      {
+        "top10words": [
+          "seine",
+          "hatte",
+          "Kinder",
+          "Hermine",
+          "ihm",
+          "habe",
+          "ganz",
+          "Kaiser",
+          "Frst",
+          "wieder"
+        ],
+        "Strings": 2949,
+        "TextLines": 360,
+        "arithmeticMeanStrinsPerLine": "8.1917",
+        "arithmeticMeanLineLengthInMm": "79.3",
+        "blocks": 11,
+        "arithmeticMeanLinesPerBlock": "32.7273",
+        "sizeInPx": {
+          "xMin": 97,
+          "xMax": 3356,
+          "yMin": 432,
+          "yMax": 5463
+        },
+        "sizeInMm": {
+          "width": "275.9",
+          "height": "426.0"
+        },
+        "arithmeticMeanWC": "0.57957",
+        "fileName": "alto/F_SBB_00009_18900401_038_077_1_001.xml"
+      },
+      {
+        "top10words": [
+          "ihm",
+          "Hermine",
+          "Berlin",
+          "zum",
+          "Korb",
+          "mir",
+          "heute",
+          "Kinder",
+          "wenig",
+          "geben"
+        ],
+        "Strings": 3222,
+        "TextLines": 384,
+        "arithmeticMeanStrinsPerLine": "8.3906",
+        "arithmeticMeanLineLengthInMm": "81.1",
+        "blocks": 12,
+        "arithmeticMeanLinesPerBlock": "32.0000",
+        "sizeInPx": {
+          "xMin": 816,
+          "xMax": 4053,
+          "yMin": 498,
+          "yMax": 5464
+        },
+        "sizeInMm": {
+          "width": "274.1",
+          "height": "420.5"
+        },
+        "arithmeticMeanWC": "0.55240",
+        "fileName": "alto/F_SBB_00009_18900401_038_077_1_002.xml"
+      }
+    ],
+    "metsFileName": "SBB_00006_18900401_F_038_077_1_mets.xml",
+    "zipFileName": "SBB_00006_18900401_F_038_077_1.zip"
+  },
+  {
+    "title": "Volkszeitung (1890-1904) /Berliner Volkszeitung (1904-1930)",
+    "dateIssued": "1890-04-01",
+    "details": [
+      {
+        "caption": "Jahrgang",
+        "number": "038"
+      },
+      {
+        "caption": "Nr.",
+        "number": "077"
+      }
+    ],
+    "pages": [
+      {
+        "top10words": [
+          "nnd",
+          "welche",
+          "Berlin",
+          "anf",
+          "diese",
+          "Tren",
+          "zum",
+          "bis",
+          "Zeit",
+          "welcher"
+        ],
+        "Strings": 3345,
+        "TextLines": 377,
+        "arithmeticMeanStrinsPerLine": "8.8727",
+        "arithmeticMeanLineLengthInMm": "84.0",
+        "blocks": 16,
+        "arithmeticMeanLinesPerBlock": "23.5625",
+        "sizeInPx": {
+          "xMin": 170,
+          "xMax": 3407,
+          "yMin": 507,
+          "yMax": 5465
+        },
+        "sizeInMm": {
+          "width": "274.1",
+          "height": "419.8"
+        },
+        "arithmeticMeanWC": "0.51236",
+        "fileName": "alto/F_SBB_00009_18900401_038_077_2_001.xml"
+      },
+      {
+        "top10words": [
+          "verl",
+          "verlangt",
+          "Reform",
+          "sofort",
+          "Mode",
+          "Klempner",
+          "Drechsler",
+          "Berlin",
+          "Tageblatt",
+          "Bildhauer"
+        ],
+        "Strings": 2174,
+        "TextLines": 423,
+        "arithmeticMeanStrinsPerLine": "5.1395",
+        "arithmeticMeanLineLengthInMm": "53.9",
+        "blocks": 79,
+        "arithmeticMeanLinesPerBlock": "5.3544",
+        "sizeInPx": {
+          "xMin": 289,
+          "xMax": 3523,
+          "yMin": 271,
+          "yMax": 5476
+        },
+        "sizeInMm": {
+          "width": "273.8",
+          "height": "440.7"
+        },
+        "arithmeticMeanWC": "0.52719",
+        "fileName": "alto/F_SBB_00009_18900401_038_077_2_003.xml"
+      },
+      {
+        "top10words": [
+          "Verein",
+          "Bhrend",
+          "bedeckt",
+          "habe",
+          "welche",
+          "Schmidt",
+          "Berliner",
+          "schon",
+          "Angeklagte",
+          "150"
+        ],
+        "Strings": 3345,
+        "TextLines": 689,
+        "arithmeticMeanStrinsPerLine": "4.8549",
+        "arithmeticMeanLineLengthInMm": "42.3",
+        "blocks": 329,
+        "arithmeticMeanLinesPerBlock": "2.0942",
+        "sizeInPx": {
+          "xMin": 808,
+          "xMax": 4031,
+          "yMin": 470,
+          "yMax": 5460
+        },
+        "sizeInMm": {
+          "width": "272.9",
+          "height": "422.5"
+        },
+        "arithmeticMeanWC": "0.51319",
+        "fileName": "alto/F_SBB_00009_18900401_038_077_2_002.xml"
+      },
+      {
+        "top10words": [
+          "verlangt",
+          "verl",
+          "vcrl",
+          "gute",
+          "dauernde",
+          "Tcht",
+          "Tchtige",
+          "Tischler",
+          "str",
+          "Hause"
+        ],
+        "Strings": 3302,
+        "TextLines": 630,
+        "arithmeticMeanStrinsPerLine": "5.2413",
+        "arithmeticMeanLineLengthInMm": "47.0",
+        "blocks": 175,
+        "arithmeticMeanLinesPerBlock": "3.6000",
+        "sizeInPx": {
+          "xMin": 933,
+          "xMax": 4136,
+          "yMin": 490,
+          "yMax": 5430
+        },
+        "sizeInMm": {
+          "width": "271.2",
+          "height": "418.3"
+        },
+        "arithmeticMeanWC": "0.50065",
+        "fileName": "alto/F_SBB_00009_18900401_038_077_2_004.xml"
+      }
+    ],
+    "metsFileName": "SBB_00006_18900401_F_038_077_2_mets.xml",
+    "zipFileName": "SBB_00006_18900401_F_038_077_2.zip"
+  },
+  {
+    "title": "Volkszeitung (1890-1904) /Berliner Volkszeitung (1904-1930)",
+    "dateIssued": "1890-04-02",
+    "details": [
+      {
+        "caption": "Jahrgang",
+        "number": "038"
+      },
+      {
+        "caption": "Nr.",
+        "number": "078"
+      }
+    ],
+    "pages": [
+      {
+        "top10words": [
+          "Bank",
+          "April",
+          "ver",
+          "loco",
+          "Mark",
+          "bcz",
+          "Kilo",
+          "Preis",
+          "rer",
+          "Brauerei"
+        ],
+        "Strings": 4994,
+        "TextLines": 2315,
+        "arithmeticMeanStrinsPerLine": "2.1572",
+        "arithmeticMeanLineLengthInMm": "14.3",
+        "blocks": 1748,
+        "arithmeticMeanLinesPerBlock": "1.3244",
+        "sizeInPx": {
+          "xMin": 958,
+          "xMax": 4203,
+          "yMin": 482,
+          "yMax": 5489
+        },
+        "sizeInMm": {
+          "width": "274.7",
+          "height": "423.9"
+        },
+        "arithmeticMeanWC": "0.52131",
+        "fileName": "alto/F_SBB_00009_18900402_038_078_0_004.xml"
+      },
+      {
+        "top10words": [
+          "Kilogr",
+          "Berlin",
+          "Mai",
+          "April",
+          "seine",
+          "Dividende",
+          "zum",
+          "Liebknecht",
+          "welche",
+          "dieser"
+        ],
+        "Strings": 3968,
+        "TextLines": 560,
+        "arithmeticMeanStrinsPerLine": "7.0857",
+        "arithmeticMeanLineLengthInMm": "62.9",
+        "blocks": 159,
+        "arithmeticMeanLinesPerBlock": "3.5220",
+        "sizeInPx": {
+          "xMin": 256,
+          "xMax": 3492,
+          "yMin": 247,
+          "yMax": 5473
+        },
+        "sizeInMm": {
+          "width": "274.0",
+          "height": "442.5"
+        },
+        "arithmeticMeanWC": "0.49786",
+        "fileName": "alto/F_SBB_00009_18900402_038_078_0_003.xml"
+      },
+      {
+        "top10words": [
+          "soll",
+          "Regierung",
+          "welche",
+          "dieser",
+          "unter",
+          "habe",
+          "Kaiser",
+          "nnd",
+          "zum",
+          "Rohre"
+        ],
+        "Strings": 3293,
+        "TextLines": 393,
+        "arithmeticMeanStrinsPerLine": "8.3791",
+        "arithmeticMeanLineLengthInMm": "82.1",
+        "blocks": 11,
+        "arithmeticMeanLinesPerBlock": "35.7273",
+        "sizeInPx": {
+          "xMin": 772,
+          "xMax": 4018,
+          "yMin": 479,
+          "yMax": 5444
+        },
+        "sizeInMm": {
+          "width": "274.8",
+          "height": "420.4"
+        },
+        "arithmeticMeanWC": "0.58756",
+        "fileName": "alto/F_SBB_00009_18900402_038_078_0_002.xml"
+      },
+      {
+        "top10words": [
+          "dcr",
+          "dieser",
+          "ihrer",
+          "Anjnst",
+          "waren",
+          "Berlin",
+          "bald",
+          "serbischen",
+          "Partei",
+          "neuen"
+        ],
+        "Strings": 2842,
+        "TextLines": 356,
+        "arithmeticMeanStrinsPerLine": "7.9831",
+        "arithmeticMeanLineLengthInMm": "81.5",
+        "blocks": 20,
+        "arithmeticMeanLinesPerBlock": "17.8000",
+        "sizeInPx": {
+          "xMin": 290,
+          "xMax": 3547,
+          "yMin": 460,
+          "yMax": 5498
+        },
+        "sizeInMm": {
+          "width": "275.8",
+          "height": "426.6"
+        },
+        "arithmeticMeanWC": "0.56958",
+        "fileName": "alto/F_SBB_00009_18900402_038_078_0_001.xml"
+      }
+    ],
+    "metsFileName": "SBB_00006_18900402_F_038_078_0_mets.xml",
+    "zipFileName": "SBB_00006_18900402_F_038_078_0.zip"
+  },
+  {
+    "title": "Volkszeitung (1890-1904) /Berliner Volkszeitung (1904-1930)",
+    "dateIssued": "1890-04-02",
+    "details": [
+      {
+        "caption": "Jahrgang",
+        "number": "038"
+      },
+      {
+        "caption": "Nr.",
+        "number": "078"
+      }
+    ],
+    "pages": [
+      {
+        "top10words": [
+          "April",
+          "Oberlehrer",
+          "heute",
+          "Gymnasium",
+          "Mark",
+          "Dividende",
+          "bis",
+          "gleicher",
+          "Bank",
+          "Lehrer"
+        ],
+        "Strings": 3543,
+        "TextLines": 423,
+        "arithmeticMeanStrinsPerLine": "8.3759",
+        "arithmeticMeanLineLengthInMm": "80.3",
+        "blocks": 7,
+        "arithmeticMeanLinesPerBlock": "60.4286",
+        "sizeInPx": {
+          "xMin": 218,
+          "xMax": 3464,
+          "yMin": 474,
+          "yMax": 5440
+        },
+        "sizeInMm": {
+          "width": "274.8",
+          "height": "420.5"
+        },
+        "arithmeticMeanWC": "0.51105",
+        "fileName": "alto/F_SBB_00009_18900402_038_078_1_003.xml"
+      },
+      {
+        "top10words": [
+          "Schneberg",
+          "wenn",
+          "Fraktion",
+          "sein",
+          "Gemeinde",
+          "junge",
+          "hatte",
+          "seine",
+          "Mdchen",
+          "welche"
+        ],
+        "Strings": 2841,
+        "TextLines": 359,
+        "arithmeticMeanStrinsPerLine": "7.9136",
+        "arithmeticMeanLineLengthInMm": "79.2",
+        "blocks": 12,
+        "arithmeticMeanLinesPerBlock": "29.9167",
+        "sizeInPx": {
+          "xMin": 161,
+          "xMax": 3403,
+          "yMin": 473,
+          "yMax": 5480
+        },
+        "sizeInMm": {
+          "width": "274.5",
+          "height": "423.9"
+        },
+        "arithmeticMeanWC": "0.63988",
+        "fileName": "alto/F_SBB_00009_18900402_038_078_1_001.xml"
+      },
+      {
+        "top10words": [
+          "April",
+          "Mittwoch",
+          "Mark",
+          "Berlin",
+          "Vorstellung",
+          "zum",
+          "Ansang",
+          "1890",
+          "geb",
+          "Morgen"
+        ],
+        "Strings": 2470,
+        "TextLines": 528,
+        "arithmeticMeanStrinsPerLine": "4.6780",
+        "arithmeticMeanLineLengthInMm": "46.4",
+        "blocks": 78,
+        "arithmeticMeanLinesPerBlock": "6.7692",
+        "sizeInPx": {
+          "xMin": 2,
+          "xMax": 4106,
+          "yMin": 1,
+          "yMax": 5436
+        },
+        "sizeInMm": {
+          "width": "347.5",
+          "height": "460.2"
+        },
+        "arithmeticMeanWC": "0.53043",
+        "fileName": "alto/F_SBB_00009_18900402_038_078_1_004.xml"
+      },
+      {
+        "top10words": [
+          "Oberlehrer",
+          "zum",
+          "ordentliche",
+          "Lehrer",
+          "welche",
+          "Gymnasium",
+          "habe",
+          "Anstalt",
+          "sein",
+          "Herrn"
+        ],
+        "Strings": 2975,
+        "TextLines": 395,
+        "arithmeticMeanStrinsPerLine": "7.5316",
+        "arithmeticMeanLineLengthInMm": "78.3",
+        "blocks": 28,
+        "arithmeticMeanLinesPerBlock": "14.1071",
+        "sizeInPx": {
+          "xMin": 764,
+          "xMax": 3993,
+          "yMin": 459,
+          "yMax": 5428
+        },
+        "sizeInMm": {
+          "width": "273.4",
+          "height": "420.7"
+        },
+        "arithmeticMeanWC": "0.65870",
+        "fileName": "alto/F_SBB_00009_18900402_038_078_1_002.xml"
+      }
+    ],
+    "metsFileName": "SBB_00006_18900402_F_038_078_1_mets.xml",
+    "zipFileName": "SBB_00006_18900402_F_038_078_1.zip"
+  }
+]

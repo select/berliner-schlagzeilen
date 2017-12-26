@@ -583,283 +583,330 @@
     "sendAfter": "2017-11-30 19:35",
     "status": "Neuer vergeblicher englischer Angriff bei Bourlon. 30.11.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-11-30/27971740 #1917LIVE",
     "alt_text": "Berliner Volkszeitung 30.11.1917 Abend-Ausgabe",
-    "img": "1917-11-30.2.png"
+    "img": "1917-11-30.2.png",
+    "tweetId": 936331681342148600
   },
   {
     "sendAfter": "2017-12-01 10:35",
     "status": "Das russische Friedenstelegramm. 01.12.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-12-01/27971740 #1917LIVE",
     "alt_text": "Berliner Volkszeitung 01.12.1917 Morgen-Ausgabe",
-    "img": "1917-12-01.1.png"
+    "img": "1917-12-01.1.png",
+    "tweetId": 936584478104997900
   },
   {
     "sendAfter": "2017-12-01 18:35",
     "status": "Siegreicher Gegenstoß bei Cambrai. 01.12.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-12-01/27971740 #1917LIVE",
     "alt_text": "Berliner Volkszeitung 01.12.1917 Abend-Ausgabe",
-    "img": "1917-12-01.2.png"
+    "img": "1917-12-01.2.png",
+    "tweetId": 936671291788218400
   },
   {
     "sendAfter": "2017-12-02 10:35",
     "status": "Russische Drohung mit dem Sonderfrieden. 02.12.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-12-02/27971740 #1917LIVE",
     "alt_text": "Berliner Volkszeitung 02.12.1917 Morgen-Ausgabe",
-    "img": "1917-12-02.0.png"
+    "img": "1917-12-02.0.png",
+    "tweetId": 936965734542037000
   },
   {
     "sendAfter": "2017-12-03 10:35",
     "status": "Neue englische Niederlagen bei Cambrai. 03.12.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-12-03/27971740 #1917LIVE",
     "alt_text": "Berliner Volkszeitung 03.12.1917 Morgen-Ausgabe",
-    "img": "1917-12-03.0.png"
+    "img": "1917-12-03.0.png",
+    "tweetId": 937256396319526900
   },
   {
     "sendAfter": "2017-12-03 18:35",
     "status": "Beginn der Waffenstillstandsverhandlungen! 03.12.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-12-03/27971740 #1917LIVE",
     "alt_text": "Berliner Volkszeitung 03.12.1917 Abend-Ausgabe",
-    "img": "1917-12-03.1.png"
+    "img": "1917-12-03.1.png",
+    "tweetId": 937396072560955400
   },
   {
     "sendAfter": "2017-12-04 10:35",
     "status": "Die Verhandlungen mit Rußland. 04.12.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-12-04/27971740 #1917LIVE",
     "alt_text": "Berliner Volkszeitung 04.12.1917 Morgen-Ausgabe",
-    "img": "1917-12-04.1.png"
+    "img": "1917-12-04.1.png",
+    "tweetId": 937618769408675800
   },
   {
     "sendAfter": "2017-12-04 18:35",
     "status": "Dorf Vacquerie im Sturm genommen. 04.12.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-12-04/27971740 #1917LIVE",
     "alt_text": "Berliner Volkszeitung 04.12.1917 Abend-Ausgabe",
-    "img": "1917-12-04.2.png"
+    "img": "1917-12-04.2.png",
+    "tweetId": 937788653081948200
   },
   {
     "sendAfter": "2017-12-05 10:35",
     "status": "Der erste Tag der Waffenstillstands-Konferenz. 05.12.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-12-05/27971740 #1917LIVE",
     "alt_text": "Berliner Volkszeitung 05.12.1917 Morgen-Ausgabe",
-    "img": "1917-12-05.1.png"
+    "img": "1917-12-05.1.png",
+    "tweetId": 937984924161925100
   },
   {
     "sendAfter": "2017-12-05 18:35",
     "status": "Die Wahlrechtsvorlage vor dem Preußenhause. 05.12.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-12-05/27971740 #1917LIVE",
     "alt_text": "Berliner Volkszeitung 05.12.1917 Abend-Ausgabe",
-    "img": "1917-12-05.2.png"
+    "img": "1917-12-05.2.png",
+    "tweetId": 938120910946668500
   },
   {
     "sendAfter": "2017-12-06 10:35",
     "status": "Der erste Tag der Wahlrechtsschlacht. 06.12.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-12-06/27971740 #1917LIVE",
     "alt_text": "Berliner Volkszeitung 06.12.1917 Morgen-Ausgabe",
-    "img": "1917-12-06.0.png"
+    "img": "1917-12-06.0.png",
+    "tweetId": 938354871266435100
   },
   {
     "sendAfter": "2017-12-06 18:35",
     "status": "Glänzende Erfolge bei Cambrai und in Italien. 06.12.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-12-06/27971740 #1917LIVE",
     "alt_text": "Berliner Volkszeitung 06.12.1917 Abend-Ausgabe",
-    "img": "1917-12-06.2.png"
+    "img": "1917-12-06.2.png",
+    "tweetId": 938464344903503900
   },
   {
     "sendAfter": "2017-12-07 10:35",
     "status": "Das gefährdete gleiche Wahlrecht. 07.12.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-12-07/27971740 #1917LIVE",
     "alt_text": "Berliner Volkszeitung 07.12.1917 Morgen-Ausgabe",
-    "img": "1917-12-07.0.png"
+    "img": "1917-12-07.0.png",
+    "tweetId": 938751244428103700
   },
   {
     "sendAfter": "2017-12-07 15:27",
     "status": "Ende der Schlacht von Cambrai. 07.12.1917 https://de.wikipedia.org/wiki/Schlacht_von_Cambrai",
     "alt_text": "Schlacht von Cambrai 1917",
-    "img": "WWITrenchCambrai.jpg"
+    "img": "WWITrenchCambrai.jpg",
+    "tweetId": 938777640017842200
   },
   {
     "sendAfter": "2017-12-07 18:35",
     "status": "Erstürmung des Monte Sisemol. 07.12.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-12-07/27971740 #1917LIVE",
     "alt_text": "Berliner Volkszeitung 07.12.1917 Abend-Ausgabe",
-    "img": "1917-12-07.2.png"
+    "img": "1917-12-07.2.png",
+    "tweetId": 938860720736874500
   },
   {
     "sendAfter": "2017-12-08 10:35",
     "status": "Erfolgreiche Kämpfe bei Graincourt. 08.12.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-12-08/27971740 #1917LIVE",
     "alt_text": "Berliner Volkszeitung 08.12.1917 Morgen-Ausgabe",
-    "img": "1917-12-08.1.png"
+    "img": "1917-12-08.1.png",
+    "tweetId": 939079659307794400
   },
   {
     "sendAfter": "2017-12-08 18:35",
     "status": "Erhöhte Artillerietätigkeit südlich der Scarpe. 08.12.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-12-08/27971740 #1917LIVE",
     "alt_text": "Berliner Volkszeitung 08.12.1917 Abend-Ausgabe",
-    "img": "1917-12-08.2.png"
+    "img": "1917-12-08.2.png",
+    "tweetId": 939189136069742600
   },
   {
     "sendAfter": "2017-12-09 10:35",
     "status": "286 900 Gefangene - 2000 Geschütze. Die deutsche Kriegsbeute seit dem 12. Dezember 1916. 09.12.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-12-09/27971740 #1917LIVE",
     "alt_text": "Berliner Volkszeitung 09.12.1917 Morgen-Ausgabe",
-    "img": "1917-12-09.1.png"
+    "img": "1917-12-09.1.png",
+    "tweetId": 939430724947587100
   },
   {
     "sendAfter": "2017-12-10 10:35",
     "status": "Starke Feuertätigkeit in Flandern und im Artois. 10.12.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-12-10/27971740 #1917LIVE",
     "alt_text": "Berliner Volkszeitung 10.12.1917 Morgen-Ausgabe",
-    "img": "1917-12-10.0.png"
+    "img": "1917-12-10.0.png",
+    "tweetId": 939815759169163300
   },
   {
     "sendAfter": "2017-12-10 18:35",
     "status": "Waffenstillstand zwischen Dnjestr und Donaumündung. 10.12.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-12-10/27971740 #1917LIVE",
     "alt_text": "Berliner Volkszeitung 10.12.1917 Abend-Ausgabe",
-    "img": "1917-12-10.1.png"
+    "img": "1917-12-10.1.png",
+    "tweetId": 939913913818341400
   },
   {
     "sendAfter": "2017-12-11 10:35",
     "status": "Aus der Waffenstillstandskonferenz. 11.12.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-12-11/27971740 #1917LIVE",
     "alt_text": "Berliner Volkszeitung 11.12.1917 Morgen-Ausgabe",
-    "img": "1917-12-11.1.png"
+    "img": "1917-12-11.1.png",
+    "tweetId": 940166819503071200
   },
   {
     "sendAfter": "2017-12-11 18:35",
     "status": "Über ein Viertel der Welttonnage versenkt. Die Jahresbilanz des U-Boot-Krieges. 11.12.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-12-11/27971740 #1917LIVE",
     "alt_text": "Berliner Volkszeitung 11.12.1917 Abend-Ausgabe",
-    "img": "1917-12-11.2.png"
+    "img": "1917-12-11.2.png",
+    "tweetId": 940276304380858400
   },
   {
     "sendAfter": "2017-12-12 10:35",
     "status": "Beginn der russischen Demobilisation. 12.12.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-12-12/27971740 #1917LIVE",
     "alt_text": "Berliner Volkszeitung 12.12.1917 Morgen-Ausgabe",
-    "img": "1917-12-12.0.png"
+    "img": "1917-12-12.0.png",
+    "tweetId": 940517873725968400
   },
   {
     "sendAfter": "2017-12-12 18:35",
     "status": "Kämpfe zwischen Brenta und Piave. 12.12.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-12-12/27971740 #1917LIVE",
     "alt_text": "Berliner Volkszeitung 12.12.1917 Abend-Ausgabe",
-    "img": "1917-12-12.2.png"
+    "img": "1917-12-12.2.png",
+    "tweetId": 940687769784995800
   },
   {
     "sendAfter": "2017-12-13 10:35",
     "status": "Vernichtung eines englischen Luftschiffs. 13.12.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-12-13/27971740 #1917LIVE",
     "alt_text": "Berliner Volkszeitung 13.12.1917 Morgen-Ausgabe",
-    "img": "1917-12-13.0.png"
+    "img": "1917-12-13.0.png",
+    "tweetId": 940880256407343100
   },
   {
     "sendAfter": "2017-12-13 18:35",
     "status": "Fortsetzung der Waffenstillstandsverhandlungen. 13.12.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-12-13/27971740 #1917LIVE",
     "alt_text": "Berliner Volkszeitung 13.12.1917 Abend-Ausgabe",
-    "img": "1917-12-13.2.png"
+    "img": "1917-12-13.2.png",
+    "tweetId": 941055857974038500
   },
   {
     "sendAfter": "2017-12-14 10:35",
     "status": "Die Lage an den Fronten. 14.12.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-12-14/27971740 #1917LIVE",
     "alt_text": "Berliner Volkszeitung 14.12.1917 Morgen-Ausgabe",
-    "img": "1917-12-14.0.png"
+    "img": "1917-12-14.0.png",
+    "tweetId": 941242643509665800
   },
   {
     "sendAfter": "2017-12-14 18:35",
     "status": "Ein ganzer Geleitzug vernichtet. 50 000 Tonnen im Mittelmeer versenkt. 14.12.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-12-14/27971740 #1917LIVE",
     "alt_text": "Berliner Volkszeitung 14.12.1917 Abend-Ausgabe",
-    "img": "1917-12-14.2.png"
+    "img": "1917-12-14.2.png",
+    "tweetId": 941416530650259500
   },
   {
     "sendAfter": "2017-12-15 10:35",
     "status": "Prüfung der Waffenstillstandsentwürfe. 15.12.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-12-15/27971740 #1917LIVE",
     "alt_text": "Berliner Volkszeitung 15.12.1917 Morgen-Ausgabe",
-    "img": "1917-12-15.0.png"
+    "img": "1917-12-15.0.png",
+    "tweetId": 941631478877868000
   },
   {
     "sendAfter": "2017-12-15 18:35",
     "status": "Teilweise Einigung über den Waffenstillstand. 15.12.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-12-15/27971740 #1917LIVE",
     "alt_text": "Berliner Volkszeitung 15.12.1917 Abend-Ausgabe",
-    "img": "1917-12-15.2.png"
+    "img": "1917-12-15.2.png",
+    "tweetId": 941808897920258000
   },
   {
     "sendAfter": "2017-12-16 10:35",
     "status": "Sieg der Bolschewiki über Kaledin. 16.12.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-12-16/27971740 #1917LIVE",
     "alt_text": "Berliner Volkszeitung 16.12.1917 Morgen-Ausgabe",
-    "img": "1917-12-16.1.png"
+    "img": "1917-12-16.1.png",
+    "tweetId": 942042936040190000
   },
   {
     "sendAfter": "2017-12-17 10:35",
     "status": "28 Tage Waffenstillstand mit Rußland. 17.12.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-12-17/27971740 #1917LIVE",
     "alt_text": "Berliner Volkszeitung 17.12.1917 Morgen-Ausgabe",
-    "img": "1917-12-17.0.png"
+    "img": "1917-12-17.0.png",
+    "tweetId": 942469501358166000
   },
   {
     "sendAfter": "2017-12-17 18:35",
     "status": "Heftige Artilleriekämpfe zwischen Brenta und Piave. 17.12.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-12-17/27971740 #1917LIVE",
     "alt_text": "Berliner Volkszeitung 17.12.1917 Abend-Ausgabe",
-    "img": "1917-12-17.1.png"
+    "img": "1917-12-17.1.png",
+    "tweetId": 942473274138746900
   },
   {
     "sendAfter": "2017-12-18 10:35",
     "status": "Friedensverhandlungen in den nächsten Tagen. 18.12.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-12-18/27971740 #1917LIVE",
     "alt_text": "Berliner Volkszeitung 18.12.1917 Morgen-Ausgabe",
-    "img": "1917-12-18.0.png"
+    "img": "1917-12-18.0.png",
+    "tweetId": 942703513657888800
   },
   {
     "sendAfter": "2017-12-18 18:35",
     "status": "Stellungen am Monte Solarolo genommen. 18.12.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-12-18/27971740 #1917LIVE",
     "alt_text": "Berliner Volkszeitung 18.12.1917 Abend-Ausgabe",
-    "img": "1917-12-18.2.png"
+    "img": "1917-12-18.2.png",
+    "tweetId": 942812997281599500
   },
   {
     "sendAfter": "2017-12-19 10:35",
     "status": "Volk und Friedensschluß. 19.12.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-12-19/27971740 #1917LIVE",
     "alt_text": "Berliner Volkszeitung 19.12.1917 Morgen-Ausgabe",
-    "img": "1917-12-19.1.png"
+    "img": "1917-12-19.1.png",
+    "tweetId": 943073575212408800
   },
   {
     "sendAfter": "2017-12-19 18:35",
     "status": "Erstürmung des Monte Asolone. 19.12.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-12-19/27971740 #1917LIVE",
     "alt_text": "Berliner Volkszeitung 19.12.1917 Abend-Ausgabe",
-    "img": "1917-12-19.2.png"
+    "img": "1917-12-19.2.png",
+    "tweetId": 943175380218863600
   },
   {
     "sendAfter": "2017-12-20 10:35",
     "status": "Die Lage an den Fronten. 20.12.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-12-20/27971740 #1917LIVE",
     "alt_text": "Berliner Volkszeitung 20.12.1917 Morgen-Ausgabe",
-    "img": "1917-12-20.1.png"
+    "img": "1917-12-20.1.png",
+    "tweetId": 943455009798283300
   },
   {
     "sendAfter": "2017-12-20 18:35",
     "status": "Italienische Angriffe am Monte Pertica abgewiesen. 20.12.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-12-20/27971740 #1917LIVE",
     "alt_text": "Berliner Volkszeitung 20.12.1917 Abend-Ausgabe",
-    "img": "1917-12-20.2.png"
+    "img": "1917-12-20.2.png",
+    "tweetId": 943919051562213400
   },
   {
     "sendAfter": "2017-12-21 10:35",
     "status": "Volksvertretung und Friedensverhandlungen. 21.12.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-12-21/27971740 #1917LIVE",
     "alt_text": "Berliner Volkszeitung 21.12.1917 Morgen-Ausgabe",
-    "img": "1917-12-21.1.png"
+    "img": "1917-12-21.0.png",
+    "tweetId": 943974450642505700
   },
   {
     "sendAfter": "2017-12-21 18:35",
     "status": "Erneute heftige Angriffe der Italiener gescheitert. 21.12.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-12-21/27971740 #1917LIVE",
     "alt_text": "Berliner Volkszeitung 21.12.1917 Abend-Ausgabe",
-    "img": "1917-12-21.2.png"
+    "img": "1917-12-21.2.png",
+    "error": "Error: ENOENT: no such file or directory, open '/home/select/Dev/berliner-schlagzeilen/src/../data/img/1917-12-21.2.png'"
   },
   {
     "sendAfter": "2017-12-22 10:35",
     "status": "607 00 Tonnen im November versenkt. 22.12.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-12-22/27971740 #1917LIVE",
     "alt_text": "Berliner Volkszeitung 22.12.1917 Morgen-Ausgabe",
-    "img": "1917-12-22.1.png"
+    "img": "1917-12-22.1.png",
+    "tweetId": 944141769251356700
   },
   {
     "sendAfter": "2017-12-22 18:35",
     "status": "Neue lebhafte Kämpfe in Italien. 22.12.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-12-22/27971740 #1917LIVE",
     "alt_text": "Berliner Volkszeitung 22.12.1917 Abend-Ausgabe",
-    "img": "1917-12-22.2.png"
+    "img": "1917-12-22.2.png",
+    "tweetId": 944262562908123100
   },
   {
     "sendAfter": "2017-12-23 10:35",
     "status": "Die Ukraine gegen Kaledin. 23.12.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-12-23/27971740 #1917LIVE",
     "alt_text": "Berliner Volkszeitung 23.12.1917 Morgen-Ausgabe",
-    "img": "1917-12-23.0.png"
+    "img": "1917-12-23.0.png",
+    "tweetId": 944507931206279200
   },
   {
     "sendAfter": "2017-12-24 10:35",
     "status": "Eröffnung der Friedensverhandlungen. 24.12.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-12-24/27971740 #1917LIVE",
     "alt_text": "Berliner Volkszeitung 24.12.1917 Morgen-Ausgabe",
-    "img": "1917-12-24.0.png"
+    "img": "1917-12-24.0.png",
+    "tweetId": 944915616753954800
   },
   {
     "sendAfter": "2017-12-24 18:35",
     "status": "Erstürmung des Col de Rosso. - 6000 Gefangene. 24.12.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-12-24/27971740 #1917LIVE",
     "alt_text": "Berliner Volkszeitung 24.12.1917 Abend-Ausgabe",
-    "img": "1917-12-24.1.png"
+    "img": "1917-12-24.1.png",
+    "tweetId": 945157205254459400
   },
   {
     "sendAfter": "2017-12-25 10:35",
     "status": "* * * Kriegsweihnachten 1917. * * * 25.12.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-12-25/27971740 #1917LIVE",
     "alt_text": "Berliner Volkszeitung 25.12.1917 Morgen-Ausgabe",
-    "img": "1917-12-25.1.png"
+    "img": "1917-12-25.1.png",
+    "tweetId": 945228931728396300
   },
   {
     "sendAfter": "2017-12-27 10:35",

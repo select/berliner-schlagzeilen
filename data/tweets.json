@@ -912,61 +912,71 @@
     "sendAfter": "2017-12-27 10:35",
     "status": "Allgemeiner Frieden? 27.12.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-12-27/27971740 #1917LIVE",
     "alt_text": "Berliner Volkszeitung 27.12.1917 Morgen-Ausgabe",
-    "img": "1917-12-27.1.png"
+    "img": "1917-12-27.0.png",
+    "tweetId": 946031210437992400
   },
   {
     "sendAfter": "2017-12-27 18:35",
     "status": "Erfolgreiche Unternehmung bei Bezonvaux. 27.12.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-12-27/27971740 #1917LIVE",
     "alt_text": "Berliner Volkszeitung 27.12.1917 Abend-Ausgabe",
-    "img": "1917-12-27.2.png"
+    "img": "1917-12-27.1.png",
+    "tweetId": 946074507487432700
   },
   {
     "sendAfter": "2017-12-28 10:35",
     "status": "Die Lage an den Fronten. 28.12.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-12-28/27971740 #1917LIVE",
     "alt_text": "Berliner Volkszeitung 28.12.1917 Morgen-Ausgabe",
-    "img": "1917-12-28.1.png"
+    "img": "1917-12-28.1.png",
+    "tweetId": 946393963401015300
   },
   {
     "sendAfter": "2017-12-28 18:35",
     "status": "Kampftätigkeit an der Brenta-Piave-Front. 28.12.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-12-28/27971740 #1917LIVE",
     "alt_text": "Berliner Volkszeitung 28.12.1917 Abend-Ausgabe",
-    "img": "1917-12-28.2.png"
+    "img": "1917-12-28.2.png",
+    "tweetId": 946436891376832500
   },
   {
     "sendAfter": "2017-12-29 10:35",
     "status": "Das Zehntage-Angebot. 29.12.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-12-29/27971740 #1917LIVE",
     "alt_text": "Berliner Volkszeitung 29.12.1917 Morgen-Ausgabe",
-    "img": "1917-12-29.1.png"
+    "img": "1917-12-29.1.png",
+    "tweetId": 946735105795600400
   },
   {
     "sendAfter": "2017-12-29 18:35",
     "status": "Grundsätzliche Einigung mit den Russen. 29.12.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-12-29/27971740 #1917LIVE",
     "alt_text": "Berliner Volkszeitung 29.12.1917 Abend-Ausgabe",
-    "img": "1917-12-29.2.png"
+    "img": "1917-12-29.2.png",
+    "tweetId": 946799275975102500
   },
   {
     "sendAfter": "2017-12-30 10:35",
     "status": "Die Grundlagen des deutsch-russischen Friedens. 30.12.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-12-30/27971740 #1917LIVE",
     "alt_text": "Berliner Volkszeitung 30.12.1917 Morgen-Ausgabe",
-    "img": "1917-12-30.1.png"
+    "img": "1917-12-30.1.png",
+    "tweetId": 947040870737510400
   },
   {
     "sendAfter": "2017-12-31 10:35",
     "status": "Englische Gräben bei Cambrai genommen. 31.12.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-12-31/27971740 #1917LIVE",
     "alt_text": "Berliner Volkszeitung 31.12.1917 Morgen-Ausgabe",
-    "img": "1917-12-31.0.png"
+    "img": "1917-12-31.0.png",
+    "tweetId": 947452327002243100
   },
   {
     "sendAfter": "2017-12-31 18:35",
     "status": "Angriff französischer Truppen am Tomba-Rücken. 31.12.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-12-31/27971740 #1917LIVE",
     "alt_text": "Berliner Volkszeitung 31.12.1917 Abend-Ausgabe",
-    "img": "1917-12-31.1.png"
+    "img": "1917-12-31.1.png",
+    "tweetId": 947678830977839100
   },
   {
     "sendAfter": "2018-01-01 10:35",
     "status": "01.01.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-01-01/27971740 #1918LIVE",
     "alt_text": "Berliner Volkszeitung 01.01.1918 Morgen-Ausgabe",
-    "img": "1918-01-01.0.png"
+    "img": "1918-01-01.0.png",
+    "tweetId": 947882667915268100
   },
   {
     "sendAfter": "2018-01-02 10:35",

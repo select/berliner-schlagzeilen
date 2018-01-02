@@ -16,15 +16,15 @@
       {
         "top10words": [
           "Bank",
-          "loco",
           "Preis",
-          "Mark",
           "Mai",
+          "Mark",
           "Brauerei",
-          "April",
           "AprilMai",
-          "rer",
-          "StPr"
+          "April",
+          "III",
+          "StPr",
+          "Sack"
         ],
         "Strings": 5156,
         "TextLines": 2172,
@@ -49,14 +49,14 @@
         "top10words": [
           "Signora",
           "Grfin",
-          "ihrer",
-          "hatte",
-          "ihren",
-          "Ehernbina",
-          "keine",
           "Basili",
-          "diese",
-          "ver"
+          "Ehernbina",
+          "Frau",
+          "groen",
+          "knnte",
+          "Mnchener",
+          "sic",
+          "htte"
         ],
         "Strings": 2654,
         "TextLines": 340,
@@ -79,16 +79,16 @@
       },
       {
         "top10words": [
-          "unter",
-          "hatte",
-          "selbst",
-          "sein",
-          "jetzt",
-          "welche",
           "uud",
-          "soll",
-          "zum",
-          "ver"
+          "Studenten",
+          "Regierung",
+          "Oper",
+          "Vorstellung",
+          "General",
+          "Gemlde",
+          "Theater",
+          "Vater",
+          "Bild"
         ],
         "Strings": 3301,
         "TextLines": 386,
@@ -112,15 +112,15 @@
       {
         "top10words": [
           "Rubel",
-          "000",
           "Kilogr",
           "Dividende",
           "Berlin",
-          "1889",
           "Mark",
-          "Jahre",
           "Aktien",
-          "Genossenschaft"
+          "Berliner",
+          "Genossenschaft",
+          "Arbeiter",
+          "Kaufmann"
         ],
         "Strings": 3598,
         "TextLines": 523,
@@ -161,16 +161,16 @@
     "pages": [
       {
         "top10words": [
-          "000",
-          "200",
-          "200000",
-          "300000",
           "Berlin",
           "Male",
-          "400000",
           "Herrn",
+          "Vorstellung",
           "Anfang",
-          "100000"
+          "Renz",
+          "Schauspiel",
+          "Akten",
+          "Mark",
+          "Mittwoch"
         ],
         "Strings": 1783,
         "TextLines": 469,
@@ -194,15 +194,15 @@
       {
         "top10words": [
           "Dividende",
-          "welche",
-          "1889",
-          "waren",
           "fich",
-          "unter",
           "Arbeiter",
-          "dieser",
-          "pro",
-          "bis"
+          "Bank",
+          "Aktien",
+          "Hamburg",
+          "London",
+          "betrgt",
+          "whrend",
+          "Stadt"
         ],
         "Strings": 3654,
         "TextLines": 422,
@@ -225,16 +225,16 @@
       },
       {
         "top10words": [
-          "seine",
-          "hatte",
           "Kinder",
           "Hermine",
-          "ihm",
-          "habe",
-          "ganz",
           "Kaiser",
           "Frst",
-          "wieder"
+          "Eisenbahn",
+          "Konferenz",
+          "Frsten",
+          "Berlin",
+          "Weise",
+          "Laube"
         ],
         "Strings": 2949,
         "TextLines": 360,
@@ -257,16 +257,16 @@
       },
       {
         "top10words": [
-          "ihm",
           "Hermine",
           "Berlin",
-          "zum",
           "Korb",
-          "mir",
-          "heute",
           "Kinder",
-          "wenig",
-          "geben"
+          "Krbchen",
+          "Mama",
+          "April",
+          "znm",
+          "Mdchen",
+          "Herz"
         ],
         "Strings": 3222,
         "TextLines": 384,
@@ -307,16 +307,16 @@
     "pages": [
       {
         "top10words": [
-          "nnd",
-          "welche",
           "Berlin",
           "anf",
-          "diese",
+          "Frau",
           "Tren",
-          "zum",
-          "bis",
-          "Zeit",
-          "welcher"
+          "Stcker",
+          "whrend",
+          "Forckenbeck",
+          "Zahl",
+          "Leiche",
+          "Tochter"
         ],
         "Strings": 3345,
         "TextLines": 377,
@@ -339,16 +339,16 @@
       },
       {
         "top10words": [
-          "verl",
           "verlangt",
           "Reform",
-          "sofort",
           "Mode",
-          "Klempner",
           "Drechsler",
-          "Berlin",
+          "Klempner",
+          "Bildhauer",
+          "Tchtige",
           "Tageblatt",
-          "Bildhauer"
+          "Schlesische",
+          "Schlosser"
         ],
         "Strings": 2174,
         "TextLines": 423,
@@ -374,13 +374,13 @@
           "Verein",
           "Bhrend",
           "bedeckt",
-          "habe",
-          "welche",
-          "Schmidt",
           "Berliner",
-          "schon",
+          "Schmidt",
           "Angeklagte",
-          "150"
+          "Gerichtshof",
+          "Turnver",
+          "Klger",
+          "Mdchen"
         ],
         "Strings": 3345,
         "TextLines": 689,
@@ -404,15 +404,15 @@
       {
         "top10words": [
           "verlangt",
-          "verl",
           "vcrl",
-          "gute",
-          "dauernde",
           "Tcht",
+          "dauernde",
           "Tchtige",
           "Tischler",
-          "str",
-          "Hause"
+          "Hause",
+          "Lehrling",
+          "Rockschn",
+          "Schneider"
         ],
         "Strings": 3302,
         "TextLines": 630,
@@ -455,14 +455,14 @@
         "top10words": [
           "Bank",
           "April",
-          "ver",
-          "loco",
-          "Mark",
           "bcz",
-          "Kilo",
+          "Mark",
           "Preis",
-          "rer",
-          "Brauerei"
+          "Kilo",
+          "Brauerei",
+          "Berliner",
+          "bedeckt",
+          "StPr"
         ],
         "Strings": 4994,
         "TextLines": 2315,
@@ -489,12 +489,12 @@
           "Berlin",
           "Mai",
           "April",
-          "seine",
           "Dividende",
-          "zum",
+          "Mark",
+          "Versammlung",
+          "Arbeit",
           "Liebknecht",
-          "welche",
-          "dieser"
+          "hiesigen"
         ],
         "Strings": 3968,
         "TextLines": 560,
@@ -517,16 +517,16 @@
       },
       {
         "top10words": [
-          "soll",
           "Regierung",
-          "welche",
-          "dieser",
-          "unter",
-          "habe",
           "Kaiser",
-          "nnd",
-          "zum",
-          "Rohre"
+          "Rohre",
+          "lassen",
+          "deutschen",
+          "Explosionen",
+          "dcS",
+          "Zeche",
+          "knnen",
+          "Wasser"
         ],
         "Strings": 3293,
         "TextLines": 393,
@@ -550,15 +550,15 @@
       {
         "top10words": [
           "dcr",
-          "dieser",
-          "ihrer",
           "Anjnst",
-          "waren",
-          "Berlin",
-          "bald",
-          "serbischen",
           "Partei",
-          "neuen"
+          "Berlin",
+          "serbischen",
+          "Belling",
+          "Gebude",
+          "Tom",
+          "Belgrad",
+          "Pasilsch"
         ],
         "Strings": 2842,
         "TextLines": 356,
@@ -601,14 +601,14 @@
         "top10words": [
           "April",
           "Oberlehrer",
-          "heute",
           "Gymnasium",
           "Mark",
           "Dividende",
-          "bis",
           "gleicher",
+          "Lehrer",
           "Bank",
-          "Lehrer"
+          "Eigenschaft",
+          "Tchter"
         ],
         "Strings": 3543,
         "TextLines": 423,
@@ -632,15 +632,15 @@
       {
         "top10words": [
           "Schneberg",
-          "wenn",
           "Fraktion",
-          "sein",
           "Gemeinde",
           "junge",
-          "hatte",
-          "seine",
           "Mdchen",
-          "welche"
+          "mtSvorsteher",
+          "Berlin",
+          "Sic",
+          "Hefter",
+          "Augen"
         ],
         "Strings": 2841,
         "TextLines": 359,
@@ -665,14 +665,14 @@
         "top10words": [
           "April",
           "Mittwoch",
-          "Mark",
           "Berlin",
           "Vorstellung",
-          "zum",
+          "Mark",
           "Ansang",
-          "1890",
-          "geb",
-          "Morgen"
+          "groe",
+          "Stube",
+          "Freitag",
+          "Zeitung"
         ],
         "Strings": 2470,
         "TextLines": 528,
@@ -696,15 +696,15 @@
       {
         "top10words": [
           "Oberlehrer",
-          "zum",
           "ordentliche",
           "Lehrer",
-          "welche",
           "Gymnasium",
-          "habe",
+          "Herrn",
           "Anstalt",
-          "sein",
-          "Herrn"
+          "Fraktion",
+          "Daily",
+          "Nachrichten",
+          "erhalten"
         ],
         "Strings": 2975,
         "TextLines": 395,

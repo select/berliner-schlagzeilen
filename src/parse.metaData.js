@@ -135,6 +135,7 @@ function parseAlto(fileName) {
 			words.reduce((acc, w) => {
 				const wn = w.$.CONTENT.replace(/\W/g,'');
 				if (wn.length < 3) return acc;
+				if (/\d+/.test(wn)) return acc;
 				if (wn in acc) acc[wn] += 1;
 				else acc[wn] = 1;
 				return acc;
@@ -245,7 +246,7 @@ const promises = fs
 		console.log('year', year);
 		const files = fs.readdirSync(`${config.remoteDataDir}/${year}`);
 		return files
-			.splice(0, 5)
+			.splice(0, 10)
 			.filter(file => !statsDataIndex.has(file))
 			.map(file => ({
 				zipFileName: file,

@@ -4,6 +4,7 @@
   "description": "Tweeting old news from 100 years ago.",
   "main": "index.js",
   "scripts": {
+    "start": "http-server -p 8888 ./",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -23,6 +24,7 @@
   "dependencies": {
     "adm-zip": "^0.4.7",
     "crawler": "^1.1.1",
+    "http-server": "^0.10.0",
     "jsdom": "^9.12.0",
     "moment": "^2.19.1",
     "twit": "^2.2.9",

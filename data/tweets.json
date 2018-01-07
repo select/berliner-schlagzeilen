@@ -982,67 +982,78 @@
     "sendAfter": "2018-01-02 10:35",
     "status": "Heftige Feuerkämpfe im Tomba-Gebiet. 02.01.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-01-02/27971740 #1918LIVE",
     "alt_text": "Berliner Volkszeitung 02.01.1918 Morgen-Ausgabe",
-    "img": "1918-01-02.0.png"
+    "img": "1918-01-02.0.png",
+    "tweetId": 948137331709575200
   },
   {
     "sendAfter": "2018-01-02 18:35",
     "status": "Rekordfahrt eines deutschen U-Bootes. 02.01.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-01-02/27971740 #1918LIVE",
     "alt_text": "Berliner Volkszeitung 02.01.1918 Abend-Ausgabe",
-    "img": "1918-01-02.1.png"
+    "img": "1918-01-02.1.png",
+    "tweetId": 948267700933070800
   },
   {
     "sendAfter": "2018-01-03 10:35",
     "status": "Teilnahme der Ukraine in Brest-Litowsk. 03.01.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-01-03/27971740 #1918LIVE",
     "alt_text": "Berliner Volkszeitung 03.01.1918 Morgen-Ausgabe",
-    "img": "1918-01-03.0.png"
+    "img": "1918-01-03.0.png",
+    "tweetId": 948490394559541200
   },
   {
     "sendAfter": "2018-01-03 18:35",
     "status": "Französische Vorstöße in der Champagne gescheitert. 03.01.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-01-03/27971740 #1918LIVE",
     "alt_text": "Berliner Volkszeitung 03.01.1918 Abend-Ausgabe",
-    "img": "1918-01-03.2.png"
+    "img": "1918-01-03.2.png",
+    "tweetId": 948626318912090100
   },
   {
     "sendAfter": "2018-01-04 10:35",
     "status": "Wiederbeginn in Brest-Litowsk. 04.01.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-01-04/27971740 #1918LIVE",
     "alt_text": "Berliner Volkszeitung 04.01.1918 Morgen-Ausgabe",
-    "img": "1918-01-04.1.png"
+    "img": "1918-01-04.1.png",
+    "tweetId": 948871890797584400
   },
   {
     "sendAfter": "2018-01-04 18:35",
     "status": "Unterbrechung in Brest-Litowsk. 04.01.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-01-04/27971740 #1918LIVE",
     "alt_text": "Berliner Volkszeitung 04.01.1918 Abend-Ausgabe",
-    "img": "1918-01-04.2.png"
+    "img": "1918-01-04.2.png",
+    "tweetId": 948973582616580100
   },
   {
     "sendAfter": "2018-01-05 10:35",
     "status": "Fernbleiben der Russen aus Brest-Litowsk. 05.01.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-01-05/27971740 #1918LIVE",
     "alt_text": "Berliner Volkszeitung 05.01.1918 Morgen-Ausgabe",
-    "img": "1918-01-05.2.png"
+    "img": "1918-01-05.0.png",
+    "tweetId": 949358422604075000
   },
   {
     "sendAfter": "2018-01-05 10:35",
     "status": "Es wird weiter verhandelt. Trotzki mit der russischen Delegation unterwegs nach Brest-Litowsk. 05.01.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-01-05/27971740 #1918LIVE",
     "alt_text": "Berliner Volkszeitung 05.01.1918 Morgen-Ausgabe",
-    "img": "1918-01-05.0.png"
+    "img": "1918-01-05.2.png",
+    "tweetId": 949358641894907900
   },
   {
     "sendAfter": "2018-01-06 10:35",
     "status": "Vor neuen Verhandlungen in Brest-Litowsk. 06.01.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-01-06/27971740 #1918LIVE",
     "alt_text": "Berliner Volkszeitung 06.01.1918 Morgen-Ausgabe",
-    "img": "1918-01-06.1.png"
+    "img": "1918-01-06.1.png",
+    "tweetId": 949619104108949500
   },
   {
     "sendAfter": "2018-01-07 10:35",
     "status": "Lloyd George verkündet die englischen Kriegsziele. 07.01.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-01-07/27971740 #1918LIVE",
     "alt_text": "Berliner Volkszeitung 07.01.1918 Morgen-Ausgabe",
-    "img": "1918-01-07.1.png"
+    "img": "1918-01-07.0.png",
+    "tweetId": 950034616014004200
   },
   {
     "sendAfter": "2018-01-07 10:35",
     "status": "Trotzki in Brest-Litowsk eingetroffen. 07.01.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-01-07/27971740 #1918LIVE",
     "alt_text": "Berliner Volkszeitung 07.01.1918 Morgen-Ausgabe",
-    "img": "1918-01-07.0.png"
+    "img": "1918-01-07.1.png",
+    "tweetId": 950034787883978800
   },
   {
     "sendAfter": "2018-01-08 10:35",

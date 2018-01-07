@@ -1,0 +1,52 @@
+<html>
+	<head>
+		<style>
+body {
+	font-family: sans-serif;
+}
+.tweets {
+  display: flex;
+  flex-wrap: wrap;
+}
+.tweets > div {
+	display: flex;
+	flex-direction: column;
+	height: 300px;
+	width: 200px;
+	margin: 10px;
+	overflow: hidden;
+}
+.tweets img {
+	object-fit: scale-down;
+	object-position: 0 0;
+}
+.sendAfter {
+	color: #aaa;
+}
+.status {
+	height: 40px;
+	text-overflow: ellipsis;
+}
+		</style>
+	</head>
+	<body>
+		<h1>Tweet Manager</h1>
+		<div class="tweets"></div>
+	</body>
+	<script>
+		const $tweets = document.querySelector('.tweets');
+		fetch('../data/tweets.json')
+			.then(response => response.json())
+			.then(tweets => {
+				tweets
+					.filter(({img, tweetId, error }) => img && !(tweetId || error) )
+					.forEach(tweet => {
+						$tweets.innerHTML += `<div>
+							<div class="sendAfter">${tweet.sendAfter}</div>
+							<div class="status">${tweet.status}</div>
+							<img src="../data/img/${tweet.img}"/>
+						</div>`
+					})
+			});
+	</script>
+</html>

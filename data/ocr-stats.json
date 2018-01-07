@@ -728,5 +728,2427 @@
     ],
     "metsFileName": "SBB_00006_18900402_F_038_078_1_mets.xml",
     "zipFileName": "SBB_00006_18900402_F_038_078_1.zip"
+  },
+  {
+    "title": "Volkszeitung (1890-1904) /Berliner Volkszeitung (1904-1930)",
+    "dateIssued": "1918-01-01",
+    "details": [
+      {
+        "caption": "Jahrgang",
+        "number": "066"
+      },
+      {
+        "caption": "Nr.",
+        "number": "001"
+      }
+    ],
+    "pages": [
+      {
+        "top10words": [
+          "Nachm",
+          "Vorstellungen",
+          "Meter",
+          "Berlin",
+          "Kleider",
+          "halbe",
+          "breit",
+          "Akten",
+          "Kind",
+          "Theater"
+        ],
+        "Strings": 1365,
+        "TextLines": 419,
+        "arithmeticMeanStrinsPerLine": "3.2578",
+        "arithmeticMeanLineLengthInMm": "32.2",
+        "blocks": 60,
+        "arithmeticMeanLinesPerBlock": "6.9833",
+        "sizeInPx": {
+          "xMin": 822,
+          "xMax": 4195,
+          "yMin": 528,
+          "yMax": 5906
+        },
+        "sizeInMm": {
+          "width": "285.6",
+          "height": "455.3"
+        },
+        "arithmeticMeanWC": "0.46613",
+        "fileName": "alto/F_SBB_00009_19180101_066_001_0_004.xml"
+      },
+      {
+        "top10words": [
+          "Stck",
+          "Akt",
+          "Dezember",
+          "Marine",
+          "Berlin",
+          "Landrat",
+          "Herrn",
+          "Zeitung",
+          "Gast",
+          "Siege"
+        ],
+        "Strings": 2846,
+        "TextLines": 359,
+        "arithmeticMeanStrinsPerLine": "7.9276",
+        "arithmeticMeanLineLengthInMm": "81.9",
+        "blocks": 19,
+        "arithmeticMeanLinesPerBlock": "18.8947",
+        "sizeInPx": {
+          "xMin": 862,
+          "xMax": 4127,
+          "yMin": 885,
+          "yMax": 5655
+        },
+        "sizeInMm": {
+          "width": "276.4",
+          "height": "403.9"
+        },
+        "arithmeticMeanWC": "0.51100",
+        "fileName": "alto/F_SBB_00009_19180101_066_001_0_002.xml"
+      },
+      {
+        "top10words": [
+          "verkauft",
+          "billig",
+          "kaust",
+          "Tie",
+          "Mark",
+          "strae",
+          "deutschen",
+          "Art",
+          "Mbel",
+          "Groe"
+        ],
+        "Strings": 3797,
+        "TextLines": 825,
+        "arithmeticMeanStrinsPerLine": "4.6024",
+        "arithmeticMeanLineLengthInMm": "42.6",
+        "blocks": 89,
+        "arithmeticMeanLinesPerBlock": "9.2697",
+        "sizeInPx": {
+          "xMin": 127,
+          "xMax": 3365,
+          "yMin": 901,
+          "yMax": 5684
+        },
+        "sizeInMm": {
+          "width": "274.2",
+          "height": "405.0"
+        },
+        "arithmeticMeanWC": "0.48527",
+        "fileName": "alto/F_SBB_00009_19180101_066_001_0_003.xml"
+      },
+      {
+        "top10words": [
+          "George",
+          "Arbeiter",
+          "Dezember",
+          "Lloyd",
+          "persischen",
+          "Frieden",
+          "wrde",
+          "letzten",
+          "Welt",
+          "Kundgebung"
+        ],
+        "Strings": 2322,
+        "TextLines": 287,
+        "arithmeticMeanStrinsPerLine": "8.0906",
+        "arithmeticMeanLineLengthInMm": "82.3",
+        "blocks": 17,
+        "arithmeticMeanLinesPerBlock": "16.8824",
+        "sizeInPx": {
+          "xMin": 55,
+          "xMax": 3279,
+          "yMin": 872,
+          "yMax": 5649
+        },
+        "sizeInMm": {
+          "width": "273.0",
+          "height": "404.5"
+        },
+        "arithmeticMeanWC": "0.56524",
+        "fileName": "alto/F_SBB_00009_19180101_066_001_0_001.xml"
+      }
+    ],
+    "metsFileName": "SBB_00006_19180101_F_066_001_0_mets.xml"
+  },
+  {
+    "title": "Volkszeitung (1890-1904) /Berliner Volkszeitung (1904-1930)",
+    "dateIssued": "1918-01-01",
+    "details": [
+      {
+        "caption": "Jahrgang",
+        "number": "066"
+      },
+      {
+        "caption": "Nr.",
+        "number": "001"
+      }
+    ],
+    "pages": [
+      {
+        "top10words": [
+          "gesucht",
+          "verlangt",
+          "sucht",
+          "Berlin",
+          "Arbeiterinnen",
+          "Maschinenfabrik",
+          "Arbeiter",
+          "stellt",
+          "Mdchen",
+          "Alte"
+        ],
+        "Strings": 2191,
+        "TextLines": 723,
+        "arithmeticMeanStrinsPerLine": "3.0304",
+        "arithmeticMeanLineLengthInMm": "31.5",
+        "blocks": 139,
+        "arithmeticMeanLinesPerBlock": "5.2014",
+        "sizeInPx": {
+          "xMin": 839,
+          "xMax": 4057,
+          "yMin": 853,
+          "yMax": 5640
+        },
+        "sizeInMm": {
+          "width": "272.5",
+          "height": "405.3"
+        },
+        "arithmeticMeanWC": "0.56384",
+        "fileName": "alto/F_SBB_00009_19180101_066_001_1_002.xml"
+      },
+      {
+        "top10words": [
+          "Berlin",
+          "too",
+          "Auswahl",
+          "Paul",
+          "rang",
+          "Fredy",
+          "Del",
+          "Gleiser",
+          "Knrgstr",
+          "JBafrnfrof"
+        ],
+        "Strings": 670,
+        "TextLines": 182,
+        "arithmeticMeanStrinsPerLine": "3.6813",
+        "arithmeticMeanLineLengthInMm": "36.9",
+        "blocks": 34,
+        "arithmeticMeanLinesPerBlock": "5.3529",
+        "sizeInPx": {
+          "xMin": 895,
+          "xMax": 4085,
+          "yMin": 1198,
+          "yMax": 5768
+        },
+        "sizeInMm": {
+          "width": "270.1",
+          "height": "386.9"
+        },
+        "arithmeticMeanWC": "0.43429",
+        "fileName": "alto/F_SBB_00009_19180101_066_001_1_004.xml"
+      },
+      {
+        "top10words": [
+          "verlangt",
+          "Berlin",
+          "sucht",
+          "gesucht",
+          "suchen",
+          "Eintritt",
+          "Dreher",
+          "verlangen",
+          "Tchtige",
+          "Tischler"
+        ],
+        "Strings": 1931,
+        "TextLines": 623,
+        "arithmeticMeanStrinsPerLine": "3.0995",
+        "arithmeticMeanLineLengthInMm": "32.6",
+        "blocks": 111,
+        "arithmeticMeanLinesPerBlock": "5.6126",
+        "sizeInPx": {
+          "xMin": 83,
+          "xMax": 3939,
+          "yMin": 889,
+          "yMax": 6134
+        },
+        "sizeInMm": {
+          "width": "326.5",
+          "height": "444.1"
+        },
+        "arithmeticMeanWC": "0.50399",
+        "fileName": "alto/F_SBB_00009_19180101_066_001_1_003.xml"
+      },
+      {
+        "top10words": [
+          "Mark",
+          "Zeitung",
+          "Napoleon",
+          "Alexander",
+          "Januar",
+          "Groe",
+          "Stunde",
+          "Garibaldi",
+          "Krieg",
+          "Berliner"
+        ],
+        "Strings": 2952,
+        "TextLines": 346,
+        "arithmeticMeanStrinsPerLine": "8.5318",
+        "arithmeticMeanLineLengthInMm": "77.8",
+        "blocks": 22,
+        "arithmeticMeanLinesPerBlock": "15.7273",
+        "sizeInPx": {
+          "xMin": 68,
+          "xMax": 3315,
+          "yMin": 876,
+          "yMax": 5651
+        },
+        "sizeInMm": {
+          "width": "274.9",
+          "height": "404.3"
+        },
+        "arithmeticMeanWC": "0.51651",
+        "fileName": "alto/F_SBB_00009_19180101_066_001_1_001.xml"
+      }
+    ],
+    "metsFileName": "SBB_00006_19180101_F_066_001_1_mets.xml"
+  },
+  {
+    "title": "Volkszeitung (1890-1904) /Berliner Volkszeitung (1904-1930)",
+    "dateIssued": "1918-01-01",
+    "details": [
+      {
+        "caption": "Jahrgang",
+        "number": "066"
+      },
+      {
+        "caption": "Nr.",
+        "number": "001"
+      }
+    ],
+    "pages": [
+      {
+        "top10words": [
+          "Nachm",
+          "Vorstellungen",
+          "Meter",
+          "Berlin",
+          "Kleider",
+          "halbe",
+          "breit",
+          "Akten",
+          "Kind",
+          "Theater"
+        ],
+        "Strings": 1365,
+        "TextLines": 419,
+        "arithmeticMeanStrinsPerLine": "3.2578",
+        "arithmeticMeanLineLengthInMm": "32.2",
+        "blocks": 60,
+        "arithmeticMeanLinesPerBlock": "6.9833",
+        "sizeInPx": {
+          "xMin": 822,
+          "xMax": 4195,
+          "yMin": 528,
+          "yMax": 5906
+        },
+        "sizeInMm": {
+          "width": "285.6",
+          "height": "455.3"
+        },
+        "arithmeticMeanWC": "0.46613",
+        "fileName": "alto/F_SBB_00009_19180101_066_001_0_004.xml"
+      },
+      {
+        "top10words": [
+          "Stck",
+          "Akt",
+          "Dezember",
+          "Marine",
+          "Berlin",
+          "Landrat",
+          "Herrn",
+          "Zeitung",
+          "Gast",
+          "Siege"
+        ],
+        "Strings": 2846,
+        "TextLines": 359,
+        "arithmeticMeanStrinsPerLine": "7.9276",
+        "arithmeticMeanLineLengthInMm": "81.9",
+        "blocks": 19,
+        "arithmeticMeanLinesPerBlock": "18.8947",
+        "sizeInPx": {
+          "xMin": 862,
+          "xMax": 4127,
+          "yMin": 885,
+          "yMax": 5655
+        },
+        "sizeInMm": {
+          "width": "276.4",
+          "height": "403.9"
+        },
+        "arithmeticMeanWC": "0.51100",
+        "fileName": "alto/F_SBB_00009_19180101_066_001_0_002.xml"
+      },
+      {
+        "top10words": [
+          "verkauft",
+          "billig",
+          "kaust",
+          "Tie",
+          "Mark",
+          "strae",
+          "deutschen",
+          "Art",
+          "Mbel",
+          "Groe"
+        ],
+        "Strings": 3797,
+        "TextLines": 825,
+        "arithmeticMeanStrinsPerLine": "4.6024",
+        "arithmeticMeanLineLengthInMm": "42.6",
+        "blocks": 89,
+        "arithmeticMeanLinesPerBlock": "9.2697",
+        "sizeInPx": {
+          "xMin": 127,
+          "xMax": 3365,
+          "yMin": 901,
+          "yMax": 5684
+        },
+        "sizeInMm": {
+          "width": "274.2",
+          "height": "405.0"
+        },
+        "arithmeticMeanWC": "0.48527",
+        "fileName": "alto/F_SBB_00009_19180101_066_001_0_003.xml"
+      },
+      {
+        "top10words": [
+          "George",
+          "Arbeiter",
+          "Dezember",
+          "Lloyd",
+          "persischen",
+          "Frieden",
+          "wrde",
+          "letzten",
+          "Welt",
+          "Kundgebung"
+        ],
+        "Strings": 2322,
+        "TextLines": 287,
+        "arithmeticMeanStrinsPerLine": "8.0906",
+        "arithmeticMeanLineLengthInMm": "82.3",
+        "blocks": 17,
+        "arithmeticMeanLinesPerBlock": "16.8824",
+        "sizeInPx": {
+          "xMin": 55,
+          "xMax": 3279,
+          "yMin": 872,
+          "yMax": 5649
+        },
+        "sizeInMm": {
+          "width": "273.0",
+          "height": "404.5"
+        },
+        "arithmeticMeanWC": "0.56524",
+        "fileName": "alto/F_SBB_00009_19180101_066_001_0_001.xml"
+      }
+    ],
+    "metsFileName": "SBB_00006_19180101_F_066_001_0_mets.xml"
+  },
+  {
+    "title": "Volkszeitung (1890-1904) /Berliner Volkszeitung (1904-1930)",
+    "dateIssued": "1918-01-01",
+    "details": [
+      {
+        "caption": "Jahrgang",
+        "number": "066"
+      },
+      {
+        "caption": "Nr.",
+        "number": "001"
+      }
+    ],
+    "pages": [
+      {
+        "top10words": [
+          "gesucht",
+          "verlangt",
+          "sucht",
+          "Berlin",
+          "Arbeiterinnen",
+          "Maschinenfabrik",
+          "Arbeiter",
+          "stellt",
+          "Mdchen",
+          "Alte"
+        ],
+        "Strings": 2191,
+        "TextLines": 723,
+        "arithmeticMeanStrinsPerLine": "3.0304",
+        "arithmeticMeanLineLengthInMm": "31.5",
+        "blocks": 139,
+        "arithmeticMeanLinesPerBlock": "5.2014",
+        "sizeInPx": {
+          "xMin": 839,
+          "xMax": 4057,
+          "yMin": 853,
+          "yMax": 5640
+        },
+        "sizeInMm": {
+          "width": "272.5",
+          "height": "405.3"
+        },
+        "arithmeticMeanWC": "0.56384",
+        "fileName": "alto/F_SBB_00009_19180101_066_001_1_002.xml"
+      },
+      {
+        "top10words": [
+          "Berlin",
+          "too",
+          "Auswahl",
+          "Paul",
+          "rang",
+          "Fredy",
+          "Del",
+          "Gleiser",
+          "Knrgstr",
+          "JBafrnfrof"
+        ],
+        "Strings": 670,
+        "TextLines": 182,
+        "arithmeticMeanStrinsPerLine": "3.6813",
+        "arithmeticMeanLineLengthInMm": "36.9",
+        "blocks": 34,
+        "arithmeticMeanLinesPerBlock": "5.3529",
+        "sizeInPx": {
+          "xMin": 895,
+          "xMax": 4085,
+          "yMin": 1198,
+          "yMax": 5768
+        },
+        "sizeInMm": {
+          "width": "270.1",
+          "height": "386.9"
+        },
+        "arithmeticMeanWC": "0.43429",
+        "fileName": "alto/F_SBB_00009_19180101_066_001_1_004.xml"
+      },
+      {
+        "top10words": [
+          "verlangt",
+          "Berlin",
+          "sucht",
+          "gesucht",
+          "suchen",
+          "Eintritt",
+          "Dreher",
+          "verlangen",
+          "Tchtige",
+          "Tischler"
+        ],
+        "Strings": 1931,
+        "TextLines": 623,
+        "arithmeticMeanStrinsPerLine": "3.0995",
+        "arithmeticMeanLineLengthInMm": "32.6",
+        "blocks": 111,
+        "arithmeticMeanLinesPerBlock": "5.6126",
+        "sizeInPx": {
+          "xMin": 83,
+          "xMax": 3939,
+          "yMin": 889,
+          "yMax": 6134
+        },
+        "sizeInMm": {
+          "width": "326.5",
+          "height": "444.1"
+        },
+        "arithmeticMeanWC": "0.50399",
+        "fileName": "alto/F_SBB_00009_19180101_066_001_1_003.xml"
+      },
+      {
+        "top10words": [
+          "Mark",
+          "Zeitung",
+          "Napoleon",
+          "Alexander",
+          "Januar",
+          "Groe",
+          "Stunde",
+          "Garibaldi",
+          "Krieg",
+          "Berliner"
+        ],
+        "Strings": 2952,
+        "TextLines": 346,
+        "arithmeticMeanStrinsPerLine": "8.5318",
+        "arithmeticMeanLineLengthInMm": "77.8",
+        "blocks": 22,
+        "arithmeticMeanLinesPerBlock": "15.7273",
+        "sizeInPx": {
+          "xMin": 68,
+          "xMax": 3315,
+          "yMin": 876,
+          "yMax": 5651
+        },
+        "sizeInMm": {
+          "width": "274.9",
+          "height": "404.3"
+        },
+        "arithmeticMeanWC": "0.51651",
+        "fileName": "alto/F_SBB_00009_19180101_066_001_1_001.xml"
+      }
+    ],
+    "metsFileName": "SBB_00006_19180101_F_066_001_1_mets.xml"
+  },
+  {
+    "title": "Volkszeitung (1890-1904) /Berliner Volkszeitung (1904-1930)",
+    "dateIssued": "1918-01-02",
+    "details": [
+      {
+        "caption": "Jahrgang",
+        "number": "066"
+      },
+      {
+        "caption": "Nr.",
+        "number": "002"
+      }
+    ],
+    "pages": [
+      {
+        "top10words": [
+          "Berlin",
+          "letzten",
+          "Dezember",
+          "Ter",
+          "Stadt",
+          "Berliner",
+          "Januar",
+          "Geld",
+          "deutschen",
+          "Landwirte"
+        ],
+        "Strings": 3361,
+        "TextLines": 377,
+        "arithmeticMeanStrinsPerLine": "8.9151",
+        "arithmeticMeanLineLengthInMm": "82.0",
+        "blocks": 15,
+        "arithmeticMeanLinesPerBlock": "25.1333",
+        "sizeInPx": {
+          "xMin": 1019,
+          "xMax": 4217,
+          "yMin": 497,
+          "yMax": 5662
+        },
+        "sizeInMm": {
+          "width": "270.8",
+          "height": "437.3"
+        },
+        "arithmeticMeanWC": "0.48723",
+        "fileName": "alto/F_SBB_00009_19180102_066_002_0_002.xml"
+      },
+      {
+        "top10words": [
+          "deutsche",
+          "Januar",
+          "England",
+          "Frankreich",
+          "UBoot",
+          "Angriff",
+          "Dezember",
+          "Knig",
+          "Arbeit",
+          "Kaiser"
+        ],
+        "Strings": 1932,
+        "TextLines": 258,
+        "arithmeticMeanStrinsPerLine": "7.4884",
+        "arithmeticMeanLineLengthInMm": "78.2",
+        "blocks": 11,
+        "arithmeticMeanLinesPerBlock": "23.4545",
+        "sizeInPx": {
+          "xMin": 22,
+          "xMax": 3269,
+          "yMin": 1057,
+          "yMax": 5701
+        },
+        "sizeInMm": {
+          "width": "274.9",
+          "height": "393.2"
+        },
+        "arithmeticMeanWC": "0.50453",
+        "fileName": "alto/F_SBB_00009_19180102_066_002_0_001.xml"
+      }
+    ],
+    "metsFileName": "SBB_00006_19180102_F_066_002_0_mets.xml"
+  },
+  {
+    "title": "Volkszeitung (1890-1904) /Berliner Volkszeitung (1904-1930)",
+    "dateIssued": "1918-01-02",
+    "details": [
+      {
+        "caption": "Jahrgang",
+        "number": "066"
+      },
+      {
+        "caption": "Nr.",
+        "number": "003"
+      }
+    ],
+    "pages": [
+      {
+        "top10words": [
+          "Januar",
+          "BrestLitowsk",
+          "Frieden",
+          "deutschen",
+          "Inseln",
+          "Mittelmchte",
+          "Lloyd",
+          "find",
+          "Berlin",
+          "Regierung"
+        ],
+        "Strings": 2189,
+        "TextLines": 283,
+        "arithmeticMeanStrinsPerLine": "7.7350",
+        "arithmeticMeanLineLengthInMm": "80.0",
+        "blocks": 21,
+        "arithmeticMeanLinesPerBlock": "13.4762",
+        "sizeInPx": {
+          "xMin": 78,
+          "xMax": 3372,
+          "yMin": 831,
+          "yMax": 5698
+        },
+        "sizeInMm": {
+          "width": "278.9",
+          "height": "412.1"
+        },
+        "arithmeticMeanWC": "0.57166",
+        "fileName": "alto/F_SBB_00009_19180102_066_003_0_001.xml"
+      },
+      {
+        "top10words": [
+          "Wohnung",
+          "Januar",
+          "Wenzel",
+          "Berlin",
+          "Torf",
+          "fand",
+          "Silvesternacht",
+          "Ter",
+          "Mord",
+          "gestern"
+        ],
+        "Strings": 2229,
+        "TextLines": 375,
+        "arithmeticMeanStrinsPerLine": "5.9440",
+        "arithmeticMeanLineLengthInMm": "50.3",
+        "blocks": 126,
+        "arithmeticMeanLinesPerBlock": "2.9762",
+        "sizeInPx": {
+          "xMin": 901,
+          "xMax": 4226,
+          "yMin": 500,
+          "yMax": 5781
+        },
+        "sizeInMm": {
+          "width": "281.5",
+          "height": "447.1"
+        },
+        "arithmeticMeanWC": "0.52831",
+        "fileName": "alto/F_SBB_00009_19180102_066_003_0_002.xml"
+      }
+    ],
+    "metsFileName": "SBB_00006_19180102_F_066_003_0_mets.xml"
+  },
+  {
+    "title": "Volkszeitung (1890-1904) /Berliner Volkszeitung (1904-1930)",
+    "dateIssued": "1918-01-03",
+    "details": [
+      {
+        "caption": "Jahrgang",
+        "number": "066"
+      },
+      {
+        "caption": "Nr.",
+        "number": "004"
+      }
+    ],
+    "pages": [
+      {
+        "top10words": [
+          "verlangt",
+          "gesucht",
+          "sucht",
+          "Berlin",
+          "stellt",
+          "fllr",
+          "Arbeiterinnen",
+          "Lose",
+          "sllr",
+          "Frau"
+        ],
+        "Strings": 2600,
+        "TextLines": 756,
+        "arithmeticMeanStrinsPerLine": "3.4392",
+        "arithmeticMeanLineLengthInMm": "31.4",
+        "blocks": 105,
+        "arithmeticMeanLinesPerBlock": "7.2000",
+        "sizeInPx": {
+          "xMin": 28,
+          "xMax": 3313,
+          "yMin": 823,
+          "yMax": 5631
+        },
+        "sizeInMm": {
+          "width": "278.1",
+          "height": "407.1"
+        },
+        "arithmeticMeanWC": "0.47016",
+        "fileName": "alto/F_SBB_00009_19180103_066_004_0_003.xml"
+      },
+      {
+        "top10words": [
+          "verlangt",
+          "sucht",
+          "gesucht",
+          "Tischler",
+          "Berlin",
+          "stellt",
+          "tchtige",
+          "suchen",
+          "dauernde",
+          "Eintritt"
+        ],
+        "Strings": 2548,
+        "TextLines": 757,
+        "arithmeticMeanStrinsPerLine": "3.3659",
+        "arithmeticMeanLineLengthInMm": "31.8",
+        "blocks": 96,
+        "arithmeticMeanLinesPerBlock": "7.8854",
+        "sizeInPx": {
+          "xMin": 15,
+          "xMax": 4216,
+          "yMin": 498,
+          "yMax": 6309
+        },
+        "sizeInMm": {
+          "width": "355.7",
+          "height": "492.0"
+        },
+        "arithmeticMeanWC": "0.50686",
+        "fileName": "alto/F_SBB_00009_19180103_066_004_0_004.xml"
+      },
+      {
+        "top10words": [
+          "Januar",
+          "Krylenko",
+          "Entente",
+          "Christa",
+          "knne",
+          "Ter",
+          "Gemse",
+          "Stelle",
+          "Frank",
+          "Obst"
+        ],
+        "Strings": 3357,
+        "TextLines": 362,
+        "arithmeticMeanStrinsPerLine": "9.2735",
+        "arithmeticMeanLineLengthInMm": "81.2",
+        "blocks": 18,
+        "arithmeticMeanLinesPerBlock": "20.1111",
+        "sizeInPx": {
+          "xMin": 856,
+          "xMax": 4116,
+          "yMin": 865,
+          "yMax": 5662
+        },
+        "sizeInMm": {
+          "width": "276.0",
+          "height": "406.1"
+        },
+        "arithmeticMeanWC": "0.51117",
+        "fileName": "alto/F_SBB_00009_19180103_066_004_0_002.xml"
+      },
+      {
+        "top10words": [
+          "Januar",
+          "Berlin",
+          "drr",
+          "whrend",
+          "Gemeinden",
+          "russischen",
+          "Petersburg",
+          "Dezember",
+          "Tie",
+          "Brgermeister"
+        ],
+        "Strings": 2313,
+        "TextLines": 278,
+        "arithmeticMeanStrinsPerLine": "8.3201",
+        "arithmeticMeanLineLengthInMm": "78.3",
+        "blocks": 19,
+        "arithmeticMeanLinesPerBlock": "14.6316",
+        "sizeInPx": {
+          "xMin": 51,
+          "xMax": 3341,
+          "yMin": 857,
+          "yMax": 5659
+        },
+        "sizeInMm": {
+          "width": "278.6",
+          "height": "406.6"
+        },
+        "arithmeticMeanWC": "0.51465",
+        "fileName": "alto/F_SBB_00009_19180103_066_004_0_001.xml"
+      }
+    ],
+    "metsFileName": "SBB_00006_19180103_F_066_004_0_mets.xml"
+  },
+  {
+    "title": "Volkszeitung (1890-1904) /Berliner Volkszeitung (1904-1930)",
+    "dateIssued": "1918-01-03",
+    "details": [
+      {
+        "caption": "Jahrgang",
+        "number": "066"
+      },
+      {
+        "caption": "Nr.",
+        "number": "004"
+      }
+    ],
+    "pages": [
+      {
+        "top10words": [
+          "Mark",
+          "dah",
+          "Gemse",
+          "Bock",
+          "Obst",
+          "Dezember",
+          "Tie",
+          "Januar",
+          "Millionen",
+          "Ter"
+        ],
+        "Strings": 3274,
+        "TextLines": 377,
+        "arithmeticMeanStrinsPerLine": "8.6844",
+        "arithmeticMeanLineLengthInMm": "82.3",
+        "blocks": 43,
+        "arithmeticMeanLinesPerBlock": "8.7674",
+        "sizeInPx": {
+          "xMin": 53,
+          "xMax": 3938,
+          "yMin": 895,
+          "yMax": 6129
+        },
+        "sizeInMm": {
+          "width": "328.9",
+          "height": "443.1"
+        },
+        "arithmeticMeanWC": "0.63985",
+        "fileName": "alto/F_SBB_00009_19180103_066_004_1_001.xml"
+      },
+      {
+        "top10words": [
+          "neu",
+          "Mark",
+          "Pfund",
+          "Januar",
+          "lauft",
+          "verkauft",
+          "billig",
+          "Sonntag",
+          "Berlin",
+          "verkuflich"
+        ],
+        "Strings": 2909,
+        "TextLines": 775,
+        "arithmeticMeanStrinsPerLine": "3.7535",
+        "arithmeticMeanLineLengthInMm": "34.3",
+        "blocks": 72,
+        "arithmeticMeanLinesPerBlock": "10.7639",
+        "sizeInPx": {
+          "xMin": 874,
+          "xMax": 4108,
+          "yMin": 923,
+          "yMax": 5701
+        },
+        "sizeInMm": {
+          "width": "273.8",
+          "height": "404.5"
+        },
+        "arithmeticMeanWC": "0.51232",
+        "fileName": "alto/F_SBB_00009_19180103_066_004_1_002.xml"
+      }
+    ],
+    "metsFileName": "SBB_00006_19180103_F_066_004_1_mets.xml"
+  },
+  {
+    "title": "Volkszeitung (1890-1904) /Berliner Volkszeitung (1904-1930)",
+    "dateIssued": "1918-01-03",
+    "details": [
+      {
+        "caption": "Jahrgang",
+        "number": "066"
+      },
+      {
+        "caption": "Nr.",
+        "number": "005"
+      }
+    ],
+    "pages": [
+      {
+        "top10words": [
+          "Mark",
+          "Ter",
+          "Obst",
+          "Gemse",
+          "Ausstellung",
+          "Verein",
+          "Beratungsstelle",
+          "Tie",
+          "Braut",
+          "Kaufmann"
+        ],
+        "Strings": 1933,
+        "TextLines": 251,
+        "arithmeticMeanStrinsPerLine": "7.7012",
+        "arithmeticMeanLineLengthInMm": "67.9",
+        "blocks": 31,
+        "arithmeticMeanLinesPerBlock": "8.0968",
+        "sizeInPx": {
+          "xMin": 976,
+          "xMax": 4242,
+          "yMin": 937,
+          "yMax": 5682
+        },
+        "sizeInMm": {
+          "width": "276.5",
+          "height": "401.7"
+        },
+        "arithmeticMeanWC": "0.56488",
+        "fileName": "alto/F_SBB_00009_19180103_066_005_0_002.xml"
+      },
+      {
+        "top10words": [
+          "Januar",
+          "Antwort",
+          "Majestt",
+          "Soldaten",
+          "Front",
+          "gestern",
+          "Feinde",
+          "drben",
+          "Reichstags",
+          "Posten"
+        ],
+        "Strings": 2227,
+        "TextLines": 285,
+        "arithmeticMeanStrinsPerLine": "7.8140",
+        "arithmeticMeanLineLengthInMm": "79.5",
+        "blocks": 14,
+        "arithmeticMeanLinesPerBlock": "20.3571",
+        "sizeInPx": {
+          "xMin": 17,
+          "xMax": 3304,
+          "yMin": 863,
+          "yMax": 5695
+        },
+        "sizeInMm": {
+          "width": "278.3",
+          "height": "409.1"
+        },
+        "arithmeticMeanWC": "0.56436",
+        "fileName": "alto/F_SBB_00009_19180103_066_005_0_001.xml"
+      }
+    ],
+    "metsFileName": "SBB_00006_19180103_F_066_005_0_mets.xml"
+  },
+  {
+    "title": "Volkszeitung (1890-1904) /Berliner Volkszeitung (1904-1930)",
+    "dateIssued": "1918-01-04",
+    "details": [
+      {
+        "caption": "Jahrgang",
+        "number": "066"
+      },
+      {
+        "caption": "Nr.",
+        "number": "006"
+      }
+    ],
+    "pages": [
+      {
+        "top10words": [
+          "Januar",
+          "Regierung",
+          "BrestLitowsk",
+          "russischen",
+          "Ukraine",
+          "Litauen",
+          "rumnischen",
+          "Volk",
+          "Sitzung",
+          "ukrainischen"
+        ],
+        "Strings": 2364,
+        "TextLines": 298,
+        "arithmeticMeanStrinsPerLine": "7.9329",
+        "arithmeticMeanLineLengthInMm": "76.0",
+        "blocks": 19,
+        "arithmeticMeanLinesPerBlock": "15.6842",
+        "sizeInPx": {
+          "xMin": 80,
+          "xMax": 3326,
+          "yMin": 937,
+          "yMax": 5707
+        },
+        "sizeInMm": {
+          "width": "274.8",
+          "height": "403.9"
+        },
+        "arithmeticMeanWC": "0.53577",
+        "fileName": "alto/F_SBB_00009_19180104_066_006_0_001.xml"
+      },
+      {
+        "top10words": [
+          "verlangt",
+          "sucht",
+          "stellt",
+          "gesucht",
+          "suchen",
+          "Tischler",
+          "Mar",
+          "verlangen",
+          "Sattler",
+          "Schuhmacher"
+        ],
+        "Strings": 2566,
+        "TextLines": 791,
+        "arithmeticMeanStrinsPerLine": "3.2440",
+        "arithmeticMeanLineLengthInMm": "31.6",
+        "blocks": 99,
+        "arithmeticMeanLinesPerBlock": "7.9899",
+        "sizeInPx": {
+          "xMin": 1042,
+          "xMax": 4269,
+          "yMin": 941,
+          "yMax": 5730
+        },
+        "sizeInMm": {
+          "width": "273.2",
+          "height": "405.5"
+        },
+        "arithmeticMeanWC": "0.49641",
+        "fileName": "alto/F_SBB_00009_19180104_066_006_0_004.xml"
+      },
+      {
+        "top10words": [
+          "Tie",
+          "Schratt",
+          "Januar",
+          "Verhandlungen",
+          "Kaiser",
+          "wute",
+          "Presse",
+          "Erklrung",
+          "wrde",
+          "groen"
+        ],
+        "Strings": 3202,
+        "TextLines": 362,
+        "arithmeticMeanStrinsPerLine": "8.8453",
+        "arithmeticMeanLineLengthInMm": "83.1",
+        "blocks": 16,
+        "arithmeticMeanLinesPerBlock": "22.6250",
+        "sizeInPx": {
+          "xMin": 949,
+          "xMax": 4207,
+          "yMin": 970,
+          "yMax": 5740
+        },
+        "sizeInMm": {
+          "width": "275.8",
+          "height": "403.9"
+        },
+        "arithmeticMeanWC": "0.47359",
+        "fileName": "alto/F_SBB_00009_19180104_066_006_0_002.xml"
+      },
+      {
+        "top10words": [
+          "sucht",
+          "verlangt",
+          "gesucht",
+          "sllr",
+          "Berlin",
+          "sosort",
+          "such",
+          "suchen",
+          "Arbeiterinnen",
+          "erlangt"
+        ],
+        "Strings": 2957,
+        "TextLines": 746,
+        "arithmeticMeanStrinsPerLine": "3.9638",
+        "arithmeticMeanLineLengthInMm": "37.9",
+        "blocks": 107,
+        "arithmeticMeanLinesPerBlock": "6.9720",
+        "sizeInPx": {
+          "xMin": 94,
+          "xMax": 3341,
+          "yMin": 967,
+          "yMax": 5727
+        },
+        "sizeInMm": {
+          "width": "274.9",
+          "height": "403.0"
+        },
+        "arithmeticMeanWC": "0.49009",
+        "fileName": "alto/F_SBB_00009_19180104_066_006_0_003.xml"
+      }
+    ],
+    "metsFileName": "SBB_00006_19180104_F_066_006_0_mets.xml"
+  },
+  {
+    "title": "Volkszeitung (1890-1904) /Berliner Volkszeitung (1904-1930)",
+    "dateIssued": "1918-01-04",
+    "details": [
+      {
+        "caption": "Jahrgang",
+        "number": "066"
+      },
+      {
+        "caption": "Nr.",
+        "number": "006"
+      }
+    ],
+    "pages": [
+      {
+        "top10words": [
+          "kauft",
+          "verkauft",
+          "neu",
+          "Berlin",
+          "Mbel",
+          "kaust",
+          "Theater",
+          "Spiegel",
+          "Januar",
+          "Stark"
+        ],
+        "Strings": 2866,
+        "TextLines": 861,
+        "arithmeticMeanStrinsPerLine": "3.3287",
+        "arithmeticMeanLineLengthInMm": "31.3",
+        "blocks": 147,
+        "arithmeticMeanLinesPerBlock": "5.8571",
+        "sizeInPx": {
+          "xMin": 1029,
+          "xMax": 4266,
+          "yMin": 819,
+          "yMax": 5718
+        },
+        "sizeInMm": {
+          "width": "274.1",
+          "height": "414.8"
+        },
+        "arithmeticMeanWC": "0.52459",
+        "fileName": "alto/F_SBB_00009_19180104_066_006_1_002.xml"
+      },
+      {
+        "top10words": [
+          "Mark",
+          "Stadtverordneter",
+          "Beisitzer",
+          "Berlin",
+          "Soz",
+          "Stadtverordneten",
+          "Fraktion",
+          "Berliner",
+          "Januar",
+          "gestern"
+        ],
+        "Strings": 2457,
+        "TextLines": 315,
+        "arithmeticMeanStrinsPerLine": "7.8000",
+        "arithmeticMeanLineLengthInMm": "74.9",
+        "blocks": 21,
+        "arithmeticMeanLinesPerBlock": "15.0000",
+        "sizeInPx": {
+          "xMin": 40,
+          "xMax": 3281,
+          "yMin": 922,
+          "yMax": 5674
+        },
+        "sizeInMm": {
+          "width": "274.4",
+          "height": "402.3"
+        },
+        "arithmeticMeanWC": "0.52024",
+        "fileName": "alto/F_SBB_00009_19180104_066_006_1_001.xml"
+      }
+    ],
+    "metsFileName": "SBB_00006_19180104_F_066_006_1_mets.xml"
+  },
+  {
+    "title": "Volkszeitung (1890-1904) /Berliner Volkszeitung (1904-1930)",
+    "dateIssued": "1918-01-04",
+    "details": [
+      {
+        "caption": "Jahrgang",
+        "number": "066"
+      },
+      {
+        "caption": "Nr.",
+        "number": "007"
+      }
+    ],
+    "pages": [
+      {
+        "top10words": [
+          "Mark",
+          "Berlin",
+          "Wagen",
+          "Pfund",
+          "Pfennig",
+          "Kronen",
+          "wrde",
+          "Geld",
+          "Bevlkerung",
+          "Haltestellen"
+        ],
+        "Strings": 2386,
+        "TextLines": 414,
+        "arithmeticMeanStrinsPerLine": "5.7633",
+        "arithmeticMeanLineLengthInMm": "45.8",
+        "blocks": 111,
+        "arithmeticMeanLinesPerBlock": "3.7297",
+        "sizeInPx": {
+          "xMin": 1043,
+          "xMax": 4297,
+          "yMin": 897,
+          "yMax": 5643
+        },
+        "sizeInMm": {
+          "width": "275.5",
+          "height": "401.8"
+        },
+        "arithmeticMeanWC": "0.49650",
+        "fileName": "alto/F_SBB_00009_19180104_066_007_0_002.xml"
+      },
+      {
+        "top10words": [
+          "Verhandlungen",
+          "Stockholm",
+          "BrestLitowsk",
+          "Januar",
+          "Regierung",
+          "deutschen",
+          "englischen",
+          "wrde",
+          "Abg",
+          "Angaben"
+        ],
+        "Strings": 1980,
+        "TextLines": 280,
+        "arithmeticMeanStrinsPerLine": "7.0714",
+        "arithmeticMeanLineLengthInMm": "80.0",
+        "blocks": 12,
+        "arithmeticMeanLinesPerBlock": "23.3333",
+        "sizeInPx": {
+          "xMin": 0,
+          "xMax": 3228,
+          "yMin": 1685,
+          "yMax": 5688
+        },
+        "sizeInMm": {
+          "width": "273.3",
+          "height": "338.9"
+        },
+        "arithmeticMeanWC": "0.53611",
+        "fileName": "alto/F_SBB_00009_19180104_066_007_0_001.xml"
+      }
+    ],
+    "metsFileName": "SBB_00006_19180104_F_066_007_0_mets.xml"
+  },
+  {
+    "title": "Volkszeitung (1890-1904) /Berliner Volkszeitung (1904-1930)",
+    "dateIssued": "1918-01-01",
+    "details": [
+      {
+        "caption": "Jahrgang",
+        "number": "066"
+      },
+      {
+        "caption": "Nr.",
+        "number": "001"
+      }
+    ],
+    "pages": [
+      {
+        "top10words": [
+          "Nachm",
+          "Vorstellungen",
+          "Meter",
+          "Berlin",
+          "Kleider",
+          "halbe",
+          "breit",
+          "Akten",
+          "Kind",
+          "Theater"
+        ],
+        "Strings": 1365,
+        "TextLines": 419,
+        "arithmeticMeanStrinsPerLine": "3.2578",
+        "arithmeticMeanLineLengthInMm": "32.2",
+        "blocks": 60,
+        "arithmeticMeanLinesPerBlock": "6.9833",
+        "sizeInPx": {
+          "xMin": 822,
+          "xMax": 4195,
+          "yMin": 528,
+          "yMax": 5906
+        },
+        "sizeInMm": {
+          "width": "285.6",
+          "height": "455.3"
+        },
+        "arithmeticMeanWC": "0.46613",
+        "fileName": "alto/F_SBB_00009_19180101_066_001_0_004.xml"
+      },
+      {
+        "top10words": [
+          "Stck",
+          "Akt",
+          "Dezember",
+          "Marine",
+          "Berlin",
+          "Landrat",
+          "Herrn",
+          "Zeitung",
+          "Gast",
+          "Siege"
+        ],
+        "Strings": 2846,
+        "TextLines": 359,
+        "arithmeticMeanStrinsPerLine": "7.9276",
+        "arithmeticMeanLineLengthInMm": "81.9",
+        "blocks": 19,
+        "arithmeticMeanLinesPerBlock": "18.8947",
+        "sizeInPx": {
+          "xMin": 862,
+          "xMax": 4127,
+          "yMin": 885,
+          "yMax": 5655
+        },
+        "sizeInMm": {
+          "width": "276.4",
+          "height": "403.9"
+        },
+        "arithmeticMeanWC": "0.51100",
+        "fileName": "alto/F_SBB_00009_19180101_066_001_0_002.xml"
+      },
+      {
+        "top10words": [
+          "verkauft",
+          "billig",
+          "kaust",
+          "Tie",
+          "Mark",
+          "strae",
+          "deutschen",
+          "Art",
+          "Mbel",
+          "Groe"
+        ],
+        "Strings": 3797,
+        "TextLines": 825,
+        "arithmeticMeanStrinsPerLine": "4.6024",
+        "arithmeticMeanLineLengthInMm": "42.6",
+        "blocks": 89,
+        "arithmeticMeanLinesPerBlock": "9.2697",
+        "sizeInPx": {
+          "xMin": 127,
+          "xMax": 3365,
+          "yMin": 901,
+          "yMax": 5684
+        },
+        "sizeInMm": {
+          "width": "274.2",
+          "height": "405.0"
+        },
+        "arithmeticMeanWC": "0.48527",
+        "fileName": "alto/F_SBB_00009_19180101_066_001_0_003.xml"
+      },
+      {
+        "top10words": [
+          "George",
+          "Arbeiter",
+          "Dezember",
+          "Lloyd",
+          "persischen",
+          "Frieden",
+          "wrde",
+          "letzten",
+          "Welt",
+          "Kundgebung"
+        ],
+        "Strings": 2322,
+        "TextLines": 287,
+        "arithmeticMeanStrinsPerLine": "8.0906",
+        "arithmeticMeanLineLengthInMm": "82.3",
+        "blocks": 17,
+        "arithmeticMeanLinesPerBlock": "16.8824",
+        "sizeInPx": {
+          "xMin": 55,
+          "xMax": 3279,
+          "yMin": 872,
+          "yMax": 5649
+        },
+        "sizeInMm": {
+          "width": "273.0",
+          "height": "404.5"
+        },
+        "arithmeticMeanWC": "0.56524",
+        "fileName": "alto/F_SBB_00009_19180101_066_001_0_001.xml"
+      }
+    ],
+    "metsFileName": "SBB_00006_19180101_F_066_001_0_mets.xml"
+  },
+  {
+    "title": "Volkszeitung (1890-1904) /Berliner Volkszeitung (1904-1930)",
+    "dateIssued": "1918-01-01",
+    "details": [
+      {
+        "caption": "Jahrgang",
+        "number": "066"
+      },
+      {
+        "caption": "Nr.",
+        "number": "001"
+      }
+    ],
+    "pages": [
+      {
+        "top10words": [
+          "gesucht",
+          "verlangt",
+          "sucht",
+          "Berlin",
+          "Arbeiterinnen",
+          "Maschinenfabrik",
+          "Arbeiter",
+          "stellt",
+          "Mdchen",
+          "Alte"
+        ],
+        "Strings": 2191,
+        "TextLines": 723,
+        "arithmeticMeanStrinsPerLine": "3.0304",
+        "arithmeticMeanLineLengthInMm": "31.5",
+        "blocks": 139,
+        "arithmeticMeanLinesPerBlock": "5.2014",
+        "sizeInPx": {
+          "xMin": 839,
+          "xMax": 4057,
+          "yMin": 853,
+          "yMax": 5640
+        },
+        "sizeInMm": {
+          "width": "272.5",
+          "height": "405.3"
+        },
+        "arithmeticMeanWC": "0.56384",
+        "fileName": "alto/F_SBB_00009_19180101_066_001_1_002.xml"
+      },
+      {
+        "top10words": [
+          "Berlin",
+          "too",
+          "Auswahl",
+          "Paul",
+          "rang",
+          "Fredy",
+          "Del",
+          "Gleiser",
+          "Knrgstr",
+          "JBafrnfrof"
+        ],
+        "Strings": 670,
+        "TextLines": 182,
+        "arithmeticMeanStrinsPerLine": "3.6813",
+        "arithmeticMeanLineLengthInMm": "36.9",
+        "blocks": 34,
+        "arithmeticMeanLinesPerBlock": "5.3529",
+        "sizeInPx": {
+          "xMin": 895,
+          "xMax": 4085,
+          "yMin": 1198,
+          "yMax": 5768
+        },
+        "sizeInMm": {
+          "width": "270.1",
+          "height": "386.9"
+        },
+        "arithmeticMeanWC": "0.43429",
+        "fileName": "alto/F_SBB_00009_19180101_066_001_1_004.xml"
+      },
+      {
+        "top10words": [
+          "verlangt",
+          "Berlin",
+          "sucht",
+          "gesucht",
+          "suchen",
+          "Eintritt",
+          "Dreher",
+          "verlangen",
+          "Tchtige",
+          "Tischler"
+        ],
+        "Strings": 1931,
+        "TextLines": 623,
+        "arithmeticMeanStrinsPerLine": "3.0995",
+        "arithmeticMeanLineLengthInMm": "32.6",
+        "blocks": 111,
+        "arithmeticMeanLinesPerBlock": "5.6126",
+        "sizeInPx": {
+          "xMin": 83,
+          "xMax": 3939,
+          "yMin": 889,
+          "yMax": 6134
+        },
+        "sizeInMm": {
+          "width": "326.5",
+          "height": "444.1"
+        },
+        "arithmeticMeanWC": "0.50399",
+        "fileName": "alto/F_SBB_00009_19180101_066_001_1_003.xml"
+      },
+      {
+        "top10words": [
+          "Mark",
+          "Zeitung",
+          "Napoleon",
+          "Alexander",
+          "Januar",
+          "Groe",
+          "Stunde",
+          "Garibaldi",
+          "Krieg",
+          "Berliner"
+        ],
+        "Strings": 2952,
+        "TextLines": 346,
+        "arithmeticMeanStrinsPerLine": "8.5318",
+        "arithmeticMeanLineLengthInMm": "77.8",
+        "blocks": 22,
+        "arithmeticMeanLinesPerBlock": "15.7273",
+        "sizeInPx": {
+          "xMin": 68,
+          "xMax": 3315,
+          "yMin": 876,
+          "yMax": 5651
+        },
+        "sizeInMm": {
+          "width": "274.9",
+          "height": "404.3"
+        },
+        "arithmeticMeanWC": "0.51651",
+        "fileName": "alto/F_SBB_00009_19180101_066_001_1_001.xml"
+      }
+    ],
+    "metsFileName": "SBB_00006_19180101_F_066_001_1_mets.xml"
+  },
+  {
+    "title": "Volkszeitung (1890-1904) /Berliner Volkszeitung (1904-1930)",
+    "dateIssued": "1918-01-02",
+    "details": [
+      {
+        "caption": "Jahrgang",
+        "number": "066"
+      },
+      {
+        "caption": "Nr.",
+        "number": "002"
+      }
+    ],
+    "pages": [
+      {
+        "top10words": [
+          "Berlin",
+          "letzten",
+          "Dezember",
+          "Ter",
+          "Stadt",
+          "Berliner",
+          "Januar",
+          "Geld",
+          "deutschen",
+          "Landwirte"
+        ],
+        "Strings": 3361,
+        "TextLines": 377,
+        "arithmeticMeanStrinsPerLine": "8.9151",
+        "arithmeticMeanLineLengthInMm": "82.0",
+        "blocks": 15,
+        "arithmeticMeanLinesPerBlock": "25.1333",
+        "sizeInPx": {
+          "xMin": 1019,
+          "xMax": 4217,
+          "yMin": 497,
+          "yMax": 5662
+        },
+        "sizeInMm": {
+          "width": "270.8",
+          "height": "437.3"
+        },
+        "arithmeticMeanWC": "0.48723",
+        "fileName": "alto/F_SBB_00009_19180102_066_002_0_002.xml"
+      },
+      {
+        "top10words": [
+          "deutsche",
+          "Januar",
+          "England",
+          "Frankreich",
+          "UBoot",
+          "Angriff",
+          "Dezember",
+          "Knig",
+          "Arbeit",
+          "Kaiser"
+        ],
+        "Strings": 1932,
+        "TextLines": 258,
+        "arithmeticMeanStrinsPerLine": "7.4884",
+        "arithmeticMeanLineLengthInMm": "78.2",
+        "blocks": 11,
+        "arithmeticMeanLinesPerBlock": "23.4545",
+        "sizeInPx": {
+          "xMin": 22,
+          "xMax": 3269,
+          "yMin": 1057,
+          "yMax": 5701
+        },
+        "sizeInMm": {
+          "width": "274.9",
+          "height": "393.2"
+        },
+        "arithmeticMeanWC": "0.50453",
+        "fileName": "alto/F_SBB_00009_19180102_066_002_0_001.xml"
+      }
+    ],
+    "metsFileName": "SBB_00006_19180102_F_066_002_0_mets.xml"
+  },
+  {
+    "title": "Volkszeitung (1890-1904) /Berliner Volkszeitung (1904-1930)",
+    "dateIssued": "1918-01-02",
+    "details": [
+      {
+        "caption": "Jahrgang",
+        "number": "066"
+      },
+      {
+        "caption": "Nr.",
+        "number": "003"
+      }
+    ],
+    "pages": [
+      {
+        "top10words": [
+          "Januar",
+          "BrestLitowsk",
+          "Frieden",
+          "deutschen",
+          "Inseln",
+          "Mittelmchte",
+          "Lloyd",
+          "find",
+          "Berlin",
+          "Regierung"
+        ],
+        "Strings": 2189,
+        "TextLines": 283,
+        "arithmeticMeanStrinsPerLine": "7.7350",
+        "arithmeticMeanLineLengthInMm": "80.0",
+        "blocks": 21,
+        "arithmeticMeanLinesPerBlock": "13.4762",
+        "sizeInPx": {
+          "xMin": 78,
+          "xMax": 3372,
+          "yMin": 831,
+          "yMax": 5698
+        },
+        "sizeInMm": {
+          "width": "278.9",
+          "height": "412.1"
+        },
+        "arithmeticMeanWC": "0.57166",
+        "fileName": "alto/F_SBB_00009_19180102_066_003_0_001.xml"
+      },
+      {
+        "top10words": [
+          "Wohnung",
+          "Januar",
+          "Wenzel",
+          "Berlin",
+          "Torf",
+          "fand",
+          "Silvesternacht",
+          "Ter",
+          "Mord",
+          "gestern"
+        ],
+        "Strings": 2229,
+        "TextLines": 375,
+        "arithmeticMeanStrinsPerLine": "5.9440",
+        "arithmeticMeanLineLengthInMm": "50.3",
+        "blocks": 126,
+        "arithmeticMeanLinesPerBlock": "2.9762",
+        "sizeInPx": {
+          "xMin": 901,
+          "xMax": 4226,
+          "yMin": 500,
+          "yMax": 5781
+        },
+        "sizeInMm": {
+          "width": "281.5",
+          "height": "447.1"
+        },
+        "arithmeticMeanWC": "0.52831",
+        "fileName": "alto/F_SBB_00009_19180102_066_003_0_002.xml"
+      }
+    ],
+    "metsFileName": "SBB_00006_19180102_F_066_003_0_mets.xml"
+  },
+  {
+    "title": "Volkszeitung (1890-1904) /Berliner Volkszeitung (1904-1930)",
+    "dateIssued": "1918-01-03",
+    "details": [
+      {
+        "caption": "Jahrgang",
+        "number": "066"
+      },
+      {
+        "caption": "Nr.",
+        "number": "004"
+      }
+    ],
+    "pages": [
+      {
+        "top10words": [
+          "verlangt",
+          "gesucht",
+          "sucht",
+          "Berlin",
+          "stellt",
+          "fllr",
+          "Arbeiterinnen",
+          "Lose",
+          "sllr",
+          "Frau"
+        ],
+        "Strings": 2600,
+        "TextLines": 756,
+        "arithmeticMeanStrinsPerLine": "3.4392",
+        "arithmeticMeanLineLengthInMm": "31.4",
+        "blocks": 105,
+        "arithmeticMeanLinesPerBlock": "7.2000",
+        "sizeInPx": {
+          "xMin": 28,
+          "xMax": 3313,
+          "yMin": 823,
+          "yMax": 5631
+        },
+        "sizeInMm": {
+          "width": "278.1",
+          "height": "407.1"
+        },
+        "arithmeticMeanWC": "0.47016",
+        "fileName": "alto/F_SBB_00009_19180103_066_004_0_003.xml"
+      },
+      {
+        "top10words": [
+          "verlangt",
+          "sucht",
+          "gesucht",
+          "Tischler",
+          "Berlin",
+          "stellt",
+          "tchtige",
+          "suchen",
+          "dauernde",
+          "Eintritt"
+        ],
+        "Strings": 2548,
+        "TextLines": 757,
+        "arithmeticMeanStrinsPerLine": "3.3659",
+        "arithmeticMeanLineLengthInMm": "31.8",
+        "blocks": 96,
+        "arithmeticMeanLinesPerBlock": "7.8854",
+        "sizeInPx": {
+          "xMin": 15,
+          "xMax": 4216,
+          "yMin": 498,
+          "yMax": 6309
+        },
+        "sizeInMm": {
+          "width": "355.7",
+          "height": "492.0"
+        },
+        "arithmeticMeanWC": "0.50686",
+        "fileName": "alto/F_SBB_00009_19180103_066_004_0_004.xml"
+      },
+      {
+        "top10words": [
+          "Januar",
+          "Krylenko",
+          "Entente",
+          "Christa",
+          "knne",
+          "Ter",
+          "Gemse",
+          "Stelle",
+          "Frank",
+          "Obst"
+        ],
+        "Strings": 3357,
+        "TextLines": 362,
+        "arithmeticMeanStrinsPerLine": "9.2735",
+        "arithmeticMeanLineLengthInMm": "81.2",
+        "blocks": 18,
+        "arithmeticMeanLinesPerBlock": "20.1111",
+        "sizeInPx": {
+          "xMin": 856,
+          "xMax": 4116,
+          "yMin": 865,
+          "yMax": 5662
+        },
+        "sizeInMm": {
+          "width": "276.0",
+          "height": "406.1"
+        },
+        "arithmeticMeanWC": "0.51117",
+        "fileName": "alto/F_SBB_00009_19180103_066_004_0_002.xml"
+      },
+      {
+        "top10words": [
+          "Januar",
+          "Berlin",
+          "drr",
+          "whrend",
+          "Gemeinden",
+          "russischen",
+          "Petersburg",
+          "Dezember",
+          "Tie",
+          "Brgermeister"
+        ],
+        "Strings": 2313,
+        "TextLines": 278,
+        "arithmeticMeanStrinsPerLine": "8.3201",
+        "arithmeticMeanLineLengthInMm": "78.3",
+        "blocks": 19,
+        "arithmeticMeanLinesPerBlock": "14.6316",
+        "sizeInPx": {
+          "xMin": 51,
+          "xMax": 3341,
+          "yMin": 857,
+          "yMax": 5659
+        },
+        "sizeInMm": {
+          "width": "278.6",
+          "height": "406.6"
+        },
+        "arithmeticMeanWC": "0.51465",
+        "fileName": "alto/F_SBB_00009_19180103_066_004_0_001.xml"
+      }
+    ],
+    "metsFileName": "SBB_00006_19180103_F_066_004_0_mets.xml"
+  },
+  {
+    "title": "Volkszeitung (1890-1904) /Berliner Volkszeitung (1904-1930)",
+    "dateIssued": "1918-01-03",
+    "details": [
+      {
+        "caption": "Jahrgang",
+        "number": "066"
+      },
+      {
+        "caption": "Nr.",
+        "number": "004"
+      }
+    ],
+    "pages": [
+      {
+        "top10words": [
+          "Mark",
+          "dah",
+          "Gemse",
+          "Bock",
+          "Obst",
+          "Dezember",
+          "Tie",
+          "Januar",
+          "Millionen",
+          "Ter"
+        ],
+        "Strings": 3274,
+        "TextLines": 377,
+        "arithmeticMeanStrinsPerLine": "8.6844",
+        "arithmeticMeanLineLengthInMm": "82.3",
+        "blocks": 43,
+        "arithmeticMeanLinesPerBlock": "8.7674",
+        "sizeInPx": {
+          "xMin": 53,
+          "xMax": 3938,
+          "yMin": 895,
+          "yMax": 6129
+        },
+        "sizeInMm": {
+          "width": "328.9",
+          "height": "443.1"
+        },
+        "arithmeticMeanWC": "0.63985",
+        "fileName": "alto/F_SBB_00009_19180103_066_004_1_001.xml"
+      },
+      {
+        "top10words": [
+          "neu",
+          "Mark",
+          "Pfund",
+          "Januar",
+          "lauft",
+          "verkauft",
+          "billig",
+          "Sonntag",
+          "Berlin",
+          "verkuflich"
+        ],
+        "Strings": 2909,
+        "TextLines": 775,
+        "arithmeticMeanStrinsPerLine": "3.7535",
+        "arithmeticMeanLineLengthInMm": "34.3",
+        "blocks": 72,
+        "arithmeticMeanLinesPerBlock": "10.7639",
+        "sizeInPx": {
+          "xMin": 874,
+          "xMax": 4108,
+          "yMin": 923,
+          "yMax": 5701
+        },
+        "sizeInMm": {
+          "width": "273.8",
+          "height": "404.5"
+        },
+        "arithmeticMeanWC": "0.51232",
+        "fileName": "alto/F_SBB_00009_19180103_066_004_1_002.xml"
+      }
+    ],
+    "metsFileName": "SBB_00006_19180103_F_066_004_1_mets.xml"
+  },
+  {
+    "title": "Volkszeitung (1890-1904) /Berliner Volkszeitung (1904-1930)",
+    "dateIssued": "1918-01-03",
+    "details": [
+      {
+        "caption": "Jahrgang",
+        "number": "066"
+      },
+      {
+        "caption": "Nr.",
+        "number": "005"
+      }
+    ],
+    "pages": [
+      {
+        "top10words": [
+          "Mark",
+          "Ter",
+          "Obst",
+          "Gemse",
+          "Ausstellung",
+          "Verein",
+          "Beratungsstelle",
+          "Tie",
+          "Braut",
+          "Kaufmann"
+        ],
+        "Strings": 1933,
+        "TextLines": 251,
+        "arithmeticMeanStrinsPerLine": "7.7012",
+        "arithmeticMeanLineLengthInMm": "67.9",
+        "blocks": 31,
+        "arithmeticMeanLinesPerBlock": "8.0968",
+        "sizeInPx": {
+          "xMin": 976,
+          "xMax": 4242,
+          "yMin": 937,
+          "yMax": 5682
+        },
+        "sizeInMm": {
+          "width": "276.5",
+          "height": "401.7"
+        },
+        "arithmeticMeanWC": "0.56488",
+        "fileName": "alto/F_SBB_00009_19180103_066_005_0_002.xml"
+      },
+      {
+        "top10words": [
+          "Januar",
+          "Antwort",
+          "Majestt",
+          "Soldaten",
+          "Front",
+          "gestern",
+          "Feinde",
+          "drben",
+          "Reichstags",
+          "Posten"
+        ],
+        "Strings": 2227,
+        "TextLines": 285,
+        "arithmeticMeanStrinsPerLine": "7.8140",
+        "arithmeticMeanLineLengthInMm": "79.5",
+        "blocks": 14,
+        "arithmeticMeanLinesPerBlock": "20.3571",
+        "sizeInPx": {
+          "xMin": 17,
+          "xMax": 3304,
+          "yMin": 863,
+          "yMax": 5695
+        },
+        "sizeInMm": {
+          "width": "278.3",
+          "height": "409.1"
+        },
+        "arithmeticMeanWC": "0.56436",
+        "fileName": "alto/F_SBB_00009_19180103_066_005_0_001.xml"
+      }
+    ],
+    "metsFileName": "SBB_00006_19180103_F_066_005_0_mets.xml"
+  },
+  {
+    "title": "Volkszeitung (1890-1904) /Berliner Volkszeitung (1904-1930)",
+    "dateIssued": "1918-01-04",
+    "details": [
+      {
+        "caption": "Jahrgang",
+        "number": "066"
+      },
+      {
+        "caption": "Nr.",
+        "number": "006"
+      }
+    ],
+    "pages": [
+      {
+        "top10words": [
+          "Januar",
+          "Regierung",
+          "BrestLitowsk",
+          "russischen",
+          "Ukraine",
+          "Litauen",
+          "rumnischen",
+          "Volk",
+          "Sitzung",
+          "ukrainischen"
+        ],
+        "Strings": 2364,
+        "TextLines": 298,
+        "arithmeticMeanStrinsPerLine": "7.9329",
+        "arithmeticMeanLineLengthInMm": "76.0",
+        "blocks": 19,
+        "arithmeticMeanLinesPerBlock": "15.6842",
+        "sizeInPx": {
+          "xMin": 80,
+          "xMax": 3326,
+          "yMin": 937,
+          "yMax": 5707
+        },
+        "sizeInMm": {
+          "width": "274.8",
+          "height": "403.9"
+        },
+        "arithmeticMeanWC": "0.53577",
+        "fileName": "alto/F_SBB_00009_19180104_066_006_0_001.xml"
+      },
+      {
+        "top10words": [
+          "verlangt",
+          "sucht",
+          "stellt",
+          "gesucht",
+          "suchen",
+          "Tischler",
+          "Mar",
+          "verlangen",
+          "Sattler",
+          "Schuhmacher"
+        ],
+        "Strings": 2566,
+        "TextLines": 791,
+        "arithmeticMeanStrinsPerLine": "3.2440",
+        "arithmeticMeanLineLengthInMm": "31.6",
+        "blocks": 99,
+        "arithmeticMeanLinesPerBlock": "7.9899",
+        "sizeInPx": {
+          "xMin": 1042,
+          "xMax": 4269,
+          "yMin": 941,
+          "yMax": 5730
+        },
+        "sizeInMm": {
+          "width": "273.2",
+          "height": "405.5"
+        },
+        "arithmeticMeanWC": "0.49641",
+        "fileName": "alto/F_SBB_00009_19180104_066_006_0_004.xml"
+      },
+      {
+        "top10words": [
+          "Tie",
+          "Schratt",
+          "Januar",
+          "Verhandlungen",
+          "Kaiser",
+          "wute",
+          "Presse",
+          "Erklrung",
+          "wrde",
+          "groen"
+        ],
+        "Strings": 3202,
+        "TextLines": 362,
+        "arithmeticMeanStrinsPerLine": "8.8453",
+        "arithmeticMeanLineLengthInMm": "83.1",
+        "blocks": 16,
+        "arithmeticMeanLinesPerBlock": "22.6250",
+        "sizeInPx": {
+          "xMin": 949,
+          "xMax": 4207,
+          "yMin": 970,
+          "yMax": 5740
+        },
+        "sizeInMm": {
+          "width": "275.8",
+          "height": "403.9"
+        },
+        "arithmeticMeanWC": "0.47359",
+        "fileName": "alto/F_SBB_00009_19180104_066_006_0_002.xml"
+      },
+      {
+        "top10words": [
+          "sucht",
+          "verlangt",
+          "gesucht",
+          "sllr",
+          "Berlin",
+          "sosort",
+          "such",
+          "suchen",
+          "Arbeiterinnen",
+          "erlangt"
+        ],
+        "Strings": 2957,
+        "TextLines": 746,
+        "arithmeticMeanStrinsPerLine": "3.9638",
+        "arithmeticMeanLineLengthInMm": "37.9",
+        "blocks": 107,
+        "arithmeticMeanLinesPerBlock": "6.9720",
+        "sizeInPx": {
+          "xMin": 94,
+          "xMax": 3341,
+          "yMin": 967,
+          "yMax": 5727
+        },
+        "sizeInMm": {
+          "width": "274.9",
+          "height": "403.0"
+        },
+        "arithmeticMeanWC": "0.49009",
+        "fileName": "alto/F_SBB_00009_19180104_066_006_0_003.xml"
+      }
+    ],
+    "metsFileName": "SBB_00006_19180104_F_066_006_0_mets.xml"
+  },
+  {
+    "title": "Volkszeitung (1890-1904) /Berliner Volkszeitung (1904-1930)",
+    "dateIssued": "1918-01-04",
+    "details": [
+      {
+        "caption": "Jahrgang",
+        "number": "066"
+      },
+      {
+        "caption": "Nr.",
+        "number": "006"
+      }
+    ],
+    "pages": [
+      {
+        "top10words": [
+          "kauft",
+          "verkauft",
+          "neu",
+          "Berlin",
+          "Mbel",
+          "kaust",
+          "Theater",
+          "Spiegel",
+          "Januar",
+          "Stark"
+        ],
+        "Strings": 2866,
+        "TextLines": 861,
+        "arithmeticMeanStrinsPerLine": "3.3287",
+        "arithmeticMeanLineLengthInMm": "31.3",
+        "blocks": 147,
+        "arithmeticMeanLinesPerBlock": "5.8571",
+        "sizeInPx": {
+          "xMin": 1029,
+          "xMax": 4266,
+          "yMin": 819,
+          "yMax": 5718
+        },
+        "sizeInMm": {
+          "width": "274.1",
+          "height": "414.8"
+        },
+        "arithmeticMeanWC": "0.52459",
+        "fileName": "alto/F_SBB_00009_19180104_066_006_1_002.xml"
+      },
+      {
+        "top10words": [
+          "Mark",
+          "Stadtverordneter",
+          "Beisitzer",
+          "Berlin",
+          "Soz",
+          "Stadtverordneten",
+          "Fraktion",
+          "Berliner",
+          "Januar",
+          "gestern"
+        ],
+        "Strings": 2457,
+        "TextLines": 315,
+        "arithmeticMeanStrinsPerLine": "7.8000",
+        "arithmeticMeanLineLengthInMm": "74.9",
+        "blocks": 21,
+        "arithmeticMeanLinesPerBlock": "15.0000",
+        "sizeInPx": {
+          "xMin": 40,
+          "xMax": 3281,
+          "yMin": 922,
+          "yMax": 5674
+        },
+        "sizeInMm": {
+          "width": "274.4",
+          "height": "402.3"
+        },
+        "arithmeticMeanWC": "0.52024",
+        "fileName": "alto/F_SBB_00009_19180104_066_006_1_001.xml"
+      }
+    ],
+    "metsFileName": "SBB_00006_19180104_F_066_006_1_mets.xml"
+  },
+  {
+    "title": "Volkszeitung (1890-1904) /Berliner Volkszeitung (1904-1930)",
+    "dateIssued": "1918-01-04",
+    "details": [
+      {
+        "caption": "Jahrgang",
+        "number": "066"
+      },
+      {
+        "caption": "Nr.",
+        "number": "007"
+      }
+    ],
+    "pages": [
+      {
+        "top10words": [
+          "Mark",
+          "Berlin",
+          "Wagen",
+          "Pfund",
+          "Pfennig",
+          "Kronen",
+          "wrde",
+          "Geld",
+          "Bevlkerung",
+          "Haltestellen"
+        ],
+        "Strings": 2386,
+        "TextLines": 414,
+        "arithmeticMeanStrinsPerLine": "5.7633",
+        "arithmeticMeanLineLengthInMm": "45.8",
+        "blocks": 111,
+        "arithmeticMeanLinesPerBlock": "3.7297",
+        "sizeInPx": {
+          "xMin": 1043,
+          "xMax": 4297,
+          "yMin": 897,
+          "yMax": 5643
+        },
+        "sizeInMm": {
+          "width": "275.5",
+          "height": "401.8"
+        },
+        "arithmeticMeanWC": "0.49650",
+        "fileName": "alto/F_SBB_00009_19180104_066_007_0_002.xml"
+      },
+      {
+        "top10words": [
+          "Verhandlungen",
+          "Stockholm",
+          "BrestLitowsk",
+          "Januar",
+          "Regierung",
+          "deutschen",
+          "englischen",
+          "wrde",
+          "Abg",
+          "Angaben"
+        ],
+        "Strings": 1980,
+        "TextLines": 280,
+        "arithmeticMeanStrinsPerLine": "7.0714",
+        "arithmeticMeanLineLengthInMm": "80.0",
+        "blocks": 12,
+        "arithmeticMeanLinesPerBlock": "23.3333",
+        "sizeInPx": {
+          "xMin": 0,
+          "xMax": 3228,
+          "yMin": 1685,
+          "yMax": 5688
+        },
+        "sizeInMm": {
+          "width": "273.3",
+          "height": "338.9"
+        },
+        "arithmeticMeanWC": "0.53611",
+        "fileName": "alto/F_SBB_00009_19180104_066_007_0_001.xml"
+      }
+    ],
+    "metsFileName": "SBB_00006_19180104_F_066_007_0_mets.xml"
   }
 ]

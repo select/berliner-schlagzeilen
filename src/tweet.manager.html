@@ -35,11 +35,12 @@ body {
 	</body>
 	<script>
 		const $tweets = document.querySelector('.tweets');
+		const now = new Date()
 		fetch('../data/tweets.json')
 			.then(response => response.json())
 			.then(tweets => {
 				tweets
-					.filter(({img, tweetId, error }) => img && !(tweetId || error) )
+					.filter(({img, sendAfter }) => img && (now < new Date(sendAfter)) )
 					.forEach(tweet => {
 						$tweets.innerHTML += `<div>
 							<div class="sendAfter">${tweet.sendAfter}</div>

@@ -1368,109 +1368,126 @@
     "status": "Verschärfter Belagerungszustand für Groß-Berlin. Ein Jahr uneingeschränkter U-Boot-Krieg. 01.02.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-02-01/27971740",
     "alt_text": "Berliner Volkszeitung 01.02.1918 Morgen-Ausgabe",
     "img": "1918-02-01.0.png",
-    "tweetId": 959029847308857300
+    "tweetId": 959044948808085500
   },
   {
     "sendAfter": "2018-02-02 10:35",
     "status": "Die Streikbewegung. 02.02.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-02-02/27971740 #1918LIVE",
     "alt_text": "Berliner Volkszeitung 02.02.1918 Morgen-Ausgabe",
-    "img": "1918-02-02.1.png"
+    "img": "1918-02-02.1.png",
+    "tweetId": 959384706545528800
   },
   {
     "sendAfter": "2018-02-02 18:35",
     "status": "Trotzki über die Wahrscheinlichkeit des Friedensschlusses. Die Streikbewegung in Groß-Berlin. 02.02.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-02-02/27971740 #1918LIVE",
     "alt_text": "Berliner Volkszeitung 02.02.1918 Abend-Ausgabe",
-    "img": "1918-02-02.2.png"
+    "img": "1918-02-02.2.png",
+    "tweetId": 959482857344458800
   },
   {
     "sendAfter": "2018-02-03 10:35",
     "status": "Lossagung der Ukraine vom föderativen Rußland. Eine wichtige Vollsitzung in Brest-Litowsk. 03.02.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-02-03/27971740 #1918LIVE",
     "alt_text": "Berliner Volkszeitung 03.02.1918 Morgen-Ausgabe",
-    "img": "1918-02-03.0.png"
+    "img": "1918-02-03.0.png",
+    "tweetId": 959724450861248500
   },
   {
     "sendAfter": "2018-02-04 10:35",
     "status": "Czernin, Kühlmann und Ludendorff in Berlin. 04.02.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-02-04/27971740 #1918LIVE",
     "alt_text": "Berliner Volkszeitung 04.02.1918 Morgen-Ausgabe",
-    "img": "1918-02-04.0.png"
+    "img": "1918-02-04.0.png",
+    "tweetId": 960158555906236400
   },
   {
     "sendAfter": "2018-02-04 18:35",
     "status": "Artilleriekämpfe zwischen Etsch und Piave. 04.02.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-02-04/27971740 #1918LIVE",
     "alt_text": "Berliner Volkszeitung 04.02.1918 Abend-Ausgabe",
-    "img": "1918-02-04.1.png"
+    "img": "1918-02-04.1.png",
+    "tweetId": 960207606299099100
   },
   {
     "sendAfter": "2018-02-05 10:35",
     "status": "Konferenz Ludendorff - Kühlmann - Czernin. 05.02.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-02-05/27971740 #1918LIVE",
     "alt_text": "Berliner Volkszeitung 05.02.1918 Morgen-Ausgabe",
-    "img": "1918-02-05.1.png"
+    "img": "1918-02-05.1.png",
+    "tweetId": 960449192345948200
   },
   {
     "sendAfter": "2018-02-05 18:35",
     "status": "Erfolgreicher Vorstoß bei Beaumont. 05.02.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-02-05/27971740 #1918LIVE",
     "alt_text": "Berliner Volkszeitung 05.02.1918 Abend-Ausgabe",
-    "img": "1918-02-05.2.png"
+    "img": "1918-02-05.2.png",
+    "tweetId": 960622868357886000
   },
   {
     "sendAfter": "2018-02-06 10:35",
     "status": "Rückkehr Kühlmanns und Czernins nach Brest-Litowsk. 06.02.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-02-06/27971740 #1918LIVE",
     "alt_text": "Berliner Volkszeitung 06.02.1918 Morgen-Ausgabe",
-    "img": "1918-02-06.0.png"
+    "img": "1918-02-06.0.png",
+    "tweetId": 960826680834187300
   },
   {
     "sendAfter": "2018-02-06 18:35",
     "status": "Artillerietätigkeit an der Westfront. 06.02.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-02-06/27971740 #1918LIVE",
     "alt_text": "Berliner Volkszeitung 06.02.1918 Abend-Ausgabe",
-    "img": "1918-02-06.2.png"
+    "img": "1918-02-06.2.png",
+    "tweetId": 960973922526289900
   },
   {
     "sendAfter": "2018-02-07 10:35",
     "status": "Das Ergebnis der Berliner Besprechungen. 07.02.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-02-07/27971740 #1918LIVE",
     "alt_text": "Berliner Volkszeitung 07.02.1918 Morgen-Ausgabe",
-    "img": "1918-02-07.0.png"
+    "img": "1918-02-07.0.png",
+    "tweetId": 961185296686690300
   },
   {
     "sendAfter": "2018-02-07 18:35",
     "status": "Fortgesetzte Artillerietätigkeit an der Westfront. 07.02.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-02-07/27971740 #1918LIVE",
     "alt_text": "Berliner Volkszeitung 07.02.1918 Abend-Ausgabe",
-    "img": "1918-02-07.2.png"
+    "img": "1918-02-07.2.png",
+    "tweetId": 961294782978035700
   },
   {
     "sendAfter": "2018-02-08 10:35",
     "status": "Rücktritt des Kabinetts Seidler. 08.02.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-02-08/27971740 #1918LIVE",
     "alt_text": "Berliner Volkszeitung 08.02.1918 Morgen-Ausgabe",
-    "img": "1918-02-08.0.png"
+    "img": "1918-02-08.0.png",
+    "tweetId": 961543912920879100
   },
   {
     "sendAfter": "2018-02-08 18:35",
     "status": "Ein amerikanischer Truppentransporter versenkt. Kabinettskrise in Österrreich. 08.02.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-02-08/27971740 #1918LIVE",
     "alt_text": "Berliner Volkszeitung 08.02.1918 Abend-Ausgabe",
-    "img": "1918-02-08.2.png"
+    "img": "1918-02-08.2.png",
+    "tweetId": 961657161624506400
   },
   {
     "sendAfter": "2018-02-09 10:35",
     "status": "Zuspitzung in Brest-Litowsk. 09.02.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-02-09/27971740 #1918LIVE",
     "alt_text": "Berliner Volkszeitung 09.02.1918 Morgen-Ausgabe",
-    "img": "1918-02-09.0.png"
+    "img": "1918-02-09.0.png",
+    "tweetId": 961944061056831500
   },
   {
     "sendAfter": "2018-02-09 18:35",
     "status": "Friede mit der Ukraine. 09.02.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-02-09/27971740 #1918LIVE",
     "alt_text": "Berliner Volkszeitung 09.02.1918 Abend-Ausgabe",
-    "img": "1918-02-09.2.png"
+    "img": "1918-02-09.2.png",
+    "tweetId": 962019551121682400
   },
   {
     "sendAfter": "2018-02-10 10:35",
     "status": "Der Frieden mit der Ukraine. Neue U-Boot-Erfolge. 10.02.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-02-10/27971740 #1918LIVE",
     "alt_text": "Berliner Volkszeitung 10.02.1918 Morgen-Ausgabe",
-    "img": "1918-02-10.1.png"
+    "img": "1918-02-10.1.png",
+    "tweetId": 962261157837930500
   },
   {
     "sendAfter": "2018-02-11 10:35",
     "status": "11.02.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-02-11/27971740 #1918LIVE",
     "alt_text": "Berliner Volkszeitung 11.02.1918 Morgen-Ausgabe",
-    "img": "1918-02-11.0.png"
+    "img": "1918-02-11.0.png",
+    "tweetId": 962665050480828400
   },
   {
     "sendAfter": "2018-02-11 18:35",

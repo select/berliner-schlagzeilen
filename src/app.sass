@@ -1,0 +1,145 @@
+body
+	font-family: sans-serif
+	background: #ECEFF1
+
+*
+	box-sizing: border-box
+
+h1
+	font-weight: 100
+
+.card-1
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24)
+	transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1)
+	&:hover
+		box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22)
+
+header
+	position: absolute
+	top: 0
+	right: 0
+	display: flex
+	div
+		width: 2em
+		height: 2em
+		cursor: pointer
+		font-size: 2em
+		display: flex
+		align-items: center
+		justify-content: center
+.tweets
+	display: flex
+	flex-wrap: wrap
+
+
+.tweets
+	> div
+		position: relative
+		display: block
+		flex-direction: column
+		height: 400px
+		width: 340px
+		margin: 10px
+		overflow: hidden
+		background: #FFF
+		transition: all 250ms
+		&.hidden
+			display: none
+		&.ready
+			border-top: 1em solid #1DE9B6
+  img
+    width: 100%
+
+.full-screen
+	position: absolute
+	font-weight: bold
+	top: 0
+	right: 0
+	cursor: pointer
+	width: 2em
+	height: 2em
+	display: flex
+	align-items: center
+	justify-content: center
+	color: #eee
+	&:hover
+		background: #eee
+		color: #fff
+
+
+.sendAfter
+  color: #666
+  margin: .5em
+
+.status
+  overflow: hidden
+  text-overflow: ellipsis
+  margin: .5em
+
+.tweets > div:hover .status
+  height: auto
+
+input[type="text"],
+input[type="password"]
+	font-size: 1em
+	border: none
+	border-bottom: 1px solid #aaa
+	background: transparent
+	height: 2.5em
+	&:active,
+	&:focus
+		outline-style: none
+
+label
+	font-size: 0.7em
+	text-transform: uppercase
+	color: #aaa
+
+.login
+	display: flex
+	justify-content: center
+	align-items: center
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	background: rgba(0,0,0,.7)
+	> div
+		position: relative
+		background: #FFF
+		flex-direction: column
+		> div
+			display: flex
+			flex-direction: column
+			width: 20em
+			margin: 2em
+			&:first-child
+				margin-bottom: 2em
+
+	button
+		color: #aaa
+		border: none
+		background: #eee
+		font-size: 2em
+		width: 100%
+		height: 1.5em
+		cursor: pointer
+		&:hover
+			background: #aaa
+			color: #FFF
+.messages
+	z-index: 1
+	position: absolute
+	top: 2em
+	right: 2em
+	> div
+		color: #fff
+		padding: 1em
+		width: 20em
+		border-radius: .2em
+		margin-bottom: .5em
+		&.error
+			background: #c0392b
+		&.success
+		 background: #2ECC71

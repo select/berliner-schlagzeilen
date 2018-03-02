@@ -2,10 +2,11 @@
   "name": "berliner-schlagzeilen",
   "version": "1.0.0",
   "description": "Tweeting old news from 100 years ago.",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "start": "http-server -p 8888 ./",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./config/webpack.dev.js",
+    "serve": "nodemon",
+    "build": "./node_modules/.bin/webpack --config='./config/webpack.base.js' --progress --display-error-details"
   },
   "repository": {
     "type": "git",
@@ -21,16 +22,38 @@
     "url": "https://github.com/shoutrlabs/berliner-schlagzeilen/issues"
   },
   "homepage": "https://github.com/shoutrlabs/berliner-schlagzeilen#readme",
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "es5",
+    "printWidth": 180
+  },
   "dependencies": {
     "adm-zip": "^0.4.7",
     "crawler": "^1.1.1",
+    "express": "^4.16.2",
     "http-server": "^0.10.0",
     "jsdom": "^9.12.0",
+    "lowdb": "^1.0.0",
     "moment": "^2.19.1",
+    "secure-password": "^3.0.0",
+    "socket.io": "^2.0.4",
     "twit": "^2.2.9",
+    "uuid": "^3.2.1",
     "xml2js": "^0.4.19"
   },
   "devDependencies": {
-    "cleaver": "^0.8.5"
+    "cleaver": "^0.8.5",
+    "autoprefixer": "^8.0.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "circular-dependency-plugin": "^4.4.0",
+    "copy-webpack-plugin": "^4.4.1",
+    "css-loader": "^0.28.9",
+    "node-sass": "^4.7.2",
+    "postcss-loader": "^2.1.0",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.20.1",
+    "webpack": "^3.11.0",
+    "webpack-dev-server": "^2.11.1"
   }
 }

@@ -4,10 +4,11 @@ const fs = require('fs');
 const path = require('path');
 const xml2js = require('xml2js');
 const AdmZip = require('adm-zip');
+const Crawler = require('crawler');
 
 const config = require('./config');
-const outputPath = `${config.dataDir}/ocr-stats.json`;
-let statsData = require(outputPath);
+let statsData = require(config.ocrStats);
+let dirIndexData = require(config.remoteDataDirIndex);
 let stopwords = new Set(require(`${config.dataDir}/stopwords.json`));
 
 const idRegEx = /FID-F_SBB_\d+_(\d+_\d+_\d+)_(\d+)_(\d+)-OCRMASTER-TECHMD/;
@@ -133,7 +134,7 @@ function parseAlto(fileName) {
 		);
 		const top10words = Object.entries(
 			words.reduce((acc, w) => {
-				const wn = w.$.CONTENT.replace(/\W/g,'');
+				const wn = w.$.CONTENT.replace(/\W/g, '');
 				if (wn.length < 3) return acc;
 				if (/\d+/.test(wn)) return acc;
 				if (wn in acc) acc[wn] += 1;
@@ -187,6 +188,7 @@ function parseAlto(fileName) {
 // }
 
 function getZipContent(zipFilePath) {
+	console.log('load file', zipFilePath);
 	const zip = new AdmZip(zipFilePath);
 	const zipEntries = zip.getEntries(); // an array of ZipEntry records
 	const altoFiles = zipEntries
@@ -206,7 +208,7 @@ function getZipContent(zipFilePath) {
 }
 
 function parseZipContent(file) {
-	console.log('file', file.zipFileName);
+	console.log('parsing zip content');
 	let dataMets;
 	return parseMETS(file.metsFile.content)
 		.then(data => {
@@ -223,8 +225,8 @@ function parseZipContent(file) {
 				pages: pageStats,
 			};
 			statsData = [...statsData, fileStats];
-			fs.writeFileSync(outputPath, JSON.stringify(statsData, null, 2));
-			process.stdout.write(`\nwrote file ${outputPath}\n`);
+			fs.writeFileSync(config.ocrStats, JSON.stringify(statsData, null, 2));
+			process.stdout.write(`\n${file.metsFile.name}wrote file ${config.ocrStats}\n`);
 			console.log('file.metsFile.name', file.metsFile.name);
 			return fileStats;
 		});
@@ -238,27 +240,71 @@ console.log('statsDataIndex', statsDataIndex);
 // 	console.log('res', x);
 // });
 
-const promises = fs
-	.readdirSync(`${config.remoteDataDir}`)
-	.filter(y => /^\d+/.test(y))
-	.splice(0, 1)
-	.map(year => {
-		console.log('year', year);
-		const files = fs.readdirSync(`${config.remoteDataDir}/${year}`);
-		return files
-			.splice(0, 10)
-			.filter(file => !statsDataIndex.has(file))
-			.map(file => ({
-				zipFileName: file,
-				...getZipContent(`${config.remoteDataDir}/${year}/${file}`),
-			}));
-	})
-	.map(files => {
-		return Promise.all(
-			files.map(parseZipContent)
-		);
-	});
+// const promises = fs
+// 	.readdirSync(`${config.remoteDataDir}`)
+// 	.filter(y => /^\d+/.test(y))
+// 	.splice(0, 1)
+// 	.map(year => {
+// 		console.log('year', year);
+// 		const files = fs.readdirSync(`${config.remoteDataDir}/${year}`);
+// 		return files
+// 			.splice(0, 10)
+// 			.filter(file => !statsDataIndex.has(file))
+// 			.map(file => ({
+// 				zipFileName: file,
+// 				...getZipContent(`${config.remoteDataDir}/${year}/${file}`),
+// 			}));
+// 	})
+// 	.map(files => {
+// 		return Promise.all(
+// 			files.map(parseZipContent)
+// 		);
+// 	});
 
-Promise.all(promises).then(res => {
-	// console.log(JSON.stringify(res, null, 2));
-});
+function copyFile(source, target) {
+	var rd = fs.createReadStream(source);
+	rd.pipe(fs.createWriteStream(target));
+}
+
+async function execSync(promises) {
+	for (promise of promises) {
+		await promise;
+	}
+}
+
+// var crawler = new Crawler({
+// 	// encoding: null,
+// 	// jQuery: false, // set false to suppress warning message.
+// 	jQuery: jsdom,
+// 	maxConnections: 2,
+// 	callback: function(err, res, done) {
+// 		if (err) {
+// 			console.error(err.stack);
+// 		} else {
+// 			fs.createWriteStream(`${config.dataDir}/img/raw/${res.options.filename}`).write(res.body);
+// 		}
+// 		done();
+// 	},
+// });
+// crawler.queue([`http://136.243.4.67/index.php/s/hp6TFyqvZ5ZuAlW?path=%2F${year}`]);
+
+for (var i = 1918; i < 1931; i++) {
+	const year = i;
+	if (!dirIndexData[year]) {
+		dirIndexData[year] = fs.readdirSync(`${config.remoteDataDir}/${year}`);
+		console.log(`read dir ${year} - files ${dirIndexData[year].length}`);
+		fs.writeFileSync(config.remoteDataDirIndex, JSON.stringify(dirIndexData, null, 2));
+		process.stdout.write(`\nwrote file ${config.remoteDataDirIndex}\n`);
+	}
+}
+
+const year = 1918;
+execSync(
+	dirIndexData[year]
+		.splice(0, 10)
+		.filter(file => !statsDataIndex.has(file))
+		.map(file => parseZipContent(getZipContent(`${config.remoteDataDir}/${year}/${file}`)))
+);
+// Promise.all(promises).then(res => {
+// 	// console.log(JSON.stringify(res, null, 2));
+// });

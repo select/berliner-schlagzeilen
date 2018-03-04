@@ -11,19 +11,24 @@ const FileSync = require('lowdb/adapters/FileSync');
 const pwd = securePassword();
 
 const tweetsPath = 'data/tweets3.json';
-const dbTweets = low(new FileSync(tweetsPath));
-dbTweets.defaults([]).write();
+const tweetsDb = low(new FileSync(tweetsPath));
+tweetsDb.defaults([]).write();
 
 const userDb = low(new FileSync('data/users.json'));
 userDb.defaults({}).write();
 
-function authenticateSession(username, sessionToken, socketCallback, successCallback) {
-	const user = userDb.get(username).value();
-	if (!user) return socketCallback({ error: 'Username or token wrong.' });
-	const result = pwd.verifySync(Buffer.from(sessionToken), Buffer.from(user.sessionTokenHash.data));
-	if (result === securePassword.INVALID) return socketCallback({ error: 'Username or token wrong.' });
-	if (result === securePassword.VALID) {
-		successCallback();
+
+function authenticateSession(username, sessionToken, cb, successCallback) {
+	try {
+		const user = userDb.read().get(username).value();
+		if (!user) return cb && cb({ error: 'Username or token wrong.' });
+		const result = pwd.verifySync(Buffer.from(sessionToken), Buffer.from(user.sessionTokenHash.data));
+		if (result === securePassword.INVALID) return cb && cb({ error: 'Username or token wrong.' });
+		if (result === securePassword.VALID) {
+			successCallback();
+		}
+	} catch (error) {
+		cb && cb({ error: `Something went wrong. ${error}` });
 	}
 }
 
@@ -31,16 +36,25 @@ io.on('connection', function(socket) {
 	// Login with username: if sucessfull return a session token and
 	// store the secure hash token in the user db.
 	socket.on('login with password', ({ username, password }, cb) => {
-		const user = userDb.get(username).value();
+		const user = userDb.read().get(username).value();
 		if (!user) return cb({ error: 'Username or password wrong.' });
-		const result = pwd.verifySync(Buffer.from(password), Buffer.from(user.passwordHash.data));
+		if (!(user.passwordHash)) return cb && cb({ error: 'Please contact an admin and ask for a new registration link.' });
+		let result;
+		try {
+			result = pwd.verifySync(
+				Buffer.from(password),
+				Buffer.from(user.passwordHash.data)
+			);
+		} catch (error) {
+			return cb && cb({ error: `Crashed: ${error}` });
+		}
 		if (result === securePassword.INVALID) return cb({ error: 'Username or password wrong.' });
 		if (result === securePassword.VALID) {
 			socket.authenticated = true;
 			const sessionToken = uuidv4();
 			const sessionTokenHash = pwd.hashSync(Buffer.from(sessionToken));
 			userDb.set(`${username}.sessionTokenHash`, sessionTokenHash).write();
-			cb({ sessionToken, success: true, tweets: dbTweets.getState() });
+			cb && cb({ sessionToken, success: true, tweets: tweetsDb.getState() });
 		}
 	});
 
@@ -48,7 +62,7 @@ io.on('connection', function(socket) {
 	socket.on('login with sessionToken', ({ username, sessionToken }, cb) => {
 		authenticateSession(username, sessionToken, cb, () => {
 			socket.authenticated = true;
-			cb({ success: true, tweets: dbTweets.getState() });
+			cb && cb({ success: true, tweets: tweetsDb.getState() });
 		});
 	});
 
@@ -57,26 +71,75 @@ io.on('connection', function(socket) {
 		authenticateSession(username, sessionToken, cb, () => {
 			socket.authenticated = false;
 			userDb.set(`${username}.sessionTokenHash`, undefined).write();
-			cb({ success: true });
+			cb && cb({ success: true });
 		});
 	});
 
 	// Register: This must happen in a secure namespace or everybody can registerC
 	// Create a new user entry and calculate a secure password hash.
-	socket.on('register', ({ username, password }, cb) => {
-		if (userDb.get(username).value()) return cb({ error: `Username <b>${username}</b> is already registered.` });
-		console.log('register username, password', username, password);
-		const passwordHash = pwd.hashSync(Buffer.from(password));
-		userDb.set(username, { passwordHash }).write();
-		cb({ success: `Created new user <b>${username}</b>.` });
+	socket.on('register', ({ username, password, registrationToken }, cb) => {
+		console.log("registrationToken", registrationToken);
+		const registrationTokenBuffer = userDb.read().get(`${username}.registrationTokenBuffer.data`).value();
+		console.log("`${username}.registrationTokenBuffer.data`", `${username}.registrationTokenBuffer.data`);
+		if (!registrationTokenBuffer) return cb && cb({ error: 'Username or token wrong.' });
+		const result = pwd.verifySync(
+			Buffer.from(registrationToken),
+			Buffer.from(registrationTokenBuffer)
+		);
+		if (result === securePassword.INVALID) return cb && cb({ error: 'Username or token wrong.' });
+		if (result === securePassword.VALID) {
+			console.log('register username, password', username, password);
+			const passwordHash = pwd.hashSync(Buffer.from(password));
+			userDb
+				.set(username, { passwordHash })
+				.unset(`${username}.registrationTokenBuffer`)
+				.write();
+			cb && cb({ success: `Registered new user <b>${username}</b>.` });
+		}
 	});
+
+	// Create registration token
+	socket.on(
+		'create registration token',
+		checkAuthenticated(socket, ({ username }, cb) => {
+			const registrationToken = uuidv4();
+			const registrationTokenBuffer = pwd.hashSync(Buffer.from(registrationToken));
+			userDb.set(username, { registrationTokenBuffer }).write();
+			cb && cb({ success: 'Edit success.',user: { username, registrationToken, hasRegistrationToken: true } });
+		})
+	);
+
+	socket.on(
+		'delete user',
+		checkAuthenticated(socket, ({ username }, cb) => {
+			userDb.unset(username).write();
+			cb && cb({ success: 'Delete success.'});
+		})
+	);
 
 	socket.on(
 		'edit tweet',
 		checkAuthenticated(socket, ({ index, data }, cb) => {
-			console.log('dbTweets.nth(index)', dbTweets.nth(index).value());
-			dbTweets.nth(index).assign(data).write();
-			cb({ success: 'Edit success.' });
+			tweetsDb
+				.nth(index)
+				.assign(data)
+				.write();
+			cb && cb({ success: 'Edit success.' });
+		})
+	);
+
+	socket.on(
+		'list users',
+		checkAuthenticated(socket, (data, cb) => {
+			cb &&
+				cb({userList:
+					userDb
+						.read()
+						.entries()
+						.value()
+						.map(([username, { registrationTokenBuffer }]) => ({ username, hasRegistrationToken: !!registrationTokenBuffer }))
+				}
+				);
 		})
 	);
 });
@@ -84,7 +147,7 @@ io.on('connection', function(socket) {
 function checkAuthenticated(socket, next) {
 	return (data, cb) => {
 		if (socket.authenticated) next(data, cb);
-		else cb({ error: 'not authenticated' });
+		else cb && cb({ error: 'not authenticated' });
 	};
 }
 

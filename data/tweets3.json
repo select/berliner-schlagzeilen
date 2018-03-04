@@ -4,7 +4,8 @@
     "status": "22.10.1917 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1917-10-22/27971740",
     "alt_text": "Berliner Volkszeitung 22.10.1917 Morgen-Ausgabe",
     "img": "1917-10-22.0.png",
-    "tweetId": 931495934353174500
+    "tweetId": 931495934353174500,
+    "ready": true
   },
   {
     "sendAfter": "2017-10-22 22:30",
@@ -1745,43 +1746,50 @@
     "sendAfter": "2018-03-03 10:35",
     "status": "Rumänien zu Verhandlungen bereit. Die Vierbundsbedingungen als Verhandlungsgrundlage. 03.03.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-03-03/27971740 #1918LIVE",
     "alt_text": "Berliner Volkszeitung 03.03.1918 Morgen-Ausgabe",
-    "img": "1918-03-03.1.png"
+    "img": "1918-03-03.1.png",
+    "ready": true
   },
   {
     "sendAfter": "2018-03-04 10:35",
     "status": "Friede mit Rußland. 04.03.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-03-04/27971740 #1918LIVE",
     "alt_text": "Berliner Volkszeitung 04.03.1918 Morgen-Ausgabe",
-    "img": "1918-03-04.0.png"
+    "img": "1918-03-04.0.png",
+    "ready": true
   },
   {
     "sendAfter": "2018-03-04 18:35",
     "status": "Der Friedensvertrag mit Rußland. 04.03.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-03-04/27971740 #1918LIVE",
     "alt_text": "Berliner Volkszeitung 04.03.1918 Abend-Ausgabe",
-    "img": "1918-03-04.1.png"
+    "img": "1918-03-04.1.png",
+    "ready": true
   },
   {
     "sendAfter": "2018-03-05 10:35",
     "status": "Die Verhandlungen mit Rumänien. 05.03.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-03-05/27971740 #1918LIVE",
     "alt_text": "Berliner Volkszeitung 05.03.1918 Morgen-Ausgabe",
-    "img": "1918-03-05.1.png"
+    "img": "1918-03-05.1.png",
+    "ready": true
   },
   {
     "sendAfter": "2018-03-05 18:35",
     "status": "Lebhafte Erkundungstätigkeit an der Westfront. 05.03.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-03-05/27971740 #1918LIVE",
     "alt_text": "Berliner Volkszeitung 05.03.1918 Abend-Ausgabe",
-    "img": "1918-03-05.2.png"
+    "img": "1918-03-05.2.png",
+    "ready": true
   },
   {
     "sendAfter": "2018-03-06 10:35",
     "status": "Wie der Friede unterzeichnet wurde. 06.03.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-03-06/27971740 #1918LIVE",
     "alt_text": "Berliner Volkszeitung 06.03.1918 Morgen-Ausgabe",
-    "img": "1918-03-06.1.png"
+    "img": "1918-03-06.1.png",
+    "ready": true
   },
   {
     "sendAfter": "2018-03-06 18:35",
     "status": "Der Vorfrieden mit Rumänien unterzeichnet. Ankunft der deutschen Hilfsexpedition auf den Alandsinseln. 06.03.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-03-06/27971740 #1918LIVE",
     "alt_text": "Berliner Volkszeitung 06.03.1918 Abend-Ausgabe",
-    "img": "1918-03-06.2.png"
+    "img": "1918-03-06.2.png",
+    "ready": true
   },
   {
     "sendAfter": "2018-03-07 10:35",

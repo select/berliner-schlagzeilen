@@ -22,6 +22,7 @@ module.exports = {
 	module: {
 		loaders: [
 			{ test: /\.sass$/, loaders: ['style-loader', 'css-loader'/*, 'postcss-loader'*/, 'sass-loader'] },
+			{ test: /\.(jpg|png|svg)$/, loader: 'url-loader', options: { limit: 8192 } },
 			{ test: /\.ttf$/, loader: 'url-loader' },
 			{ test: /\.html$/, loader: 'raw-loader' },
 			{ test: /\.svg$/, loader: 'raw-loader' },

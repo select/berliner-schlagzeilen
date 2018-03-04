@@ -1,14 +1,25 @@
 <html>
 	<head>
 		<title>Berliner Schlagzeilen - Tweet Manager</title>
+		<meta name="viewport" content="width=device-width" />
 	</head>
 	<body>
 		<h1>Tweet Manager</h1>
 		<header>
-			<div class="menu">🍔</div>
+			<div class="nav__user-list">🚹</div>
 			<div class="logout">❌</div>
 		</header>
 		<div class="tweets"></div>
+		<div class="user">
+			<div class="user__close">❌</div>
+			<div class="user__list"></div>
+			<form class="card-1 user__add">
+				<input type="text" name="username" placeholder="… add user">
+				<div class="user__menu">
+					<input type="submit" value="❌">
+				</div>
+			</form>
+		</div>
 		<form class="login">
 			<div>
 				<div>
@@ -18,6 +29,19 @@
 				<div>
 					<label>Password</label>
 					<input name="password" type="password">
+				</div>
+				<button type="submit">⇢</button>
+			</div>
+		</form>
+		<form class="new-password">
+			<div>
+				<div>
+					<label>New password</label>
+					<input name="password1" type="password" minlength="8" autofocus>
+				</div>
+				<div>
+					<label>Repeat password</label>
+					<input name="password2" type="password" minlength="8">
 				</div>
 				<button type="submit">⇢</button>
 			</div>

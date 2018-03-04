@@ -42,17 +42,18 @@
     "xml2js": "^0.4.19"
   },
   "devDependencies": {
-    "cleaver": "^0.8.5",
     "autoprefixer": "^8.0.0",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "circular-dependency-plugin": "^4.4.0",
+    "cleaver": "^0.8.5",
     "copy-webpack-plugin": "^4.4.1",
     "css-loader": "^0.28.9",
     "node-sass": "^4.7.2",
     "postcss-loader": "^2.1.0",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.20.1",
+    "url-loader": "^1.0.1",
     "webpack": "^3.11.0",
     "webpack-dev-server": "^2.11.1"
   }

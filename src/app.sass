@@ -1,12 +1,40 @@
 body
 	font-family: sans-serif
-	background: #ECEFF1
+	background-image: url("../public/ecailles.png")
+	margin: 0
+	padding: 0
+	width: 100%
+	height: 100%
+	position: absolute
 
 *
 	box-sizing: border-box
 
+// @media only screen and (max-width: 500px)
+// 	body
+// 	  font-size: 62.5%
+
+
 h1
+	font-size: 3em
 	font-weight: 100
+	display: inline
+	position: relative
+	letter-spacing: -4px
+	color: rgba(22,160,133,.7)
+
+h1:after
+	content: "Tweet Manager"
+	position: absolute
+	left: 2px
+	top: 3px
+	color: rgba(231,76,60,0.5)
+	width: 110%
+
+
+a,
+a:visited
+	color: #34495e
 
 .card-1
 	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24)
@@ -27,6 +55,8 @@ header
 		display: flex
 		align-items: center
 		justify-content: center
+		&:hover
+			color: #1DE9B6
 .tweets
 	display: flex
 	flex-wrap: wrap
@@ -46,7 +76,7 @@ header
 		&.hidden
 			display: none
 		&.ready
-			border-top: 1em solid #1DE9B6
+			border-top: 1rem solid #1DE9B6
   img
     width: 100%
 
@@ -89,13 +119,18 @@ input[type="password"]
 	&:active,
 	&:focus
 		outline-style: none
+div
+	&:active,
+	&:focus
+		outline-style: none
 
 label
 	font-size: 0.7em
 	text-transform: uppercase
 	color: #aaa
 
-.login
+.login,
+.new-password
 	display: flex
 	justify-content: center
 	align-items: center
@@ -116,7 +151,6 @@ label
 			margin: 2em
 			&:first-child
 				margin-bottom: 2em
-
 	button
 		color: #aaa
 		border: none
@@ -128,9 +162,10 @@ label
 		&:hover
 			background: #aaa
 			color: #FFF
+
 .messages
 	z-index: 1
-	position: absolute
+	position: fixed
 	top: 2em
 	right: 2em
 	> div
@@ -143,3 +178,73 @@ label
 			background: #c0392b
 		&.success
 		 background: #2ECC71
+
+.user
+	display: none
+	position: absolute
+	background: #FFF
+	background-image: url("../public/ecailles.png")
+	justify-content: center
+	align-items: center
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	flex-direction: column
+	align-items: center
+.user__list > div,
+.user__add
+		display: flex
+		align-items: center
+		justify-content: space-between
+		padding: 0 1em
+		background: #FFF
+		height: 2em
+		width: 20em
+		margin-bottom: .5em
+		&:hover
+			background: #ddd
+			.user__menu
+				display: block
+		&.user--not-registerd
+			background: #f1c40f
+			color: #fff
+		&.user--has-reg-token
+			background: #2ecc71
+			color: #fff
+.user__add .user__menu
+	display: block
+.user__menu
+	display: none
+	span, input
+		cursor: pointer
+		margin-left: .5em
+		&:hover
+			color: #1DE9B6
+.user__close
+	position: absolute
+	top: 0
+	right: 0
+	width: 2em
+	height: 2em
+	cursor: pointer
+	font-size: 2em
+	display: flex
+	align-items: center
+	justify-content: center
+	&:hover
+		color: #1DE9B6
+.user__add
+	padding-right: 0.7em
+	input
+		border: 0
+		&:first-child
+			flex: 1
+	[type="submit"]
+		cursor: pointer
+		font-size: 1em
+		transform: rotate(45deg)
+		background: transparent
+
+.new-password
+	display: none

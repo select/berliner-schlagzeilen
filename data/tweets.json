@@ -1745,19 +1745,22 @@
     "sendAfter": "2018-03-03 10:35",
     "status": "Rumänien zu Verhandlungen bereit. Die Vierbundsbedingungen als Verhandlungsgrundlage. 03.03.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-03-03/27971740 #1918LIVE",
     "alt_text": "Berliner Volkszeitung 03.03.1918 Morgen-Ausgabe",
-    "img": "1918-03-03.1.png"
+    "img": "1918-03-03.1.png",
+    "tweetId": 969882606207750100
   },
   {
     "sendAfter": "2018-03-04 10:35",
     "status": "Friede mit Rußland. 04.03.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-03-04/27971740 #1918LIVE",
     "alt_text": "Berliner Volkszeitung 04.03.1918 Morgen-Ausgabe",
-    "img": "1918-03-04.0.png"
+    "img": "1918-03-04.0.png",
+    "tweetId": 970256333126676500
   },
   {
     "sendAfter": "2018-03-04 18:35",
     "status": "Der Friedensvertrag mit Rußland. 04.03.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-03-04/27971740 #1918LIVE",
     "alt_text": "Berliner Volkszeitung 04.03.1918 Abend-Ausgabe",
-    "img": "1918-03-04.1.png"
+    "img": "1918-03-04.1.png",
+    "tweetId": 970377118302527500
   },
   {
     "sendAfter": "2018-03-05 10:35",

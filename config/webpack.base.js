@@ -11,7 +11,8 @@ module.exports = {
 		path: path.resolve(`${__dirname}/../public/`),
 		filename: 'app.js',
 	},
-	devtool: 'source-map',
+	mode: 'production',
+	devtool: '',
 	stats: {
 		// Configure the console output
 		colors: true,
@@ -20,7 +21,7 @@ module.exports = {
 		assets: true,
 	},
 	module: {
-		loaders: [
+		rules: [
 			{ test: /\.sass$/, loaders: ['style-loader', 'css-loader'/*, 'postcss-loader'*/, 'sass-loader'] },
 			{ test: /\.(jpg|png|svg)$/, loader: 'url-loader', options: { limit: 8192 } },
 			{ test: /\.ttf$/, loader: 'url-loader' },

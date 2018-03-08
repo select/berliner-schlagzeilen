@@ -7,6 +7,9 @@ const CircularDependencyPlugin = require('circular-dependency-plugin');
 const config = require('./webpack.base.js');
 const port = 8000;
 
+config.mode = 'development';
+config.devtool = 'source-map';
+
 config.entry = [
 	`webpack-dev-server/client?http://localhost:${port}/`,
 	'webpack/hot/dev-server',

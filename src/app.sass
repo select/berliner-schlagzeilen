@@ -56,26 +56,41 @@ header
 	display: flex
 	flex-wrap: wrap
 
-
-.tweets
-	> div
-		position: relative
-		display: block
-		flex-direction: column
-		height: 400px
-		width: 340px
-		margin: 10px
-		overflow: hidden
-		background: #FFF
-		transition: all 250ms
-		&.hidden
+.tweet img
+  width: 100%
+.tweet
+	position: relative
+	display: block
+	flex-direction: column
+	height: 400px
+	width: 340px
+	margin: 10px
+	overflow: hidden
+	background: #FFF
+	transition: all 250ms
+	&.ready
+		border-top: 1rem solid #1DE9B6
+	&:hover .tweet__status
+  	height: auto
+	&.tweet--maximize
+		position: fixed
+		width: 100%
+		height: 100%
+		background-image: url("../public/ecailles.png")
+		z-index: 1
+		position: fixed
+		top: 0
+		left: 0
+		padding: 0 15%
+		margin: 0
+		.tweet__full-screen
 			display: none
-		&.ready
-			border-top: 1rem solid #1DE9B6
-  img
-    width: 100%
+		.tweet__close
+			display: flex
+			color: #000
 
-.full-screen
+.tweet__full-screen,
+.tweet__close
 	position: absolute
 	font-weight: bold
 	top: 0
@@ -92,17 +107,23 @@ header
 		color: #fff
 
 
-.sendAfter
+.tweet__sendAfter
   color: #666
   margin: .5em
 
-.status
+.tweet__status
   overflow: hidden
   text-overflow: ellipsis
   margin: .5em
 
-.tweets > div:hover .status
-  height: auto
+
+
+.tweet__close
+	display: none
+	position: absolute
+	top: 0
+	right: 0
+	font-size: 2em
 
 input[type="text"],
 input[type="password"]
@@ -176,7 +197,7 @@ label
 
 .user
 	display: none
-	position: absolute
+	position: fixed
 	background: #FFF
 	background-image: url("../public/ecailles.png")
 	justify-content: center

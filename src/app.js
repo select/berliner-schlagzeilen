@@ -2,13 +2,41 @@ import io from 'socket.io-client';
 import { debounce } from './debounce';
 import './app.sass';
 
-const host = 'http://localhost:3001';
+const host = window.location.host === 'bs.rockdapus.org' ? 'https://bs.rockdapus.org' : 'http://localhost:3001';
 
 const $tweets = document.querySelector('.tweets');
 const now = Date.now();
 
 // Connect to socket.io server
 const socket = io(host);
+let secureSocket; // on logged in connect to secure socket
+
+// Display messages with error and success syle.
+// `messageObject` Examples:
+// ```
+// {error: 'Error message with <b>style</b>.'}
+// {success: 'Success message.'}
+// ```
+function message(messageObject) {
+	const $message = document.createElement('div');
+	[$message.innerHTML] = Object.values(messageObject);
+	$message.classList.add(Object.keys(messageObject)[0]);
+	document.querySelector('.messages').appendChild($message);
+	setTimeout(() => {
+		$message.remove();
+	}, 3000);
+}
+function renderTweet(tweet) {
+	const { img, sendAfter, status, ready, index } = tweet;
+	const imgEl = img ? `<img src="${host}/img/${img}"/>` : '';
+	return `<div class="tweet card-1 ${ready ? 'ready' : ''}" data-id="${index}">
+		<div class="tweet__close">❌</div>
+		<div class="tweet__full-screen">↗</div>
+		<div class="tweet__sendAfter">${sendAfter}</div>
+		<div class="tweet__status" contenteditable="true" data-id="${index}">${status}</div>
+		${imgEl}
+	</div>`;
+}
 
 function render(tweets) {
 	if (!tweets) return;
@@ -16,19 +44,13 @@ function render(tweets) {
 	tweets
 		.map((tweet, index) => Object.assign(tweet, { index }))
 		.filter(({ sendAfter }) => now < new Date(sendAfter))
-		.forEach(({ img, sendAfter, status, ready, index }) => {
-			const imgEl = img ? `<img src="${host}/img/${img}"/>` : '';
-			$tweets.innerHTML += `<div class="card-1 ${ready ? 'ready' : ''}" data-id="${index}">
-						<div class="full-screen">↗</div>
-						<div class="sendAfter">${sendAfter}</div>
-						<div class="status" contenteditable="true" data-id="${index}">${status}</div>
-						${imgEl}
-					</div>`;
+		.forEach(tweet => {
+			$tweets.innerHTML += renderTweet(tweet);
 		});
 	[...document.querySelectorAll('[contenteditable]')].forEach(el => {
 		// prettier-ignore
 		el.addEventListener('input', debounce(event => {
-			socket.emit('edit tweet', {
+			secureSocket.emit('edit tweet', {
 					index: event.target.dataset.id,
 					data: { status: event.target.innerHTML },
 				}, data => { message(data); });
@@ -50,44 +72,51 @@ function render(tweets) {
 	});
 }
 
-// Display messages with error and success syle.
-// `messageObject` Examples:
-// ```
-// {error: 'Error message with <b>style</b>.'}
-// {success: 'Success message.'}
-// ```
-function message(messageObject) {
-	const $message = document.createElement('div');
-	$message.innerHTML = Object.values(messageObject)[0];
-	$message.classList.add(Object.keys(messageObject)[0]);
-	document.querySelector('.messages').appendChild($message);
-	setTimeout(() => {
-		$message.remove();
-	}, 3000);
-}
+$tweets.addEventListener('click', event => {
+	if (event.target.classList.contains('tweet__full-screen')) {
+		event.target.parentElement.classList.add('tweet--maximize');
+	}
+	if (event.target.classList.contains('tweet__close')) {
+		event.target.parentElement.classList.remove('tweet--maximize');
+	}
+});
 
-// Login with session token if available
-if (localStorage.credentials) {
-	socket.on('connect', () => {
-		socket.emit('login with sessionToken', JSON.parse(localStorage.credentials), data => {
-			if (data.error) localStorage.removeItem('credentials');
-			$loginForm.style.display = 'none';
-			render(data.tweets);
-		});
+const $loginForm = document.querySelector('.login');
+function onLoggedIn(tweets) {
+	secureSocket = io(`${host}/secure`);
+	$loginForm.style.display = 'none';
+	render(tweets);
+	secureSocket.on('disconnect', () => {
+		message({ error: 'Secure socket disconnected!' });
+		$loginForm.style.display = 'flex';
+	});
+	secureSocket.on('update tweet', ({ index, tweet }) => {
+		const $el = document.querySelector(`.tweet[data-id="${index}"]`);
+		if ($el) $el.outerHTML = renderTweet(Object.assign(tweet, { index }));
 	});
 }
+window.onLoggedIn = onLoggedIn;
+
+// Login with session token if available
+socket.on('connect', () => {
+	if (localStorage.credentials) {
+		socket.emit('login with sessionToken', JSON.parse(localStorage.credentials), data => {
+			if (data.error) localStorage.removeItem('credentials');
+			onLoggedIn(data.tweets);
+		});
+	}
+});
 
 // Connect the login form to login over the socket
-const $loginForm = document.querySelector('.login');
 $loginForm.addEventListener('submit', event => {
 	event.preventDefault();
 	const username = event.target.elements.username.value;
 	const password = event.target.elements.password.value;
 	socket.emit('login with password', { username, password }, data => {
 		if (data.error) return message(data);
-		$loginForm.style.display = 'none';
-		render(data.tweets);
-		localStorage.credentials = JSON.stringify({ sessionToken: data.sessionToken, username });
+		onLoggedIn(data.tweets);
+		const { sessionId, sessionToken } = data;
+		localStorage.credentials = JSON.stringify({ sessionToken, sessionId });
 	});
 });
 
@@ -96,7 +125,7 @@ function logout() {
 		socket.emit('logout', JSON.parse(localStorage.credentials), () => {
 			localStorage.removeItem('credentials');
 			render([]);
-			$loginForm.style.display = '';
+			$loginForm.style.display = 'flex';
 		});
 	}
 }
@@ -127,8 +156,8 @@ document.querySelector('.nav__user-list').addEventListener('click', () => {
 		$user.style.display = 'flex';
 		return;
 	}
-	socket.emit('list users', null, (data) => {
-		if(data.error) return message(data.error);
+	socket.emit('list users', null, data => {
+		if (data.error) return message(data.error);
 		$user.style.display = 'flex';
 		userList = data.userList;
 		userList.forEach(user => {
@@ -201,12 +230,13 @@ $newPasswordForm.addEventListener('submit', event => {
 		{
 			username: getParameters.username,
 			password,
-			registrationToken: getParameters.registrationToken
+			registrationToken: getParameters.registrationToken,
 		},
 		data => {
 			message(data);
+			if (data.error) return;
 			window.history.replaceState({}, document.title, '/');
 			$newPasswordForm.style.display = 'none';
-			if (data.error) return;
-		});
+		}
+	);
 });

@@ -50,9 +50,10 @@ function render(tweets) {
 	[...document.querySelectorAll('[contenteditable]')].forEach(el => {
 		// prettier-ignore
 		el.addEventListener('input', debounce(event => {
+
 			secureSocket.emit('edit tweet', {
 					index: event.target.dataset.id,
-					data: { status: event.target.innerHTML },
+					data: { status: event.target.innerHTML.replace('&nbsp;', ' ') },
 				}, data => { message(data); });
 			}),
 			500

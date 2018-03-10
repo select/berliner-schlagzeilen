@@ -1,4 +1,7 @@
 data/raw
+server-data/users.json
+server-data/sessions.json
+server-data/img
 data/remote-data
 keys.js
 .DS_Store

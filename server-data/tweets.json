@@ -1834,21 +1834,24 @@
   },
   {
     "sendAfter": "2018-03-10 10:35",
-    "status": "Glanzleistung eines U-Bootes. 10.03.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-03-10/27971740 #1918LIVE",
+    "status": "Glanzleistung eines U-Bootes. 10.03.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-03-10/27971740 #1918LIVE #uboot",
     "alt_text": "Berliner Volkszeitung 10.03.1918 Morgen-Ausgabe",
-    "img": "1918-03-10.0.png"
+    "img": "1918-03-10.0.png",
+    "ready": true
   },
   {
     "sendAfter": "2018-03-11 10:35",
-    "status": "Grabenkämpfe bei Badonviller. 11.03.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-03-11/27971740 #1918LIVE",
+    "status": "Grabenkämpfe bei Badonviller. 11.03.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-03-11/27971740 #1918LIVE #Frankreich #ww1",
     "alt_text": "Berliner Volkszeitung 11.03.1918 Morgen-Ausgabe",
-    "img": "1918-03-11.0.png"
+    "img": "1918-03-11.0.png",
+    "ready": false
   },
   {
     "sendAfter": "2018-03-11 18:35",
-    "status": "Lebhafte Tätigkeit an der Westfront. 11.03.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-03-11/27971740 #1918LIVE",
+    "status": "Lebhafte Tätigkeit an der Westfront. 11.03.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-03-11/27971740 #1918LIVE #ww1",
     "alt_text": "Berliner Volkszeitung 11.03.1918 Abend-Ausgabe",
-    "img": "1918-03-11.1.png"
+    "img": "1918-03-11.1.png",
+    "ready": true
   },
   {
     "sendAfter": "2018-03-12 10:35",
@@ -1858,7 +1861,7 @@
   },
   {
     "sendAfter": "2018-03-12 18:35",
-    "status": "Vorfeldgefechte an der Westfront. 12.03.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-03-12/27971740 #1918LIVE",
+    "status": "Vorfeldgefechte an der Westfront. 12.03.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-03-12/27971740 #1918LIVE #ww1",
     "alt_text": "Berliner Volkszeitung 12.03.1918 Abend-Ausgabe",
     "img": "1918-03-12.2.png"
   },
@@ -1870,19 +1873,19 @@
   },
   {
     "sendAfter": "2018-03-13 18:35",
-    "status": "Deutsche Truppen vor Odessa. 13.03.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-03-13/27971740 #1918LIVE",
+    "status": "Deutsche Truppen vor Odessa. 13.03.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-03-13/27971740 #1918LIVE #ww1",
     "alt_text": "Berliner Volkszeitung 13.03.1918 Abend-Ausgabe",
     "img": "1918-03-13.2.png"
   },
   {
     "sendAfter": "2018-03-14 10:35",
-    "status": "Luftschiffangriff auf England. Deutsche Truppen in Odessa eingedrungen. 14.03.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-03-14/27971740 #1918LIVE",
+    "status": "Luftschiffangriff auf England. Deutsche Truppen in Odessa eingedrungen. 14.03.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-03-14/27971740 #1918LIVE #ww1",
     "alt_text": "Berliner Volkszeitung 14.03.1918 Morgen-Ausgabe",
     "img": "1918-03-14.1.png"
   },
   {
     "sendAfter": "2018-03-14 18:35",
-    "status": "Die Besetzung von Odessa. 14.03.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-03-14/27971740 #1918LIVE",
+    "status": "Die Besetzung von Odessa. 14.03.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-03-14/27971740 #1918LIVE #ww1",
     "alt_text": "Berliner Volkszeitung 14.03.1918 Abend-Ausgabe",
     "img": "1918-03-14.2.png"
   },
@@ -1894,7 +1897,7 @@
   },
   {
     "sendAfter": "2018-03-15 18:35",
-    "status": "Grabenkämpfe nordöstlich von Prosnes. 15.03.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-03-15/27971740 #1918LIVE",
+    "status": "Grabenkämpfe nordöstlich von Prosnes. 15.03.1918 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1918-03-15/27971740 #1918LIVE #ww1",
     "alt_text": "Berliner Volkszeitung 15.03.1918 Abend-Ausgabe",
     "img": "1918-03-15.2.png"
   },

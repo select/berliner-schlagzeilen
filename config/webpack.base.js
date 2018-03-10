@@ -1,8 +1,8 @@
 /* global __dirname */
 const path = require('path');
-const webpack = require('webpack');
-const autoprefixer = require('autoprefixer');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
+// const webpack = require('webpack');
+// const autoprefixer = require('autoprefixer');
+// const CopyWebpackPlugin = require('copy-webpack-plugin');
 const CircularDependencyPlugin = require('circular-dependency-plugin');
 
 module.exports = {
@@ -12,14 +12,14 @@ module.exports = {
 		filename: 'app.js',
 	},
 	mode: 'production',
-	devtool: '',
-	stats: {
-		// Configure the console output
-		colors: true,
-		modules: false,
-		reasons: true,
-		assets: true,
-	},
+	// devtool: '',
+	// stats: {
+	// 	// Configure the console output
+	// 	coulors: true,
+	// 	modules: false,
+	// 	reasons: true,
+	// 	assets: true,
+	// },
 	module: {
 		rules: [
 			{ test: /\.sass$/, loaders: ['style-loader', 'css-loader'/*, 'postcss-loader'*/, 'sass-loader'] },
@@ -42,16 +42,16 @@ module.exports = {
 		new CircularDependencyPlugin({
 			failOnError: true,
 		}),
-		new webpack.LoaderOptionsPlugin({
-			options: {
-				context: __dirname,
-				postcss: [autoprefixer],
-				babel: {
-					presets: ['es2015', 'stage-2'],
-					comments: false,
-					plugins: ['transform-es2015-destructuring', 'transform-object-rest-spread'],
-				},
-			},
-		}),
+		// new webpack.LoaderOptionsPlugin({
+		// 	options: {
+		// 		context: __dirname,
+		// 		postcss: [autoprefixer],
+		// 		babel: {
+		// 			presets: ['es2015', 'stage-2'],
+		// 			comments: false,
+		// 			plugins: ['transform-es2015-destructuring', 'transform-object-rest-spread'],
+		// 		},
+		// 	},
+		// }),
 	],
 };

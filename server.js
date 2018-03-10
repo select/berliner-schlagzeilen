@@ -10,16 +10,18 @@ const app = express();
 const http = require('http').Server(app);
 const io = require('socket.io')(http);
 
+const dataDir = process.env.DATA_DIR || 'server-data';
+
 // Initialise the password policy
 const pwd = securePassword();
 
-const tweetsDb = low(new FileSync('data/tweets3.json'));
+const tweetsDb = low(new FileSync(`${dataDir}/tweets.json`));
 tweetsDb.defaults([]).write();
 
-const userDb = low(new FileSync('data/users.json'));
+const userDb = low(new FileSync(`${dataDir}/users.json`));
 userDb.defaults({}).write();
 
-const sessionDb = low(new FileSync('data/sessions.json'));
+const sessionDb = low(new FileSync(`${dataDir}/sessions.json`));
 sessionDb.defaults({}).write();
 
 function checkAuthenticated(socket, next) {
@@ -161,4 +163,4 @@ http.listen(port, () => {
 });
 
 app.use(express.static('public'));
-app.use('/img', express.static('data/img'));
+app.use('/img', express.static(`${dataDir}/img`));

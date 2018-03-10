@@ -39,7 +39,7 @@ function renderTweet(tweet) {
 }
 
 function render(tweets) {
-	if (!tweets) return;
+	if (!(tweets && Array.isArray(tweets))) return;
 	$tweets.innerHTML = '';
 	tweets
 		.map((tweet, index) => Object.assign(tweet, { index }))
@@ -62,8 +62,8 @@ function render(tweets) {
 		// prettier-ignore
 		el.addEventListener('dblclick', event => {
 			const ready = !event.currentTarget.classList.contains('ready');
-			el.classList[ready ? 'add' : 'remove']('ready')
-			socket.emit('edit tweet', {
+			el.classList[ready ? 'add' : 'remove']('ready');
+			secureSocket.emit('edit tweet', {
 				index: event.currentTarget.dataset.id,
 				data: { ready },
 			},
@@ -87,7 +87,7 @@ function onLoggedIn(tweets) {
 	$loginForm.style.display = 'none';
 	render(tweets);
 	secureSocket.on('disconnect', () => {
-		message({ error: 'Secure socket disconnected!' });
+		message({ error: 'Secure socket disconnected. Please reload.' });
 		$loginForm.style.display = 'flex';
 	});
 	secureSocket.on('update tweet', ({ index, tweet }) => {

@@ -7,7 +7,8 @@
     "start": "node ./config/webpack.dev.js",
     "serve": "nodemon",
     "build": "./node_modules/.bin/webpack --config='./config/webpack.base.js' --progress --display-error-details",
-    "deploy": "npm run build;./deploy"
+    "deploy": "npm run build;./deploy",
+    "sync": "unison ./server-data ssh://select@rockdapus.org//opt/berliner-schlagzeilen-data"
   },
   "repository": {
     "type": "git",

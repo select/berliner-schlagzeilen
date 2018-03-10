@@ -9,11 +9,14 @@ const config = require('./config');
 const errorLogPath = `${__dirname}/../log/error.log`;
 const now = moment(new Date());
 
+const dataDir = process.argv[2] || config.dataDir;
+const tweetsPath = `${dataDir}/tweets.json`;
+console.log("tweetsPath", tweetsPath);
 
 // Log the error to file, console and tweets.json.
 function onError(error) {
 	tweet.error = `${error}`;
-	fs.writeFileSync(config.tweetsPath, JSON.stringify(tweets, null, 2));
+	fs.writeFileSync(tweetsPath, JSON.stringify(tweets, null, 2));
 	console.warn(`Could not tweet. ${error}`);
 	fs.appendFileSync(errorLogPath, `\n${now.format('YYYY-MM-DD HH:mm')} ${error}`);
 }
@@ -40,7 +43,7 @@ const twitterClient = new Twit(
 // Get the tweets.
 let tweets;
 try {
-	tweets = require(config.tweetsPath);
+	tweets = require(tweetsPath);
 } catch (error) {
 	fs.appendFileSync(errorLogPath, `\n${now.format('YYYY-MM-DD HH:mm')} ${error}`);
 	console.warn(`Could not tweet. ${error}`);
@@ -60,7 +63,7 @@ if (tweet.img) {
 	let media_id;
 	let b64content;
 	try {
-		b64content = fs.readFileSync(`${config.dataDir}/img/${tweet.img}`, { encoding: 'base64' });
+		b64content = fs.readFileSync(`${dataDir}/img/${tweet.img}`, { encoding: 'base64' });
 	} catch (error) {
 		onError(error);
 		process.exit(1);
@@ -81,7 +84,7 @@ if (tweet.img) {
 		))
 		.then(catchError((data) => {
 			tweet.tweetId = data.id;
-			fs.writeFileSync(config.tweetsPath, JSON.stringify(tweets, null, 2));
+			fs.writeFileSync(tweetsPath, JSON.stringify(tweets, null, 2));
 			console.log(`Send ${data.id} ${tweet.status}`);
 		}))
 		.catch(onError);
@@ -91,7 +94,7 @@ if (tweet.img) {
 		.post('statuses/update', { status: tweet.status })
 		.then(catchError((data) => {
 			tweet.tweetId = data.id;
-			fs.writeFileSync(config.tweetsPath, JSON.stringify(tweets, null, 2));
+			fs.writeFileSync(tweetsPath, JSON.stringify(tweets, null, 2));
 			console.log(`Send [no imgage] ${data.id} ${tweet.status}`);
 		}))
 		.catch(onError);

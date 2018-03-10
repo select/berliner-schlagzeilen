@@ -5,6 +5,7 @@ server-data/img
 data/remote-data
 keys.js
 bs.rockdapus.org
+mount.select.sh
 .DS_Store
 
 # Logs

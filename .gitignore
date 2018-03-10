@@ -4,6 +4,7 @@ server-data/sessions.json
 server-data/img
 data/remote-data
 keys.js
+bs.rockdapus.org
 .DS_Store
 
 # Logs

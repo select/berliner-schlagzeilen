@@ -3,7 +3,8 @@ npm run build
 rsync -ru --progress package.json package-lock.json server.js keys.js rockdapus:./berliner-schlagzeilen
 rsync -ru --progress public/ rockdapus:./berliner-schlagzeilen/public
 rsync -ru --progress src/ rockdapus:./berliner-schlagzeilen/src
-ssh -t rockdapus "sudo cp -r /home/select/berliner-schlagzeilen /opt; sudo chown -R node-pm2:node-pm2 /opt/berliner-schlagzeilen; sudo -H -u node-pm2 bash -c 'cd /opt/berliner-schlagzeilen; npm i; pm2 restart berliner-schlagzeilen'"
+ssh -t rockdapus "sudo cp -r /home/select/berliner-schlagzeilen /opt; sudo chown -R node-pm2:node-pm2 /opt/berliner-schlagzeilen; sudo -H -u node-pm2 bash -c 'pm2 restart berliner-schlagzeilen'"
+# ssh -t rockdapus "sudo -H -u node-pm2 bash -c 'cd /opt/berliner-schlagzeilen; npm i'"
 
 # rsync -ru --progress data/img/ rockdapus:./berliner-schlagzeilen-data/img/
 # DATA_DIR='/opt/berliner-schlagzeilen-data/' pm2 start berliner-schlagzeilen --update-env

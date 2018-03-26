@@ -13,7 +13,7 @@ config.devtool = 'source-map';
 config.entry = [
 	`webpack-dev-server/client?http://localhost:${port}/`,
 	'webpack/hot/dev-server',
-	'./src/app.js',
+	config.entry,
 ];
 
 config.output = {

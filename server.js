@@ -2,7 +2,8 @@
 /* eslint-disable no-param-reassign, no-unused-expressions */
 const express = require('express');
 const securePassword = require('secure-password');
-const uuidv4 = require('uuid/v4');
+const uuidv4 = require('uuid/v4'); // real random uuid
+const uuidv1 = require('uuid/v1'); // timestamp
 const low = require('lowdb');
 const FileSync = require('lowdb/adapters/FileSync');
 
@@ -24,14 +25,7 @@ userDb.defaults({}).write();
 const sessionDb = low(new FileSync(`${dataDir}/sessions.json`));
 sessionDb.defaults({}).write();
 
-function checkAuthenticated(socket, next) {
-	return (data, cb) => {
-		if (socket.authenticated) next(data, cb);
-		else cb && cb({ error: 'not authenticated' });
-	};
-}
-
-const authenticatedSockets = new Set();
+const authenticatedSockets = {};
 
 io.on('connection', socket => {
 	// Login with username: if sucessfull return a session token and
@@ -46,13 +40,11 @@ io.on('connection', socket => {
 		const result = pwd.verifySync(Buffer.from(password), Buffer.from(user.passwordHash.data));
 		if (result === securePassword.INVALID) return cb({ error: 'Username or password wrong.' });
 		if (result === securePassword.VALID) {
-			socket.authenticated = true;
-			authenticatedSockets.add(`/secure#${socket.id}`);
-			socket.username = username;
 			const sessionId = uuidv4();
 			const sessionToken = uuidv4();
 			const sessionTokenHash = pwd.hashSync(Buffer.from(sessionToken));
 			sessionDb.set(sessionId, { sessionTokenHash, username }).write();
+			authenticatedSockets[`/secure#${socket.id}`] = sessionId;
 			cb && cb({ sessionToken, sessionId, success: true, tweets: tweetsDb.read().getState() });
 		}
 	});
@@ -67,24 +59,18 @@ io.on('connection', socket => {
 		const result = pwd.verifySync(Buffer.from(sessionToken), Buffer.from(session.sessionTokenHash.data));
 		if (result === securePassword.INVALID) return cb && cb({ error: 'Unknown token.' });
 		if (result === securePassword.VALID) {
-			socket.authenticated = true;
-			authenticatedSockets.add(`/secure#${socket.id}`);
-			socket.username = session.username;
-			socket.sessionId = sessionId;
+			authenticatedSockets[`/secure#${socket.id}`] = sessionId;
 			cb && cb({ success: true, tweets: tweetsDb.read().getState() });
 		}
 	});
 
-	// Logout: Remove authenticated flag and delete the session token.
-	socket.on(
-		'logout',
-		checkAuthenticated(socket, (a, cb) => {
-			socket.authenticated = false;
-			authenticatedSockets.delete(`/secure#${socket.id}`);
-			userDb.unset(socket.sessionId).write();
-			cb && cb({ success: true });
-		})
-	);
+	socket.on('is registration token active', ({ username }, cb) => {
+		const isRegistrationActive = userDb
+			.read()
+			.has(`${username}.registrationTokenBuffer`)
+			.value();
+		cb && cb({ isRegistrationActive });
+	});
 
 	// Register: Create a new user entry and calculate a secure password hash.
 	socket.on('register', ({ username, password, registrationToken }, cb) => {
@@ -106,54 +92,74 @@ io.on('connection', socket => {
 			cb && cb({ success: `Registered new user <b>${username}</b>.` });
 		}
 	});
-
-	// Create registration token
-	socket.on(
-		'create registration token',
-		checkAuthenticated(socket, ({ username }, cb) => {
-			const registrationToken = uuidv4();
-			const registrationTokenBuffer = pwd.hashSync(Buffer.from(registrationToken));
-			userDb.set(username, { registrationTokenBuffer }).write();
-			// TODO add broadcast here
-			cb && cb({ success: 'Edit success.', user: { username, registrationToken, hasRegistrationToken: true } });
-		})
-	);
-
-	socket.on(
-		'delete user',
-		checkAuthenticated(socket, ({ username }, cb) => {
-			userDb.unset(username).write();
-			// TODO add broadcast here
-			cb && cb({ success: 'Delete success.' });
-		})
-	);
-
-	socket.on(
-		'list users',
-		checkAuthenticated(socket, (data, cb) => {
-			cb &&
-				cb({
-					userList: userDb
-						.read()
-						.entries()
-						.value()
-						.map(([username, { registrationTokenBuffer }]) => ({ username, hasRegistrationToken: !!registrationTokenBuffer })),
-				});
-		})
-	);
 });
 
 io.of('/secure').on('connection', socket => {
-	if (!authenticatedSockets.has(socket.id)) {
+	if (!(socket.id in authenticatedSockets)) {
 		socket.disconnect();
 	}
-	socket.on('edit tweet', ({ index, data }, cb) => {
+
+	// Logout: Remove authenticated flag and delete the session token.
+	socket.on('logout', (a, cb) => {
+		userDb.unset(authenticatedSockets[`/secure#${socket.id}`]).write();
+		delete authenticatedSockets[`/secure#${socket.id}`];
+		cb && cb({ success: true });
+	});
+
+	// Create registration token
+	socket.on('create registration token', ({ username }, cb) => {
+		const registrationToken = uuidv4();
+		const registrationTokenBuffer = pwd.hashSync(Buffer.from(registrationToken));
+		userDb.set(username, { registrationTokenBuffer }).write();
+		// TODO add broadcast here
+		cb && cb({ success: 'Edit success.', user: { username, registrationToken, hasRegistrationToken: true } });
+	});
+
+	// Delete a user
+	socket.on('delete user', ({ username }, cb) => {
+		userDb.unset(username).write();
+		// TODO add broadcast here
+		cb && cb({ success: 'Delete success.' });
+	});
+
+	// List all users
+	socket.on('list users', (data, cb) => {
+		cb &&
+			cb({
+				userList: userDb
+					.read()
+					.entries()
+					.value()
+					.map(([username, { registrationTokenBuffer }]) => ({ username, hasRegistrationToken: !!registrationTokenBuffer })),
+			});
+	});
+
+	// Init tweets
+	socket.on('init tweets', () => {
+		const tweets = tweetsDb.read().getState();
+		tweets.forEach(tweet => {
+			if (!tweet.id) tweet.id = uuidv1();
+		});
+		tweetsDb.setState(tweets).write();
+		socket.emit('init tweets', { tweets: tweetsDb.read().getState() });
+	});
+
+	// Edit a tweet
+	socket.on('edit tweet', ({ id, data }) => {
 		tweetsDb
-			.nth(index)
+			.find(tweet => tweet.id === id)
 			.assign(data)
 			.write();
-		socket.broadcast.emit('update tweet', { index, tweet: tweetsDb.nth(index).value() });
-		cb && cb({ success: 'Edit success.' });
+		socket.broadcast.emit('update tweet', { tweet: tweetsDb.find(tweet => tweet.id === id).value() });
+		socket.send({ success: 'Edit success.' });
+	});
+
+	// Delete a tweet
+	socket.on('delete tweet', ({ id }) => {
+		tweetsDb.remove((tweet) => tweet.id === id).write();
+		tweetsDb.read();
+		socket.emit('delete tweet', { id });
+		socket.send({ success: 'Deleted tweet.' });
 	});
 });
 

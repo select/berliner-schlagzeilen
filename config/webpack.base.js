@@ -12,14 +12,6 @@ module.exports = {
 		filename: 'app.js',
 	},
 	mode: 'production',
-	// devtool: '',
-	// stats: {
-	// 	// Configure the console output
-	// 	coulors: true,
-	// 	modules: false,
-	// 	reasons: true,
-	// 	assets: true,
-	// },
 	module: {
 		rules: [
 			{ test: /\.sass$/, loaders: ['style-loader', 'css-loader'/*, 'postcss-loader'*/, 'sass-loader'] },

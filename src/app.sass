@@ -37,94 +37,6 @@ a:visited
 	&:hover
 		box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22)
 
-header
-	position: absolute
-	top: 0
-	right: 0
-	display: flex
-	div
-		width: 2em
-		height: 2em
-		cursor: pointer
-		font-size: 2em
-		display: flex
-		align-items: center
-		justify-content: center
-		&:hover
-			color: #1DE9B6
-.tweets
-	display: flex
-	flex-wrap: wrap
-
-.tweet img
-  width: 100%
-.tweet
-	position: relative
-	display: block
-	flex-direction: column
-	height: 400px
-	width: 340px
-	margin: 10px
-	overflow: hidden
-	background: #FFF
-	transition: all 250ms
-	&.ready
-		border-top: 1rem solid #1DE9B6
-	&:hover .tweet__status
-  	height: auto
-	&.tweet--maximize
-		position: fixed
-		width: 100%
-		height: 100%
-		background-image: url("../public/ecailles.png")
-		z-index: 1
-		position: fixed
-		top: 0
-		left: 0
-		padding: 0 15%
-		margin: 0
-		.tweet__full-screen
-			display: none
-		.tweet__close
-			display: flex
-			color: #000
-
-.tweet__full-screen,
-.tweet__close
-	position: absolute
-	font-weight: bold
-	top: 0
-	right: 0
-	cursor: pointer
-	width: 2em
-	height: 2em
-	display: flex
-	align-items: center
-	justify-content: center
-	color: #eee
-	&:hover
-		background: #eee
-		color: #fff
-
-
-.tweet__sendAfter
-  color: #666
-  margin: .5em
-
-.tweet__status
-  overflow: hidden
-  text-overflow: ellipsis
-  margin: .5em
-
-
-
-.tweet__close
-	display: none
-	position: absolute
-	top: 0
-	right: 0
-	font-size: 2em
-
 input[type="text"],
 input[type="password"]
 	font-size: 1em
@@ -135,6 +47,137 @@ input[type="password"]
 	&:active,
 	&:focus
 		outline-style: none
+
+
+// -----------------
+header
+	position: absolute
+	top: 0
+	right: 0
+	display: flex
+	align-items: center
+	div
+		width: 2em
+		height: 2em
+		cursor: pointer
+		font-size: 2em
+		display: flex
+		align-items: center
+		justify-content: center
+		&:hover
+			color: #1DE9B6
+
+.add-tweet
+	width: 2em
+	height: 2em
+	transform: rotate(45deg)
+	font-size: 1.7em
+	border: 1px solid #000
+	border-radius: 50%
+	position: fixed
+	bottom: 0.5em
+	right: 0.5em
+	display: flex
+	justify-content: center
+	align-items: center
+	cursor: pointer
+	z-index: 1
+	background: rgba(255,255,255,.7)
+	&:hover
+		color: #1DE9B6
+		border-color: #1DE9B6
+.tweets
+	display: flex
+	flex-wrap: wrap
+
+.tweet img
+	width: 100%
+
+.tweet
+	position: relative
+	display: block
+	flex-direction: column
+	height: 400px
+	width: 340px
+	margin: 10px
+	overflow: hidden
+	transition: all 250ms
+	&:hover .tweet__status
+		height: auto
+	&.tweet--maximize
+		position: fixed
+		width: 100%
+		height: 100%
+		background-color: #FFF
+		background-image: url("../public/ecailles.png")
+		z-index: 1
+		position: fixed
+		top: 0
+		left: 0
+		margin: 0
+		padding: 0 15%
+		.tweet__full-screen
+			display: none
+		.tweet__close
+			position: fixed
+			display: flex
+
+.tweet__body
+	position: relative
+	background: #FFF
+	&.ready
+		border-top: 1rem solid #1DE9B6
+.tweet__menu
+	position: absolute
+	top: 0
+	right: 0
+	display: flex
+	flex-direction: row
+	> div
+		font-weight: bold
+		top: 0
+		right: 0
+		cursor: pointer
+		width: 2em
+		height: 2em
+		align-items: center
+		justify-content: center
+		color: #eee
+		&:not(.tweet__close)
+			display: flex
+		&:hover
+			background: #eee
+			color: #fff
+		&.tweet__delete:hover
+			color: #e74c3c
+.tweet__close
+	width: 2em
+	height: 2em
+	cursor: pointer
+	display: flex
+	justify-content: center
+	align-items: center
+	&:hover
+		color: #1DE9B6
+
+.tweet__sendAfter.tweet__sendAfter
+	color: #666
+	height: 1em
+	margin: .5em
+	border: 0
+
+.tweet__status
+	overflow: hidden
+	text-overflow: ellipsis
+	margin: .5em
+
+.tweet__close
+	display: none
+	position: absolute
+	top: 0
+	right: 0
+	font-size: 2em
+
 div
 	&:active,
 	&:focus
@@ -156,6 +199,7 @@ label
 	width: 100%
 	height: 100%
 	background: rgba(0,0,0,.7)
+	z-index: 2
 	> div
 		position: relative
 		background: #FFF
@@ -180,7 +224,7 @@ label
 			color: #FFF
 
 .messages
-	z-index: 1
+	z-index: 3
 	position: fixed
 	top: 2em
 	right: 2em
@@ -208,6 +252,7 @@ label
 	height: 100%
 	flex-direction: column
 	align-items: center
+	z-index: 2
 .user__list > div,
 .user__add
 		display: flex

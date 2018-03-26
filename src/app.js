@@ -26,60 +26,109 @@ function message(messageObject) {
 		$message.remove();
 	}, 3000);
 }
+
+socket.on('message', message);
+
 function renderTweet(tweet) {
-	const { img, sendAfter, status, ready, index } = tweet;
-	const imgEl = img ? `<img src="${host}/img/${img}"/>` : '';
-	return `<div class="tweet card-1 ${ready ? 'ready' : ''}" data-id="${index}">
+	const { img, sendAfter, status, ready, id } = tweet;
+	const imgEl = img ? `<img data-origin="${host}/img/${img}"/>` : '';
+	// pattern="\d{4}-\d{2}-\d{2} \d{2}:\d{2}"
+	return `<div class="tweet card-1" data-id="${id}">
 		<div class="tweet__close">❌</div>
-		<div class="tweet__full-screen">↗</div>
-		<div class="tweet__sendAfter">${sendAfter}</div>
-		<div class="tweet__status" contenteditable="true" data-id="${index}">${status}</div>
-		${imgEl}
+		<div class="tweet__body ${ready ? 'ready' : ''}">
+			<div class="tweet__menu">
+				<div class="tweet__delete" title="Delete this tweet">❌</div>
+				<div class="tweet__full-screen" title="Maximize tweet">↗</div>
+			</div>
+			<input type="text" value="${sendAfter}" placeholder="yyyy-mm-dd hh:mm" class="tweet__sendAfter">
+			<div class="tweet__status" contenteditable="true">${status}</div>
+			${imgEl}
+		</div>
 	</div>`;
 }
+
+function isElementInViewport(el) {
+	if (!el) return false;
+	const rect = el.getBoundingClientRect();
+	return rect.top + 300 >= 0 && rect.bottom - 300 <= (window.innerHeight || document.documentElement.clientHeight);
+}
+
+function findAncestor($el, className) {
+	while (!$el.classList.contains(className) && ($el = $el.parentElement));
+	return $el;
+}
+
+function renderTweetVisibility() {
+	[...$tweets.querySelectorAll('img:not([src])')].forEach($el => {
+		if (isElementInViewport($el.parentElement)) {
+			$el.src = $el.dataset.origin;
+		}
+	});
+}
+
+window.addEventListener('scroll', renderTweetVisibility);
 
 function render(tweets) {
 	if (!(tweets && Array.isArray(tweets))) return;
 	$tweets.innerHTML = '';
-	tweets
-		.map((tweet, index) => Object.assign(tweet, { index }))
-		.filter(({ sendAfter }) => now < new Date(sendAfter))
-		.forEach(tweet => {
-			$tweets.innerHTML += renderTweet(tweet);
-		});
-	[...document.querySelectorAll('[contenteditable]')].forEach(el => {
-		// prettier-ignore
-		el.addEventListener('input', debounce(event => {
+	tweets.filter(({ sendAfter }) => now < new Date(sendAfter)).forEach(tweet => {
+		$tweets.innerHTML += renderTweet(tweet);
+	});
 
-			secureSocket.emit('edit tweet', {
-					index: event.target.dataset.id,
-					data: { status: event.target.innerHTML.replace('&nbsp;', ' ') },
-				}, data => { message(data); });
-			}),
-			500
-		);
-	});
-	[...document.querySelectorAll('.tweets > div')].forEach(el => {
-		// prettier-ignore
-		el.addEventListener('dblclick', event => {
-			const ready = !event.currentTarget.classList.contains('ready');
-			el.classList[ready ? 'add' : 'remove']('ready');
-			secureSocket.emit('edit tweet', {
-				index: event.currentTarget.dataset.id,
-				data: { ready },
-			},
-			data => { message(data); });
-		});
-	});
+	renderTweetVisibility();
 }
+
+document.querySelector('.nav__init-tweets').addEventListener('click', () => {
+	secureSocket.emit('init tweets', null, data => {
+		message(data);
+	});
+});
+
+$tweets.addEventListener(
+	'input',
+	debounce(event => {
+		if (event.target.classList.contains('tweet__status')) {
+			secureSocket.emit('edit tweet', {
+				id: findAncestor(event.target, 'tweet').dataset.id,
+				data: { status: event.target.innerHTML.replace('&nbsp;', ' ') },
+			});
+		}
+	}, 500)
+);
+
+$tweets.addEventListener('dblclick', event => {
+	if (!event.target.classList.contains('tweets')) {
+		let tweetBody = findAncestor(event.target, 'tweet__body');
+		if (!tweetBody) tweetBody = event.target.querySelector('.tweet__body');
+		const ready = !tweetBody.classList.contains('ready');
+		tweetBody.classList[ready ? 'add' : 'remove']('ready');
+		event.currentTarget.classList[ready ? 'add' : 'remove']('ready');
+		secureSocket.emit('edit tweet', {
+			id: findAncestor(event.target, 'tweet').dataset.id,
+			data: { ready },
+		});
+	}
+});
 
 $tweets.addEventListener('click', event => {
 	if (event.target.classList.contains('tweet__full-screen')) {
-		event.target.parentElement.classList.add('tweet--maximize');
+		findAncestor(event.target, 'tweet').classList.add('tweet--maximize');
 	}
 	if (event.target.classList.contains('tweet__close')) {
-		event.target.parentElement.classList.remove('tweet--maximize');
+		findAncestor(event.target, 'tweet').classList.remove('tweet--maximize');
 	}
+	if (event.target.classList.contains('tweet__delete')) {
+		if (confirm('Delete this tweet?')) {
+			secureSocket.emit('delete tweet', {
+				id: findAncestor(event.target, 'tweet').dataset.id,
+			});
+		}
+	}
+});
+
+document.querySelector('.add-tweet').addEventListener('click', event => {
+	event.stopPropagation();
+	message({ error: 'Not implemented … working on it.' });
 });
 
 const $loginForm = document.querySelector('.login');
@@ -87,13 +136,19 @@ function onLoggedIn(tweets) {
 	secureSocket = io(`${host}/secure`);
 	$loginForm.style.display = 'none';
 	render(tweets);
+	secureSocket.on('message', message);
 	secureSocket.on('disconnect', () => {
 		message({ error: 'Secure socket disconnected. Please reload.' });
 		$loginForm.style.display = 'flex';
 	});
-	secureSocket.on('update tweet', ({ index, tweet }) => {
-		const $el = document.querySelector(`.tweet[data-id="${index}"]`);
-		if ($el) $el.outerHTML = renderTweet(Object.assign(tweet, { index }));
+	secureSocket.on('update tweet', ({ tweet }) => {
+		const $el = document.querySelector(`.tweet[data-id="${tweet.id}"]`);
+		if ($el) $el.outerHTML = renderTweet(tweet);
+		renderTweetVisibility();
+	});
+	secureSocket.on('delete tweet', ({ id }) => {
+		document.querySelector(`.tweet[data-id="${id}"]`).remove();
+		renderTweetVisibility();
 	});
 }
 window.onLoggedIn = onLoggedIn;
@@ -123,7 +178,7 @@ $loginForm.addEventListener('submit', event => {
 
 function logout() {
 	if (localStorage.credentials) {
-		socket.emit('logout', JSON.parse(localStorage.credentials), () => {
+		secureSocket.emit('logout', JSON.parse(localStorage.credentials), () => {
 			localStorage.removeItem('credentials');
 			render([]);
 			$loginForm.style.display = 'flex';
@@ -139,8 +194,12 @@ const $user = document.querySelector('.user');
 const $userList = $user.querySelector('.user__list');
 function renderUser({ username, hasRegistrationToken, registrationToken }) {
 	let registration = hasRegistrationToken ? '<i>(pending)</i>' : '';
-	registration = registrationToken ? `<a href="?username=${username}&registrationToken=${registrationToken}">(⎘ registration link)</a>` : registration;
-	return `<div class="card-1 ${hasRegistrationToken ? 'user--not-registerd' : ''} ${registrationToken ? 'user--has-reg-token' : ''}">
+	registration = registrationToken
+		? `<a href="?username=${username}&registrationToken=${registrationToken}">(⎘ registration link)</a>`
+		: registration;
+	return `<div class="card-1 ${hasRegistrationToken ? 'user--not-registerd' : ''} ${
+		registrationToken ? 'user--has-reg-token' : ''
+	}">
 		<span>${username} ${registration}</span>
 		<div class="user__menu" data-username="${username}">
 			<span data-fkt="reset">↻</span>
@@ -157,10 +216,10 @@ document.querySelector('.nav__user-list').addEventListener('click', () => {
 		$user.style.display = 'flex';
 		return;
 	}
-	socket.emit('list users', null, data => {
+	secureSocket.emit('list users', null, data => {
 		if (data.error) return message(data.error);
 		$user.style.display = 'flex';
-		userList = data.userList;
+		({ userList } = data);
 		userList.forEach(user => {
 			$userList.innerHTML += renderUser(user);
 		});
@@ -170,7 +229,7 @@ document.querySelector('.nav__user-list').addEventListener('click', () => {
 $user.querySelector('form').addEventListener('submit', event => {
 	event.preventDefault();
 	const username = event.target.elements.username.value;
-	socket.emit('create registration token', { username }, data => {
+	secureSocket.emit('create registration token', { username }, data => {
 		if (data.error) return message(data);
 		event.target.elements.username.value = '';
 		$userList.innerHTML += renderUser(data.user);
@@ -181,7 +240,7 @@ $user.querySelector('form').addEventListener('submit', event => {
 const userActions = {
 	reset(username) {
 		if (confirm('Reset password and create new registration token?')) {
-			socket.emit('create registration token', { username }, data => {
+			secureSocket.emit('create registration token', { username }, data => {
 				if (data.error) return message(data);
 				$userList.querySelector(`[data-username="${username}"]`).parentElement.outerHTML = renderUser(data.user);
 			});
@@ -189,7 +248,7 @@ const userActions = {
 	},
 	delete(username) {
 		if (confirm(`Delete user ${username}?`)) {
-			socket.emit('delete user', { username }, data => {
+			secureSocket.emit('delete user', { username }, data => {
 				if (data.error) return message(data);
 				$userList.querySelector(`[data-username="${username}"]`).parentElement.remove();
 			});
@@ -209,16 +268,23 @@ function getJsonFromUrl() {
 		.substr(1)
 		.split('&')
 		.reduce((acc, part) => {
-			var item = part.split('=');
+			const item = part.split('=');
 			return Object.assign(acc, { [item[0]]: decodeURIComponent(item[1]) });
 		}, {});
 }
 
 const $newPasswordForm = document.querySelector('.new-password');
 const getParameters = getJsonFromUrl();
-if (getParameters.registrationToken && getParameters.username) {
-	logout();
-	$newPasswordForm.style.display = 'flex';
+if (getParameters.registrationToken && getParameters.username && !localStorage.credentials) {
+	socket.emit('is registration token active', getParameters, ({ isRegistrationActive }) => {
+		if (isRegistrationActive) {
+			logout();
+			$newPasswordForm.style.display = 'flex';
+		} else {
+			window.history.pushState({}, document.title, '/');
+			message({ error: 'Your registration token is not valid any more.' });
+		}
+	});
 }
 
 $newPasswordForm.addEventListener('submit', event => {
@@ -226,18 +292,10 @@ $newPasswordForm.addEventListener('submit', event => {
 	const password = event.target.elements.password1.value;
 	const password2 = event.target.elements.password2.value;
 	if (password !== password2) return message({ error: 'Passwords did not match.' });
-	socket.emit(
-		'register',
-		{
-			username: getParameters.username,
-			password,
-			registrationToken: getParameters.registrationToken,
-		},
-		data => {
-			message(data);
-			if (data.error) return;
-			window.history.replaceState({}, document.title, '/');
-			$newPasswordForm.style.display = 'none';
-		}
-	);
+	socket.emit('register', Object.assign({ password }, getParameters), data => {
+		message(data);
+		if (data.error) return;
+		window.history.replaceState({}, document.title, '/');
+		$newPasswordForm.style.display = 'none';
+	});
 });

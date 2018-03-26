@@ -21,6 +21,8 @@ module.exports = {
 	},
 	// add your custom rules here
 	rules: {
+		'no-param-reassign': 'off',
+		'no-alert': 'off',
 		'arrow-parens': 'off', // FIXME jsPrettier must fix this and then we can remove the rule again
 		indent: [2, 'tab', { SwitchCase: 1 }], // indent with tabs
 		'no-tabs': 'off',
@@ -52,7 +54,9 @@ module.exports = {
 				optionalDependencies: ['test/unit/index.js'],
 			},
 		],
+		'object-curly-newline': 'off',
 		// allow debugger during development
 		'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
+		'max-len': ['error', { code: 130, ignoreUrls: true }],
 	},
 };

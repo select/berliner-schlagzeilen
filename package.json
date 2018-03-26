@@ -18,7 +18,7 @@
     "news",
     "twitter"
   ],
-  "author": "",
+  "author": "@select",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/shoutrlabs/berliner-schlagzeilen/issues"
@@ -27,7 +27,7 @@
   "prettier": {
     "singleQuote": true,
     "trailingComma": "es5",
-    "printWidth": 180
+    "printWidth": 130
   },
   "dependencies": {
     "adm-zip": "^0.4.7",

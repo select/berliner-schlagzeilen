@@ -26,9 +26,9 @@ const crawler = new Crawler({
 		if (error) {
 			process.stderr.write(error);
 		} else {
-			const posts = Array.from(res.$('.tx-zefyskalender-pi2 a[href^="dfg-viewer"]'));
+			const posts = Array.from(res.$('.tx-zefyskalender-pi2 a[href^="index"]'));
 			const ids = posts.map(el => {
-				const match = /identifier%255D%3D([\w-]+)/.exec(el.href);
+				const match = /content.staatsbibliothek-berlin.de%2Fzefys%2F([\w-]+)\.xml/.exec(el.href);
 				return match[1]
 			}).filter((item, pos, self) => self.indexOf(item) === pos);
 			allIds.push({

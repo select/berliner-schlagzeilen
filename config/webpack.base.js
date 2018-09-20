@@ -6,15 +6,15 @@ const path = require('path');
 const CircularDependencyPlugin = require('circular-dependency-plugin');
 
 module.exports = {
+	mode: 'development',
 	entry: './src/app.js',
 	output: {
 		path: path.resolve(`${__dirname}/../public/`),
 		filename: 'app.js',
 	},
-	mode: 'production',
 	module: {
 		rules: [
-			{ test: /\.sass$/, loaders: ['style-loader', 'css-loader'/*, 'postcss-loader'*/, 'sass-loader'] },
+			{ test: /\.sass$/, loaders: ['style-loader', 'css-loader'/*, 'postcss-loader' */, 'sass-loader'] },
 			{ test: /\.(jpg|png|svg)$/, loader: 'url-loader', options: { limit: 8192 } },
 			{ test: /\.ttf$/, loader: 'url-loader' },
 			{ test: /\.html$/, loader: 'raw-loader' },

@@ -169,7 +169,7 @@ $loginForm.addEventListener('submit', event => {
 	const username = event.target.elements.username.value;
 	const password = event.target.elements.password.value;
 	socket.emit('login with password', { username, password }, data => {
-		if (data.error) return message(data);
+		if (data.error) return void message(data);
 		onLoggedIn(data.tweets);
 		const { sessionId, sessionToken } = data;
 		localStorage.credentials = JSON.stringify({ sessionToken, sessionId });
@@ -217,7 +217,7 @@ document.querySelector('.nav__user-list').addEventListener('click', () => {
 		return;
 	}
 	secureSocket.emit('list users', null, data => {
-		if (data.error) return message(data.error);
+		if (data.error) return void message(data.error);
 		$user.style.display = 'flex';
 		({ userList } = data);
 		userList.forEach(user => {
@@ -230,7 +230,7 @@ $user.querySelector('form').addEventListener('submit', event => {
 	event.preventDefault();
 	const username = event.target.elements.username.value;
 	secureSocket.emit('create registration token', { username }, data => {
-		if (data.error) return message(data);
+		if (data.error) return void message(data);
 		event.target.elements.username.value = '';
 		$userList.innerHTML += renderUser(data.user);
 		userList.push(data.user);
@@ -241,7 +241,7 @@ const userActions = {
 	reset(username) {
 		if (confirm('Reset password and create new registration token?')) {
 			secureSocket.emit('create registration token', { username }, data => {
-				if (data.error) return message(data);
+				if (data.error) return void message(data);
 				$userList.querySelector(`[data-username="${username}"]`).parentElement.outerHTML = renderUser(data.user);
 			});
 		}
@@ -249,7 +249,7 @@ const userActions = {
 	delete(username) {
 		if (confirm(`Delete user ${username}?`)) {
 			secureSocket.emit('delete user', { username }, data => {
-				if (data.error) return message(data);
+				if (data.error) return void message(data);
 				$userList.querySelector(`[data-username="${username}"]`).parentElement.remove();
 			});
 		}
@@ -291,7 +291,7 @@ $newPasswordForm.addEventListener('submit', event => {
 	event.preventDefault();
 	const password = event.target.elements.password1.value;
 	const password2 = event.target.elements.password2.value;
-	if (password !== password2) return message({ error: 'Passwords did not match.' });
+	if (password !== password2) return void message({ error: 'Passwords did not match.' });
 	socket.emit('register', Object.assign({ password }, getParameters), data => {
 		message(data);
 		if (data.error) return;

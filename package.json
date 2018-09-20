@@ -8,7 +8,8 @@
     "serve": "nodemon",
     "build": "./node_modules/.bin/webpack --config='./config/webpack.base.js' --progress --display-error-details",
     "deploy": "npm run build;./deploy",
-    "sync": "unison ./server-data ssh://select@rockdapus.org//opt/berliner-schlagzeilen-data"
+    "sync": "unison ./server-data ssh://select@rockdapus.org//opt/berliner-schlagzeilen-data",
+    "gen": "node src/init.tweets.js"
   },
   "repository": {
     "type": "git",

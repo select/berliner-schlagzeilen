@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/env nodejs
 
 const fs = require('fs');
 const Twit = require('twit'); // https://github.com/ttezel/twit
@@ -11,7 +11,6 @@ const now = moment(new Date());
 
 const dataDir = process.argv[2] || config.dataDir;
 const tweetsPath = `${dataDir}/tweets.json`;
-console.log("tweetsPath", tweetsPath);
 
 // Log the error to file, console and tweets.json.
 function onError(error) {
@@ -21,16 +20,14 @@ function onError(error) {
 	fs.appendFileSync(errorLogPath, `\n${now.format('YYYY-MM-DD HH:mm')} ${error}`);
 }
 
-
 // Twit library does not implement promises reject for failed tweets but
 // resolves them and puts the error in the data object.
 function catchError(callback) {
-	return (response) => {
-		if (response.data.errors) return onError(response.data.errors[0].message)
-		else return callback(response.data)
-	}
+	return response => {
+		if (response.data.errors) return onError(response.data.errors[0].message);
+		else return callback(response.data);
+	};
 }
-
 
 // Get an instance of the twitter client.
 const twitterClient = new Twit(
@@ -38,7 +35,6 @@ const twitterClient = new Twit(
 		timeout_ms: 60 * 1000, // optional HTTP request timeout to apply to all requests.
 	})
 );
-
 
 // Get the tweets.
 let tweets;
@@ -70,32 +66,41 @@ if (tweet.img) {
 	}
 	twitterClient
 		.post('media/upload', { media_data: b64content })
-		.then(catchError((data) => {
-			media_id = data.media_id_string;
-			return twitterClient.post('media/metadata/create', {
-				media_id: data.media_id_string,
-				alt_text: { text: tweet.alt_text },
+		.then(
+			catchError(data => {
+				media_id = data.media_id_string;
+				return twitterClient.post('media/metadata/create', {
+					media_id: data.media_id_string,
+					alt_text: { text: tweet.alt_text },
+				});
 			})
-		}))
-		.then(catchError(() => twitterClient.post('statuses/update', {
-				status: tweet.status,
-				media_ids: [media_id],
+		)
+		.then(
+			catchError(() =>
+				twitterClient.post('statuses/update', {
+					status: tweet.status,
+					media_ids: [media_id],
+				})
+			)
+		)
+		.then(
+			catchError(data => {
+				tweet.tweetId = data.id;
+				fs.writeFileSync(tweetsPath, JSON.stringify(tweets, null, 2));
+				console.log(`Send ${data.id} ${tweet.status}`);
 			})
-		))
-		.then(catchError((data) => {
-			tweet.tweetId = data.id;
-			fs.writeFileSync(tweetsPath, JSON.stringify(tweets, null, 2));
-			console.log(`Send ${data.id} ${tweet.status}`);
-		}))
+		)
 		.catch(onError);
 } else {
 	// Send tweet without image.
 	twitterClient
 		.post('statuses/update', { status: tweet.status })
-		.then(catchError((data) => {
-			tweet.tweetId = data.id;
-			fs.writeFileSync(tweetsPath, JSON.stringify(tweets, null, 2));
-			console.log(`Send [no imgage] ${data.id} ${tweet.status}`);
-		}))
+		.then(
+			catchError(data => {
+				tweet.tweetId = data.id;
+				fs.writeFileSync(tweetsPath, JSON.stringify(tweets, null, 2));
+				console.log(`Send [no imgage] ${data.id} ${tweet.status}`);
+			})
+		)
 		.catch(onError);
 }

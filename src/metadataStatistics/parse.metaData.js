@@ -161,6 +161,10 @@ function parseAlto(fileName) {
 				width: px2mm(minMax.xMax - minMax.xMin),
 				height: px2mm(minMax.yMax - minMax.yMin),
 			},
+			absoluteSizeInPx: {
+				width: minMax.xMax - minMax.xMin,
+				heigth: minMax.yMax - minMax.yMin,
+			},
 			arithmeticMeanWC: (words.reduce((acc, w) => acc + parseFloat(w.$.WC), 0) / words.length).toFixed(5),
 		};
 		console.log('words', words.length);

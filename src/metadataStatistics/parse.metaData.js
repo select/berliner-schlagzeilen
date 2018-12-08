@@ -15,6 +15,7 @@ const dirIndexData = require(remoteDataDirIndex);
 const filesPath = path.join(__dirname, 'data', 'files');
 const imagesPath = path.join(__dirname, 'data', 'images');
 const statsPath = path.join(__dirname, 'data', 'stats');
+const indexDataPath = path.join(__dirname, 'stats-index.json');
 
 const stopwords = new Set(require(path.join(__dirname, 'stopwords.json')));
 
@@ -188,7 +189,7 @@ function parseAlto(fileName) {
 			},
 			absoluteSizeInPx: {
 				width: minMax.xMax - minMax.xMin,
-				heigth: minMax.yMax - minMax.yMin,
+				height: minMax.yMax - minMax.yMin,
 			},
 			arithmeticMeanWC: (words.reduce((acc, w) => acc + parseFloat(w.$.WC), 0) / words.length).toFixed(5),
 		};
@@ -222,12 +223,26 @@ function getZipContent(zipFilePath) {
 
 // function ensurePath(...path) {
 // }
+function convertAndCrop(baseName, cropCoordinates) {
+	console.log('cropCoordinates', cropCoordinates);
+	const name = path.join(imagesPath, baseName);
+	if (!fs.existsSync(`${name}.jp2`)) {
+		console.log('not exits');
+		return;
+	}
+	execSync(`j2k_to_image -i ${name}.jp2 -o ${name}.bmp`);
+	const cropCommand = `convert -crop ${cropCoordinates.width}x${cropCoordinates.height}+${cropCoordinates.xMin}+${cropCoordinates.yMin} ${name}.bmp ${name}.jpg`;
+	console.log('cropCommand', cropCommand);
+	execSync(cropCommand);
+	fs.unlinkSync(`${name}.bmp`);
+}
 
 async function parseZipContent(file, year) {
 	const dataMets = await parseMETS(file.metsFile.content);
 	const pageStats = await Promise.all(file.altoFiles.map(({ content }) => parseAlto(content))).then(altos =>
 		altos.map((res, index) => ({ ...res, fileName: file.altoFiles[index].name }))
 	);
+
 	const fileStats = {
 		...dataMets,
 		metsFileName: file.metsFile.name,
@@ -247,20 +262,14 @@ function copyFile(source, target) {
 	rd.pipe(fs.createWriteStream(target));
 }
 
-function convertAndCrop(filename, cropCoordinates) {
-	execSync(`j2k_to_image -i ${filename}.jp2 -o ${filename}.bmp`);
-	execSync(`convert -crop ${cropCoordinates.absoluteSizeInPx.width}x${cropCoordinates.absoluteSizeInPx.height}+${cropCoordinates.MinMax.MinX}+${cropCoordinates.MinMax.MinY} ${filename}.jpg`);
-}
-
 async function addToIndex() {
-	const dataPath = path.join(__dirname, 'stats-index.json');
 	const dataListPath = path.join(__dirname, 'stats-list.json');
 	// const filesPath = path.join('data', 'files');
 	let oldData = {};
 	try {
-		oldData = require(dataPath);
+		oldData = require(indexDataPath);
 	} catch (e) {
-		process.stderr.write(`${dataPath} was empty, initialized with {}\n`);
+		process.stderr.write(`${indexDataPath} was empty, initialized with {}\n`);
 	}
 
 	// statsPath
@@ -282,7 +291,7 @@ async function addToIndex() {
 			console.log('error: ', error);
 		}
 	}
-	fs.writeFileSync(dataPath, JSON.stringify(newData, null, 2));
+	fs.writeFileSync(indexDataPath, JSON.stringify(newData, null, 2));
 	const pagesList = Object.values(newData).reduce(
 		(acc, { dateIssued, pages }) => [...acc, ...pages.map(page => Object.assign({ dateIssued }, page))],
 		[]
@@ -356,6 +365,17 @@ async function runCui() {
 			action: () => addToIndex(),
 		},
 		{
+			name: 'convert',
+			action: () => {
+				const pages = require('./stats-list.json');
+				// console.log("pages", pages);
+				pages.forEach(page => {
+					console.log('converst ', path.basename(page.fileName));
+					convertAndCrop(path.basename(page.fileName).split('.')[0], Object.assign({}, page.absoluteSizeInPx, page.sizeInPx));
+				});
+			},
+		},
+		{
 			name: 'Download and parse one year',
 			async action() {
 				const choices = Object.keys(dirIndexData);
@@ -373,14 +393,14 @@ async function runCui() {
 				]);
 				const bins = dirIndexData[year[0]].reduce(
 					(acc, file, index) => {
-						if (index % 5 === 0) acc.push([]);
+						if (index % 2 === 0) acc.push([]);
 						acc[acc.length - 1].push(file);
 						return acc;
 					},
 					[[]]
 				);
 				console.log('bins.slice(0, 3)', bins.slice(0, 3));
-				for (const files of bins.slice(0, 3)) {
+				for (const files of bins.slice(0, 2)) {
 					console.log('processing', files);
 					await downloadFiles(year, files);
 					console.log('add to index');

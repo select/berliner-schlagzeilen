@@ -301,7 +301,7 @@ async function runCui() {
 				console.log('fileList', fileList);
 				return Promise.all(
 					fileList.map(file =>
-						parseZipContent(getZipContent(path.join(filesPath, file)))
+						parseZipContent(getZipContent(path.join(filesPath, file)), file.split('/')[0])
 							.then(res => {} /*console.log(JSON.stringify(res, null, 2))*/)
 							.catch(e => console.warn(e))
 					)

@@ -8,6 +8,9 @@ const inquirer = require('inquirer');
 const fuzzy = require('fuzzy');
 inquirer.registerPrompt('checkbox-autocomplete', require('inquirer-checkbox-autocomplete-prompt'));
 
+const { downloadFiles } = require('./downloadZefysOwnCloud');
+const remoteDataDirIndex = './remote-dir-index.json';
+const dirIndexData = require(remoteDataDirIndex);
 const filesPath = path.join(__dirname, 'data', 'files');
 const statsPath = path.join(__dirname, 'data', 'stats');
 
@@ -85,6 +88,13 @@ function recurseToString(root) {
 	];
 }
 
+function recurseToIllustration(root) {
+	return [
+		...['TextBlock', 'ComposedBlock'].reduce(recursionReducer(recurseToIllustration, root), []),
+		...(root.Illustration || []),
+	];
+}
+
 function recurseToLine(root) {
 	return [...['TextBlock', 'ComposedBlock'].reduce(recursionReducer(recurseToLine, root), []), ...(root.TextLine || [])];
 }
@@ -111,6 +121,10 @@ function px2mm(l) {
 	return (l * 25.4 / 300).toFixed(1);
 }
 
+function px2cm(l) {
+	return (l * 25.4 / (300 * 10)).toFixed(1);
+}
+
 function getTopWords(words) {
 	const topWords = Object.entries(
 		words.reduce((acc, w) => {
@@ -133,6 +147,9 @@ function parseAlto(fileName) {
 		// return { words: words.map(w => w.$.CONTENT).join(' ') };
 		const lines = recurseToLine(printSpaceXML);
 		const blocks = recurseToBlock(printSpaceXML);
+		const illustrations = recurseToIllustration(printSpaceXML);
+		console.log("illustrations", illustrations);
+		return;
 		const minMax = words.reduce(
 			(acc, w) => {
 				const size = getSize(w.$);
@@ -145,8 +162,8 @@ function parseAlto(fileName) {
 			},
 			{ xMin: 999999999, yMin: 999999999, xMax: 0, yMax: 0 }
 		);
-
 		return {
+			words: words.map(w => w.$.CONTENT).join(' '),
 			topWords: getTopWords(words)
 				.map(w => w[0])
 				.slice(0, numTopWords),
@@ -156,6 +173,12 @@ function parseAlto(fileName) {
 			arithmeticMeanLineLengthInMm: px2mm(lines.reduce((acc, l) => acc + getSize(l.$).w, 0) / lines.length),
 			blocks: blocks.length,
 			arithmeticMeanLinesPerBlock: (blocks.reduce((acc, l) => acc + (l.TextLine || []).length, 0) / blocks.length).toFixed(4),
+			printSpaceDimensions: {
+				left: px2mm(printSpaceXML.$.HPOS),
+				top: px2mm(printSpaceXML.$.VPOS),
+				width: px2mm(printSpaceXML.$.WIDTH),
+				height: px2mm(printSpaceXML.$.HEIGHT),
+			},
 			sizeInPx: minMax,
 			sizeInMm: {
 				width: px2mm(minMax.xMax - minMax.xMin),
@@ -170,8 +193,6 @@ function parseAlto(fileName) {
 
 function getZipContent(zipFilePath) {
 	const { size } = fs.statSync(zipFilePath);
-	console.log('size', size);
-	console.log('load file', zipFilePath);
 	const zip = new AdmZip(zipFilePath);
 	const zipEntries = zip.getEntries(); // an array of ZipEntry records
 	const altoFiles = zipEntries.filter(zipEntry => /\d\.xml$/.test(zipEntry.entryName)).map(zipEntry => ({
@@ -231,6 +252,7 @@ async function execSync(promises) {
 
 async function addToIndex() {
 	const dataPath = path.join(__dirname, 'stats-index.json');
+	const dataListPath = path.join(__dirname, 'stats-list.json');
 	// const filesPath = path.join('data', 'files');
 	let oldData = {};
 	try {
@@ -261,6 +283,8 @@ async function addToIndex() {
 	}
 	console.log('newData', newData);
 	fs.writeFileSync(dataPath, JSON.stringify(newData, null, 2));
+	const pagesList = Object.values(newData).reduce((acc, { dateIssued, pages }) => [...acc, ...pages.map(page => Object.assign({ dateIssued }, page))], []);
+	fs.writeFileSync(dataListPath, JSON.stringify(pagesList, null, 2));
 }
 
 async function runCui() {
@@ -298,7 +322,7 @@ async function runCui() {
 						},
 					},
 				]);
-				console.log('fileList', fileList);
+				// console.log('fileList', fileList);
 				return Promise.all(
 					fileList.map(file =>
 						parseZipContent(getZipContent(path.join(filesPath, file)), file.split('/')[0])
@@ -311,6 +335,34 @@ async function runCui() {
 		{
 			name: 'Extend index with downloaded Files',
 			action: () => addToIndex(),
+		},
+		{
+			name: 'Download and parse one year',
+			async action() {
+				const choices = Object.keys(dirIndexData);
+				const { year } = await inquirer.prompt([
+					{
+						type: 'checkbox-autocomplete',
+						name: 'year',
+						asyncSource: async (answers, input) => fuzzy.filter(input || '', choices).map(el => el.original),
+						message: 'Please select one year:',
+						validate(answer) {
+							if (answer.length !== 1) return 'You must choose one year.';
+							return true;
+						},
+					},
+				]);
+				const bins = dirIndexData[year[0]].reduce((acc, file, index) => {
+					if (index % 5 === 0) acc.push([]);
+					acc[acc.length - 1].push(file);
+					return acc;
+				}, [[]]);
+				// Promise.all(bins.map(async files => {
+				// 	await downloadFiles(year, files);
+				// 	await
+				// }))
+				console.log("bins", bins);
+			},
 		},
 	];
 	const { startAction } = await inquirer.prompt([

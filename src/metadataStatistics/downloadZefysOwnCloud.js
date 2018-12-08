@@ -58,28 +58,34 @@ function getFileIndex() {
 }
 
 function downloadFiles(year, files) {
-	if (!fs.existsSync(dataPath)) fs.mkdirSync(dataPath);
-	const yearPath = `${dataPath}/${year}`;
-	if (!fs.existsSync(yearPath)) fs.mkdirSync(yearPath);
+	return new Promise((resolve) => {
+		if (!files.length) resolve();
+		if (!fs.existsSync(dataPath)) fs.mkdirSync(dataPath);
+		const yearPath = `${dataPath}/${year}`;
+		if (!fs.existsSync(yearPath)) fs.mkdirSync(yearPath);
 
+		crawler.on('drain', () => {
+			resolve();
+		});
 
-	crawler.queue(
-		files.map(fileName => ({
-			uri: `http://136.243.4.67/index.php/s/hp6TFyqvZ5ZuAlW/download?path=%2F${year}&files=${fileName}`,
-			fileName,
-			encoding: null,
-			jQuery: false,
-			callback: (error1, res1, done1) => {
-				console.log(res1.options.uri);
-				if (error1) console.error(error1.stack);
-				else {
-					console.log(`${yearPath}/${res1.options.fileName}`);
-					fs.createWriteStream(`${yearPath}/${res1.options.fileName}`).write(res1.body);
-				}
-				done1();
-			},
-		}))
-	);
+		crawler.queue(
+			files.map(fileName => ({
+				uri: `http://136.243.4.67/index.php/s/hp6TFyqvZ5ZuAlW/download?path=%2F${year}&files=${fileName}`,
+				fileName,
+				encoding: null,
+				jQuery: false,
+				callback: (error1, res1, done1) => {
+					console.log(res1.options.uri);
+					if (error1) console.error(error1.stack);
+					else {
+						console.log(`${yearPath}/${res1.options.fileName}`);
+						fs.createWriteStream(`${yearPath}/${res1.options.fileName}`).write(res1.body);
+					}
+					done1();
+				},
+			}))
+		);
+	});
 }
 
 async function runCui() {
@@ -113,7 +119,7 @@ async function runCui() {
 						},
 					},
 				]);
-				downloadFiles(year, files);
+				await downloadFiles(year, files);
 			},
 		},
 		// {

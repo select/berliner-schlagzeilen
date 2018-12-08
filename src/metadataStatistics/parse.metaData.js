@@ -12,6 +12,7 @@ const { downloadFiles } = require('./downloadZefysOwnCloud');
 const remoteDataDirIndex = './remote-dir-index.json';
 const dirIndexData = require(remoteDataDirIndex);
 const filesPath = path.join(__dirname, 'data', 'files');
+const imagesPath = path.join(__dirname, 'data', 'images');
 const statsPath = path.join(__dirname, 'data', 'stats');
 
 const stopwords = new Set(require(path.join(__dirname, 'stopwords.json')));
@@ -63,7 +64,7 @@ function parseMETS(fileName) {
 			caption: detail['mods:caption'][0],
 			number: detail['mods:number'][0],
 		}));
-		return { title, dateIssued, details, pages };
+		return { title, dateIssued, details, pages, numPages: pages.length };
 	});
 }
 
@@ -148,8 +149,8 @@ function parseAlto(fileName) {
 		const lines = recurseToLine(printSpaceXML);
 		const blocks = recurseToBlock(printSpaceXML);
 		const illustrations = recurseToIllustration(printSpaceXML);
-		console.log("illustrations", illustrations);
-		return;
+		// console.log("illustrations", illustrations);
+		// return;
 		const minMax = words.reduce(
 			(acc, w) => {
 				const size = getSize(w.$);
@@ -203,6 +204,10 @@ function getZipContent(zipFilePath) {
 		name: zipEntry.entryName,
 		content: zipEntry.getData().toString('utf8'),
 	}));
+	if (!fs.existsSync(imagesPath)) fs.mkdirSync(imagesPath);
+	zipEntries.filter(zipEntry => /\d\.jp2$/.test(zipEntry.entryName)).forEach(zipEntry => {
+		zip.extractEntryTo(zipEntry.entryName, imagesPath, false);
+	});
 	const metsFile = zipEntries.find(zipEntry => /METS.xml$/i.test(zipEntry.entryName));
 	return {
 		zipFileName: path.basename(zipFilePath, path.extname(zipFilePath)),
@@ -232,7 +237,6 @@ async function parseZipContent(file, year) {
 	const yearPath = path.join(statsPath, year);
 	if (!fs.existsSync(yearPath)) fs.mkdirSync(yearPath);
 	const statsFilePath = path.join(yearPath, `${file.zipFileName}.json`);
-	console.log('statsFileName', statsFilePath);
 	fs.writeFileSync(statsFilePath, JSON.stringify(fileStats, null, 2));
 	return fileStats;
 }
@@ -283,12 +287,29 @@ async function addToIndex() {
 		} catch (error) {
 			console.log('error: ', error);
 		}
-		console.log('done');
 	}
-	console.log('newData', newData);
 	fs.writeFileSync(dataPath, JSON.stringify(newData, null, 2));
-	const pagesList = Object.values(newData).reduce((acc, { dateIssued, pages }) => [...acc, ...pages.map(page => Object.assign({ dateIssued }, page))], []);
+	const pagesList = Object.values(newData).reduce(
+		(acc, { dateIssued, pages }) => [...acc, ...pages.map(page => Object.assign({ dateIssued }, page))],
+		[]
+	);
 	fs.writeFileSync(dataListPath, JSON.stringify(pagesList, null, 2));
+}
+
+function deleteFolderRecursive(path) {
+	if (fs.existsSync(path)) {
+		fs.readdirSync(path).forEach(function(file, index) {
+			var curPath = path + '/' + file;
+			if (fs.lstatSync(curPath).isDirectory()) {
+				// recurse
+				deleteFolderRecursive(curPath);
+			} else {
+				// delete file
+				fs.unlinkSync(curPath);
+			}
+		});
+		fs.rmdirSync(path);
+	}
 }
 
 async function runCui() {
@@ -356,16 +377,23 @@ async function runCui() {
 						},
 					},
 				]);
-				const bins = dirIndexData[year[0]].reduce((acc, file, index) => {
-					if (index % 5 === 0) acc.push([]);
-					acc[acc.length - 1].push(file);
-					return acc;
-				}, [[]]);
-				// Promise.all(bins.map(async files => {
-				// 	await downloadFiles(year, files);
-				// 	await
-				// }))
-				console.log("bins", bins);
+				const bins = dirIndexData[year[0]].reduce(
+					(acc, file, index) => {
+						if (index % 5 === 0) acc.push([]);
+						acc[acc.length - 1].push(file);
+						return acc;
+					},
+					[[]]
+				);
+				console.log('bins.slice(0, 3)', bins.slice(0, 3));
+				for (const files of bins.slice(0, 3)) {
+					console.log('processing', files);
+					await downloadFiles(year, files);
+					console.log('add to index');
+					await addToIndex();
+					if (fs.existsSync(filesPath)) deleteFolderRecursive(filesPath);
+					console.log('done');
+				}
 			},
 		},
 	];

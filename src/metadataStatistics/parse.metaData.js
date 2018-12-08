@@ -6,6 +6,7 @@ const xml2js = require('xml2js');
 const AdmZip = require('adm-zip');
 const inquirer = require('inquirer');
 const fuzzy = require('fuzzy');
+const { execSync } = require('child_process');
 inquirer.registerPrompt('checkbox-autocomplete', require('inquirer-checkbox-autocomplete-prompt'));
 
 const { downloadFiles } = require('./downloadZefysOwnCloud');
@@ -246,16 +247,9 @@ function copyFile(source, target) {
 	rd.pipe(fs.createWriteStream(target));
 }
 
-async function execSync(promises) {
-	const out = [];
-	for (const promise of promises) {
-		try {
-			out.push(await promise);
-		} catch (error) {
-			console.log('error: ', error);
-		}
-	}
-	return out;
+function convertAndCrop(filename, cropCoordinates) {
+	execSync(`j2k_to_image -i ${filename}.jp2 -o ${filename}.bmp`);
+	execSync(`convert -crop ${cropCoordinates.absoluteSizeInPx.width}x${cropCoordinates.absoluteSizeInPx.height}+${cropCoordinates.MinMax.MinX}+${cropCoordinates.MinMax.MinY} ${filename}.jpg`);
 }
 
 async function addToIndex() {

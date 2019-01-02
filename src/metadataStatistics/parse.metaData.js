@@ -151,8 +151,9 @@ function parseAlto(fileName) {
 		const lines = recurseToLine(printSpaceXML);
 		const blocks = recurseToBlock(printSpaceXML);
 		const illustrations = recurseToIllustration(printSpaceXML);
-		// console.log("illustrations", illustrations);
-		// return;
+		// The following line is not used since there are too many false positives for
+		// illustrations.
+		// const minMax = [...illustrations, ...words].reduce(
 		const minMax = words.reduce(
 			(acc, w) => {
 				const size = getSize(w.$);
@@ -165,35 +166,50 @@ function parseAlto(fileName) {
 			},
 			{ xMin: 999999999, yMin: 999999999, xMax: 0, yMax: 0 }
 		);
+		const wordSpaceDimensionsInMm = {
+			width: px2mm(minMax.xMax - minMax.xMin),
+			height: px2mm(minMax.yMax - minMax.yMin),
+		};
+		const areaInSquareMm = wordSpaceDimensionsInMm.width * wordSpaceDimensionsInMm.height;
+		const corpus = words.map(w => w.$.CONTENT).join(' ');
 		return {
-			words: words.map(w => w.$.CONTENT).join(' '),
+			// words,
+			numWords: words.length,
 			topWords: getTopWords(words)
 				.map(w => w[0])
 				.slice(0, numTopWords),
-			Strings: words.length,
 			TextLines: lines.length,
+			numIllustrations: illustrations.length,
 			arithmeticMeanStrinsPerLine: (lines.reduce((acc, l) => acc + (l.String || []).length, 0) / lines.length).toFixed(4),
 			arithmeticMeanLineLengthInMm: px2mm(lines.reduce((acc, l) => acc + getSize(l.$).w, 0) / lines.length),
 			blocks: blocks.length,
 			arithmeticMeanLinesPerBlock: (blocks.reduce((acc, l) => acc + (l.TextLine || []).length, 0) / blocks.length).toFixed(4),
-			printSpaceDimensions: {
+			printSpaceDimensionsInMm: {
 				left: px2mm(printSpaceXML.$.HPOS),
 				top: px2mm(printSpaceXML.$.VPOS),
 				width: px2mm(printSpaceXML.$.WIDTH),
 				height: px2mm(printSpaceXML.$.HEIGHT),
 			},
-			sizeInPx: minMax,
-			sizeInMm: {
-				width: px2mm(minMax.xMax - minMax.xMin),
-				height: px2mm(minMax.yMax - minMax.yMin),
+			wordSpaceDimensionsInMm,
+			dimensionsInPx: Object.assign(
+				{
+					width: minMax.xMax - minMax.xMin,
+					height: minMax.yMax - minMax.yMin,
+				},
+				minMax
+			),
+			dimensionsInPx2: {
+				xMin: printSpaceXML.$.HPOS,
+				yMin: printSpaceXML.$.VPOS,
+				width: printSpaceXML.$.WIDTH,
+				height: printSpaceXML.$.HEIGHT,
 			},
-			absoluteSizeInPx: {
-				width: minMax.xMax - minMax.xMin,
-				height: minMax.yMax - minMax.yMin,
-			},
+			areaInSquareMm,
+			wordDensity: words.length / areaInSquareMm,
+			letterDensity: corpus.length / areaInSquareMm,
 			arithmeticMeanWC: (words.reduce((acc, w) => acc + parseFloat(w.$.WC), 0) / words.length).toFixed(5),
 		};
-		console.log('words', words.length);
+		// console.log('words', words.length);
 		// console.log('words', words.map(w => w.$.CONTENT).join(' '));
 	});
 }
@@ -207,9 +223,11 @@ function getZipContent(zipFilePath) {
 		content: zipEntry.getData().toString('utf8'),
 	}));
 	if (!fs.existsSync(imagesPath)) fs.mkdirSync(imagesPath);
-	zipEntries.filter(zipEntry => /\d\.jp2$/.test(zipEntry.entryName)).forEach(zipEntry => {
-		zip.extractEntryTo(zipEntry.entryName, imagesPath, false);
-	});
+	zipEntries
+		.filter(zipEntry => /\d\.jp2$/.test(zipEntry.entryName))
+		.forEach(zipEntry => {
+			zip.extractEntryTo(zipEntry.entryName, imagesPath, false, true);
+		});
 	const metsFile = zipEntries.find(zipEntry => /METS.xml$/i.test(zipEntry.entryName));
 	return {
 		zipFileName: path.basename(zipFilePath, path.extname(zipFilePath)),
@@ -224,17 +242,24 @@ function getZipContent(zipFilePath) {
 // function ensurePath(...path) {
 // }
 function convertAndCrop(baseName, cropCoordinates) {
-	console.log('cropCoordinates', cropCoordinates);
 	const name = path.join(imagesPath, baseName);
 	if (!fs.existsSync(`${name}.jp2`)) {
 		console.log('not exits');
 		return;
 	}
 	execSync(`j2k_to_image -i ${name}.jp2 -o ${name}.bmp`);
-	const cropCommand = `convert -crop ${cropCoordinates.width}x${cropCoordinates.height}+${cropCoordinates.xMin}+${cropCoordinates.yMin} ${name}.bmp ${name}.jpg`;
+	const padding = 50;
+	const limits = {
+		x: cropCoordinates.xMin > padding ? cropCoordinates.xMin - padding : 0,
+		y: cropCoordinates.yMin > padding ? cropCoordinates.yMin - padding : 0,
+		w: cropCoordinates.width + padding,
+		h: cropCoordinates.height + padding,
+	};
+	const cropCommand = `convert -crop ${limits.w}x${limits.h}+${limits.x}+${limits.y} ${name}.bmp ${name}.jpg`;
 	console.log('cropCommand', cropCommand);
 	execSync(cropCommand);
 	fs.unlinkSync(`${name}.bmp`);
+	// fs.unlinkSync(`${name}.jp2`);
 }
 
 async function parseZipContent(file, year) {
@@ -249,11 +274,11 @@ async function parseZipContent(file, year) {
 		zipFileName: file.zipFileName,
 		pages: pageStats,
 	};
-	if (!fs.existsSync(statsPath)) fs.mkdirSync(statsPath);
-	const yearPath = path.join(statsPath, year);
-	if (!fs.existsSync(yearPath)) fs.mkdirSync(yearPath);
-	const statsFilePath = path.join(yearPath, `${file.zipFileName}.json`);
-	fs.writeFileSync(statsFilePath, JSON.stringify(fileStats, null, 2));
+	// if (!fs.existsSync(statsPath)) fs.mkdirSync(statsPath);
+	// const yearPath = path.join(statsPath, year);
+	// if (!fs.existsSync(yearPath)) fs.mkdirSync(yearPath);
+	// const statsFilePath = path.join(yearPath, `${file.zipFileName}.json`);
+	// fs.writeFileSync(statsFilePath, JSON.stringify(fileStats, null, 2));
 	return fileStats;
 }
 
@@ -288,7 +313,7 @@ async function addToIndex() {
 		try {
 			newData[filePath] = await parseZipContent(getZipContent(filePath), year);
 		} catch (error) {
-			console.log('error: ', error);
+			console.log('parseZipContent error: ', error);
 		}
 	}
 	fs.writeFileSync(indexDataPath, JSON.stringify(newData, null, 2));
@@ -370,8 +395,7 @@ async function runCui() {
 				const pages = require('./stats-list.json');
 				// console.log("pages", pages);
 				pages.forEach(page => {
-					console.log('converst ', path.basename(page.fileName));
-					convertAndCrop(path.basename(page.fileName).split('.')[0], Object.assign({}, page.absoluteSizeInPx, page.sizeInPx));
+					convertAndCrop(path.basename(page.fileName).split('.')[0], page.dimensionsInPx);
 				});
 			},
 		},
@@ -399,13 +423,13 @@ async function runCui() {
 					},
 					[[]]
 				);
-				console.log('bins.slice(0, 3)', bins.slice(0, 3));
-				for (const files of bins.slice(0, 2)) {
+				// console.log('bins.slice(0, 3)', bins.slice(0, 3));
+				for (const files of bins.slice(0, 5)) {
 					console.log('processing', files);
 					await downloadFiles(year, files);
 					console.log('add to index');
 					await addToIndex();
-					if (fs.existsSync(filesPath)) deleteFolderRecursive(filesPath);
+					// if (fs.existsSync(filesPath)) deleteFolderRecursive(filesPath);
 					console.log('done');
 				}
 			},

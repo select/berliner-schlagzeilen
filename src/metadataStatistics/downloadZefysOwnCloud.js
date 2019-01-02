@@ -58,7 +58,7 @@ function getFileIndex() {
 }
 
 function downloadFiles(year, files) {
-	return new Promise((resolve) => {
+	return new Promise(resolve => {
 		if (!files.length) resolve();
 		if (!fs.existsSync(dataPath)) fs.mkdirSync(dataPath);
 		const yearPath = `${dataPath}/${year}`;
@@ -69,14 +69,14 @@ function downloadFiles(year, files) {
 		});
 
 		crawler.queue(
-			files.map(fileName => ({
+			files.filter(fileName => !fs.existsSync(`${yearPath}/${fileName}`)).map(fileName => ({
 				uri: `http://136.243.4.67/index.php/s/hp6TFyqvZ5ZuAlW/download?path=%2F${year}&files=${fileName}`,
 				fileName,
 				encoding: null,
 				jQuery: false,
 				callback: (error1, res1, done1) => {
 					console.log(res1.options.uri);
-					if (error1) console.error(error1.stack);
+					if (error1) console.error('Download error', error1.stack);
 					else {
 						console.log(`${yearPath}/${res1.options.fileName}`);
 						fs.createWriteStream(`${yearPath}/${res1.options.fileName}`).write(res1.body);

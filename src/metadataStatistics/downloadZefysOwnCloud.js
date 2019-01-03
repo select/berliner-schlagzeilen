@@ -122,6 +122,25 @@ async function runCui() {
 				await downloadFiles(year, files);
 			},
 		},
+		{
+			name: 'Download a year',
+			async action() {
+				const choices = Object.keys(dirIndexData);
+				const { year } = await inquirer.prompt([
+					{
+						type: 'checkbox-autocomplete',
+						name: 'year',
+						asyncSource: async (answers, input) => fuzzy.filter(input || '', choices).map(el => el.original),
+						message: 'Please select one year:',
+						validate(answer) {
+							if (answer.length !== 1) return 'You must choose one year.';
+							return true;
+						},
+					},
+				]);
+				await downloadFiles(year, dirIndexData[year[0]]);
+			},
+		},
 		// {
 		// 	name: 'Mount rockdapus webdav',
 		// 	action: () => mount(),

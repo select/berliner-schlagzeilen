@@ -183,12 +183,20 @@ function parseAlto(fileName) {
 			height: px2mm(minMax.yMax - minMax.yMin),
 		};
 		const areaInSquareMm = wordSpaceDimensionsInMm.width * wordSpaceDimensionsInMm.height;
+		const illustrationAreaInSquareMm = illustrations.reduce((acc, illustr) => {
+			const w = px2mm(illustr.$.WIDTH);
+			const h = px2mm(illustr.$.HEIGHT);
+			acc += w * h;
+			return acc;
+		}, 0);
 		const corpus = words.map(w => w.$.CONTENT).join(' ');
 		return {
 			numWords: words.length,
 			numLetters: corpus.length,
 			TextLines: lines.length,
 			numIllustrations: illustrations.length,
+			illustrationAreaInSquareMm,
+			illustrationAreaRatio: illustrationAreaInSquareMm / areaInSquareMm,
 			arithmeticMeanStrinsPerLine: (lines.reduce((acc, l) => acc + (l.String || []).length, 0) / lines.length).toFixed(4),
 			arithmeticMeanLineLengthInMm: px2mm(lines.reduce((acc, l) => acc + getSize(l.$).w, 0) / lines.length),
 			blocks: blocks.length,
@@ -491,9 +499,15 @@ async function runCui() {
 			},
 		},
 		{
-			name: 'get top words from cropus',
+			name: 'get top words from corpus',
 			async action() {
 				topWordsPerMonth();
+			},
+		},
+		{
+			name: 'merge stopwords',
+			async action() {
+				mergeStopwordLists();
 			},
 		},
 		{

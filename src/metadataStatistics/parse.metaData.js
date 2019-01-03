@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
+/* eslint-disable no-restricted-syntax  */
 const fs = require('fs');
 const path = require('path');
 const xml2js = require('xml2js');
@@ -173,7 +174,7 @@ function parseAlto(fileName) {
 		const areaInSquareMm = wordSpaceDimensionsInMm.width * wordSpaceDimensionsInMm.height;
 		const corpus = words.map(w => w.$.CONTENT).join(' ');
 		return {
-			// words,
+			corpus,
 			numWords: words.length,
 			numLetters: corpus.length,
 			topWords: getTopWords(words)
@@ -224,11 +225,9 @@ function getZipContent(zipFilePath) {
 		content: zipEntry.getData().toString('utf8'),
 	}));
 	if (!fs.existsSync(imagesPath)) fs.mkdirSync(imagesPath);
-	zipEntries
-		.filter(zipEntry => /\d\.jp2$/.test(zipEntry.entryName))
-		.forEach(zipEntry => {
-			zip.extractEntryTo(zipEntry.entryName, imagesPath, false, true);
-		});
+	zipEntries.filter(zipEntry => /\d\.jp2$/.test(zipEntry.entryName)).forEach(zipEntry => {
+		zip.extractEntryTo(zipEntry.entryName, imagesPath, false, true);
+	});
 	const metsFile = zipEntries.find(zipEntry => /METS.xml$/i.test(zipEntry.entryName));
 	return {
 		zipFileName: path.basename(zipFilePath, path.extname(zipFilePath)),
@@ -286,6 +285,37 @@ async function parseZipContent(file, year) {
 function copyFile(source, target) {
 	const rd = fs.createReadStream(source);
 	rd.pipe(fs.createWriteStream(target));
+}
+
+async function corpusPerMonth() {
+	const corpusDataPath = path.join(__dirname, 'corpus-month.json');
+	let oldData = {};
+	try {
+		oldData = require(corpusDataPath);
+	} catch (e) {
+		process.stderr.write(`${corpusDataPath} was empty, initialized with {}\n`);
+	}
+	const zeroSuffixRegEx = /_0\.zip$/;
+	const years = fs.readdirSync(filesPath);
+	for (const year of years) {
+		const files = fs.readdirSync(path.join(filesPath, year));
+		for (const file of files) {
+			const filePath = path.join(filesPath, year, file);
+			try {
+				if (!zeroSuffixRegEx.test(file)) continue;
+				console.log('parse filePath', filePath);
+				const data = await parseZipContent(getZipContent(filePath), year);
+				const month = data.dateIssued.slice(0, 7);
+				// const corpus = data.pages.map(({ corpus }) => corpus).join(' ');
+				const corpus = data.pages[0].corpus;
+				if (month in oldData) oldData[month] += ` ${corpus}`;
+				else oldData[month] += corpus;
+			} catch (error) {
+				console.log('parseZipContent error: ', error);
+			}
+		}
+	}
+	fs.writeFileSync(corpusDataPath, JSON.stringify(oldData, null, 2));
 }
 
 async function addToIndex() {
@@ -401,6 +431,12 @@ async function runCui() {
 			},
 		},
 		{
+			name: 'corpus',
+			async action() {
+				await corpusPerMonth();
+			},
+		},
+		{
 			name: 'Download and parse one year',
 			async action() {
 				const choices = Object.keys(dirIndexData);
@@ -457,4 +493,5 @@ module.exports = {
 	runCui,
 	parseZipContent,
 	getZipContent,
+	corpusPerMonth,
 };

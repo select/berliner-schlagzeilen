@@ -160,7 +160,6 @@ function parseAlto(fileName) {
 	return xml2obj(fileName).then(result => {
 		const printSpaceXML = result.alto.Layout[0].Page[0].PrintSpace[0];
 		const words = recurseToString(printSpaceXML);
-		// return { words: words.map(w => w.$.CONTENT).join(' ') };
 		const lines = recurseToLine(printSpaceXML);
 		const blocks = recurseToBlock(printSpaceXML);
 		const illustrations = recurseToIllustration(printSpaceXML);
@@ -186,13 +185,8 @@ function parseAlto(fileName) {
 		const areaInSquareMm = wordSpaceDimensionsInMm.width * wordSpaceDimensionsInMm.height;
 		const corpus = words.map(w => w.$.CONTENT).join(' ');
 		return {
-			// corpus,
-			// words: words.map(w => w.$.CONTENT.replace(/\W/g, '')),
 			numWords: words.length,
 			numLetters: corpus.length,
-			// topWords: getTopWords(words)
-			// 	.map(w => w[0])
-			// 	.slice(0, numTopWords),
 			TextLines: lines.length,
 			numIllustrations: illustrations.length,
 			arithmeticMeanStrinsPerLine: (lines.reduce((acc, l) => acc + (l.String || []).length, 0) / lines.length).toFixed(4),
@@ -332,7 +326,7 @@ function mergeStopwordLists() {
 
 async function corpusPerMonth() {
 	const corpusDataPath = path.join(__dirname, 'corpus-month.json');
-	let oldData = {};
+	const oldData = {};
 	// try {
 	// 	oldData = require(corpusDataPath);
 	// } catch (e) {
@@ -368,7 +362,8 @@ async function corpusPerMonth() {
 }
 
 async function addToIndex() {
-	const dataListPath = path.join(__dirname, 'stats-list.json');
+	const dataListPath = path.join(__dirname, 'stats-pages-list.json');
+	const issueListPath = path.join(__dirname, 'stats-issue-list.json');
 	// const filesPath = path.join('data', 'files');
 	let oldData = {};
 	try {
@@ -383,16 +378,17 @@ async function addToIndex() {
 			...acc,
 			...fs
 				.readdirSync(path.join(filesPath, year))
-				.filter(file => !(file in oldData))
+				.filter(file => !(path.basename(file, '.zip') in oldData))
 				.map(file => [year, path.join(filesPath, year, file)]),
 		],
 		[]
 	);
 	const newData = Object.assign({}, oldData);
 	for (const [year, filePath] of files) {
+		const basename = path.basename(filePath, '.zip');
 		console.log(`${year}: ${filePath}`);
 		try {
-			newData[filePath] = await parseZipContent(getZipContent(filePath), year);
+			newData[basename] = await parseZipContent(getZipContent(filePath), year);
 		} catch (error) {
 			console.log('parseZipContent error: ', error);
 		}
@@ -402,7 +398,15 @@ async function addToIndex() {
 		(acc, { dateIssued, pages }) => [...acc, ...pages.map(page => Object.assign({ dateIssued }, page))],
 		[]
 	);
-	fs.writeFileSync(dataListPath, JSON.stringify(pagesList, null, 2));
+	fs.writeFileSync(issueListPath, JSON.stringify(pagesList, null, 2));
+	const issueList = Object.values(newData).reduce(
+		(acc, issue) => {
+			delete issue.pages;
+			return [...acc, issue];
+		},
+		[]
+	);
+	fs.writeFileSync(dataListPath, JSON.stringify(issueList, null, 2));
 }
 
 function deleteFolderRecursive(path) {

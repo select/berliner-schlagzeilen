@@ -334,12 +334,15 @@ async function corpusPerMonth() {
 			try {
 				if (!zeroSuffixRegEx.test(file)) continue;
 				console.log('parse filePath', filePath);
-				const data = await parseZipContent(getZipContent(filePath), year);
-				const month = data.dateIssued.slice(0, 7);
-				// const corpus = data.pages.map(({ corpus }) => corpus).join(' ');
-				const words = data.pages[0].words.filter(
-					w => !stopwords.has(w.toLocaleLowerCase()) && w.length > 3 && !numberRegExeg.test(w)
-				);
+				const zipContent = await getZipContent(filePath);
+				const dataMets = await parseMETS(zipContent.metsFile.content);
+				// Only take the first page
+				const result = await xml2obj(zipContent.altoFiles[0].content);
+				const printSpaceXML = result.alto.Layout[0].Page[0].PrintSpace[0];
+				const month = dataMets.dateIssued.slice(0, 7);
+				const words = recurseToString(printSpaceXML)
+					.map(w => w.$.CONTENT.replace(/\W/g, ''))
+					.filter(w => !stopwords.has(w.toLocaleLowerCase()) && w.length > 3 && !numberRegExeg.test(w));
 				if (month in oldData) oldData[month] = oldData[month].concat(words);
 				else oldData[month] = words;
 			} catch (error) {
@@ -525,6 +528,7 @@ async function runCui() {
 }
 
 if (require.main === module) {
+	// corpusPerMonth().then(() => console.log('The End'));
 	runCui().then(() => console.log('The End'));
 }
 

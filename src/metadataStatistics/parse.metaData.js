@@ -187,12 +187,12 @@ function parseAlto(fileName) {
 		const corpus = words.map(w => w.$.CONTENT).join(' ');
 		return {
 			// corpus,
-			words: words.map(w => w.$.CONTENT.replace(/\W/g, '')),
+			// words: words.map(w => w.$.CONTENT.replace(/\W/g, '')),
 			numWords: words.length,
 			numLetters: corpus.length,
-			topWords: getTopWords(words)
-				.map(w => w[0])
-				.slice(0, numTopWords),
+			// topWords: getTopWords(words)
+			// 	.map(w => w[0])
+			// 	.slice(0, numTopWords),
 			TextLines: lines.length,
 			numIllustrations: illustrations.length,
 			arithmeticMeanStrinsPerLine: (lines.reduce((acc, l) => acc + (l.String || []).length, 0) / lines.length).toFixed(4),

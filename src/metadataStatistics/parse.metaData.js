@@ -323,6 +323,8 @@ function mergeStopwordLists() {
 		...require('./stopwords1'),
 		...require('./stopwords2'),
 		...require('./stopwords3'),
+		...require('./stopwords4'),
+		...require('./stopwords5'),
 	]));
 	const stopwordsPath = path.join(__dirname, 'stopwords-merged.json');
 	fs.writeFileSync(stopwordsPath, JSON.stringify(stopwords, null, 2));

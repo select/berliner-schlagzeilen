@@ -424,7 +424,8 @@ async function runCui() {
 					[[]]
 				);
 				// console.log('bins.slice(0, 3)', bins.slice(0, 3));
-				for (const files of bins.slice(0, 5)) {
+				// for (const files of bins.slice(0, 5)) {
+				for (const files of bins) {
 					console.log('processing', files);
 					await downloadFiles(year, files);
 					console.log('add to index');

@@ -18,7 +18,7 @@ const imagesPath = path.join(__dirname, 'data', 'images');
 const statsPath = path.join(__dirname, 'data', 'stats');
 const indexDataPath = path.join(__dirname, 'stats-index.json');
 
-const stopwords = new Set(require(path.join(__dirname, 'stopwords.json')));
+const stopwords = new Set(require(path.join(__dirname, 'stopwords-merged.json')));
 
 const numTopWords = 50;
 const idRegEx = /FID-F_SBB_\d+_(\d+_\d+_\d+)_(\d+)_(\d+)-OCRMASTER-TECHMD/;
@@ -316,6 +316,18 @@ function topWordsPerMonth() {
 	fs.writeFileSync(topWordsDataPath, JSON.stringify(result, null, 2));
 }
 
+function mergeStopwordLists() {
+	/* prettier-ignore */
+	const stopwords = Array.from(new Set([
+		...require('./stopwords'),
+		...require('./stopwords1'),
+		...require('./stopwords2'),
+		...require('./stopwords3'),
+	]));
+	const stopwordsPath = path.join(__dirname, 'stopwords-merged.json');
+	fs.writeFileSync(stopwordsPath, JSON.stringify(stopwords, null, 2));
+}
+
 async function corpusPerMonth() {
 	const corpusDataPath = path.join(__dirname, 'corpus-month.json');
 	let oldData = {};
@@ -530,6 +542,7 @@ async function runCui() {
 if (require.main === module) {
 	// corpusPerMonth().then(() => console.log('The End'));
 	runCui().then(() => console.log('The End'));
+	// mergeStopwordLists()
 }
 
 module.exports = {

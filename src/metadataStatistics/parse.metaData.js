@@ -338,7 +338,7 @@ async function corpusPerMonth() {
 				const month = data.dateIssued.slice(0, 7);
 				// const corpus = data.pages.map(({ corpus }) => corpus).join(' ');
 				const words = data.pages[0].words.filter(
-					w => !stopwords.has(w.toLocaleLowerCase()) && w.length > 1 && !numberRegExeg.test(w)
+					w => !stopwords.has(w.toLocaleLowerCase()) && w.length > 3 && !numberRegExeg.test(w)
 				);
 				if (month in oldData) oldData[month] = oldData[month].concat(words);
 				else oldData[month] = words;

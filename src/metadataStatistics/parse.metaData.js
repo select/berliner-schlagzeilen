@@ -373,6 +373,7 @@ async function addToIndex() {
 	);
 	const newData = Object.assign({}, oldData);
 	for (const [year, filePath] of files) {
+		console.log(`${year}: ${filePath}`);
 		try {
 			newData[filePath] = await parseZipContent(getZipContent(filePath), year);
 		} catch (error) {

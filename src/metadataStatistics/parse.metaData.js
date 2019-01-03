@@ -175,6 +175,7 @@ function parseAlto(fileName) {
 		return {
 			// words,
 			numWords: words.length,
+			numLetters: corpus.length,
 			topWords: getTopWords(words)
 				.map(w => w[0])
 				.slice(0, numTopWords),

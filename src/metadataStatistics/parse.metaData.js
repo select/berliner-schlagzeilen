@@ -129,6 +129,18 @@ function px2cm(l) {
 	return (l * 25.4 / (300 * 10)).toFixed(1);
 }
 
+function getTopWords2(words) {
+	const topWords = Object.entries(
+		words.reduce((acc, wn) => {
+			if (wn in acc) acc[wn] += 1;
+			else acc[wn] = 1;
+			return acc;
+		}, {})
+	);
+	topWords.sort((a, b) => (a[1] < b[1] ? 1 : -1));
+	return topWords;
+}
+
 function getTopWords(words) {
 	const topWords = Object.entries(
 		words.reduce((acc, w) => {
@@ -174,7 +186,8 @@ function parseAlto(fileName) {
 		const areaInSquareMm = wordSpaceDimensionsInMm.width * wordSpaceDimensionsInMm.height;
 		const corpus = words.map(w => w.$.CONTENT).join(' ');
 		return {
-			corpus,
+			// corpus,
+			words: words.map(w => w.$.CONTENT.replace(/\W/g, '')),
 			numWords: words.length,
 			numLetters: corpus.length,
 			topWords: getTopWords(words)
@@ -287,15 +300,32 @@ function copyFile(source, target) {
 	rd.pipe(fs.createWriteStream(target));
 }
 
+function topWordsPerMonth() {
+	const corpusDataPath = path.join(__dirname, 'corpus-month.json');
+	const topWordsDataPath = path.join(__dirname, 'top-words-month.json');
+	const corpusData = require(corpusDataPath);
+	const result = Object.entries(corpusData).reduce(
+		(acc, [date, words]) =>
+			Object.assign(acc, {
+				[date]: getTopWords2(words)
+					.map(w => w[0])
+					.slice(0, numTopWords),
+			}),
+		{}
+	);
+	fs.writeFileSync(topWordsDataPath, JSON.stringify(result, null, 2));
+}
+
 async function corpusPerMonth() {
 	const corpusDataPath = path.join(__dirname, 'corpus-month.json');
 	let oldData = {};
-	try {
-		oldData = require(corpusDataPath);
-	} catch (e) {
-		process.stderr.write(`${corpusDataPath} was empty, initialized with {}\n`);
-	}
+	// try {
+	// 	oldData = require(corpusDataPath);
+	// } catch (e) {
+	// 	process.stderr.write(`${corpusDataPath} was empty, initialized with {}\n`);
+	// }
 	const zeroSuffixRegEx = /_0\.zip$/;
+	const numberRegExeg = /\d+/;
 	const years = fs.readdirSync(filesPath);
 	for (const year of years) {
 		const files = fs.readdirSync(path.join(filesPath, year));
@@ -307,9 +337,11 @@ async function corpusPerMonth() {
 				const data = await parseZipContent(getZipContent(filePath), year);
 				const month = data.dateIssued.slice(0, 7);
 				// const corpus = data.pages.map(({ corpus }) => corpus).join(' ');
-				const corpus = data.pages[0].corpus;
-				if (month in oldData) oldData[month] += ` ${corpus}`;
-				else oldData[month] += corpus;
+				const words = data.pages[0].words.filter(
+					w => !stopwords.has(w.toLocaleLowerCase()) && w.length > 1 && !numberRegExeg.test(w)
+				);
+				if (month in oldData) oldData[month] = oldData[month].concat(words);
+				else oldData[month] = words;
 			} catch (error) {
 				console.log('parseZipContent error: ', error);
 			}
@@ -431,9 +463,15 @@ async function runCui() {
 			},
 		},
 		{
-			name: 'corpus',
+			name: 'get corpus',
 			async action() {
 				await corpusPerMonth();
+			},
+		},
+		{
+			name: 'get top words from cropus',
+			async action() {
+				topWordsPerMonth();
 			},
 		},
 		{

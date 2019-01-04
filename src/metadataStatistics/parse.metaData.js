@@ -369,6 +369,16 @@ async function corpusPerMonth() {
 	fs.writeFileSync(corpusDataPath, JSON.stringify(oldData, null, 2));
 }
 
+function corpusToCsv() {
+	const corpusDataPath = path.join(__dirname, 'corpus-month.json');
+	const corpusDataFilesPath = path.join(__dirname, 'data', 'corpus');
+	if (!fs.existsSync(corpusDataFilesPath)) fs.mkdirSync(corpusDataFilesPath);
+	const corpusData = require(corpusDataPath);
+	Object.entries(corpusData).forEach(([date, words]) => {
+		fs.writeFileSync(path.join(corpusDataFilesPath, `${date}.csv`), words.join('\n'));
+	});
+}
+
 async function addToIndex() {
 	const dataListPath = path.join(__dirname, 'stats-pages-list.json');
 	const issueListPath = path.join(__dirname, 'stats-issue-list.json');
@@ -499,6 +509,12 @@ async function runCui() {
 			},
 		},
 		{
+			name: 'corpus to csv',
+			async action() {
+				corpusToCsv();
+			},
+		},
+		{
 			name: 'get top words from corpus',
 			async action() {
 				topWordsPerMonth();
@@ -560,9 +576,10 @@ async function runCui() {
 }
 
 if (require.main === module) {
-	// corpusPerMonth().then(() => console.log('The End'));
 	runCui().then(() => console.log('The End'));
+	// corpusPerMonth().then(() => console.log('The End'));
 	// mergeStopwordLists()
+	// corpusToCsv();
 }
 
 module.exports = {
@@ -570,4 +587,5 @@ module.exports = {
 	parseZipContent,
 	getZipContent,
 	corpusPerMonth,
+	corpusToCsv,
 };

@@ -51,10 +51,10 @@ function parseMETS(fileName) {
 		const pagesXML = rootXML['mets:amdSec'][0]['mets:techMD'];
 
 		const pages = pagesXML.map(pageXML => {
-			const id = pageXML['$'].ID;
+			// const id = pageXML['$'].ID;
 			return {
-				id,
-				idParts: idRegEx.exec(id).slice(1),
+				// id,
+				// idParts: idRegEx.exec(id).slice(1),
 				dpi:
 					pageXML['mets:mdWrap'][0]['mets:xmlData'][0]['mix:mix'][0]['mix:ImageAssessmentMetadata'][0]['mix:SpatialMetrics'][0][
 						'mix:xSamplingFrequency'
@@ -241,9 +241,9 @@ function getZipContent(zipFilePath) {
 		content: zipEntry.getData().toString('utf8'),
 	}));
 	if (!fs.existsSync(imagesPath)) fs.mkdirSync(imagesPath);
-	zipEntries.filter(zipEntry => /\d\.jp2$/.test(zipEntry.entryName)).forEach(zipEntry => {
-		zip.extractEntryTo(zipEntry.entryName, imagesPath, false, true);
-	});
+	// zipEntries.filter(zipEntry => /\d\.jp2$/.test(zipEntry.entryName)).forEach(zipEntry => {
+	// 	zip.extractEntryTo(zipEntry.entryName, imagesPath, false, true);
+	// });
 	const metsFile = zipEntries.find(zipEntry => /METS.xml$/i.test(zipEntry.entryName));
 	return {
 		zipFileName: path.basename(zipFilePath, path.extname(zipFilePath)),
@@ -286,11 +286,23 @@ async function parseZipContent(file, year) {
 			const pageNumberMatch = pageNumberRegEx.exec(fileName);
 			return {
 				...res,
-				pageNumber: pageNumberMatch ? parseInt(pageNumberMatch[1], 10) : undefined,
 				fileName,
+				pageNumber: pageNumberMatch ? parseInt(pageNumberMatch[1], 10) : undefined,
 			};
 		})
 	);
+
+	const zipFileParts = file.zipFileName.split('_');
+	pageStats.forEach((page, index) => {
+		Object.assign(
+			page,
+			{
+				issue: parseInt(dataMets.details[1].number, 10),
+				subIssue: parseInt(zipFileParts[zipFileParts.length - 1], 10),
+			},
+			dataMets.pages[index]
+		);
+	});
 
 	const fileStats = {
 		...dataMets,
@@ -508,10 +520,16 @@ async function runCui() {
 				const choices = Array.from(new Set(pages.map(({ dateIssued }) => dateIssued.slice(0, 4))));
 				const [year] = await inquireYear(choices);
 				const zeroSuffixRegEx = /_001\.xml$/;
+				const processedImagesPath = path.join(__dirname, 'data', 'processedImages');
+				if (!fs.existsSync(processedImagesPath)) fs.mkdirSync(processedImagesPath);
 				pages
 					.filter(({ dateIssued, fileName }) => dateIssued.slice(0, 4) === year && zeroSuffixRegEx.test(fileName))
-					.forEach(({ fileName, dimensionsInPx, dateIssued }) => {
-						convertAndCrop(path.basename(fileName).split('.')[0], dimensionsInPx, dateIssued);
+					.forEach(({ fileName, dimensionsInPx, dateIssued, issue, subIssue }) => {
+						convertAndCrop(
+							path.basename(fileName).split('.')[0],
+							dimensionsInPx,
+							path.join(processedImagesPath, `${dateIssued}.${issue}.${subIssue}`)
+						);
 					});
 			},
 		},

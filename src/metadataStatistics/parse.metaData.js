@@ -22,6 +22,7 @@ const stopwords = new Set(require(path.join(__dirname, 'stopwords-merged.json'))
 
 const numTopWords = 50;
 const idRegEx = /FID-F_SBB_\d+_(\d+_\d+_\d+)_(\d+)_(\d+)-OCRMASTER-TECHMD/;
+const pageNumberRegEx = /_(\d+)\.xml$/;
 
 const parser = new xml2js.Parser();
 function xml2obj(fileName) {
@@ -256,7 +257,7 @@ function getZipContent(zipFilePath) {
 
 // function ensurePath(...path) {
 // }
-function convertAndCrop(baseName, cropCoordinates) {
+function convertAndCrop(baseName, cropCoordinates, newName) {
 	const name = path.join(imagesPath, baseName);
 	if (!fs.existsSync(`${name}.jp2`)) {
 		console.log('not exits');
@@ -270,7 +271,7 @@ function convertAndCrop(baseName, cropCoordinates) {
 		w: cropCoordinates.width + padding,
 		h: cropCoordinates.height + padding,
 	};
-	const cropCommand = `convert -crop ${limits.w}x${limits.h}+${limits.x}+${limits.y} ${name}.bmp ${name}.jpg`;
+	const cropCommand = `convert -crop ${limits.w}x${limits.h}+${limits.x}+${limits.y} ${name}.bmp ${newName}.jpg`;
 	console.log('cropCommand', cropCommand);
 	execSync(cropCommand);
 	fs.unlinkSync(`${name}.bmp`);
@@ -280,7 +281,15 @@ function convertAndCrop(baseName, cropCoordinates) {
 async function parseZipContent(file, year) {
 	const dataMets = await parseMETS(file.metsFile.content);
 	const pageStats = await Promise.all(file.altoFiles.map(({ content }) => parseAlto(content))).then(altos =>
-		altos.map((res, index) => ({ ...res, fileName: file.altoFiles[index].name }))
+		altos.map((res, index) => {
+			const fileName = file.altoFiles[index].name;
+			const pageNumberMatch = pageNumberRegEx.exec(fileName);
+			return {
+				...res,
+				pageNumber: pageNumberMatch ? parseInt(pageNumberMatch[1], 10) : undefined,
+				fileName,
+			};
+		})
 	);
 
 	const fileStats = {
@@ -497,10 +506,13 @@ async function runCui() {
 			async action() {
 				const pages = require('./stats-pages-list.json');
 				const choices = Array.from(new Set(pages.map(({ dateIssued }) => dateIssued.slice(0, 4))));
-				const year = await inquireYear(choices);
-				pages.filter(({ dateIssued }) => dateIssued.slice(0, 4) === year).forEach(page => {
-					convertAndCrop(path.basename(page.fileName).split('.')[0], page.dimensionsInPx);
-				});
+				const [year] = await inquireYear(choices);
+				const zeroSuffixRegEx = /_001\.xml$/;
+				pages
+					.filter(({ dateIssued, fileName }) => dateIssued.slice(0, 4) === year && zeroSuffixRegEx.test(fileName))
+					.forEach(({ fileName, dimensionsInPx, dateIssued }) => {
+						convertAndCrop(path.basename(fileName).split('.')[0], dimensionsInPx, dateIssued);
+					});
 			},
 		},
 		{

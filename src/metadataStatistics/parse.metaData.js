@@ -380,7 +380,7 @@ function corpusToCsv() {
 }
 
 async function addToIndex() {
-	const dataListPath = path.join(__dirname, 'stats-pages-list.json');
+	const pagesListPath = path.join(__dirname, 'stats-pages-list.json');
 	const issueListPath = path.join(__dirname, 'stats-issue-list.json');
 	// const filesPath = path.join('data', 'files');
 	let oldData = {};
@@ -416,15 +416,12 @@ async function addToIndex() {
 		(acc, { dateIssued, pages }) => [...acc, ...pages.map(page => Object.assign({ dateIssued }, page))],
 		[]
 	);
-	fs.writeFileSync(issueListPath, JSON.stringify(pagesList, null, 2));
-	const issueList = Object.values(newData).reduce(
-		(acc, issue) => {
-			delete issue.pages;
-			return [...acc, issue];
-		},
-		[]
-	);
-	fs.writeFileSync(dataListPath, JSON.stringify(issueList, null, 2));
+	fs.writeFileSync(pagesListPath, JSON.stringify(pagesList, null, 2));
+	const issueList = Object.values(newData).reduce((acc, issue) => {
+		delete issue.pages;
+		return [...acc, issue];
+	}, []);
+	fs.writeFileSync(issueListPath, JSON.stringify(issueList, null, 2));
 }
 
 function deleteFolderRecursive(path) {
@@ -443,25 +440,28 @@ function deleteFolderRecursive(path) {
 	}
 }
 
+async function inquireYear(choices) {
+	const { year } = await inquirer.prompt([
+		{
+			type: 'checkbox-autocomplete',
+			name: 'year',
+			asyncSource: async (answers, input) => fuzzy.filter(input || '', choices).map(el => el.original),
+			message: 'Please select one year:',
+			validate(answer) {
+				if (answer.length !== 1) return 'You must choose one year.';
+				return true;
+			},
+		},
+	]);
+	return year;
+}
+
 async function runCui() {
 	const actions = [
 		{
 			name: 'Parse a file',
 			async action() {
 				const years = fs.readdirSync(`${filesPath}/`);
-				// console.log('years', years);
-				// const { year } = await inquirer.prompt([
-				// 	{
-				// 		type: 'checkbox-autocomplete',
-				// 		name: 'year',
-				// 		asyncSource: async (answers, input) => fuzzy.filter(input || '', years).map(el => el.original),
-				// 		message: 'Please select a year:',
-				// 		validate(answer) {
-				// 			if (answer.length !== 1) return 'You must choose one year.';
-				// 			return true;
-				// 		},
-				// 	},
-				// ]);
 				const files = years.reduce((allFiles, year) => {
 					const filesInFolder = fs.readdirSync(`${filesPath}/${year}/`);
 					return allFiles.concat(filesInFolder.map(file => path.join(year, file)));
@@ -494,10 +494,11 @@ async function runCui() {
 		},
 		{
 			name: 'convert',
-			action: () => {
-				const pages = require('./stats-list.json');
-				// console.log("pages", pages);
-				pages.forEach(page => {
+			async action() {
+				const pages = require('./stats-pages-list.json');
+				const choices = Array.from(new Set(pages.map(({ dateIssued }) => dateIssued.slice(0, 4))));
+				const year = await inquireYear(choices);
+				pages.filter(({ dateIssued }) => dateIssued.slice(0, 4) === year).forEach(page => {
 					convertAndCrop(path.basename(page.fileName).split('.')[0], page.dimensionsInPx);
 				});
 			},
@@ -506,18 +507,13 @@ async function runCui() {
 			name: 'get corpus',
 			async action() {
 				await corpusPerMonth();
+				topWordsPerMonth();
 			},
 		},
 		{
 			name: 'corpus to csv',
 			async action() {
 				corpusToCsv();
-			},
-		},
-		{
-			name: 'get top words from corpus',
-			async action() {
-				topWordsPerMonth();
 			},
 		},
 		{
@@ -530,18 +526,7 @@ async function runCui() {
 			name: 'Download and parse one year',
 			async action() {
 				const choices = Object.keys(dirIndexData);
-				const { year } = await inquirer.prompt([
-					{
-						type: 'checkbox-autocomplete',
-						name: 'year',
-						asyncSource: async (answers, input) => fuzzy.filter(input || '', choices).map(el => el.original),
-						message: 'Please select one year:',
-						validate(answer) {
-							if (answer.length !== 1) return 'You must choose one year.';
-							return true;
-						},
-					},
-				]);
+				const year = await inquireYear(choices);
 				const bins = dirIndexData[year[0]].reduce(
 					(acc, file, index) => {
 						if (index % 2 === 0) acc.push([]);

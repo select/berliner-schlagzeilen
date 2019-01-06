@@ -241,9 +241,9 @@ function getZipContent(zipFilePath) {
 		content: zipEntry.getData().toString('utf8'),
 	}));
 	if (!fs.existsSync(imagesPath)) fs.mkdirSync(imagesPath);
-	// zipEntries.filter(zipEntry => /\d\.jp2$/.test(zipEntry.entryName)).forEach(zipEntry => {
-	// 	zip.extractEntryTo(zipEntry.entryName, imagesPath, false, true);
-	// });
+	zipEntries.filter(zipEntry => /\d\.jp2$/.test(zipEntry.entryName)).forEach(zipEntry => {
+		zip.extractEntryTo(zipEntry.entryName, imagesPath, false, true);
+	});
 	const metsFile = zipEntries.find(zipEntry => /METS.xml$/i.test(zipEntry.entryName));
 	const zipFileName = path.basename(zipFilePath, path.extname(zipFilePath));
 	const zipFileParts = zipFileName.split('_');

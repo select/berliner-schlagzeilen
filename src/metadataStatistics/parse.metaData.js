@@ -245,9 +245,14 @@ function getZipContent(zipFilePath) {
 	// 	zip.extractEntryTo(zipEntry.entryName, imagesPath, false, true);
 	// });
 	const metsFile = zipEntries.find(zipEntry => /METS.xml$/i.test(zipEntry.entryName));
+	const zipFileName = path.basename(zipFilePath, path.extname(zipFilePath));
+	const zipFileParts = zipFileName.split('_');
+
 	return {
-		zipFileName: path.basename(zipFilePath, path.extname(zipFilePath)),
+		zipFileName,
 		altoFiles,
+		issue: parseInt(zipFileParts[zipFileParts.length - 2], 10),
+		subIssue: parseInt(zipFileParts[zipFileParts.length - 1], 10),
 		metsFile: {
 			name: metsFile.entryName,
 			content: metsFile.getData().toString('utf8'),
@@ -308,6 +313,8 @@ async function parseZipContent(file, year) {
 		...dataMets,
 		metsFileName: file.metsFile.name,
 		zipFileName: file.zipFileName,
+		issue: file.issue,
+		subIssue: file.subIssue,
 		pages: pageStats,
 	};
 	// if (!fs.existsSync(statsPath)) fs.mkdirSync(statsPath);

@@ -437,11 +437,11 @@ async function addToIndex() {
 		console.log(`${year}: ${filePath}`);
 		try {
 			newData[basename] = await parseZipContent(getZipContent(filePath), year);
+			fs.writeFileSync(indexDataPath, JSON.stringify(newData, null, 2));
 		} catch (error) {
 			console.log('parseZipContent error: ', error);
 		}
 	}
-	fs.writeFileSync(indexDataPath, JSON.stringify(newData, null, 2));
 	const pagesList = Object.values(newData).reduce(
 		(acc, { dateIssued, pages }) => [...acc, ...pages.map(page => Object.assign({ dateIssued }, page))],
 		[]
@@ -528,17 +528,21 @@ async function runCui() {
 				const pages = require('./stats-pages-list.json');
 				const choices = Array.from(new Set(pages.map(({ dateIssued }) => dateIssued.slice(0, 4))));
 				const [year] = await inquireYear(choices);
-				const zeroSuffixRegEx = /_001\.xml$/;
+				// const zeroSuffixRegEx = /_001\.xml$/;
 				const processedImagesPath = path.join(__dirname, 'data', 'processedImages');
 				if (!fs.existsSync(processedImagesPath)) fs.mkdirSync(processedImagesPath);
+				let issueCount = 0;
 				pages
-					.filter(({ dateIssued, fileName }) => dateIssued.slice(0, 4) === year && zeroSuffixRegEx.test(fileName))
+					.filter(({ dateIssued, pageNumber, subIssue }) => dateIssued.slice(0, 4) === year && pageNumber === 1 && subIssue === 0)
 					.forEach(({ fileName, dimensionsInPx, dateIssued, issue, subIssue }) => {
-						convertAndCrop(
-							path.basename(fileName).split('.')[0],
-							dimensionsInPx,
-							path.join(processedImagesPath, `${dateIssued}.${issue}.${subIssue}`)
-						);
+						const fileName = `${dateIssued}.${issue}.${subIssue}`;
+						console.log('fileName', fileName);
+						if (issue < issueCount - 2 || issue > issueCount + 3) {
+							console.log('REJECTED');
+							return;
+						}
+						issueCount = issue;
+						convertAndCrop(path.basename(fileName).split('.')[0], dimensionsInPx, path.join(processedImagesPath, fileName));
 					});
 			},
 		},

@@ -432,12 +432,17 @@ async function addToIndex() {
 		[]
 	);
 	const newData = Object.assign({}, oldData);
+	let count = 0;
 	for (const [year, filePath] of files) {
 		const basename = path.basename(filePath, '.zip');
 		console.log(`${year}: ${filePath}`);
 		try {
 			newData[basename] = await parseZipContent(getZipContent(filePath), year);
-			fs.writeFileSync(indexDataPath, JSON.stringify(newData, null, 2));
+			if (count % 100 === 0) {
+				fs.writeFileSync(indexDataPath, JSON.stringify(newData, null, 2));
+				fs.createReadStream(indexDataPath).pipe(fs.createWriteStream(`${indexDataPath}.bck`));
+			}
+			++count;
 		} catch (error) {
 			console.log('parseZipContent error: ', error);
 		}

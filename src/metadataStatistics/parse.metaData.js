@@ -139,7 +139,7 @@ function getTopWords2(words) {
 		}, {})
 	);
 	topWords.sort((a, b) => (a[1] < b[1] ? 1 : -1));
-	return topWords;
+	return topWords.map(([text, size]) => ({ text, size }));
 }
 
 function getTopWords(words) {
@@ -339,9 +339,7 @@ function topWordsPerMonth() {
 	const result = Object.entries(corpusData).reduce(
 		(acc, [date, words]) =>
 			Object.assign(acc, {
-				[date]: getTopWords2(words)
-					.map(w => w[0])
-					.slice(0, numTopWords),
+				[date]: getTopWords2(words).slice(0, 50),
 			}),
 		{}
 	);

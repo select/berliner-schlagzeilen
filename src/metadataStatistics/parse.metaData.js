@@ -18,7 +18,7 @@ const imagesPath = path.join(__dirname, 'data', 'images');
 const statsPath = path.join(__dirname, 'data', 'stats');
 const indexDataPath = path.join(__dirname, 'stats-index.json');
 
-const stopwords = new Set(require(path.join(__dirname, 'stopwords-merged.json')));
+const stopwords = new Set(require(path.join(__dirname, 'stopwords-merged.json')).map(w => w.toLocaleLowerCase()));
 
 const numTopWords = 50;
 const idRegEx = /FID-F_SBB_\d+_(\d+_\d+_\d+)_(\d+)_(\d+)-OCRMASTER-TECHMD/;

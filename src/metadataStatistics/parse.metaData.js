@@ -343,7 +343,7 @@ function topWordsPerMonth() {
 			}),
 		{}
 	);
-	fs.writeFileSync(topWordsDataPath, JSON.stringify(result, null, 2));
+	fs.writeFileSync(topWordsDataPath, JSON.stringify(result));
 }
 
 function mergeStopwordLists() {

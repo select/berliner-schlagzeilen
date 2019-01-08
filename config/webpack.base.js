@@ -7,10 +7,13 @@ const CircularDependencyPlugin = require('circular-dependency-plugin');
 
 module.exports = {
 	mode: 'development',
-	entry: './src/app.js',
+	entry: {
+		app: './src/app.js',
+		'word-cloud': './src/word-cloud.js',
+	},
 	output: {
 		path: path.resolve(`${__dirname}/../public/`),
-		filename: 'app.js',
+		filename: '[name].js',
 	},
 	module: {
 		rules: [
@@ -33,6 +36,7 @@ module.exports = {
 		// ]),
 		new CircularDependencyPlugin({
 			failOnError: true,
+			exclude: /node_modules/,
 		}),
 		// new webpack.LoaderOptionsPlugin({
 		// 	options: {

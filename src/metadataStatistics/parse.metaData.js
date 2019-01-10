@@ -464,7 +464,7 @@ function writePageList(newData) {
 }
 
 function migrateIndexFile() {
-	const data = extendPageData(require('../../stats-index.json'));
+	const data = extendPageData(require('./stats-index.json'));
 	fs.writeFileSync('./stats-index.json', JSON.stringify(data, null, 2));
 	writePageList(data);
 	// writeIssueList(data);

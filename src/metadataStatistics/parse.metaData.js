@@ -666,8 +666,8 @@ async function runCui() {
 }
 
 if (require.main === module) {
-	// runCui().then(() => console.log('The End'));
-	migrateIndexFile();
+	runCui().then(() => console.log('The End'));
+	// migrateIndexFile();
 	// corpusPerMonth().then(() => console.log('The End'));
 	// mergeStopwordLists()
 	// corpusToCsv();

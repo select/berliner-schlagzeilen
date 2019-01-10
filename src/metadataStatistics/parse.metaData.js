@@ -303,11 +303,11 @@ async function parseZipContent(file, year) {
 	pageStats.forEach((page, index) => {
 		Object.assign(
 			page,
+			dataMets.pages[index],
 			{
 				issue: parseInt(dataMets.details[1].number, 10),
 				subIssue: parseInt(zipFileParts[zipFileParts.length - 1], 10),
-			},
-			dataMets.pages[index]
+			}
 		);
 	});
 
@@ -407,9 +407,70 @@ function corpusToCsv() {
 	});
 }
 
-async function addToIndex() {
-	const pagesListPath = path.join(__dirname, 'stats-pages-list.json');
+function extendPageData(statsData) {
+	const yearRegEx = /^1919/;
+	// let count = 0;
+	let maxIssue = 0;
+	let maxYear = 0;
+	return Object.entries(statsData).reduce((acc, zipIssue) => {
+		const [zipFileId, issueData] = zipIssue;
+		// if (!yearRegEx.test(issueData.dateIssued)) return acc;
+		const year = parseInt(issueData.dateIssued.slice(0, 4), 10);
+		if (year > maxYear) {
+			maxIssue = 0;
+			maxYear = year;
+		}
+		// console.log('issueData.pages', issueData.pages);
+		return Object.assign(acc, {
+			[zipFileId]: Object.assign(issueData, {
+				year,
+				pages: issueData.pages.map(page => {
+					const { issue } = page;
+					const data = Object.assign(page, {
+						jokesIssue: issue < maxIssue,
+						zipIssue: parseInt(issueData.details[0].number, 10),
+						dateIssued: issueData.dateIssued,
+						year,
+					});
+					if (issue > maxIssue) maxIssue = issue;
+					return data;
+				}),
+			}),
+		});
+	}, {});
+}
+
+function writeIssueList(newData) {
 	const issueListPath = path.join(__dirname, 'stats-issue-list.json');
+	const issueList = Object.values(newData).reduce((acc, issue) => {
+		delete issue.pages;
+		return [...acc, issue];
+	}, []);
+	fs.writeFileSync(issueListPath, JSON.stringify(issueList, null, 2));
+}
+
+function writePageList(newData) {
+	// const pagesListPath = path.join(__dirname, 'stats-pages-list.json');
+	const pagesList = Object.values(newData).reduce(
+		(acc, { pages, year }) => {
+			const batch = year < 1910 ? 0 : 1;
+			acc[batch] = acc[batch].concat(pages);
+			return acc;
+		},
+		[[], []]
+	);
+	fs.writeFileSync(path.join(__dirname, 'stats-pages-list.0.json'), JSON.stringify(pagesList[0], null, 2));
+	fs.writeFileSync(path.join(__dirname, 'stats-pages-list.1.json'), JSON.stringify(pagesList[1], null, 2));
+}
+
+function migrateIndexFile() {
+	const data = extendPageData(require('../../stats-index.json'));
+	fs.writeFileSync('./stats-index.json', JSON.stringify(data, null, 2));
+	writePageList(data);
+	// writeIssueList(data);
+}
+
+async function addToIndex() {
 	// const filesPath = path.join('data', 'files');
 	let oldData = {};
 	try {
@@ -429,7 +490,7 @@ async function addToIndex() {
 		],
 		[]
 	);
-	const newData = Object.assign({}, oldData);
+	let newData = Object.assign({}, oldData);
 	let count = 0;
 	for (const [year, filePath] of files) {
 		const basename = path.basename(filePath, '.zip');
@@ -437,24 +498,16 @@ async function addToIndex() {
 		try {
 			newData[basename] = await parseZipContent(getZipContent(filePath), year);
 			if (count % 100 === 0) {
+				newData = extendPageData(newData);
 				fs.writeFileSync(indexDataPath, JSON.stringify(newData, null, 2));
-				fs.createReadStream(indexDataPath).pipe(fs.createWriteStream(`${indexDataPath}.bck`));
 			}
 			++count;
 		} catch (error) {
 			console.log('parseZipContent error: ', error);
 		}
 	}
-	const pagesList = Object.values(newData).reduce(
-		(acc, { dateIssued, pages }) => [...acc, ...pages.map(page => Object.assign({ dateIssued }, page))],
-		[]
-	);
-	fs.writeFileSync(pagesListPath, JSON.stringify(pagesList, null, 2));
-	const issueList = Object.values(newData).reduce((acc, issue) => {
-		delete issue.pages;
-		return [...acc, issue];
-	}, []);
-	fs.writeFileSync(issueListPath, JSON.stringify(issueList, null, 2));
+	writePageList(newData);
+	writeIssueList(newData);
 }
 
 function deleteFolderRecursive(path) {
@@ -530,13 +583,13 @@ async function runCui() {
 			async action() {
 				const pages = require('./stats-pages-list.json');
 				const choices = Array.from(new Set(pages.map(({ dateIssued }) => dateIssued.slice(0, 4))));
-				const [year] = await inquireYear(choices);
+				const [yearToGet] = await inquireYear(choices);
 				// const zeroSuffixRegEx = /_001\.xml$/;
 				const processedImagesPath = path.join(__dirname, 'data', 'processedImages');
 				if (!fs.existsSync(processedImagesPath)) fs.mkdirSync(processedImagesPath);
 				let issueCount = 0;
 				pages
-					.filter(({ dateIssued, pageNumber, subIssue }) => dateIssued.slice(0, 4) === year && pageNumber === 1 && subIssue === 0)
+					.filter(({ dateIssued, pageNumber, subIssue, jokesIssue, year }) => year === parseInt(yearToGet, 10) && pageNumber === 1 && subIssue === 0 && !jokesIssue)
 					.forEach(({ fileName, dimensionsInPx, dateIssued, issue, subIssue }) => {
 						const fileName = `${dateIssued}.${issue}.${subIssue}`;
 						console.log('fileName', fileName);
@@ -560,6 +613,12 @@ async function runCui() {
 			name: 'corpus to csv',
 			async action() {
 				corpusToCsv();
+			},
+		},
+		{
+			name: 'migrate index files',
+			async action() {
+				migrateIndexFile();
 			},
 		},
 		{
@@ -607,7 +666,8 @@ async function runCui() {
 }
 
 if (require.main === module) {
-	runCui().then(() => console.log('The End'));
+	// runCui().then(() => console.log('The End'));
+	migrateIndexFile();
 	// corpusPerMonth().then(() => console.log('The End'));
 	// mergeStopwordLists()
 	// corpusToCsv();

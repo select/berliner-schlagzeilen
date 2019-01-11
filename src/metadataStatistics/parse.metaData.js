@@ -368,6 +368,7 @@ async function corpusPerMonth() {
 	await Promise.all(pages
 		.filter(({ pageNumber, subIssue, jokesIssue, year }) => year === parseInt(yearToGet, 10) && pageNumber === 1 && subIssue === 0 && !jokesIssue)
 		.map(async ({ fileName, zipFileId, dateIssued, year }) => {
+			console.log("zipFileId", zipFileId);
 			const zip = new AdmZip(path.join(filesPath, `${year}`, `${zipFileId}.zip`));
 			const zipEntry = zip.getEntry(fileName);
 			const content = zipEntry.getData().toString('utf8');

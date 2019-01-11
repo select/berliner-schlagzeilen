@@ -362,11 +362,10 @@ async function corpusPerMonth() {
 	let maxDate = 0;
 	const pagesFiltered = pages.filter(
 		({ pageNumber, subIssue, jokesIssue, year, dateIssued }) =>
-			// year === parseInt(yearToGet, 10)
-			&& pageNumber === 1
-			&& subIssue === 0
-			&& !jokesIssue
-			&& !(dateIssued.slice(0, 7) in oldCorpusData)
+			// year === parseInt(yearToGet, 10) &&
+			pageNumber === 1 && subIssue === 0 &&
+			!jokesIssue &&
+			!(dateIssued.slice(0, 7) in oldCorpusData)
 	);
 	for (const { fileName, zipFileId, dateIssued, year } of pagesFiltered) {
 		console.log('zipFileId', zipFileId);

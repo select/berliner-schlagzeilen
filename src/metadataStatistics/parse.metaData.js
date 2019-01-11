@@ -362,13 +362,16 @@ async function corpusPerMonth() {
 
 	const pagesFiltered = pages.filter(
 		({ pageNumber, subIssue, jokesIssue, year }) =>
-			year === parseInt(yearToGet, 10) && pageNumber === 1 && subIssue === 0 && !jokesIssue
+			year === parseInt(yearToGet, 10)
+			&& pageNumber === 1
+			&& subIssue === 0
+			&& !jokesIssue
+			&& !(dateIssued.slice(0, 7) in oldCorpusData)
 	);
 	for (const { fileName, zipFileId, dateIssued, year } of pagesFiltered) {
 		console.log('zipFileId', zipFileId);
 		const month = dateIssued.slice(0, 7);
 
-		if (month in oldCorpusData) continue;
 
 		const zip = new AdmZip(path.join(filesPath, `${year}`, `${zipFileId}.zip`));
 		const zipEntry = zip.getEntry(fileName);

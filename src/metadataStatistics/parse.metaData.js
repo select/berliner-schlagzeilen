@@ -584,19 +584,11 @@ async function runCui() {
 				await Promise.all(pages
 					.filter(({ pageNumber, subIssue, jokesIssue, year }) => year === parseInt(yearToGet, 10) && pageNumber === 1 && subIssue === 0 && !jokesIssue)
 					.map(async ({ fileName, zipFileId, dimensionsInPx, dateIssued, issue, subIssue, year }) => {
-						const outFileName = `${dateIssued}.${issue}.${subIssue}`;
-						console.log("outFileName", outFileName);
+						const outFileName = `${dateIssued}.${issue}`;
 						const baseName = path.basename(fileName).split('.')[0];
-						console.log("baseName", baseName);
-						console.log("path.join(imagesPath, `${baseName}.jp2`)", path.join(imagesPath, `${baseName}.jp2`));
 						if (!fs.existsSync(path.join(imagesPath, `${baseName}.jp2`))) {
-							console.log("path.join(filesPath, `${year}`, `${zipFileId}.zip`)", path.join(filesPath, `${year}`, `${zipFileId}.zip`));
 							const zip = new AdmZip(path.join(filesPath, `${year}`, `${zipFileId}.zip`));
-							zip.getEntries().filter(zipEntry => /\d\.jp2$/.test(zipEntry.entryName)).forEach(zipEntry => {
-								if (!fs.existsSync(path.join(imagesPath, zipEntry.entryName))) {
-									zip.extractEntryTo(zipEntry.entryName, imagesPath, false, true);
-								}
-							});
+							zip.extractEntryTo(`viewing/${baseName}.jp2`, imagesPath, false, true);
 						}
 						convertAndCrop(baseName, dimensionsInPx, path.join(processedImagesPath, outFileName));
 					})

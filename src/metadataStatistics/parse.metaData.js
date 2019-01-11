@@ -358,39 +358,32 @@ function mergeStopwordLists() {
 
 async function corpusPerMonth() {
 	const corpusDataPath = path.join(__dirname, 'corpus-month.json');
-	const oldData = {};
-	// try {
-	// 	oldData = require(corpusDataPath);
-	// } catch (e) {
-	// 	process.stderr.write(`${corpusDataPath} was empty, initialized with {}\n`);
-	// }
-	const zeroSuffixRegEx = /_0\.zip$/;
+	const corpusData = {};
 	const numberRegExeg = /\d+/;
-	const years = fs.readdirSync(filesPath);
-	for (const year of years) {
-		const files = fs.readdirSync(path.join(filesPath, year));
-		for (const file of files) {
-			const filePath = path.join(filesPath, year, file);
-			try {
-				if (!zeroSuffixRegEx.test(file)) continue;
-				console.log('parse filePath', filePath);
-				const zipContent = await getZipContent(filePath);
-				const dataMets = await parseMETS(zipContent.metsFile.content);
-				// Only take the first page
-				const result = await xml2obj(zipContent.altoFiles[0].content);
-				const printSpaceXML = result.alto.Layout[0].Page[0].PrintSpace[0];
-				const month = dataMets.dateIssued.slice(0, 7);
-				const words = recurseToString(printSpaceXML)
-					.map(w => w.$.CONTENT.replace(/\W/g, ''))
-					.filter(w => !stopwords.has(w.toLocaleLowerCase()) && w.length > 3 && !numberRegExeg.test(w));
-				if (month in oldData) oldData[month] = oldData[month].concat(words);
-				else oldData[month] = words;
-			} catch (error) {
-				console.log('parseZipContent error: ', error);
-			}
-		}
-	}
-	fs.writeFileSync(corpusDataPath, JSON.stringify(oldData, null, 2));
+
+
+	const pages = require('./stats-pages-list.json');
+	const choices = Array.from(new Set(pages.map(({ dateIssued }) => dateIssued.slice(0, 4))));
+	const [yearToGet] = await inquireYear(choices);
+	await Promise.all(pages
+		.filter(({ pageNumber, subIssue, jokesIssue, year }) => year === parseInt(yearToGet, 10) && pageNumber === 1 && subIssue === 0 && !jokesIssue)
+		.map(async ({ fileName, zipFileId, dateIssued, year }) => {
+			const zip = new AdmZip(path.join(filesPath, `${year}`, `${zipFileId}.zip`));
+			const zipEntry = zip.getEntry(fileName);
+			const content = zipEntry.getData().toString('utf8');
+
+			// Only take the first page
+			const result = await xml2obj(content);
+			const printSpaceXML = result.alto.Layout[0].Page[0].PrintSpace[0];
+			const month = dateIssued.slice(0, 7);
+			const words = recurseToString(printSpaceXML)
+				.map(w => w.$.CONTENT.replace(/\W/g, ''))
+				.filter(w => !stopwords.has(w.toLocaleLowerCase()) && w.length > 3 && !numberRegExeg.test(w));
+			if (month in corpusData) corpusData[month] = corpusData[month].concat(words);
+			else corpusData[month] = words;
+		})
+	);
+	fs.writeFileSync(corpusDataPath, JSON.stringify(corpusData, null, 2));
 }
 
 function corpusToCsv() {
@@ -538,36 +531,36 @@ async function inquireYear(choices) {
 
 async function runCui() {
 	const actions = [
-		{
-			name: 'Parse a file',
-			async action() {
-				const years = fs.readdirSync(`${filesPath}/`);
-				const files = years.reduce((allFiles, year) => {
-					const filesInFolder = fs.readdirSync(`${filesPath}/${year}/`);
-					return allFiles.concat(filesInFolder.map(file => path.join(year, file)));
-				}, []);
-				const { fileList } = await inquirer.prompt([
-					{
-						type: 'checkbox-autocomplete',
-						name: 'fileList',
-						asyncSource: async (answers, input) => fuzzy.filter(input || '', files).map(el => el.original),
-						message: 'Please select one file:',
-						validate(answer) {
-							if (answer.length < 1) return 'You must choose at least one file.';
-							return true;
-						},
-					},
-				]);
-				// console.log('fileList', fileList);
-				return Promise.all(
-					fileList.map(file =>
-						parseZipContent(getZipContent(path.join(filesPath, file)), file.split('/')[0])
-							.then(res => {} /*console.log(JSON.stringify(res, null, 2))*/)
-							.catch(e => console.warn(e))
-					)
-				);
-			},
-		},
+		// {
+		// 	name: 'Parse a file',
+		// 	async action() {
+		// 		const years = fs.readdirSync(`${filesPath}/`);
+		// 		const files = years.reduce((allFiles, year) => {
+		// 			const filesInFolder = fs.readdirSync(`${filesPath}/${year}/`);
+		// 			return allFiles.concat(filesInFolder.map(file => path.join(year, file)));
+		// 		}, []);
+		// 		const { fileList } = await inquirer.prompt([
+		// 			{
+		// 				type: 'checkbox-autocomplete',
+		// 				name: 'fileList',
+		// 				asyncSource: async (answers, input) => fuzzy.filter(input || '', files).map(el => el.original),
+		// 				message: 'Please select one file:',
+		// 				validate(answer) {
+		// 					if (answer.length < 1) return 'You must choose at least one file.';
+		// 					return true;
+		// 				},
+		// 			},
+		// 		]);
+		// 		// console.log('fileList', fileList);
+		// 		return Promise.all(
+		// 			fileList.map(file =>
+		// 				parseZipContent(getZipContent(path.join(filesPath, file)), file.split('/')[0])
+		// 					.then(res => {} /*console.log(JSON.stringify(res, null, 2))*/)
+		// 					.catch(e => console.warn(e))
+		// 			)
+		// 		);
+		// 	},
+		// },
 		{
 			name: 'Extend index with downloaded Files',
 			action: () => addToIndex(),
@@ -602,12 +595,12 @@ async function runCui() {
 				topWordsPerMonth();
 			},
 		},
-		{
-			name: 'corpus to csv',
-			async action() {
-				corpusToCsv();
-			},
-		},
+		// {
+		// 	name: 'corpus to csv',
+		// 	async action() {
+		// 		corpusToCsv();
+		// 	},
+		// },
 		{
 			name: 'migrate index files',
 			async action() {

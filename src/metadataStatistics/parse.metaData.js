@@ -361,7 +361,7 @@ async function corpusPerMonth() {
 	const [yearToGet] = await inquireYear(choices);
 
 	const pagesFiltered = pages.filter(
-		({ pageNumber, subIssue, jokesIssue, year }) =>
+		({ pageNumber, subIssue, jokesIssue, year, dateIssued }) =>
 			year === parseInt(yearToGet, 10)
 			&& pageNumber === 1
 			&& subIssue === 0

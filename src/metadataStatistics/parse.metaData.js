@@ -356,21 +356,18 @@ async function corpusPerMonth() {
 	const corpusData = oldCorpusData || {};
 	const numberRegExeg = /\d+/;
 
-	const pages = require('./stats-pages-list.json')
+	const pages = require('./stats-pages-list.json');
 	// const choices = Array.from(new Set(pages.map(({ dateIssued }) => dateIssued.slice(0, 4))));
 	// const [yearToGet] = await inquireYear(choices);
 	let maxDate = 0;
 	const pagesFiltered = pages.filter(
 		({ pageNumber, subIssue, jokesIssue, year, dateIssued }) =>
 			// year === parseInt(yearToGet, 10) &&
-			pageNumber === 1 && subIssue === 0 &&
-			!jokesIssue &&
-			!(dateIssued.slice(0, 7) in oldCorpusData)
+			pageNumber === 1 && subIssue === 0 && !jokesIssue && !(dateIssued.slice(0, 7) in oldCorpusData)
 	);
 	for (const { fileName, zipFileId, dateIssued, year } of pagesFiltered) {
 		console.log('zipFileId', zipFileId);
 		const month = dateIssued.slice(0, 7);
-
 
 		const zip = new AdmZip(path.join(filesPath, `${year}`, `${zipFileId}.zip`));
 		const zipEntry = zip.getEntry(fileName);
@@ -543,6 +540,38 @@ async function inquireYear(choices) {
 	return year;
 }
 
+function imagesToVideo() {
+	const inputImagesPath = path.join(__dirname, /*'data',*/ 'processedImages');
+	const videoImagesPath = path.join(__dirname, 'data', 'videoImages');
+	const outputVideoPath = path.join(__dirname, 'berliner-volkszeitung.mp4');
+	if (fs.existsSync(videoImagesPath)) deleteFolderRecursive(videoImagesPath);
+	fs.mkdirSync(videoImagesPath);
+	if (fs.existsSync(outputVideoPath)) fs.unlinkSync(outputVideoPath);
+
+	const resolution = {
+		x: 360,
+		y: 640,
+	};
+
+	// Convert all images and add padding if needed
+	const images = fs.readdirSync(inputImagesPath);
+	images.forEach((imageName, index) => {
+		const currentImagePath = path.join(inputImagesPath, imageName);
+		const outFilePath = path.join(videoImagesPath, `out${zeroPad(index, 4)}.png`);
+		const command = `ffmpeg -i ${currentImagePath} -vf "scale=${resolution.x}:${resolution.y}:force_original_aspect_ratio=decrease,pad=${resolution.x}:${resolution.y}:(ow-iw)/2:(oh-ih)/2" ${outFilePath}`;
+		console.log('command', command);
+		execSync(command);
+	});
+
+	// Render the video from the images
+	const command = `ffmpeg -r 24 -f image2 -s ${resolution.x}x${resolution.y} -i ${path.join(
+		videoImagesPath,
+		'out%04d.png'
+	)} -vcodec libx265 -crf 25  -pix_fmt yuv420p ${outputVideoPath}`;
+	console.log('command', command);
+	execSync(command);
+}
+
 async function runCui() {
 	const actions = [
 		// {
@@ -578,6 +607,12 @@ async function runCui() {
 		{
 			name: 'Extend index with downloaded Files',
 			action: () => addToIndex(),
+		},
+		{
+			name: 'Render Video',
+			async action() {
+				imagesToVideo();
+			},
 		},
 		{
 			name: 'convert',
@@ -671,6 +706,7 @@ async function runCui() {
 
 if (require.main === module) {
 	runCui().then(() => console.log('The End'));
+	// imagesToVideo();
 	// migrateIndexFile();
 	// corpusPerMonth().then(() => console.log('The End'));
 	// mergeStopwordLists()

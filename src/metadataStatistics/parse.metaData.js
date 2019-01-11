@@ -412,13 +412,13 @@ function corpusToCsv() {
 
 function extendPageData(statsData) {
 	let maxIssue = 0;
-	let maxYear = 0;
+	let currentYear = 0;
 	return Object.entries(statsData).reduce((acc, zipIssue) => {
 		const [zipFileId, issueData] = zipIssue;
 		const year = parseInt(issueData.dateIssued.slice(0, 4), 10);
-		if (year > maxYear) {
+		if (year !== currentYear) {
 			maxIssue = 0;
-			maxYear = year;
+			currentYear = year;
 		}
 		return Object.assign(acc, {
 			[zipFileId]: Object.assign(issueData, {

@@ -276,7 +276,7 @@ function convertAndCrop(baseName, cropCoordinates, newName) {
 	console.log('cropCommand', cropCommand);
 	execSync(cropCommand);
 	fs.unlinkSync(`${name}.bmp`);
-	// fs.unlinkSync(`${name}.jp2`);
+	fs.unlinkSync(`${name}.jp2`);
 }
 
 async function parseZipContent(file, year) {
@@ -584,7 +584,7 @@ async function runCui() {
 			async action() {
 				const pages = require('./stats-pages-list.json');
 				const choices = Array.from(new Set(pages.map(({ dateIssued }) => dateIssued.slice(0, 4))));
-				const [yearToGet] = await inquireYear(choices);
+				// const [yearToGet] = await inquireYear(choices);
 				// const zeroSuffixRegEx = /_001\.xml$/;
 				const processedImagesPath = path.join(__dirname, 'data', 'processedImages');
 				if (!fs.existsSync(processedImagesPath)) fs.mkdirSync(processedImagesPath);
@@ -592,7 +592,7 @@ async function runCui() {
 					pages
 						.filter(
 							({ pageNumber, subIssue, jokesIssue, year }) =>
-								year === parseInt(yearToGet, 10) && pageNumber === 1 && subIssue === 0 && !jokesIssue
+								/*year === parseInt(yearToGet, 10) &&*/ pageNumber === 1 && subIssue === 0 && !jokesIssue
 						)
 						.map(async ({ fileName, zipFileId, dimensionsInPx, dateIssued, issue, subIssue, year }) => {
 							const outFileName = `${dateIssued}.${issue}`;

@@ -357,12 +357,12 @@ async function corpusPerMonth() {
 	const numberRegExeg = /\d+/;
 
 	const pages = require('./stats-pages-list.json')
-	const choices = Array.from(new Set(pages.map(({ dateIssued }) => dateIssued.slice(0, 4))));
-	const [yearToGet] = await inquireYear(choices);
-
+	// const choices = Array.from(new Set(pages.map(({ dateIssued }) => dateIssued.slice(0, 4))));
+	// const [yearToGet] = await inquireYear(choices);
+	let maxDate = 0;
 	const pagesFiltered = pages.filter(
 		({ pageNumber, subIssue, jokesIssue, year, dateIssued }) =>
-			year === parseInt(yearToGet, 10)
+			// year === parseInt(yearToGet, 10)
 			&& pageNumber === 1
 			&& subIssue === 0
 			&& !jokesIssue
@@ -386,7 +386,10 @@ async function corpusPerMonth() {
 		if (month in corpusData) {
 			corpusData[month] = corpusData[month].concat(words);
 		} else {
-			fs.writeFileSync(corpusDataPath, JSON.stringify(corpusData, null, 2));
+			if (maxDate < year) {
+				maxDate = year;
+				fs.writeFileSync(corpusDataPath, JSON.stringify(corpusData, null, 2));
+			}
 			corpusData[month] = words;
 		}
 	}

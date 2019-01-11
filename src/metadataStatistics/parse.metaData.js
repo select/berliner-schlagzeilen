@@ -266,10 +266,6 @@ function getZipContent(zipFilePath) {
 // }
 function convertAndCrop(baseName, cropCoordinates, newName) {
 	const name = path.join(imagesPath, baseName);
-	if (!fs.existsSync(`${name}.jp2`)) {
-		console.log('not exits');
-		return;
-	}
 	execSync(`j2k_to_image -i ${name}.jp2 -o ${name}.bmp`);
 	const padding = 50;
 	const limits = {
@@ -408,19 +404,15 @@ function corpusToCsv() {
 }
 
 function extendPageData(statsData) {
-	const yearRegEx = /^1919/;
-	// let count = 0;
 	let maxIssue = 0;
 	let maxYear = 0;
 	return Object.entries(statsData).reduce((acc, zipIssue) => {
 		const [zipFileId, issueData] = zipIssue;
-		// if (!yearRegEx.test(issueData.dateIssued)) return acc;
 		const year = parseInt(issueData.dateIssued.slice(0, 4), 10);
 		if (year > maxYear) {
 			maxIssue = 0;
 			maxYear = year;
 		}
-		// console.log('issueData.pages', issueData.pages);
 		return Object.assign(acc, {
 			[zipFileId]: Object.assign(issueData, {
 				year,
@@ -431,6 +423,7 @@ function extendPageData(statsData) {
 						zipIssue: parseInt(issueData.details[0].number, 10),
 						dateIssued: issueData.dateIssued,
 						year,
+						zipFileId,
 					});
 					if (issue > maxIssue) maxIssue = issue;
 					return data;
@@ -450,7 +443,7 @@ function writeIssueList(newData) {
 }
 
 function writePageList(newData) {
-	// const pagesListPath = path.join(__dirname, 'stats-pages-list.json');
+	const pagesListPath = path.join(__dirname, 'stats-pages-list.json');
 	const pagesList = Object.values(newData).reduce(
 		(acc, { pages, year }) => {
 			const batch = year < 1910 ? 0 : 1;
@@ -461,6 +454,7 @@ function writePageList(newData) {
 	);
 	fs.writeFileSync(path.join(__dirname, 'stats-pages-list.0.json'), JSON.stringify(pagesList[0], null, 2));
 	fs.writeFileSync(path.join(__dirname, 'stats-pages-list.1.json'), JSON.stringify(pagesList[1], null, 2));
+	fs.writeFileSync(path.join(__dirname, 'stats-pages-list.json'), JSON.stringify([...pagesList[0], ...pagesList[1]], null, 2));
 }
 
 function migrateIndexFile() {
@@ -498,14 +492,14 @@ async function addToIndex() {
 		try {
 			newData[basename] = await parseZipContent(getZipContent(filePath), year);
 			if (count % 100 === 0) {
-				newData = extendPageData(newData);
-				fs.writeFileSync(indexDataPath, JSON.stringify(newData, null, 2));
+				fs.writeFileSync(indexDataPath, JSON.stringify(extendPageData(newData), null, 2));
 			}
 			++count;
 		} catch (error) {
 			console.log('parseZipContent error: ', error);
 		}
 	}
+	fs.writeFileSync(indexDataPath, JSON.stringify(extendPageData(newData), null, 2));
 	writePageList(newData);
 	writeIssueList(newData);
 }
@@ -587,19 +581,22 @@ async function runCui() {
 				// const zeroSuffixRegEx = /_001\.xml$/;
 				const processedImagesPath = path.join(__dirname, 'data', 'processedImages');
 				if (!fs.existsSync(processedImagesPath)) fs.mkdirSync(processedImagesPath);
-				let issueCount = 0;
-				pages
-					.filter(({ dateIssued, pageNumber, subIssue, jokesIssue, year }) => year === parseInt(yearToGet, 10) && pageNumber === 1 && subIssue === 0 && !jokesIssue)
-					.forEach(({ fileName, dimensionsInPx, dateIssued, issue, subIssue }) => {
-						const fileName = `${dateIssued}.${issue}.${subIssue}`;
-						console.log('fileName', fileName);
-						if (issue < issueCount - 2 || issue > issueCount + 3) {
-							console.log('REJECTED');
-							return;
+				await Promise.all(pages
+					.filter(({ pageNumber, subIssue, jokesIssue, year }) => year === parseInt(yearToGet, 10) && pageNumber === 1 && subIssue === 0 && !jokesIssue)
+					.map(async ({ fileName, zipFileId, dimensionsInPx, dateIssued, issue, subIssue, year }) => {
+						const outFileName = `${dateIssued}.${issue}.${subIssue}`;
+						const baseName = path.basename(fileName).split('.')[0];
+						if (!fs.existsSync(path.join(imagesPath, `${baseName}.jp2`))) {
+							const zip = new AdmZip(path.join(filesPath, `${year}`, `${zipFileId}.zip`));
+							zip.getEntries().filter(zipEntry => /\d\.jp2$/.test(zipEntry.entryName)).forEach(zipEntry => {
+								if (!fs.existsSync(path.join(imagesPath, zipEntry.entryName))) {
+									zip.extractEntryTo(zipEntry.entryName, imagesPath, false, true);
+								}
+							});
 						}
-						issueCount = issue;
-						convertAndCrop(path.basename(fileName).split('.')[0], dimensionsInPx, path.join(processedImagesPath, fileName));
-					});
+						convertAndCrop(baseName, dimensionsInPx, path.join(processedImagesPath, outFileName));
+					})
+				);
 			},
 		},
 		{

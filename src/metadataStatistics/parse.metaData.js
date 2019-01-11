@@ -354,6 +354,7 @@ function mergeStopwordLists() {
 
 async function corpusPerMonth() {
 	const corpusDataPath = path.join(__dirname, 'corpus-month.json');
+	const oldCorpusData = require(corpusDataPath);
 	const corpusData = {};
 	const numberRegExeg = /\d+/;
 
@@ -367,6 +368,10 @@ async function corpusPerMonth() {
 	);
 	for (const { fileName, zipFileId, dateIssued, year } of pagesFiltered) {
 		console.log('zipFileId', zipFileId);
+		const month = dateIssued.slice(0, 7);
+
+		if (month in oldCorpusData) continue;
+
 		const zip = new AdmZip(path.join(filesPath, `${year}`, `${zipFileId}.zip`));
 		const zipEntry = zip.getEntry(fileName);
 		const content = zipEntry.getData().toString('utf8');
@@ -374,12 +379,15 @@ async function corpusPerMonth() {
 		// Only take the first page
 		const result = await xml2obj(content);
 		const printSpaceXML = result.alto.Layout[0].Page[0].PrintSpace[0];
-		const month = dateIssued.slice(0, 7);
 		const words = recurseToString(printSpaceXML)
 			.map(w => w.$.CONTENT.replace(/\W/g, ''))
 			.filter(w => !stopwords.has(w.toLocaleLowerCase()) && w.length > 3 && !numberRegExeg.test(w));
-		if (month in corpusData) corpusData[month] = corpusData[month].concat(words);
-		else corpusData[month] = words;
+		if (month in corpusData) {
+			corpusData[month] = corpusData[month].concat(words);
+		} else {
+			fs.writeFileSync(corpusDataPath, JSON.stringify(corpusData, null, 2));
+			corpusData[month] = words;
+		}
 	}
 	// await Promise.all(pages
 	// 	.filter(({ pageNumber, subIssue, jokesIssue, year }) => year === parseInt(yearToGet, 10) && pageNumber === 1 && subIssue === 0 && !jokesIssue)

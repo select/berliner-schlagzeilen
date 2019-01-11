@@ -358,12 +358,12 @@ async function corpusPerMonth() {
 	const numberRegExeg = /\d+/;
 
 	const pages = require('./stats-pages-list.json')
-	const choices = Array.from(new Set(pages.map(({ dateIssued }) => dateIssued.slice(0, 4))));
-	const [yearToGet] = await inquireYear(choices);
+	// const choices = Array.from(new Set(pages.map(({ dateIssued }) => dateIssued.slice(0, 4))));
+	// const [yearToGet] = await inquireYear(choices);
 
 	const pagesFiltered = pages.filter(
 		({ pageNumber, subIssue, jokesIssue, year }) =>
-			year === parseInt(yearToGet, 10) && pageNumber === 1 && subIssue === 0 && !jokesIssue
+			/*year === parseInt(yearToGet, 10) &&*/ pageNumber === 1 && subIssue === 0 && !jokesIssue
 	);
 	for (const { fileName, zipFileId, dateIssued, year } of pagesFiltered) {
 		console.log('zipFileId', zipFileId);

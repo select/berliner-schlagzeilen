@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/env node --max-old-space-size=8192
 
 /* eslint-disable no-restricted-syntax  */
 const fs = require('fs');

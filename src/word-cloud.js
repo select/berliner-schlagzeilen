@@ -1,6 +1,11 @@
 import * as d3 from 'd3';
 import * as cloud from './d3-cloud';
-import * as data from './metadataStatistics/top-words-month.json';
+import data from './metadataStatistics/top-words-month.json';
+
+const $year = document.querySelector('.year');
+const $month = document.querySelector('.month');
+const $cloud = document.querySelector('.cloud');
+let layout;
 
 export function hashCode(str) {
 	let hash = 0;
@@ -19,25 +24,23 @@ function stringToColour(str) {
 	return `hsl(${hashCode(str) % 360},100%,30%)`;
 }
 
-console.log("data['1919-01']", data['1919-01']);
+function createCloud(date) {
+	$cloud.innerHTML = '';
+	const [year, month] = date.split('-');
+	$year.value = year;
+	$month.value = month;
+	layout = cloud()
+		.size([700, 500])
+		.words(data[date])
+		.padding(5)
+		.rotate(0)
+		.font('Impact')
+		.fontSize(d => d.size)
+		.spiral('rectangular')
+		.on('end', draw);
 
-const layout = cloud()
-	.size([500, 500])
-	.words(data['1919-01']
-		// ['Hello', 'world', 'normally', 'you', 'want', 'more', 'words', 'than', 'this'].map(d => ({
-		// 	text: d,
-		// 	size: 10 + Math.random() * 90,
-		// 	// test: 'haha',
-		// }))
-	)
-	.padding(5)
-	.rotate(0)
-	.font('Impact')
-	.fontSize(d => d.size*2)
-	.spiral('rectangular')
-	.on('end', draw);
-
-layout.start();
+	layout.start();
+}
 
 function draw(words) {
 	d3
@@ -58,3 +61,43 @@ function draw(words) {
 		.attr('transform', d => 'translate(' + [d.x, d.y] + ')rotate(' + d.rotate + ')')
 		.text(d => d.text);
 }
+
+const dates = Object.keys(data);
+dates.sort();
+let currentDateIndex = 0;
+dates.forEach(currentDate => {
+	data[currentDate].forEach(item => {
+		item.size *= 0.6;
+	});
+});
+createCloud(dates[0]);
+
+function zeroPad(num, size) {
+	const s = `000000000${num}`;
+	return s.substr(s.length - size);
+}
+
+function setDate() {
+	const targetDate = `${$year.value}-${zeroPad($month.value,2)}`;
+	const index = dates.indexOf(targetDate);
+	if (index === -1) {
+		alert('Date not found. Please select one between 1890-01 and 1930-12.');
+		return;
+	}
+	currentDateIndex = index;
+	createCloud(dates[currentDateIndex]);
+}
+
+$year.addEventListener('change', setDate);
+$month.addEventListener('change', setDate);
+
+document.querySelector('.prev').addEventListener('click', () => {
+	console.log('prev currentDateIndex', currentDateIndex);
+	if (currentDateIndex <= 0) return;
+	createCloud(dates[--currentDateIndex]);
+});
+document.querySelector('.next').addEventListener('click', () => {
+	if (currentDateIndex >= dates.length - 1) return;
+	console.log('next currentDateIndex', currentDateIndex);
+	createCloud(dates[++currentDateIndex]);
+});

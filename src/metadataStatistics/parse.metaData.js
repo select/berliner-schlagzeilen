@@ -262,8 +262,6 @@ function getZipContent(zipFilePath) {
 	};
 }
 
-// function ensurePath(...path) {
-// }
 function convertAndCrop(baseName, cropCoordinates, newName) {
 	const name = path.join(imagesPath, baseName);
 	execSync(`j2k_to_image -i ${name}.jp2 -o ${name}.bmp`);
@@ -355,7 +353,7 @@ function mergeStopwordLists() {
 async function corpusPerMonth() {
 	const corpusDataPath = path.join(__dirname, 'corpus-month.json');
 	const oldCorpusData = require(corpusDataPath);
-	const corpusData = {};
+	const corpusData = oldCorpusData || {};
 	const numberRegExeg = /\d+/;
 
 	const pages = require('./stats-pages-list.json')

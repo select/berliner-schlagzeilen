@@ -1,4 +1,4 @@
-#!/usr/bin/env node --max-old-space-size=8192
+#!/usr/bin/env node
 
 /* eslint-disable no-restricted-syntax  */
 const fs = require('fs');
@@ -297,14 +297,10 @@ async function parseZipContent(file, year) {
 
 	const zipFileParts = file.zipFileName.split('_');
 	pageStats.forEach((page, index) => {
-		Object.assign(
-			page,
-			dataMets.pages[index],
-			{
-				issue: parseInt(dataMets.details[1].number, 10),
-				subIssue: parseInt(zipFileParts[zipFileParts.length - 1], 10),
-			}
-		);
+		Object.assign(page, dataMets.pages[index], {
+			issue: parseInt(dataMets.details[1].number, 10),
+			subIssue: parseInt(zipFileParts[zipFileParts.length - 1], 10),
+		});
 	});
 
 	const fileStats = {
@@ -361,29 +357,35 @@ async function corpusPerMonth() {
 	const corpusData = {};
 	const numberRegExeg = /\d+/;
 
-
-	const pages = require('./stats-pages-list.json');
+	const pages = require('./stats-pages-list.json')
 	const choices = Array.from(new Set(pages.map(({ dateIssued }) => dateIssued.slice(0, 4))));
 	const [yearToGet] = await inquireYear(choices);
-	await Promise.all(pages
-		.filter(({ pageNumber, subIssue, jokesIssue, year }) => year === parseInt(yearToGet, 10) && pageNumber === 1 && subIssue === 0 && !jokesIssue)
-		.map(async ({ fileName, zipFileId, dateIssued, year }) => {
-			console.log("zipFileId", zipFileId);
-			const zip = new AdmZip(path.join(filesPath, `${year}`, `${zipFileId}.zip`));
-			const zipEntry = zip.getEntry(fileName);
-			const content = zipEntry.getData().toString('utf8');
 
-			// Only take the first page
-			const result = await xml2obj(content);
-			const printSpaceXML = result.alto.Layout[0].Page[0].PrintSpace[0];
-			const month = dateIssued.slice(0, 7);
-			const words = recurseToString(printSpaceXML)
-				.map(w => w.$.CONTENT.replace(/\W/g, ''))
-				.filter(w => !stopwords.has(w.toLocaleLowerCase()) && w.length > 3 && !numberRegExeg.test(w));
-			if (month in corpusData) corpusData[month] = corpusData[month].concat(words);
-			else corpusData[month] = words;
-		})
+	const pagesFiltered = pages.filter(
+		({ pageNumber, subIssue, jokesIssue, year }) =>
+			year === parseInt(yearToGet, 10) && pageNumber === 1 && subIssue === 0 && !jokesIssue
 	);
+	for (const { fileName, zipFileId, dateIssued, year } of pagesFiltered) {
+		console.log('zipFileId', zipFileId);
+		const zip = new AdmZip(path.join(filesPath, `${year}`, `${zipFileId}.zip`));
+		const zipEntry = zip.getEntry(fileName);
+		const content = zipEntry.getData().toString('utf8');
+
+		// Only take the first page
+		const result = await xml2obj(content);
+		const printSpaceXML = result.alto.Layout[0].Page[0].PrintSpace[0];
+		const month = dateIssued.slice(0, 7);
+		const words = recurseToString(printSpaceXML)
+			.map(w => w.$.CONTENT.replace(/\W/g, ''))
+			.filter(w => !stopwords.has(w.toLocaleLowerCase()) && w.length > 3 && !numberRegExeg.test(w));
+		if (month in corpusData) corpusData[month] = corpusData[month].concat(words);
+		else corpusData[month] = words;
+	}
+	// await Promise.all(pages
+	// 	.filter(({ pageNumber, subIssue, jokesIssue, year }) => year === parseInt(yearToGet, 10) && pageNumber === 1 && subIssue === 0 && !jokesIssue)
+	// 	.map(async ({ fileName, zipFileId, dateIssued, year }) => {
+	// 	})
+	// );
 	fs.writeFileSync(corpusDataPath, JSON.stringify(corpusData, null, 2));
 }
 
@@ -575,17 +577,21 @@ async function runCui() {
 				// const zeroSuffixRegEx = /_001\.xml$/;
 				const processedImagesPath = path.join(__dirname, 'data', 'processedImages');
 				if (!fs.existsSync(processedImagesPath)) fs.mkdirSync(processedImagesPath);
-				await Promise.all(pages
-					.filter(({ pageNumber, subIssue, jokesIssue, year }) => year === parseInt(yearToGet, 10) && pageNumber === 1 && subIssue === 0 && !jokesIssue)
-					.map(async ({ fileName, zipFileId, dimensionsInPx, dateIssued, issue, subIssue, year }) => {
-						const outFileName = `${dateIssued}.${issue}`;
-						const baseName = path.basename(fileName).split('.')[0];
-						if (!fs.existsSync(path.join(imagesPath, `${baseName}.jp2`))) {
-							const zip = new AdmZip(path.join(filesPath, `${year}`, `${zipFileId}.zip`));
-							zip.extractEntryTo(`viewing/${baseName}.jp2`, imagesPath, false, true);
-						}
-						convertAndCrop(baseName, dimensionsInPx, path.join(processedImagesPath, outFileName));
-					})
+				await Promise.all(
+					pages
+						.filter(
+							({ pageNumber, subIssue, jokesIssue, year }) =>
+								year === parseInt(yearToGet, 10) && pageNumber === 1 && subIssue === 0 && !jokesIssue
+						)
+						.map(async ({ fileName, zipFileId, dimensionsInPx, dateIssued, issue, subIssue, year }) => {
+							const outFileName = `${dateIssued}.${issue}`;
+							const baseName = path.basename(fileName).split('.')[0];
+							if (!fs.existsSync(path.join(imagesPath, `${baseName}.jp2`))) {
+								const zip = new AdmZip(path.join(filesPath, `${year}`, `${zipFileId}.zip`));
+								zip.extractEntryTo(`viewing/${baseName}.jp2`, imagesPath, false, true);
+							}
+							convertAndCrop(baseName, dimensionsInPx, path.join(processedImagesPath, outFileName));
+						})
 				);
 			},
 		},

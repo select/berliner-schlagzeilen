@@ -359,7 +359,7 @@ async function corpusPerMonth() {
 	const pages = require('./stats-pages-list.json');
 	// const choices = Array.from(new Set(pages.map(({ dateIssued }) => dateIssued.slice(0, 4))));
 	// const [yearToGet] = await inquireYear(choices);
-	let maxDate = 0;
+	let currentYear = 0;
 	const pagesFiltered = pages.filter(
 		({ pageNumber, subIssue, jokesIssue, year, dateIssued }) =>
 			// year === parseInt(yearToGet, 10) &&
@@ -382,9 +382,9 @@ async function corpusPerMonth() {
 		if (month in corpusData) {
 			corpusData[month] = corpusData[month].concat(words);
 		} else {
-			if (maxDate < year) {
-				maxDate = year;
-				fs.writeFileSync(corpusDataPath, JSON.stringify(corpusData, null, 2));
+			if (currentYear !== year) {
+				currentYear = year;
+				fs.writeFileSync(corpusDataPath, JSON.stringify(corpusData));
 			}
 			corpusData[month] = words;
 		}
@@ -394,7 +394,7 @@ async function corpusPerMonth() {
 	// 	.map(async ({ fileName, zipFileId, dateIssued, year }) => {
 	// 	})
 	// );
-	fs.writeFileSync(corpusDataPath, JSON.stringify(corpusData, null, 2));
+	fs.writeFileSync(corpusDataPath, JSON.stringify(corpusData));
 }
 
 function corpusToCsv() {
@@ -567,7 +567,9 @@ function imagesToVideo() {
 	const command = `ffmpeg -r 24 -f image2 -s ${resolution.x}x${resolution.y} -i ${path.join(
 		videoImagesPath,
 		'out%04d.png'
-	)} -vcodec libx265 -crf 25  -pix_fmt yuv420p ${outputVideoPath}`;
+	)} -vcodec libx264 -crf 25  -pix_fmt yuv420p ${outputVideoPath}`;
+	// with mp3
+	// ffmpeg -r 60 -f image2 -s 1280x720 -i pic%05d.png -i MP3FILE.mp3 -vcodec libx264 -b 4M -vpre normal -acodec copy OUTPUT.mp4
 	console.log('command', command);
 	execSync(command);
 }

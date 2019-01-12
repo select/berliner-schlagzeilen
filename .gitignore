@@ -1,6 +1,6 @@
 images
-src/metadataStatistics/processedImages
-src/metadataStatistics/data
+metadataStatistics/processedImages
+metadataStatistics/data
 data/raw
 server-data/users.json
 server-data/sessions.json

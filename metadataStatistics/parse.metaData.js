@@ -3,6 +3,7 @@
 /* eslint-disable no-restricted-syntax  */
 const fs = require('fs');
 const path = require('path');
+const readline = require('readline');
 const xml2js = require('xml2js');
 const AdmZip = require('adm-zip');
 const inquirer = require('inquirer');
@@ -16,13 +17,18 @@ const dirIndexData = require(remoteDataDirIndex);
 const filesPath = path.join(__dirname, 'data', 'files');
 const imagesPath = path.join(__dirname, 'data', 'images');
 const statsPath = path.join(__dirname, 'data', 'stats');
-const indexDataPath = path.join(__dirname, 'stats-index.json');
+const indexDataPath = path.join(__dirname, 'data', 'stats-index.json');
 
 const stopwords = new Set(require(path.join(__dirname, 'stopwords-merged.json')).map(w => w.toLocaleLowerCase()));
 
 const numTopWords = 50;
 const idRegEx = /FID-F_SBB_\d+_(\d+_\d+_\d+)_(\d+)_(\d+)-OCRMASTER-TECHMD/;
 const pageNumberRegEx = /_(\d+)\.xml$/;
+
+const rl = readline.createInterface({
+	input: process.stdin,
+	output: process.stdout,
+});
 
 const parser = new xml2js.Parser();
 function xml2obj(fileName) {
@@ -323,8 +329,8 @@ function copyFile(source, target) {
 }
 
 function topWordsPerMonth() {
-	const corpusDataPath = path.join(__dirname, 'corpus-month.json');
-	const topWordsDataPath = path.join(__dirname, 'top-words-month.json');
+	const corpusDataPath = path.join(__dirname, 'data', 'corpus-month.json');
+	const topWordsDataPath = path.join(__dirname, 'data', 'top-words-month.json');
 	const corpusData = require(corpusDataPath);
 	const result = Object.entries(corpusData).reduce(
 		(acc, [date, words]) =>
@@ -350,13 +356,21 @@ function mergeStopwordLists() {
 	fs.writeFileSync(stopwordsPath, JSON.stringify(stopwords, null, 2));
 }
 
+function pauseLoop() {
+	return new Promise(resolve => {
+		rl.question('Continue? ', () => {
+			resolve();
+		});
+	});
+}
+
 async function corpusPerMonth() {
-	const corpusDataPath = path.join(__dirname, 'corpus-month.json');
+	const corpusDataPath = path.join(__dirname, 'data', 'corpus-month.json');
 	const oldCorpusData = require(corpusDataPath);
 	const corpusData = oldCorpusData || {};
 	const numberRegExeg = /\d+/;
 
-	const pages = require('./stats-pages-list.json');
+	const pages = require(path.join(__dirname, 'data', './stats-pages-list.json'));
 	// const choices = Array.from(new Set(pages.map(({ dateIssued }) => dateIssued.slice(0, 4))));
 	// const [yearToGet] = await inquireYear(choices);
 	let currentYear = 0;
@@ -385,6 +399,7 @@ async function corpusPerMonth() {
 			if (currentYear !== year) {
 				currentYear = year;
 				fs.writeFileSync(corpusDataPath, JSON.stringify(corpusData));
+				await pauseLoop();
 			}
 			corpusData[month] = words;
 		}
@@ -398,7 +413,7 @@ async function corpusPerMonth() {
 }
 
 function corpusToCsv() {
-	const corpusDataPath = path.join(__dirname, 'corpus-month.json');
+	const corpusDataPath = path.join(__dirname, 'data', 'corpus-month.json');
 	const corpusDataFilesPath = path.join(__dirname, 'data', 'corpus');
 	if (!fs.existsSync(corpusDataFilesPath)) fs.mkdirSync(corpusDataFilesPath);
 	const corpusData = require(corpusDataPath);
@@ -438,7 +453,7 @@ function extendPageData(statsData) {
 }
 
 function writeIssueList(newData) {
-	const issueListPath = path.join(__dirname, 'stats-issue-list.json');
+	const issueListPath = path.join(__dirname, 'data', 'stats-issue-list.json');
 	const issueList = Object.values(newData).reduce((acc, issue) => {
 		delete issue.pages;
 		return [...acc, issue];
@@ -447,7 +462,7 @@ function writeIssueList(newData) {
 }
 
 function writePageList(newData) {
-	const pagesListPath = path.join(__dirname, 'stats-pages-list.json');
+	const pagesListPath = path.join(__dirname, 'data', 'stats-pages-list.json');
 	const pagesList = Object.values(newData).reduce(
 		(acc, { pages, year }) => {
 			const batch = year < 1910 ? 0 : 1;
@@ -456,9 +471,12 @@ function writePageList(newData) {
 		},
 		[[], []]
 	);
-	fs.writeFileSync(path.join(__dirname, 'stats-pages-list.0.json'), JSON.stringify(pagesList[0], null, 2));
-	fs.writeFileSync(path.join(__dirname, 'stats-pages-list.1.json'), JSON.stringify(pagesList[1], null, 2));
-	fs.writeFileSync(path.join(__dirname, 'stats-pages-list.json'), JSON.stringify([...pagesList[0], ...pagesList[1]], null, 2));
+	fs.writeFileSync(path.join(__dirname, 'data', 'stats-pages-list.0.json'), JSON.stringify(pagesList[0], null, 2));
+	fs.writeFileSync(path.join(__dirname, 'data', 'stats-pages-list.1.json'), JSON.stringify(pagesList[1], null, 2));
+	fs.writeFileSync(
+		path.join(__dirname, 'data', 'stats-pages-list.json'),
+		JSON.stringify([...pagesList[0], ...pagesList[1]], null, 2)
+	);
 }
 
 function migrateIndexFile() {
@@ -541,9 +559,9 @@ async function inquireYear(choices) {
 }
 
 function imagesToVideo() {
-	const inputImagesPath = path.join(__dirname, /*'data',*/ 'processedImages');
+	const inputImagesPath = path.join(__dirname, 'data', 'processedImages');
 	const videoImagesPath = path.join(__dirname, 'data', 'videoImages');
-	const outputVideoPath = path.join(__dirname, 'berliner-volkszeitung.mp4');
+	const outputVideoPath = path.join(__dirname, 'data', 'berliner-volkszeitung.mp4');
 	if (fs.existsSync(videoImagesPath)) deleteFolderRecursive(videoImagesPath);
 	fs.mkdirSync(videoImagesPath);
 	if (fs.existsSync(outputVideoPath)) fs.unlinkSync(outputVideoPath);
@@ -558,7 +576,9 @@ function imagesToVideo() {
 	images.forEach((imageName, index) => {
 		const currentImagePath = path.join(inputImagesPath, imageName);
 		const outFilePath = path.join(videoImagesPath, `out${zeroPad(index, 4)}.png`);
-		const command = `ffmpeg -i ${currentImagePath} -vf "scale=${resolution.x}:${resolution.y}:force_original_aspect_ratio=decrease,pad=${resolution.x}:${resolution.y}:(ow-iw)/2:(oh-ih)/2" ${outFilePath}`;
+		const command = `ffmpeg -i ${currentImagePath} -vf "scale=${resolution.x}:${
+			resolution.y
+		}:force_original_aspect_ratio=decrease,pad=${resolution.x}:${resolution.y}:(ow-iw)/2:(oh-ih)/2" ${outFilePath}`;
 		console.log('command', command);
 		execSync(command);
 	});
@@ -619,7 +639,7 @@ async function runCui() {
 		{
 			name: 'convert',
 			async action() {
-				const pages = require('./stats-pages-list.json');
+				const pages = require(path.join(__dirname, 'data', 'stats-pages-list.json'));
 				const choices = Array.from(new Set(pages.map(({ dateIssued }) => dateIssued.slice(0, 4))));
 				// const [yearToGet] = await inquireYear(choices);
 				// const zeroSuffixRegEx = /_001\.xml$/;

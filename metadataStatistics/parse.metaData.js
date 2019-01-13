@@ -575,7 +575,7 @@ function imagesToVideo() {
 	const images = fs.readdirSync(inputImagesPath);
 	images.forEach((imageName, index) => {
 		const currentImagePath = path.join(inputImagesPath, imageName);
-		const outFilePath = path.join(videoImagesPath, `out${zeroPad(index, 4)}.png`);
+		const outFilePath = path.join(videoImagesPath, `out${zeroPad(index, 5)}.png`);
 		const command = `ffmpeg -i ${currentImagePath} -vf "scale=${resolution.x}:${
 			resolution.y
 		}:force_original_aspect_ratio=decrease,pad=${resolution.x}:${resolution.y}:(ow-iw)/2:(oh-ih)/2" ${outFilePath}`;

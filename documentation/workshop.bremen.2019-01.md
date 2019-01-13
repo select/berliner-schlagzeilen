@@ -10,6 +10,10 @@ controls: true
 --
 
 <style>
+.slide.slide::before {
+	background: url(img-bremen/background.png) center center no-repeat;
+	background-size: cover;
+}
 h1 {
 	color: #3b3b3b;
 	text-shadow: 1px 2px 4px #191919;
@@ -61,9 +65,14 @@ h1 {
 
 --
 <div style="background-image: url('img-bremen/max_weber_pink.jpg'); " class="fullscreen-full" ></div>
+
 --
 # "Maßband, Schere und Algorithmen"
 <div class="smaller" style="float:right">* im Geiste von Max Weber</div>
+
+--
+<div style="background-image: url('img-bremen/Illustration_für_Präsentation_BigNewsData.jpg'); " class="fullscreen-full" ></div> 
+
 --
 - "Distant Reading“
 - Beispielprojekte
@@ -173,7 +182,7 @@ o   Maße
 
 --
 ### Inhaltliche Analyse
-- verrauschten Text zeigen  wie können wir damit arbeiten? 
+- verrauschten Text zeigen wie können wir damit arbeiten? 
 - Website vorstellen
 
 - Ausblick: Möglichkeiten von Word-Clouds, z.B. Werbeanzeigen
@@ -196,12 +205,15 @@ o   Maße
 	height="240" 
 	src="./img-bremen/berliner-volkszeitung.mp4"
 	controls 
+	onclick="this.paused ? this.play() : this.pause();"
 	class="fullscreen-full"
+	style="background-color: #000" 
 	></video>
 
 --
 ### Links and Code
-Besucht uns auf Twitter und kopiert unsern Source Code
+
+Besucht uns auf Twitter - benutzt unsern Source Code
 
 [github.com/shoutrlabs/berliner-schlagzeilen](https://github.com/shoutrlabs/berliner-schlagzeilen)
 

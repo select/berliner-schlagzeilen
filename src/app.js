@@ -37,7 +37,7 @@ function renderTweet(tweet) {
 		<div class="tweet__close">❌</div>
 		<div class="tweet__body ${ready ? 'ready' : ''}">
 			<div class="tweet__menu">
-				<div class="tweet__delete" title="Delete this tweet">❌</div>
+				<!-- <div class="tweet__delete" title="Delete this tweet">❌</div> -->
 				<div class="tweet__full-screen" title="Maximize tweet">↗</div>
 			</div>
 			<input type="text" value="${sendAfter}" placeholder="yyyy-mm-dd hh:mm" class="tweet__sendAfter">
@@ -70,11 +70,11 @@ window.addEventListener('scroll', renderTweetVisibility);
 
 function render(tweets) {
 	if (!(tweets && Array.isArray(tweets))) return;
-	$tweets.innerHTML = '';
+	let html = '';
 	tweets.filter(({ sendAfter }) => now < new Date(sendAfter)).forEach(tweet => {
-		$tweets.innerHTML += renderTweet(tweet);
+		html += renderTweet(tweet);
 	});
-
+	$tweets.innerHTML = html;
 	renderTweetVisibility();
 }
 

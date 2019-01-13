@@ -10,7 +10,7 @@ const tweetsIndex = new Set(tweets.map(({ img }) => img));
 let lastDate = '';
 const newTweets = fs
 	.readdirSync(`${config.serverDataDir}/img`)
-	.filter(file => /\d+-\d+-\d+\.\d+.png$/.test(file))
+	.filter(file => /\d+-\d+-\d+\.\d+.jpg$/.test(file))
 	.filter(file => !tweetsIndex.has(file))
 	.map(file => {
 		const m = moment(file, 'YYYY-MM-DD');
@@ -26,7 +26,7 @@ const newTweets = fs
 			sendAfter: `${mToday.format('YYYY-MM-DD')} ${sendTime}`,
 			status: `${m.format('DD.MM.YYYY')} http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/${m.format(
 				'YYYY-MM-DD'
-			)}/27971740 #1918LIVE`,
+			)}/27971740 #1919LIVE`,
 			alt_text: `Berliner Volkszeitung ${m.format('DD.MM.YYYY')} ${issue}`,
 			img: file,
 		});

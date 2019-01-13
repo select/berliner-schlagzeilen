@@ -1,6 +1,6 @@
 import * as d3 from 'd3';
 import * as cloud from './d3-cloud';
-import data from './metadataStatistics/top-words-month.json';
+import data from '../metadataStatistics/data/top-words-month.json';
 
 const $year = document.querySelector('.year');
 const $month = document.querySelector('.month');

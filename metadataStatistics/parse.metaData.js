@@ -399,7 +399,7 @@ async function corpusPerMonth() {
 			if (currentYear !== year) {
 				currentYear = year;
 				fs.writeFileSync(corpusDataPath, JSON.stringify(corpusData));
-				await pauseLoop();
+				// await pauseLoop();
 			}
 			corpusData[month] = words;
 		}

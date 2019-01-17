@@ -6687,7 +6687,8 @@
     "status": "Sieg der Demokratie in Würtemberg. 13.01.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-01-13/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 13.01.1919 Morgen-Ausgabe",
     "img": "1919-01-13.10.jpg",
-    "id": "d5cd30a6-178e-11e9-aef1-5d57740989df"
+    "id": "d5cd30a6-178e-11e9-aef1-5d57740989df",
+    "tweetId": 1084601029029756900
   },
   {
     "sendAfter": "2019-01-13 18:35",
@@ -6712,14 +6713,14 @@
   },
   {
     "sendAfter": "2019-01-15 10:35",
-    "status": "Brockdorff-Rankau fordert den Wilson Frieden. 15.01.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-01-15/27971740 #1919LIVE",
+    "status": "Brockdorff-Rankau fordert den Wilson- Frieden. 15.01.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-01-15/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 15.01.1919 Morgen-Ausgabe",
     "img": "1919-01-15.13.jpg",
     "id": "d5cd57b3-178e-11e9-aef1-5d57740989df"
   },
   {
     "sendAfter": "2019-01-15 18:35",
-    "status": "Die neuen Waffenstillstansbedingungen. 15.01.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-01-15/27971740 #1919LIVE",
+    "status": "Die neuen Waffenstillstandsbedingungen. 15.01.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-01-15/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 15.01.1919 Abend-Ausgabe",
     "img": "1919-01-15.14.jpg",
     "id": "d5cd57b4-178e-11e9-aef1-5d57740989df"
@@ -6740,7 +6741,7 @@
   },
   {
     "sendAfter": "2019-01-17 10:35",
-    "status": "17.01.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-01-17/27971740 #1919LIVE",
+    "status": "Die Schuld. 17.01.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-01-17/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 17.01.1919 Morgen-Ausgabe",
     "img": "1919-01-17.18.jpg",
     "id": "d5cd57b7-178e-11e9-aef1-5d57740989df"

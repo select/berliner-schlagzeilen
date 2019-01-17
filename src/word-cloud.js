@@ -5,6 +5,7 @@ import data from '../metadataStatistics/data/top-words-month.json';
 const $year = document.querySelector('.year');
 const $month = document.querySelector('.month');
 const $cloud = document.querySelector('.cloud');
+const $filter = document.querySelector('.filter');
 let layout;
 
 export function hashCode(str) {
@@ -25,13 +26,16 @@ function stringToColour(str) {
 }
 
 function createCloud(date) {
-	$cloud.innerHTML = '';
+	localStorage.setItem('wcDate', date);
 	const [year, month] = date.split('-');
 	$year.value = year;
 	$month.value = month;
+	$cloud.innerHTML = '';
+	const filterWords = new Set($filter.value.split(' ').map(w => w.toLocaleLowerCase()));
+	const words = data[date].filter(w => !filterWords.has(w.text.toLocaleLowerCase()));
 	layout = cloud()
 		.size([700, 500])
-		.words(data[date])
+		.words(words)
 		.padding(5)
 		.rotate(0)
 		.font('Impact')
@@ -70,7 +74,6 @@ dates.forEach(currentDate => {
 		item.size *= 0.6;
 	});
 });
-createCloud(dates[0]);
 
 function zeroPad(num, size) {
 	const s = `000000000${num}`;
@@ -78,15 +81,24 @@ function zeroPad(num, size) {
 }
 
 function setDate() {
-	const targetDate = `${$year.value}-${zeroPad($month.value,2)}`;
+	const targetDate = `${$year.value}-${zeroPad($month.value, 2)}`;
 	const index = dates.indexOf(targetDate);
 	if (index === -1) {
-		alert('Date not found. Please select one between 1890-01 and 1930-12.');
+		alert('Date not found. Please select one between 1890-01 and 1930-12. Some dates are missing.');
 		return;
 	}
 	currentDateIndex = index;
 	createCloud(dates[currentDateIndex]);
 }
+
+const filterWords = localStorage.getItem('wcFilter');
+if (filterWords !== null) $filter.value = filterWords;
+const storedDate = localStorage.getItem('wcDate');
+
+$filter.addEventListener('change', event => {
+	localStorage.setItem('wcFilter', event.target.value);
+	setDate();
+});
 
 $year.addEventListener('change', setDate);
 $month.addEventListener('change', setDate);
@@ -101,3 +113,5 @@ document.querySelector('.next').addEventListener('click', () => {
 	console.log('next currentDateIndex', currentDateIndex);
 	createCloud(dates[++currentDateIndex]);
 });
+
+createCloud(storedDate || dates[0]);

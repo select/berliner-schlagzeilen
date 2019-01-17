@@ -114,7 +114,7 @@ Simons Teil hier
 --
 ### Rechenpower
 
-Virtual private server
+Virtual Private Server
 
 **13 GiB** RAM
 
@@ -182,17 +182,35 @@ o   Maße
 
 --
 ### Inhaltliche Analyse
+
+Wenn man alles lesen wollen würde
+
+**409.265.622** Wörter im Korpus
+
+**300** Wörter pro Minute
+
+**8** Stunden am Tag
+
+**356** Tage im Jahr 
+
+--
+# 7,78 Jahre
+<div class="smaller" style="text-align: center">= 409265622 / 300 / 60 / 8 / 365 </div>
+
+--
+### Inhaltliche Analyse
 - verrauschten Text zeigen wie können wir damit arbeiten? 
 - Website vorstellen
-
 - Ausblick: Möglichkeiten von Word-Clouds, z.B. Werbeanzeigen
-
 
 --
 <iframe src="https://bs.rockdapus.org/word-cloud.html" frameborder="0" class="fullscreen-full"></iframe>
+
 --
 # Krieg und Liebe
 
+--
+### Krieg
 - Juli / August 1914
 
 --

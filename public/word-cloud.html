@@ -23,6 +23,10 @@ h1, h2 {
 	justify-content: center;
 	align-items: center;
 }
+.controls textarea {
+	padding: .5em;
+	margin-left: .5em;
+}
 .prev,.next {
 	display: flex;
 	justify-content: center;
@@ -51,8 +55,12 @@ h1, h2 {
 		<input class="month" type="number" min="1" max="12" placeholder="08">
 	</div>
 	<div class="next">&gt;</div>
+	<label>Filter </label>
+	<textarea class="filter">Berlin Mark</textarea>
 </div>
 <div class="cloud"></div>
+<div>
+</div>
 </body>
 </html>
 <script src="word-cloud.js"></script>

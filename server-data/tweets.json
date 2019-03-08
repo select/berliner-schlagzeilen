@@ -6695,767 +6695,856 @@
     "status": "Wieder frei! 13.01.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-01-13/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 13.01.1919 Abend-Ausgabe",
     "img": "1919-01-13.9.jpg",
-    "id": "d5cd57b0-178e-11e9-aef1-5d57740989df"
+    "id": "d5cd57b0-178e-11e9-aef1-5d57740989df",
+    "tweetId": 1084604799922987000
   },
   {
     "sendAfter": "2019-01-14 10:35",
     "status": "Drohender Streik der Eisenbahnarbeiter. 14.01.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-01-14/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 14.01.1919 Morgen-Ausgabe",
     "img": "1919-01-14.11.jpg",
-    "id": "d5cd57b1-178e-11e9-aef1-5d57740989df"
+    "id": "d5cd57b1-178e-11e9-aef1-5d57740989df",
+    "tweetId": 1084748253806112800
   },
   {
     "sendAfter": "2019-01-14 18:35",
     "status": "Gefahr des Eisenbahnstreiks. 14.01.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-01-14/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 14.01.1919 Abend-Ausgabe",
     "img": "1919-01-14.12.jpg",
-    "id": "d5cd57b2-178e-11e9-aef1-5d57740989df"
+    "id": "d5cd57b2-178e-11e9-aef1-5d57740989df",
+    "tweetId": 1084869054526042100
   },
   {
     "sendAfter": "2019-01-15 10:35",
     "status": "Brockdorff-Rankau fordert den Wilson- Frieden. 15.01.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-01-15/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 15.01.1919 Morgen-Ausgabe",
     "img": "1919-01-15.13.jpg",
-    "id": "d5cd57b3-178e-11e9-aef1-5d57740989df"
+    "id": "d5cd57b3-178e-11e9-aef1-5d57740989df",
+    "tweetId": 1085110647074013200
   },
   {
     "sendAfter": "2019-01-15 18:35",
     "status": "Die neuen Waffenstillstandsbedingungen. 15.01.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-01-15/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 15.01.1919 Abend-Ausgabe",
     "img": "1919-01-15.14.jpg",
-    "id": "d5cd57b4-178e-11e9-aef1-5d57740989df"
+    "id": "d5cd57b4-178e-11e9-aef1-5d57740989df",
+    "tweetId": 1085231451187105800
   },
   {
     "sendAfter": "2019-01-16 10:35",
     "status": "Der drohende Russeneinbruch. 16.01.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-01-16/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 16.01.1919 Morgen-Ausgabe",
     "img": "1919-01-16.15.jpg",
-    "id": "d5cd57b5-178e-11e9-aef1-5d57740989df"
+    "id": "d5cd57b5-178e-11e9-aef1-5d57740989df",
+    "tweetId": 1085473030904709100
   },
   {
     "sendAfter": "2019-01-16 18:35",
     "status": "Liebknecht und Rosa Luxemburg getötet. 16.01.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-01-16/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 16.01.1919 Abend-Ausgabe",
     "img": "1919-01-16.16.jpg",
-    "id": "d5cd57b6-178e-11e9-aef1-5d57740989df"
+    "id": "d5cd57b6-178e-11e9-aef1-5d57740989df",
+    "tweetId": 1085593825651945500
   },
   {
     "sendAfter": "2019-01-17 10:35",
-    "status": "Die Schuld. 17.01.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-01-17/27971740 #1919LIVE",
+    "status": "Die Schuld. - Wie muss der Handwerker wählen? 17.01.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-01-17/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 17.01.1919 Morgen-Ausgabe",
     "img": "1919-01-17.18.jpg",
-    "id": "d5cd57b7-178e-11e9-aef1-5d57740989df"
+    "id": "d5cd57b7-178e-11e9-aef1-5d57740989df",
+    "tweetId": 1085835420146061300
   },
   {
     "sendAfter": "2019-01-18 10:35",
-    "status": "18.01.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-01-18/27971740 #1919LIVE",
+    "status": "Für Vaterland und Freiheit. 18.01.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-01-18/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 18.01.1919 Morgen-Ausgabe",
     "img": "1919-01-18.19.jpg",
-    "id": "d5cd57b8-178e-11e9-aef1-5d57740989df"
+    "id": "d5cd57b8-178e-11e9-aef1-5d57740989df",
+    "tweetId": 1086197804060553200
   },
   {
     "sendAfter": "2019-01-18 18:35",
-    "status": "18.01.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-01-18/27971740 #1919LIVE",
+    "status": "Schändliche Wahlmanöver der Reaktion. 18.01.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-01-18/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 18.01.1919 Abend-Ausgabe",
     "img": "1919-01-18.20.jpg",
-    "id": "d5cd57b9-178e-11e9-aef1-5d57740989df"
+    "id": "d5cd57b9-178e-11e9-aef1-5d57740989df",
+    "tweetId": 1086318598661046300
   },
   {
     "sendAfter": "2019-01-19 10:35",
-    "status": "19.01.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-01-19/27971740 #1919LIVE",
+    "status": "Der Tag des Volkes. 19.01.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-01-19/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 19.01.1919 Morgen-Ausgabe",
     "img": "1919-01-19.21.jpg",
-    "id": "d5cd57ba-178e-11e9-aef1-5d57740989df"
+    "id": "d5cd57ba-178e-11e9-aef1-5d57740989df",
+    "tweetId": 1086560192970530800
   },
   {
     "sendAfter": "2019-01-20 10:35",
-    "status": "20.01.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-01-20/27971740 #1919LIVE",
+    "status": "Die Nationalwahlen in Berlin. 20.01.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-01-20/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 20.01.1919 Morgen-Ausgabe",
     "img": "1919-01-20.22.jpg",
-    "id": "d5cd57bb-178e-11e9-aef1-5d57740989df"
+    "id": "d5cd57bb-178e-11e9-aef1-5d57740989df",
+    "tweetId": 1086922579921825800
   },
   {
     "sendAfter": "2019-01-20 18:35",
-    "status": "20.01.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-01-20/27971740 #1919LIVE",
+    "status": "Wahlaussichten. 20.01.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-01-20/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 20.01.1919 Abend-Ausgabe",
     "img": "1919-01-20.23.jpg",
-    "id": "d5cd57bc-178e-11e9-aef1-5d57740989df"
+    "id": "d5cd57bc-178e-11e9-aef1-5d57740989df",
+    "tweetId": 1087043379471495200
   },
   {
     "sendAfter": "2019-01-21 10:35",
-    "status": "21.01.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-01-21/27971740 #1919LIVE",
+    "status": "Der Sieg der Demokratie. 21.01.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-01-21/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 21.01.1919 Morgen-Ausgabe",
     "img": "1919-01-21.24.jpg",
-    "id": "d5cd57bd-178e-11e9-aef1-5d57740989df"
+    "id": "d5cd57bd-178e-11e9-aef1-5d57740989df",
+    "tweetId": 1087284968819228700
   },
   {
     "sendAfter": "2019-01-21 18:35",
-    "status": "21.01.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-01-21/27971740 #1919LIVE",
+    "status": "Weimar Tagungsort der Nationalversammlung. 21.01.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-01-21/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 21.01.1919 Abend-Ausgabe",
     "img": "1919-01-21.25.jpg",
-    "id": "d5cd57be-178e-11e9-aef1-5d57740989df"
+    "id": "d5cd57be-178e-11e9-aef1-5d57740989df",
+    "tweetId": 1087405791429214200
   },
   {
     "sendAfter": "2019-01-22 10:35",
-    "status": "22.01.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-01-22/27971740 #1919LIVE",
+    "status": "Die Neuregelung der Kommandogewalt. 22.01.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-01-22/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 22.01.1919 Morgen-Ausgabe",
     "img": "1919-01-22.26.jpg",
-    "id": "d5cd57bf-178e-11e9-aef1-5d57740989df"
+    "id": "d5cd57bf-178e-11e9-aef1-5d57740989df",
+    "tweetId": 1087647361520799700
   },
   {
     "sendAfter": "2019-01-22 18:35",
-    "status": "22.01.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-01-22/27971740 #1919LIVE",
+    "status": "76 Demokraten aus 36 Bezirken. Ein glänzender Sieg. 22.01.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-01-22/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 22.01.1919 Abend-Ausgabe",
     "img": "1919-01-22.27.jpg",
-    "id": "d5cd57c0-178e-11e9-aef1-5d57740989df"
+    "id": "d5cd57c0-178e-11e9-aef1-5d57740989df",
+    "tweetId": 1087768149246779400
   },
   {
     "sendAfter": "2019-01-23 10:35",
-    "status": "23.01.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-01-23/27971740 #1919LIVE",
+    "status": "Das Endresultat. 23.01.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-01-23/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 23.01.1919 Morgen-Ausgabe",
     "img": "1919-01-23.28.jpg",
-    "id": "d5cd57c1-178e-11e9-aef1-5d57740989df"
+    "id": "d5cd57c1-178e-11e9-aef1-5d57740989df",
+    "tweetId": 1088009746366558200
   },
   {
     "sendAfter": "2019-01-23 18:35",
-    "status": "23.01.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-01-23/27971740 #1919LIVE",
+    "status": "Es bleibt bei Weimar. 23.01.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-01-23/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 23.01.1919 Abend-Ausgabe",
     "img": "1919-01-23.29.jpg",
-    "id": "d5cd57c2-178e-11e9-aef1-5d57740989df"
+    "id": "d5cd57c2-178e-11e9-aef1-5d57740989df",
+    "tweetId": 1088130539222167600
   },
   {
     "sendAfter": "2019-01-24 10:35",
-    "status": "24.01.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-01-24/27971740 #1919LIVE",
+    "status": "Gegen die Arbeitslosigkeit. 24.01.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-01-24/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 24.01.1919 Morgen-Ausgabe",
     "img": "1919-01-24.30.jpg",
-    "id": "d5cd57c3-178e-11e9-aef1-5d57740989df"
+    "id": "d5cd57c3-178e-11e9-aef1-5d57740989df",
+    "tweetId": 1088372130285342700
   },
   {
     "sendAfter": "2019-01-24 18:35",
-    "status": "24.01.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-01-24/27971740 #1919LIVE",
+    "status": "Vor der Preußenwahl. 24.01.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-01-24/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 24.01.1919 Abend-Ausgabe",
     "img": "1919-01-24.31.jpg",
-    "id": "d5cd57c4-178e-11e9-aef1-5d57740989df"
+    "id": "d5cd57c4-178e-11e9-aef1-5d57740989df",
+    "tweetId": 1088492926202757100
   },
   {
     "sendAfter": "2019-01-25 10:35",
-    "status": "25.01.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-01-25/27971740 #1919LIVE",
+    "status": "Neuwahl der Gemeindevertretungen. 25.01.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-01-25/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 25.01.1919 Morgen-Ausgabe",
     "img": "1919-01-25.32.jpg",
-    "id": "d5cd57c5-178e-11e9-aef1-5d57740989df"
+    "id": "d5cd57c5-178e-11e9-aef1-5d57740989df",
+    "tweetId": 1088734517010018300
   },
   {
     "sendAfter": "2019-01-25 18:35",
-    "status": "25.01.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-01-25/27971740 #1919LIVE",
+    "status": "Morgen Preußenwahl. 25.01.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-01-25/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 25.01.1919 Abend-Ausgabe",
     "img": "1919-01-25.33.jpg",
-    "id": "d5cd57c6-178e-11e9-aef1-5d57740989df"
+    "id": "d5cd57c6-178e-11e9-aef1-5d57740989df",
+    "tweetId": 1088855320116580400
   },
   {
     "sendAfter": "2019-01-26 10:35",
-    "status": "26.01.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-01-26/27971740 #1919LIVE",
+    "status": "Auf zur Preußenwahl! 26.01.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-01-26/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 26.01.1919 Morgen-Ausgabe",
     "img": "1919-01-26.34.jpg",
-    "id": "d5cd57c7-178e-11e9-aef1-5d57740989df"
+    "id": "d5cd57c7-178e-11e9-aef1-5d57740989df",
+    "tweetId": 1089096907471941600
   },
   {
     "sendAfter": "2019-01-27 10:35",
-    "status": "27.01.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-01-27/27971740 #1919LIVE",
+    "status": "Nach der Preußenwahl. 27.01.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-01-27/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 27.01.1919 Morgen-Ausgabe",
     "img": "1919-01-27.35.jpg",
-    "id": "d5cd57c8-178e-11e9-aef1-5d57740989df"
+    "id": "d5cd57c8-178e-11e9-aef1-5d57740989df",
+    "tweetId": 1089459304569192400
   },
   {
     "sendAfter": "2019-01-27 18:35",
-    "status": "27.01.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-01-27/27971740 #1919LIVE",
+    "status": "Die ersten Ergebnisse. 27.01.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-01-27/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 27.01.1919 Abend-Ausgabe",
     "img": "1919-01-27.36.jpg",
-    "id": "d5cd57c9-178e-11e9-aef1-5d57740989df"
+    "id": "d5cd57c9-178e-11e9-aef1-5d57740989df",
+    "tweetId": 1089580092588740600
   },
   {
     "sendAfter": "2019-01-28 10:35",
-    "status": "28.01.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-01-28/27971740 #1919LIVE",
+    "status": "Soldatenräte und Kommandogewalt. 28.01.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-01-28/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 28.01.1919 Morgen-Ausgabe",
     "img": "1919-01-28.37.jpg",
-    "id": "d5cd57ca-178e-11e9-aef1-5d57740989df"
+    "id": "d5cd57ca-178e-11e9-aef1-5d57740989df",
+    "tweetId": 1089821686441095200
   },
   {
     "sendAfter": "2019-01-28 18:35",
-    "status": "28.01.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-01-28/27971740 #1919LIVE",
+    "status": "Die drohenden Kohlenkatastrophe. 28.01.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-01-28/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 28.01.1919 Abend-Ausgabe",
     "img": "1919-01-28.38.jpg",
-    "id": "d5cd57cb-178e-11e9-aef1-5d57740989df"
+    "id": "d5cd57cb-178e-11e9-aef1-5d57740989df",
+    "tweetId": 1089942482257883100
   },
   {
     "sendAfter": "2019-01-29 10:35",
-    "status": "29.01.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-01-29/27971740 #1919LIVE",
+    "status": "Demokratisch-sozialistische Mehrheit auch in Preußen! 29.01.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-01-29/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 29.01.1919 Morgen-Ausgabe",
     "img": "1919-01-29.39.jpg",
-    "id": "d5cd57cc-178e-11e9-aef1-5d57740989df"
+    "id": "d5cd57cc-178e-11e9-aef1-5d57740989df",
+    "tweetId": 1090184071534334000
   },
   {
     "sendAfter": "2019-01-29 18:35",
-    "status": "29.01.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-01-29/27971740 #1919LIVE",
+    "status": "Der Aufstand in Wilhelmshaven gebrochen. Völlige Kapitulation der Spartacisten. Das Ergebnis der Preußenwahlen. 29.01.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-01-29/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 29.01.1919 Abend-Ausgabe",
     "img": "1919-01-29.40.jpg",
-    "id": "d5cd57cd-178e-11e9-aef1-5d57740989df"
+    "id": "d5cd57cd-178e-11e9-aef1-5d57740989df",
+    "tweetId": 1090304865430057000
   },
   {
     "sendAfter": "2019-01-30 10:35",
-    "status": "30.01.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-01-30/27971740 #1919LIVE",
+    "status": "Der Entwurf der Reichsverfassung. 30.01.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-01-30/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 30.01.1919 Morgen-Ausgabe",
     "img": "1919-01-30.41.jpg",
-    "id": "d5cd57ce-178e-11e9-aef1-5d57740989df"
+    "id": "d5cd57ce-178e-11e9-aef1-5d57740989df",
+    "tweetId": 1090546456283566100
   },
   {
     "sendAfter": "2019-01-30 18:35",
-    "status": "30.01.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-01-30/27971740 #1919LIVE",
+    "status": "Befehl bleibt Befehl! 30.01.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-01-30/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 30.01.1919 Abend-Ausgabe",
     "img": "1919-01-30.42.jpg",
-    "id": "d5cd7ec0-178e-11e9-aef1-5d57740989df"
+    "id": "d5cd7ec0-178e-11e9-aef1-5d57740989df",
+    "tweetId": 1090667253777879000
   },
   {
     "sendAfter": "2019-01-31 10:35",
-    "status": "31.01.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-01-31/27971740 #1919LIVE",
+    "status": "Die Sicherung unserer Lebensmitteleinfuhr. 31.01.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-01-31/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 31.01.1919 Morgen-Ausgabe",
     "img": "1919-01-31.43.jpg",
-    "id": "d5cd7ec1-178e-11e9-aef1-5d57740989df"
+    "id": "d5cd7ec1-178e-11e9-aef1-5d57740989df",
+    "tweetId": 1090908846485323800
   },
   {
     "sendAfter": "2019-01-31 18:35",
-    "status": "31.01.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-01-31/27971740 #1919LIVE",
+    "status": "Die Zukunft des Rätesystems. 31.01.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-01-31/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 31.01.1919 Abend-Ausgabe",
     "img": "1919-01-31.44.jpg",
-    "id": "d5cd7ec2-178e-11e9-aef1-5d57740989df"
+    "id": "d5cd7ec2-178e-11e9-aef1-5d57740989df",
+    "tweetId": 1091029645670125600
   },
   {
     "sendAfter": "2019-02-01 10:35",
-    "status": "01.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-01/27971740 #1919LIVE",
+    "status": "Die Abstimmung des Berliner A.- u. S.-Rats. 01.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-01/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 01.02.1919 Morgen-Ausgabe",
     "img": "1919-02-01.45.jpg",
-    "id": "d5cd7ec3-178e-11e9-aef1-5d57740989df"
+    "id": "d5cd7ec3-178e-11e9-aef1-5d57740989df",
+    "tweetId": 1091271242093682700
   },
   {
     "sendAfter": "2019-02-01 18:35",
-    "status": "01.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-01/27971740 #1919LIVE",
+    "status": "Kriegsgefangenentragödie bei Longwy. Noske an die Bremer Regierung. 01.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-01/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 01.02.1919 Abend-Ausgabe",
     "img": "1919-02-01.46.jpg",
-    "id": "d5cd7ec4-178e-11e9-aef1-5d57740989df"
+    "id": "d5cd7ec4-178e-11e9-aef1-5d57740989df",
+    "tweetId": 1091392048165503000
   },
   {
     "sendAfter": "2019-02-02 10:35",
-    "status": "02.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-02/27971740 #1919LIVE",
+    "status": "Die Vorgänge in Bremen. 02.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-02/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 02.02.1919 Morgen-Ausgabe",
     "img": "1919-02-02.47.jpg",
-    "id": "d5cd7ec5-178e-11e9-aef1-5d57740989df"
+    "id": "d5cd7ec5-178e-11e9-aef1-5d57740989df",
+    "tweetId": 1091633631423090700
   },
   {
     "sendAfter": "2019-02-03 10:35",
-    "status": "03.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-03/27971740 #1919LIVE",
+    "status": "Friede mit Bremen. 03.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-03/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 03.02.1919 Morgen-Ausgabe",
     "img": "1919-02-03.48.jpg",
-    "id": "d5cd7ec6-178e-11e9-aef1-5d57740989df"
+    "id": "d5cd7ec6-178e-11e9-aef1-5d57740989df",
+    "tweetId": 1091996011344613400
   },
   {
     "sendAfter": "2019-02-03 18:35",
-    "status": "03.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-03/27971740 #1919LIVE",
+    "status": "Die Regierungsforderungen an Bremen. 03.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-03/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 03.02.1919 Abend-Ausgabe",
     "img": "1919-02-03.49.jpg",
-    "id": "d5cd7ec7-178e-11e9-aef1-5d57740989df"
+    "id": "d5cd7ec7-178e-11e9-aef1-5d57740989df",
+    "tweetId": 1092116812899254300
   },
   {
     "sendAfter": "2019-02-04 10:35",
-    "status": "04.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-04/27971740 #1919LIVE",
+    "status": "Gegen die Arbeitslosigkeit in Berlin 04.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-04/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 04.02.1919 Morgen-Ausgabe",
     "img": "1919-02-04.50.jpg",
-    "id": "d5cd7ec8-178e-11e9-aef1-5d57740989df"
+    "id": "d5cd7ec8-178e-11e9-aef1-5d57740989df",
+    "tweetId": 1092358398404935700
   },
   {
     "sendAfter": "2019-02-04 18:35",
-    "status": "04.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-04/27971740 #1919LIVE",
+    "status": "Bremen besetzt. 04.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-04/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 04.02.1919 Abend-Ausgabe",
     "img": "1919-02-04.51.jpg",
-    "id": "d5cd7ec9-178e-11e9-aef1-5d57740989df"
+    "id": "d5cd7ec9-178e-11e9-aef1-5d57740989df",
+    "tweetId": 1092479197707206700
   },
   {
     "sendAfter": "2019-02-05 10:35",
-    "status": "05.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-05/27971740 #1919LIVE",
+    "status": "Vorbereitungen der Nationalversammlung. 05.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-05/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 05.02.1919 Morgen-Ausgabe",
     "img": "1919-02-05.52.jpg",
-    "id": "d5cd7eca-178e-11e9-aef1-5d57740989df"
+    "id": "d5cd7eca-178e-11e9-aef1-5d57740989df",
+    "tweetId": 1092720795565076500
   },
   {
     "sendAfter": "2019-02-05 18:35",
-    "status": "05.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-05/27971740 #1919LIVE",
+    "status": "Schwere Kämpfe an der schlesischen Grenze. 05.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-05/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 05.02.1919 Abend-Ausgabe",
     "img": "1919-02-05.53.jpg",
-    "id": "d5cd7ecb-178e-11e9-aef1-5d57740989df"
+    "id": "d5cd7ecb-178e-11e9-aef1-5d57740989df",
+    "tweetId": 1092841587602849800
   },
   {
     "sendAfter": "2019-02-06 10:35",
-    "status": "06.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-06/27971740 #1919LIVE",
+    "status": "Der Tag von Weimar. 06.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-06/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 06.02.1919 Morgen-Ausgabe",
     "img": "1919-02-06.54.jpg",
-    "id": "d5cd7ecc-178e-11e9-aef1-5d57740989df"
+    "id": "d5cd7ecc-178e-11e9-aef1-5d57740989df",
+    "tweetId": 1093083170608767000
   },
   {
     "sendAfter": "2019-02-06 18:35",
-    "status": "06.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-06/27971740 #1919LIVE",
+    "status": "Ernste Lage im Osten. 06.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-06/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 06.02.1919 Abend-Ausgabe",
     "img": "1919-02-06.55.jpg",
-    "id": "d5cd7ecd-178e-11e9-aef1-5d57740989df"
+    "id": "d5cd7ecd-178e-11e9-aef1-5d57740989df",
+    "tweetId": 1093203969541898200
   },
   {
     "sendAfter": "2019-02-07 10:35",
-    "status": "07.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-07/27971740 #1919LIVE",
+    "status": "Der erste Tag der Nationalversammlung. 07.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-07/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 07.02.1919 Morgen-Ausgabe",
     "img": "1919-02-07.56.jpg",
-    "id": "d5cd7ece-178e-11e9-aef1-5d57740989df"
+    "id": "d5cd7ece-178e-11e9-aef1-5d57740989df",
+    "tweetId": 1093445578271477800
   },
   {
     "sendAfter": "2019-02-07 18:35",
-    "status": "07.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-07/27971740 #1919LIVE",
+    "status": "Besprechungen in Weimar. 07.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-07/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 07.02.1919 Abend-Ausgabe",
     "img": "1919-02-07.57.jpg",
-    "id": "d5cd7ecf-178e-11e9-aef1-5d57740989df"
+    "id": "d5cd7ecf-178e-11e9-aef1-5d57740989df",
+    "tweetId": 1093566361849208800
   },
   {
     "sendAfter": "2019-02-08 10:35",
-    "status": "08.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-08/27971740 #1919LIVE",
+    "status": "Dr. David Präsident der Nationalversammlung. Unterpräsidenten: Fehrenbach, Haussmann und Dietrich. 08.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-08/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 08.02.1919 Morgen-Ausgabe",
     "img": "1919-02-08.58.jpg",
-    "id": "d5cd7ed0-178e-11e9-aef1-5d57740989df"
+    "id": "d5cd7ed0-178e-11e9-aef1-5d57740989df",
+    "tweetId": 1093807962374721500
   },
   {
     "sendAfter": "2019-02-08 18:35",
-    "status": "08.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-08/27971740 #1919LIVE",
+    "status": "Die heutige Sitzung in Weimar. Die polnische Propaganda in der Ostmark. 08.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-08/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 08.02.1919 Abend-Ausgabe",
     "img": "1919-02-08.59.jpg",
-    "id": "d5cd7ed1-178e-11e9-aef1-5d57740989df"
+    "id": "d5cd7ed1-178e-11e9-aef1-5d57740989df",
+    "tweetId": 1093928739564634100
   },
   {
     "sendAfter": "2019-02-09 10:35",
-    "status": "09.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-09/27971740 #1919LIVE",
+    "status": "Die neue Regierung. 09.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-09/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 09.02.1919 Morgen-Ausgabe",
     "img": "1919-02-09.60.jpg",
-    "id": "d5cd7ed2-178e-11e9-aef1-5d57740989df"
+    "id": "d5cd7ed2-178e-11e9-aef1-5d57740989df",
+    "tweetId": 1094170337997135900
   },
   {
     "sendAfter": "2019-02-10 10:35",
-    "status": "10.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-10/27971740 #1919LIVE",
+    "status": "Erst das Programm, dann die Personen! Die Lebensmittelversorgung Deutschlands durch die Entente. 10.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-10/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 10.02.1919 Morgen-Ausgabe",
     "img": "1919-02-10.61.jpg",
-    "id": "d5cd7ed3-178e-11e9-aef1-5d57740989df"
+    "id": "d5cd7ed3-178e-11e9-aef1-5d57740989df",
+    "tweetId": 1094532725707554800
   },
   {
     "sendAfter": "2019-02-10 18:35",
-    "status": "10.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-10/27971740 #1919LIVE",
+    "status": "Die Regierungsbildung. Das Schicksal Elsaß-Lothringens. 10.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-10/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 10.02.1919 Abend-Ausgabe",
     "img": "1919-02-10.62.jpg",
-    "id": "d5cd7ed4-178e-11e9-aef1-5d57740989df"
+    "id": "d5cd7ed4-178e-11e9-aef1-5d57740989df",
+    "tweetId": 1094653519884439600
   },
   {
     "sendAfter": "2019-02-11 10:35",
-    "status": "11.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-11/27971740 #1919LIVE",
+    "status": "Annahme der Reichsnotverfassung. 11.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-11/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 11.02.1919 Morgen-Ausgabe",
     "img": "1919-02-11.63.jpg",
-    "id": "d5cd7ed5-178e-11e9-aef1-5d57740989df"
+    "id": "d5cd7ed5-178e-11e9-aef1-5d57740989df",
+    "tweetId": 1094895122028867600
   },
   {
     "sendAfter": "2019-02-11 18:35",
-    "status": "11.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-11/27971740 #1919LIVE",
+    "status": "Neu Raubpläne der Entente. - Die Internationale gegen den Bolschewismus. 11.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-11/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 11.02.1919 Abend-Ausgabe",
     "img": "1919-02-11.64.jpg",
-    "id": "d5cd7ed6-178e-11e9-aef1-5d57740989df"
+    "id": "d5cd7ed6-178e-11e9-aef1-5d57740989df",
+    "tweetId": 1095015922979479600
   },
   {
     "sendAfter": "2019-02-12 10:35",
-    "status": "12.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-12/27971740 #1919LIVE",
+    "status": "Ebert Reichspräsident. 12.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-12/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 12.02.1919 Morgen-Ausgabe",
     "img": "1919-02-12.65.jpg",
-    "id": "d5cd7ed7-178e-11e9-aef1-5d57740989df"
+    "id": "d5cd7ed7-178e-11e9-aef1-5d57740989df",
+    "tweetId": 1095257507021422600
   },
   {
     "sendAfter": "2019-02-12 18:35",
-    "status": "12.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-12/27971740 #1919LIVE",
+    "status": "Der neue Waffenstillstand. - Die Kämpfe um Bromberg. 12.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-12/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 12.02.1919 Abend-Ausgabe",
     "img": "1919-02-12.66.jpg",
-    "id": "d5cd7ed8-178e-11e9-aef1-5d57740989df"
+    "id": "d5cd7ed8-178e-11e9-aef1-5d57740989df",
+    "tweetId": 1095378316792614900
   },
   {
     "sendAfter": "2019-02-13 10:35",
-    "status": "13.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-13/27971740 #1919LIVE",
+    "status": "Radek in Berlin verhaftet. 13.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-13/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 13.02.1919 Morgen-Ausgabe",
     "img": "1919-02-13.67.jpg",
-    "id": "d5cd7ed9-178e-11e9-aef1-5d57740989df"
+    "id": "d5cd7ed9-178e-11e9-aef1-5d57740989df",
+    "tweetId": 1095619931238998000
   },
   {
     "sendAfter": "2019-02-13 18:35",
-    "status": "13.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-13/27971740 #1919LIVE",
+    "status": "Die Zusammensetzung der Volksregierung. 13.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-13/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 13.02.1919 Abend-Ausgabe",
     "img": "1919-02-13.68.jpg",
-    "id": "d5cd7eda-178e-11e9-aef1-5d57740989df"
+    "id": "d5cd7eda-178e-11e9-aef1-5d57740989df",
+    "tweetId": 1095740686329135100
   },
   {
     "sendAfter": "2019-02-14 10:35",
-    "status": "14.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-14/27971740 #1919LIVE",
+    "status": "Das Programm der Volksregierung. 14.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-14/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 14.02.1919 Morgen-Ausgabe",
     "img": "1919-02-14.69.jpg",
-    "id": "d5cd7edb-178e-11e9-aef1-5d57740989df"
+    "id": "d5cd7edb-178e-11e9-aef1-5d57740989df",
+    "tweetId": 1095982359734820900
   },
   {
     "sendAfter": "2019-02-14 18:35",
-    "status": "14.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-14/27971740 #1919LIVE",
+    "status": "Duisburg von Belgiern besetzt. - Der Streik der anderen. 14.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-14/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 14.02.1919 Abend-Ausgabe",
     "img": "1919-02-14.70.jpg",
-    "id": "d5cd7edc-178e-11e9-aef1-5d57740989df"
+    "id": "d5cd7edc-178e-11e9-aef1-5d57740989df",
+    "ready": false,
+    "tweetId": 1096103084479139800
   },
   {
     "sendAfter": "2019-02-15 10:35",
-    "status": "15.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-15/27971740 #1919LIVE",
+    "status": "Die Außenpolitik der Volksregierung. 15.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-15/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 15.02.1919 Morgen-Ausgabe",
     "img": "1919-02-15.71.jpg",
-    "id": "d5cd7edd-178e-11e9-aef1-5d57740989df"
+    "id": "d5cd7edd-178e-11e9-aef1-5d57740989df",
+    "tweetId": 1096344699277901800
   },
   {
     "sendAfter": "2019-02-15 18:35",
-    "status": "15.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-15/27971740 #1919LIVE",
+    "status": "Die neuen Waffenstillstandsbedingungen. 15.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-15/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 15.02.1919 Abend-Ausgabe",
     "img": "1919-02-15.72.jpg",
-    "id": "d5cd7ede-178e-11e9-aef1-5d57740989df"
+    "id": "d5cd7ede-178e-11e9-aef1-5d57740989df",
+    "tweetId": 1096465628691660800
   },
   {
     "sendAfter": "2019-02-16 10:35",
-    "status": "16.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-16/27971740 #1919LIVE",
+    "status": "Der Völkerbund gesichert. 16.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-16/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 16.02.1919 Morgen-Ausgabe",
     "img": "1919-02-16.73.jpg",
-    "id": "d5cd7edf-178e-11e9-aef1-5d57740989df"
+    "id": "d5cd7edf-178e-11e9-aef1-5d57740989df",
+    "tweetId": 1096707072765382700
   },
   {
     "sendAfter": "2019-02-17 10:35",
-    "status": "17.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-17/27971740 #1919LIVE",
+    "status": "Annahme der neuen Waffenstillstandsbedingungen. 17.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-17/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 17.02.1919 Morgen-Ausgabe",
     "img": "1919-02-17.74.jpg",
-    "id": "d5cd7ee0-178e-11e9-aef1-5d57740989df"
+    "id": "d5cd7ee0-178e-11e9-aef1-5d57740989df",
+    "tweetId": 1097069453114830800
   },
   {
     "sendAfter": "2019-02-17 18:35",
-    "status": "17.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-17/27971740 #1919LIVE",
+    "status": "Brockdorff-Rantzau bleibt. 17.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-17/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 17.02.1919 Abend-Ausgabe",
     "img": "1919-02-17.75.jpg",
-    "id": "d5cd7ee1-178e-11e9-aef1-5d57740989df"
+    "id": "d5cd7ee1-178e-11e9-aef1-5d57740989df",
+    "tweetId": 1097190238500372500
   },
   {
     "sendAfter": "2019-02-18 10:35",
-    "status": "18.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-18/27971740 #1919LIVE",
+    "status": "Spartacus im Ruhrgebiet. 18.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-18/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 18.02.1919 Morgen-Ausgabe",
     "img": "1919-02-18.76.jpg",
-    "id": "d5cd7ee2-178e-11e9-aef1-5d57740989df"
+    "id": "d5cd7ee2-178e-11e9-aef1-5d57740989df",
+    "tweetId": 1097431833011241000
   },
   {
     "sendAfter": "2019-02-18 18:35",
-    "status": "18.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-18/27971740 #1919LIVE",
+    "status": "Der Generalstreik im Ruhr-Kohlengebiet. 18.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-18/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 18.02.1919 Abend-Ausgabe",
     "img": "1919-02-18.77.jpg",
-    "id": "d5cd7ee3-178e-11e9-aef1-5d57740989df"
+    "id": "d5cd7ee3-178e-11e9-aef1-5d57740989df",
+    "tweetId": 1097552632917516300
   },
   {
     "sendAfter": "2019-02-19 10:35",
-    "status": "19.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-19/27971740 #1919LIVE",
+    "status": "Ungeklärte Lage im Industriegebiet. 19.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-19/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 19.02.1919 Morgen-Ausgabe",
     "img": "1919-02-19.78.jpg",
-    "id": "d5cd7ee4-178e-11e9-aef1-5d57740989df"
+    "id": "d5cd7ee4-178e-11e9-aef1-5d57740989df",
+    "tweetId": 1097794223544373200
   },
   {
     "sendAfter": "2019-02-19 18:35",
-    "status": "19.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-19/27971740 #1919LIVE",
+    "status": "Neues Lebensmittelabkommen in Trier. 19.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-19/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 19.02.1919 Abend-Ausgabe",
     "img": "1919-02-19.79.jpg",
-    "id": "d5cd7ee5-178e-11e9-aef1-5d57740989df"
+    "id": "d5cd7ee5-178e-11e9-aef1-5d57740989df",
+    "tweetId": 1097915015829557200
   },
   {
     "sendAfter": "2019-02-20 10:35",
-    "status": "20.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-20/27971740 #1919LIVE",
+    "status": "Der Kriegsminister über Liebknecht-Luxemburg. 20.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-20/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 20.02.1919 Morgen-Ausgabe",
     "img": "1919-02-20.80.jpg",
-    "id": "d5cd7ee6-178e-11e9-aef1-5d57740989df"
+    "id": "d5cd7ee6-178e-11e9-aef1-5d57740989df",
+    "tweetId": 1098156609128276000
   },
   {
     "sendAfter": "2019-02-20 18:35",
-    "status": "20.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-20/27971740 #1919LIVE",
+    "status": "Der Mordanschlag auf Clemenceau. 20.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-20/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 20.02.1919 Abend-Ausgabe",
     "img": "1919-02-20.81.jpg",
-    "id": "d5cd7ee7-178e-11e9-aef1-5d57740989df"
+    "id": "d5cd7ee7-178e-11e9-aef1-5d57740989df",
+    "tweetId": 1098277424633180200
   },
   {
     "sendAfter": "2019-02-21 10:35",
-    "status": "21.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-21/27971740 #1919LIVE",
+    "status": "Die Annahme des Milliardenkredits. 21.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-21/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 21.02.1919 Morgen-Ausgabe",
     "img": "1919-02-21.82.jpg",
-    "id": "d5cd7ee8-178e-11e9-aef1-5d57740989df"
+    "id": "d5cd7ee8-178e-11e9-aef1-5d57740989df",
+    "tweetId": 1098519000429064200
   },
   {
     "sendAfter": "2019-02-21 18:35",
-    "status": "21.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-21/27971740 #1919LIVE",
+    "status": "Eisner ermordet. 21.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-21/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 21.02.1919 Abend-Ausgabe",
     "img": "1919-02-21.83.jpg",
-    "id": "d5cd7ee9-178e-11e9-aef1-5d57740989df"
+    "id": "d5cd7ee9-178e-11e9-aef1-5d57740989df",
+    "tweetId": 1098639790998802400
   },
   {
     "sendAfter": "2019-02-22 10:35",
-    "status": "22.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-22/27971740 #1919LIVE",
+    "status": "Der Münchener Bluttag. 22.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-22/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 22.02.1919 Morgen-Ausgabe",
     "img": "1919-02-22.84.jpg",
-    "id": "d5cd7eea-178e-11e9-aef1-5d57740989df"
+    "id": "d5cd7eea-178e-11e9-aef1-5d57740989df",
+    "tweetId": 1098881383022379000
   },
   {
     "sendAfter": "2019-02-22 18:35",
-    "status": "22.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-22/27971740 #1919LIVE",
+    "status": "Räteherrschaft in München? 22.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-22/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 22.02.1919 Abend-Ausgabe",
     "img": "1919-02-22.85.jpg",
-    "id": "d5cd7eeb-178e-11e9-aef1-5d57740989df"
+    "id": "d5cd7eeb-178e-11e9-aef1-5d57740989df",
+    "tweetId": 1099002202297983000
   },
   {
     "sendAfter": "2019-02-23 10:35",
-    "status": "23.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-23/27971740 #1919LIVE",
+    "status": "Die bayerische Räterepublik \"beschlossen\". 23.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-23/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 23.02.1919 Morgen-Ausgabe",
     "img": "1919-02-23.86.jpg",
-    "id": "d5cd7eec-178e-11e9-aef1-5d57740989df"
+    "id": "d5cd7eec-178e-11e9-aef1-5d57740989df",
+    "tweetId": 1099243798079647700
   },
   {
     "sendAfter": "2019-02-24 10:35",
-    "status": "24.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-24/27971740 #1919LIVE",
+    "status": "Ruhe in München. 24.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-24/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 24.02.1919 Morgen-Ausgabe",
     "img": "1919-02-24.87.jpg",
-    "id": "d5cd7eed-178e-11e9-aef1-5d57740989df"
+    "id": "d5cd7eed-178e-11e9-aef1-5d57740989df",
+    "tweetId": 1099606175371485200
   },
   {
     "sendAfter": "2019-02-25 10:35",
-    "status": "25.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-25/27971740 #1919LIVE",
+    "status": "Unklare Lage in München. 25.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-25/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 25.02.1919 Morgen-Ausgabe",
     "img": "1919-02-25.89.jpg",
-    "id": "d5cd7eee-178e-11e9-aef1-5d57740989df"
+    "id": "d5cd7eee-178e-11e9-aef1-5d57740989df",
+    "tweetId": 1099968556404523000
   },
   {
     "sendAfter": "2019-02-25 18:35",
-    "status": "25.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-25/27971740 #1919LIVE",
+    "status": "Die Unruhen in Mitteldeutschland. 25.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-25/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 25.02.1919 Abend-Ausgabe",
     "img": "1919-02-25.90.jpg",
-    "id": "d5cd7eef-178e-11e9-aef1-5d57740989df"
+    "id": "d5cd7eef-178e-11e9-aef1-5d57740989df",
+    "tweetId": 1100089368545505300
   },
   {
     "sendAfter": "2019-02-26 10:35",
-    "status": "26.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-26/27971740 #1919LIVE",
+    "status": "Die Reichsregierung gegen das Rätesystem. 26.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-26/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 26.02.1919 Morgen-Ausgabe",
     "img": "1919-02-26.91.jpg",
-    "id": "d5cd7ef0-178e-11e9-aef1-5d57740989df"
+    "id": "d5cd7ef0-178e-11e9-aef1-5d57740989df",
+    "tweetId": 1100330944324661200
   },
   {
     "sendAfter": "2019-02-26 18:35",
-    "status": "26.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-26/27971740 #1919LIVE",
+    "status": "Dringendes Ersuchen um Lebensmittel. 26.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-26/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 26.02.1919 Abend-Ausgabe",
     "img": "1919-02-26.92.jpg",
-    "id": "d5cd7ef1-178e-11e9-aef1-5d57740989df"
+    "id": "d5cd7ef1-178e-11e9-aef1-5d57740989df",
+    "tweetId": 1100451753768771600
   },
   {
     "sendAfter": "2019-02-27 10:35",
-    "status": "27.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-27/27971740 #1919LIVE",
+    "status": "Generalstreik in Leipzig und Thüringen. 27.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-27/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 27.02.1919 Morgen-Ausgabe",
     "img": "1919-02-27.93.jpg",
-    "id": "d5cda5d0-178e-11e9-aef1-5d57740989df"
+    "id": "d5cda5d0-178e-11e9-aef1-5d57740989df",
+    "tweetId": 1100693367078481900
   },
   {
     "sendAfter": "2019-02-27 18:35",
-    "status": "27.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-27/27971740 #1919LIVE",
+    "status": "Protest der Schuldlosen! 27.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-27/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 27.02.1919 Abend-Ausgabe",
     "img": "1919-02-27.94.jpg",
-    "id": "d5cda5d1-178e-11e9-aef1-5d57740989df"
+    "id": "d5cda5d1-178e-11e9-aef1-5d57740989df",
+    "tweetId": 1100814172286181400
   },
   {
     "sendAfter": "2019-02-28 10:35",
-    "status": "28.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-28/27971740 #1919LIVE",
+    "status": "Die mitteldeutsche Streikwelle. 28.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-28/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 28.02.1919 Morgen-Ausgabe",
     "img": "1919-02-28.95.jpg",
-    "id": "d5cda5d2-178e-11e9-aef1-5d57740989df"
+    "id": "d5cda5d2-178e-11e9-aef1-5d57740989df",
+    "tweetId": 1101055704083894300
   },
   {
     "sendAfter": "2019-02-28 18:35",
-    "status": "28.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-28/27971740 #1919LIVE",
+    "status": "Der Generalstreik in Spandau beschlossen. 28.02.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-02-28/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 28.02.1919 Abend-Ausgabe",
     "img": "1919-02-28.96.jpg",
-    "id": "d5cda5d3-178e-11e9-aef1-5d57740989df"
+    "id": "d5cda5d3-178e-11e9-aef1-5d57740989df",
+    "tweetId": 1101176503449079800
   },
   {
     "sendAfter": "2019-03-01 10:35",
-    "status": "01.03.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-03-01/27971740 #1919LIVE",
+    "status": "Teilweises Abflauen in Mitteldeutschland. 01.03.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-03-01/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 01.03.1919 Morgen-Ausgabe",
     "img": "1919-03-01.97.jpg",
-    "id": "d5cda5d4-178e-11e9-aef1-5d57740989df"
+    "id": "d5cda5d4-178e-11e9-aef1-5d57740989df",
+    "tweetId": 1101418100359118800
   },
   {
     "sendAfter": "2019-03-08 10:35",
-    "status": "08.03.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-03-08/27971740 #1919LIVE",
+    "status": "Das Ende des Generalstreiks. 08.03.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-03-08/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 08.03.1919 Morgen-Ausgabe",
     "img": "1919-03-08.98.jpg",
-    "id": "d5cda5d5-178e-11e9-aef1-5d57740989df"
+    "id": "d5cda5d5-178e-11e9-aef1-5d57740989df",
+    "tweetId": 1103954812943716400,
+    "tootId": "101715958812634930"
   },
   {
     "sendAfter": "2019-03-08 18:35",
-    "status": "08.03.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-03-08/27971740 #1919LIVE",
+    "status": "Nach dem Generalstreik. 08.03.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-03-08/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 08.03.1919 Abend-Ausgabe",
     "img": "1919-03-08.99.jpg",
     "id": "d5cda5d6-178e-11e9-aef1-5d57740989df"
   },
   {
     "sendAfter": "2019-03-09 10:35",
-    "status": "09.03.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-03-09/27971740 #1919LIVE",
+    "status": "Fortschreitende Befreiung Berlins. 09.03.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-03-09/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 09.03.1919 Morgen-Ausgabe",
     "img": "1919-03-09.100.jpg",
     "id": "d5cda5d7-178e-11e9-aef1-5d57740989df"
   },
   {
     "sendAfter": "2019-03-10 10:35",
-    "status": "10.03.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-03-10/27971740 #1919LIVE",
+    "status": "Das Standrecht in Berlin. 10.03.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-03-10/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 10.03.1919 Morgen-Ausgabe",
     "img": "1919-03-10.101.jpg",
     "id": "d5cda5d8-178e-11e9-aef1-5d57740989df"
   },
   {
     "sendAfter": "2019-03-10 18:35",
-    "status": "10.03.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-03-10/27971740 #1919LIVE",
+    "status": "Vor dem Angriff auf Lichtenberg. 10.03.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-03-10/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 10.03.1919 Abend-Ausgabe",
     "img": "1919-03-10.102.jpg",
     "id": "d5cda5d9-178e-11e9-aef1-5d57740989df"
   },
   {
     "sendAfter": "2019-03-11 10:35",
-    "status": "11.03.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-03-11/27971740 #1919LIVE",
+    "status": "Vor Hungersnot und Zusammenbruch. Der Kampf um Lichtenberg. 11.03.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-03-11/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 11.03.1919 Morgen-Ausgabe",
     "img": "1919-03-11.103.jpg",
     "id": "d5cda5da-178e-11e9-aef1-5d57740989df"
   },
   {
     "sendAfter": "2019-03-11 18:35",
-    "status": "11.03.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-03-11/27971740 #1919LIVE",
+    "status": "Kleinkrieg in Groß-Berlin. 11.03.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-03-11/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 11.03.1919 Abend-Ausgabe",
     "img": "1919-03-11.104.jpg",
     "id": "d5cda5db-178e-11e9-aef1-5d57740989df"
   },
   {
     "sendAfter": "2019-03-12 10:35",
-    "status": "12.03.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-03-12/27971740 #1919LIVE",
+    "status": "Heute Entscheidung in Lichtenberg. 12.03.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-03-12/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 12.03.1919 Morgen-Ausgabe",
     "img": "1919-03-12.105.jpg",
     "id": "d5cda5dc-178e-11e9-aef1-5d57740989df"
   },
   {
     "sendAfter": "2019-03-12 18:35",
-    "status": "12.03.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-03-12/27971740 #1919LIVE",
+    "status": "Lichtenberg besetzt! 12.03.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-03-12/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 12.03.1919 Abend-Ausgabe",
     "img": "1919-03-12.106.jpg",
     "id": "d5cda5dd-178e-11e9-aef1-5d57740989df"
   },
   {
     "sendAfter": "2019-03-13 10:35",
-    "status": "13.03.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-03-13/27971740 #1919LIVE",
+    "status": "Lichtenberg befreit! 13.03.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-03-13/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 13.03.1919 Morgen-Ausgabe",
     "img": "1919-03-13.107.jpg",
     "id": "d5cda5de-178e-11e9-aef1-5d57740989df"
   },
   {
     "sendAfter": "2019-03-13 18:35",
-    "status": "13.03.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-03-13/27971740 #1919LIVE",
+    "status": "Noske über die Berliner Bluttage. 13.03.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-03-13/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 13.03.1919 Abend-Ausgabe",
     "img": "1919-03-13.108.jpg",
     "id": "d5cda5df-178e-11e9-aef1-5d57740989df"
   },
   {
     "sendAfter": "2019-03-14 10:35",
-    "status": "14.03.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-03-14/27971740 #1919LIVE",
+    "status": "Das Rheinland muß deutsch bleiben! 14.03.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-03-14/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 14.03.1919 Morgen-Ausgabe",
     "img": "1919-03-14.109.jpg",
     "id": "d5cda5e0-178e-11e9-aef1-5d57740989df"
   },
   {
     "sendAfter": "2019-03-14 18:35",
-    "status": "14.03.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-03-14/27971740 #1919LIVE",
+    "status": "Das Gewissen erwacht! 14.03.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-03-14/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 14.03.1919 Abend-Ausgabe",
     "img": "1919-03-14.110.jpg",
     "id": "d5cda5e1-178e-11e9-aef1-5d57740989df"
   },
   {
     "sendAfter": "2019-03-15 10:35",
-    "status": "15.03.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-03-15/27971740 #1919LIVE",
+    "status": "Die blutige Woche. 15.03.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-03-15/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 15.03.1919 Morgen-Ausgabe",
     "img": "1919-03-15.111.jpg",
     "id": "d5cda5e2-178e-11e9-aef1-5d57740989df"
   },
   {
     "sendAfter": "2019-03-15 18:35",
-    "status": "15.03.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-03-15/27971740 #1919LIVE",
+    "status": "Das neue Lebensmittelabkommen. 15.03.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-03-15/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 15.03.1919 Abend-Ausgabe",
     "img": "1919-03-15.112.jpg",
     "id": "d5cda5e3-178e-11e9-aef1-5d57740989df"
   },
   {
     "sendAfter": "2019-03-16 10:35",
-    "status": "16.03.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-03-16/27971740 #1919LIVE",
+    "status": "Die Bedingungen für den Lebensmittelbezug. 16.03.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-03-16/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 16.03.1919 Morgen-Ausgabe",
     "img": "1919-03-16.113.jpg",
     "id": "d5cda5e4-178e-11e9-aef1-5d57740989df"
   },
   {
     "sendAfter": "2019-03-17 10:35",
-    "status": "17.03.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-03-17/27971740 #1919LIVE",
+    "status": "Aufhebung des Standrechts. 17.03.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-03-17/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 17.03.1919 Morgen-Ausgabe",
     "img": "1919-03-17.114.jpg",
     "id": "d5cda5e5-178e-11e9-aef1-5d57740989df"
   },
   {
     "sendAfter": "2019-03-17 18:35",
-    "status": "17.03.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-03-17/27971740 #1919LIVE",
+    "status": "Die Matrosenerschießungen. 17.03.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-03-17/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 17.03.1919 Abend-Ausgabe",
     "img": "1919-03-17.115.jpg",
     "id": "d5cda5e6-178e-11e9-aef1-5d57740989df"
   },
   {
     "sendAfter": "2019-03-18 10:35",
-    "status": "18.03.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-03-18/27971740 #1919LIVE",
+    "status": "Die Landesversammlung über die Blutwoche. 18.03.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-03-18/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 18.03.1919 Morgen-Ausgabe",
     "img": "1919-03-18.116.jpg",
     "id": "d5cda5e7-178e-11e9-aef1-5d57740989df"
   },
   {
     "sendAfter": "2019-03-18 18:35",
-    "status": "18.03.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-03-18/27971740 #1919LIVE",
+    "status": "Neue Wühlereien im Ruhrgebiet. 18.03.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-03-18/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 18.03.1919 Abend-Ausgabe",
     "img": "1919-03-18.117.jpg",
     "id": "d5cda5e8-178e-11e9-aef1-5d57740989df"
   },
   {
     "sendAfter": "2019-03-19 10:35",
-    "status": "19.03.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-03-19/27971740 #1919LIVE",
+    "status": "Die Untersuchung der Berliner Vorgänge. 19.03.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-03-19/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 19.03.1919 Morgen-Ausgabe",
     "img": "1919-03-19.118.jpg",
     "id": "d5cda5e9-178e-11e9-aef1-5d57740989df"
   },
   {
     "sendAfter": "2019-03-19 18:35",
-    "status": "19.03.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-03-19/27971740 #1919LIVE",
+    "status": "Verschärfung der englischen Arbeiterkrise. 19.03.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-03-19/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 19.03.1919 Abend-Ausgabe",
     "img": "1919-03-19.119.jpg",
     "id": "d5cda5ea-178e-11e9-aef1-5d57740989df"
   },
   {
     "sendAfter": "2019-03-20 10:35",
-    "status": "20.03.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-03-20/27971740 #1919LIVE",
+    "status": "Gibt es Friedensverhandlungen? 20.03.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-03-20/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 20.03.1919 Morgen-Ausgabe",
     "img": "1919-03-20.120.jpg",
     "id": "d5cda5eb-178e-11e9-aef1-5d57740989df"
   },
   {
     "sendAfter": "2019-03-20 18:35",
-    "status": "20.03.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-03-20/27971740 #1919LIVE",
+    "status": "Der Hamburger Seemannsstreik. 20.03.1919 http://zefys.staatsbibliothek-berlin.de/kalender/auswahl/date/1919-03-20/27971740 #1919LIVE",
     "alt_text": "Berliner Volkszeitung 20.03.1919 Abend-Ausgabe",
     "img": "1919-03-20.121.jpg",
     "id": "d5cda5ec-178e-11e9-aef1-5d57740989df"

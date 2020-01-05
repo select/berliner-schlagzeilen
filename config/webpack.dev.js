@@ -3,18 +3,18 @@
 const WebpackDevServer = require('webpack-dev-server');
 const webpack = require('webpack');
 const CircularDependencyPlugin = require('circular-dependency-plugin');
-
 const config = require('./webpack.base.js');
+
 const port = 8000;
 
 config.mode = 'development';
 config.devtool = 'source-map';
 
-config.entry = [
-	`webpack-dev-server/client?http://localhost:${port}/`,
-	'webpack/hot/dev-server',
-	config.entry,
-];
+// config.entry = [
+// 	`webpack-dev-server/client?http://localhost:${port}/`,
+// 	'webpack/hot/dev-server',
+// 	config.entry,
+// ];
 
 config.output = {
 	path: `${__dirname}/public`,
@@ -47,9 +47,13 @@ new WebpackDevServer(webpack(config), {
 		aggregateTimeout: 300,
 		poll: 1000,
 	},
+	// devServer: {
+	// 	contentBase: './public/',
+	// 	hot: true,
+	// },
 	hot: true,
 	inline: true,
-}).listen(port,  'localhost', function(err, res) {
+}).listen(port, 'localhost', function(err, res) {
 	if (err) console.warn(err);
 	console.log(`Listening on localhost:${port}`);
 });

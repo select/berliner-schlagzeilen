@@ -425,6 +425,7 @@ function corpusToCsv() {
 function extendPageData(statsData) {
 	let maxIssue = 0;
 	let currentYear = 0;
+		// console.log("statsData", statsData);
 	return Object.entries(statsData).reduce((acc, zipIssue) => {
 		const [zipFileId, issueData] = zipIssue;
 		const year = parseInt(issueData.dateIssued.slice(0, 4), 10);
@@ -432,6 +433,7 @@ function extendPageData(statsData) {
 			maxIssue = 0;
 			currentYear = year;
 		}
+		// console.log("issueData", issueData);
 		return Object.assign(acc, {
 			[zipFileId]: Object.assign(issueData, {
 				year,
@@ -506,7 +508,7 @@ async function addToIndex() {
 		],
 		[]
 	);
-	let newData = Object.assign({}, oldData);
+	const newData = Object.assign({}, oldData);
 	let count = 0;
 	for (const [year, filePath] of files) {
 		const basename = path.basename(filePath, '.zip');
@@ -641,7 +643,7 @@ async function runCui() {
 			async action() {
 				const pages = require(path.join(__dirname, 'data', 'stats-pages-list.json'));
 				const choices = Array.from(new Set(pages.map(({ dateIssued }) => dateIssued.slice(0, 4))));
-				// const [yearToGet] = await inquireYear(choices);
+				const [yearToGet] = await inquireYear(choices);
 				// const zeroSuffixRegEx = /_001\.xml$/;
 				const processedImagesPath = path.join(__dirname, 'data', 'processedImages');
 				if (!fs.existsSync(processedImagesPath)) fs.mkdirSync(processedImagesPath);
@@ -649,7 +651,7 @@ async function runCui() {
 					pages
 						.filter(
 							({ pageNumber, subIssue, jokesIssue, year }) =>
-								/*year === parseInt(yearToGet, 10) &&*/ pageNumber === 1 && subIssue === 0 && !jokesIssue
+								year === parseInt(yearToGet, 10) && pageNumber === 1 && subIssue === 0 && !jokesIssue
 						)
 						.map(async ({ fileName, zipFileId, dimensionsInPx, dateIssued, issue, subIssue, year }) => {
 							const outFileName = `${dateIssued}.${issue}`;
@@ -695,7 +697,7 @@ async function runCui() {
 				const year = await inquireYear(choices);
 				const bins = dirIndexData[year[0]].reduce(
 					(acc, file, index) => {
-						if (index % 2 === 0) acc.push([]);
+						if (index % 100 === 0) acc.push([]);
 						acc[acc.length - 1].push(file);
 						return acc;
 					},

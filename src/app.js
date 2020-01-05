@@ -71,9 +71,11 @@ window.addEventListener('scroll', renderTweetVisibility);
 function render(tweets) {
 	if (!(tweets && Array.isArray(tweets))) return;
 	let html = '';
-	tweets.filter(({ sendAfter }) => now < new Date(sendAfter)).forEach(tweet => {
-		html += renderTweet(tweet);
-	});
+	tweets
+		.filter(({ sendAfter }) => now < new Date(sendAfter))
+		.forEach(tweet => {
+			html += renderTweet(tweet);
+		});
 	$tweets.innerHTML = html;
 	renderTweetVisibility();
 }
@@ -298,4 +300,21 @@ $newPasswordForm.addEventListener('submit', event => {
 		window.history.replaceState({}, document.title, '/');
 		$newPasswordForm.style.display = 'none';
 	});
+});
+
+document.addEventListener('keyup', event => {
+	// findAncestor(event.target, 'tweet').classList.add('tweet--maximize');
+	const currentFullScreenNode = document.querySelector('.tweet--maximize');
+	if (currentFullScreenNode) {
+		if (event.ctrlKey && event.key === 'ArrowRight') {
+			currentFullScreenNode.classList.remove('tweet--maximize');
+			currentFullScreenNode.nextSibling.classList.add('tweet--maximize');
+			renderTweetVisibility();
+		}
+		if (event.ctrlKey && event.key === 'ArrowLeft') {
+			currentFullScreenNode.classList.remove('tweet--maximize');
+			currentFullScreenNode.previousSibling.classList.add('tweet--maximize');
+			renderTweetVisibility();
+		}
+	}
 });

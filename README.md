@@ -35,6 +35,7 @@ Install all dependecies.
 npm i
 ```
 
+
 ## Running
 
 First we need to scrape the Zefys site to get the hash id under which we can can download the images for each newspaper

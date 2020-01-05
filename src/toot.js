@@ -10,7 +10,7 @@ const now = moment(new Date());
 const tweetsPath = `${dataDir}/tweets.json`;
 
 // Get an instance of the client.
-const M = new Masto({
+const mastodonClient = new Masto({
 	access_token: config.twitterCredentials.mastodon_access_token,
 	// timeout_ms: 60 * 1000, // optional HTTP request timeout to apply to all requests.
 	api_url: 'https://botsin.space/api/v1/', // optional, defaults to https://mastodon.social/api/v1/
@@ -37,9 +37,9 @@ if (!tweet) {
 }
 
 
-M.post('media', { file: fs.createReadStream(`${dataDir}/img/${tweet.img}`) }).then(resp => {
+mastodonClient.post('media', { file: fs.createReadStream(`${dataDir}/img/${tweet.img}`) }).then(resp => {
 	const { id } = resp.data;
-	return M.post('statuses', { status: tweet.status, media_ids: [id] });
+	return mastodonClient.post('statuses', { status: tweet.status, media_ids: [id] });
 }).then(resp => {
 	const { id } = resp.data;
 	tweet.tootId = id;

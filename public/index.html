@@ -1,54 +1,62 @@
 <html>
-	<head>
-		<title>Berliner Schlagzeilen - Tweet Manager</title>
-		<meta name="viewport" content="width=device-width" />
-	</head>
-	<body>
-		<h1>Tweet Manager</h1>
-		<header>
-			<div class="nav__init-tweets" title="Init tweets">🔁</div>
-			<div class="nav__user-list" title="Open user manager">🚹</div>
-			<div class="logout" title="Log out">❌</div>
-		</header>
-		<div class="add-tweet" title="Add new tweet">❌</div>
-		<div class="tweets"></div>
-		<div class="user">
-			<div class="user__close">❌</div>
-			<div class="user__list"></div>
-			<form class="card-1 user__add">
-				<input type="text" name="username" placeholder="… add user">
-				<div class="user__menu">
-					<input type="submit" value="❌">
-				</div>
-			</form>
+<head>
+	<title>Berliner Schlagzeilen - Tweet Manager</title>
+	<meta name="viewport" content="width=device-width" />
+</head>
+<body>
+	<h1>Tweet Manager</h1>
+	<header>
+		<div class="nav__help">
+			<div>
+				use <span>ctrl →</span> and <span>ctrl ←</span>
+			</div>
+			<div>
+				in fullscreen mode
+			</div>
 		</div>
-		<form class="login">
-			<div>
-				<div>
-					<label>Username</label>
-					<input name="username" type="text" autofocus>
-				</div>
-				<div>
-					<label>Password</label>
-					<input name="password" type="password">
-				</div>
-				<button type="submit">⇢</button>
+		<div class="nav__init-tweets" title="Init tweets">🔁</div>
+		<div class="nav__user-list" title="Open user manager">🚹</div>
+		<div class="logout" title="Log out">❌</div>
+	</header>
+	<div class="add-tweet" title="Add new tweet">❌</div>
+	<div class="tweets"></div>
+	<div class="user">
+		<div class="user__close">❌</div>
+		<div class="user__list"></div>
+		<form class="card-1 user__add">
+			<input type="text" name="username" placeholder="… add user">
+			<div class="user__menu">
+				<input type="submit" value="❌">
 			</div>
 		</form>
-		<form class="new-password">
+	</div>
+	<form class="login">
+		<div>
 			<div>
-				<div>
-					<label>New password</label>
-					<input name="password1" type="password" minlength="8">
-				</div>
-				<div>
-					<label>Repeat password</label>
-					<input name="password2" type="password" minlength="8">
-				</div>
-				<button type="submit">⇢</button>
+				<label>Username</label>
+				<input name="username" type="text" autofocus>
 			</div>
-		</form>
-		<div class="messages"></div>
-	</body>
-	<script src="app.js"></script>
+			<div>
+				<label>Password</label>
+				<input name="password" type="password">
+			</div>
+			<button type="submit">⇢</button>
+		</div>
+	</form>
+	<form class="new-password">
+		<div>
+			<div>
+				<label>New password</label>
+				<input name="password1" type="password" minlength="8">
+			</div>
+			<div>
+				<label>Repeat password</label>
+				<input name="password2" type="password" minlength="8">
+			</div>
+			<button type="submit">⇢</button>
+		</div>
+	</form>
+	<div class="messages"></div>
+</body>
+<script src="app.js"></script>
 </html>

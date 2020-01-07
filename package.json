@@ -31,7 +31,7 @@
     "printWidth": 130
   },
   "dependencies": {
-    "adm-zip": "^0.4.7",
+    "adm-zip": "^0.4.11",
     "crawler": "^1.2.0",
     "d3": "^5.15.0",
     "express": "^4.17.1",

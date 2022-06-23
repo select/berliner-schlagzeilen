@@ -39,7 +39,7 @@
     "http-server": "^0.12.0",
     "inquirer": "^7.0.2",
     "inquirer-checkbox-autocomplete-prompt": "^0.2.0",
-    "jsdom": "^9.12.0",
+    "jsdom": "^16.5.0",
     "lda": "^0.2.0",
     "lowdb": "^1.0.0",
     "mastodon": "^1.2.2",

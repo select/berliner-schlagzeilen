@@ -43,7 +43,7 @@
     "lda": "^0.2.0",
     "lowdb": "^1.0.0",
     "mastodon": "^1.2.2",
-    "moment": "^2.24.0",
+    "moment": "^2.29.4",
     "oauth": "^0.9.15",
     "secure-password": "^3.1.0",
     "socket.io": "^2.3.0",
